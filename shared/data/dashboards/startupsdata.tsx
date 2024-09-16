@@ -1,0 +1,42 @@
+export const StartupsList = [
+  {
+    id: "1",
+    companyName: "Startup XYZ",
+    industry: "Tech",
+    cohort: "2024 Cohort A",
+    founders: ["Mayor Kelly"],
+    status: "Active",
+  },
+  {
+    id: "2",
+    companyName: "Startup ABC",
+    industry: "Finance",
+    cohort: "2023 Cohort B",
+    founders: ["Founder C"],
+    status: "Active",
+  },
+  {
+    id: "3",
+    companyName: "Startup 123",
+    industry: "Healthcare",
+    cohort: "2022 Cohort C",
+    founders: ["Founder F", "Founder E"],
+    status: "Inactive",
+  },
+  {
+    id: "4",
+    companyName: "Project DEF",
+    industry: "Education",
+    cohort: "2024 Cohort D",
+    founders: ["Mirinda Hers"],
+    status: "Active",
+  },
+  {
+    id: "5",
+    companyName: "Social Platform",
+    industry: "Social Media",
+    cohort: "2023 Cohort E",
+    founders: ["Jacob Smith"],
+    status: "Inactive",
+  },
+];
