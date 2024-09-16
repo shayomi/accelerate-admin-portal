@@ -1,6 +1,18 @@
 import React from "react";
 
 const DashboardIcon = <i className="bx bx-home side-menu__icon"></i>;
+const UserIcon = <i className="bx bx-user side-menu__icon"></i>;
+const ApplicationIcon = <i className="bx bx-file side-menu__icon"></i>;
+const StartupIcon = <i className="bx bx-rocket side-menu__icon"></i>;
+const AdvisorIcon = <i className="bx bx-user-voice side-menu__icon"></i>;
+const MeetingsIcon = <i className="bx bx-calendar side-menu__icon"></i>;
+const CohortIcon = <i className="bx bx-group side-menu__icon"></i>;
+const ArticlesIcon = <i className="bx bx-news side-menu__icon"></i>;
+const AuthorsIcon = <i className="bx bx-pencil side-menu__icon"></i>;
+const TestimonialsIcon = (
+  <i className="bx bx-message-square-dots side-menu__icon"></i>
+);
+const EventsIcon = <i className="bx bx-calendar-event side-menu__icon"></i>;
 
 const PagesIcon = <i className="bx bx-file-blank side-menu__icon"></i>;
 
@@ -62,7 +74,6 @@ export const MenuItems: any = [
 
   {
     icon: DashboardIcon,
-    badgetxt: badge,
     title: "Dashboards",
     type: "sub",
     active: false,
@@ -162,8 +173,8 @@ export const MenuItems: any = [
   },
 
   {
-    icon: DashboardIcon,
-    badgetxt: badge,
+    icon: UserIcon,
+
     title: "User",
     type: "sub",
     active: false,
@@ -207,8 +218,8 @@ export const MenuItems: any = [
   },
 
   {
-    icon: DashboardIcon,
-    badgetxt: badge,
+    icon: ApplicationIcon,
+
     title: "Application",
     type: "sub",
     active: false,
@@ -238,8 +249,8 @@ export const MenuItems: any = [
   },
 
   {
-    icon: DashboardIcon,
-    badgetxt: badge,
+    icon: StartupIcon,
+
     title: "Startup",
     type: "sub",
     active: false,
@@ -290,8 +301,8 @@ export const MenuItems: any = [
   },
 
   {
-    icon: DashboardIcon,
-    badgetxt: badge,
+    icon: AdvisorIcon,
+
     title: "Advisor",
     type: "sub",
     active: false,
@@ -335,8 +346,8 @@ export const MenuItems: any = [
   },
 
   {
-    icon: DashboardIcon,
-    badgetxt: badge,
+    icon: MeetingsIcon,
+
     title: "Meetings",
     type: "sub",
     active: false,
@@ -366,8 +377,8 @@ export const MenuItems: any = [
   },
 
   {
-    icon: DashboardIcon,
-    badgetxt: badge,
+    icon: CohortIcon,
+
     title: "Cohort",
     type: "sub",
     active: false,
@@ -404,8 +415,8 @@ export const MenuItems: any = [
   },
 
   {
-    icon: DashboardIcon,
-    badgetxt: badge,
+    icon: ArticlesIcon,
+
     title: "Articles",
     type: "sub",
     active: false,
@@ -435,8 +446,8 @@ export const MenuItems: any = [
   },
 
   {
-    icon: DashboardIcon,
-    badgetxt: badge,
+    icon: AuthorsIcon,
+
     title: "Authors",
     type: "sub",
     active: false,
@@ -459,8 +470,8 @@ export const MenuItems: any = [
   },
 
   {
-    icon: DashboardIcon,
-    badgetxt: badge,
+    icon: TestimonialsIcon,
+
     title: "Testimonials",
     type: "sub",
     active: false,
@@ -483,8 +494,8 @@ export const MenuItems: any = [
   },
 
   {
-    icon: DashboardIcon,
-    badgetxt: badge,
+    icon: EventsIcon,
+
     title: "Events",
     type: "sub",
     active: false,
