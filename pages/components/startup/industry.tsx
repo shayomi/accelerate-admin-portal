@@ -42,7 +42,7 @@ const Industry = () => {
 
       <div className="">
         <div className="box custom-card">
-          <div className="box-header border-b-[1px] border-b-[#Fff]  justify-between gap-8">
+          <div className="box-header justify-between gap-8">
             <div className="box-title">Industries List</div>
             <div className="flex flex-wrap gap-2">
               <div>
