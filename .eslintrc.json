@@ -22,12 +22,12 @@
           "off"
       ],
       "linebreak-style": [
-          "error",
-          "unix"
+         "off",
+          "off"
       ],
       "quotes": [
-          "error",
-          "double"
+          "off",
+          "off"
       ],
       "semi": [
           "off",
