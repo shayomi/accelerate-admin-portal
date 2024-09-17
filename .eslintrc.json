@@ -51,7 +51,7 @@
       "react/no-unknown-property": "off",
       "no-unused-vars": "off",
       "react/no-unescaped-entities": "off",
-      "no-mixed-spaces-and-tabs": "off" // or "warn" or "off", depending on your needs
+      "no-mixed-spaces-and-tabs": "smart-tab" // or "warn" or "off", depending on your needs
     }
   }
   
