@@ -1,31 +1,37 @@
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import React, { Fragment } from "react";
+// components/Userdetails.tsx
+import React, { Fragment } from 'react';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
 
-// Define a hardcoded user object
-const hardcodedUser = {
-  id: "1",
-  name: "Mayor Kelly",
-  email: "mayorkelly@gmail.com",
-  role: "Manufacture",
-  status: "Active",
-  checked: "",
-  activityLog: [
-    { date: "2024-09-01", action: "Logged in" },
-    { date: "2024-09-02", action: "Updated profile" },
-    { date: "2024-09-03", action: "Viewed dashboard" },
-  ],
-  associatedEntities: {
-    investors: ["Investor A", "Investor B"],
-    advisors: ["Advisor X", "Advisor Y"],
-    partners: ["Partner Z"],
-    founders: [],
-  },
-};
+interface ActivityLog {
+  date: string;
+  action: string;
+}
 
-const Userdetails = () => {
-  const user = hardcodedUser;
+interface AssociatedEntities {
+  investors: string[];
+  advisors: string[];
+  partners: string[];
+  founders: string[];
+}
 
+interface User {
+  id: string;
+  firstName: string;
+  lastName:string;
+  email: string;
+  role: string;
+  status: string;
+  checked: string;
+  activityLog: ActivityLog[];
+  associatedEntities: AssociatedEntities;
+}
+
+interface UserDetailsProps {
+  user: User;
+}
+
+const Userdetails: React.FC<UserDetailsProps> = ({ user }) => {
   return (
     <Fragment>
       <Seo title={"User Management"} />
@@ -36,11 +42,11 @@ const Userdetails = () => {
       />
       <div className="container mx-auto px-4 py-8 hs-dark-mode-active:!text-white">
         {/* Header */}
-        <div className="box  p-6 rounded-md mb-6">
+        <div className="box p-6 rounded-md mb-6">
           {/* Top Row */}
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-xl font-bold text-gray-800 hs-dark-mode-active:text-white">
-              {user.name}
+              {user.firstName} {" "} {user.lastName}
             </h1>
             <div className="flex items-center space-x-4">
               <p className="text-sm text-gray-600">
@@ -64,7 +70,7 @@ const Userdetails = () => {
         {/* Dashboard Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Personal Information */}
-          <div className="box  p-6 rounded-md">
+          <div className="box p-6 rounded-md">
             <h2 className="text-xl font-semibold text-gray-800 hs-dark-mode-active:text-white mb-4">
               Personal Information
             </h2>
@@ -81,7 +87,7 @@ const Userdetails = () => {
           </div>
 
           {/* Associated Entities */}
-          <div className="box  p-6 rounded-md md:col-span-2">
+          <div className="box p-6 rounded-md md:col-span-2">
             <h2 className="text-xl font-semibold text-gray-800 mb-4 hs-dark-mode-active:text-white">
               Associated Entities
             </h2>
@@ -113,7 +119,7 @@ const Userdetails = () => {
         </div>
 
         {/* Activity Log Table */}
-        <div className="box  p-6 rounded-md mt-6">
+        <div className="box p-6 rounded-md mt-6">
           <h2 className="text-xl font-semibold text-gray-800 mb-4 hs-dark-mode-active:text-white">
             Activity Log
           </h2>
@@ -150,5 +156,4 @@ const Userdetails = () => {
   );
 };
 
-Userdetails.layout = "Contentlayout";
 export default Userdetails;

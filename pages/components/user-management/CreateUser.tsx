@@ -1,16 +1,31 @@
 "use client";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
-import React, { Fragment, useState } from "react";
+import Link from "next/link";
+import React, { Fragment, useState, useEffect } from "react";
 
-const CreateUser = () => {
+const CreateUser = ({ user }:any) => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
   const [role, setRole] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  useEffect(() => {
+    if (user) {
+      setFirstName(user.firstName || ""); 
+      setLastName(user.lastName || "");
+      setEmail(user.email || "");
+      setRole(user.role || "");
+    }
+  }, [user]);
 
   return (
     <Fragment>
       <Seo title={"User Management"} />
       <Pageheader
-        currentpage="Create New User"
+        currentpage={user ? "Edit User" : "Create New User"}
         activepage="Dashboards"
         mainpage="User Management"
       />
@@ -24,6 +39,8 @@ const CreateUser = () => {
                 className="form-control"
                 placeholder="First name"
                 aria-label="First name"
+                value={firstName} 
+                onChange={(e) => setFirstName(e.target.value)}
               />
             </div>
             <div className="md:col-span-6 col-span-12 mb-4">
@@ -33,6 +50,8 @@ const CreateUser = () => {
                 className="form-control"
                 placeholder="Last name"
                 aria-label="Last name"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
               />
             </div>
             <div className="md:col-span-6  col-span-12">
@@ -44,6 +63,8 @@ const CreateUser = () => {
                     className="form-control"
                     placeholder="Email"
                     aria-label="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
 
@@ -58,8 +79,8 @@ const CreateUser = () => {
                   <select
                     className="form-control"
                     aria-label="Role"
-                    value={role} // Use value or defaultValue
-                    onChange={(e) => setRole(e.target.value)} // Set selected value
+                    value={role}
+                    onChange={(e) => setRole(e.target.value)}
                   >
                     <option value="" disabled>
                       Select role
@@ -81,6 +102,8 @@ const CreateUser = () => {
                 className="form-control"
                 placeholder="password"
                 aria-label="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="md:col-span-6 col-span-12 mb-4 sm:mb-0">
@@ -90,21 +113,23 @@ const CreateUser = () => {
                 className="form-control"
                 placeholder="Confirm password"
                 aria-label="Confirm password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </div>
 
             <div className="md:col-span-12 col-span-12 flex flex-row gap-4 mt-6 items-end">
               <button
-                type="submit"
+                type="button"
                 className="ti-btn bg-none text-red rounded-sm !mb-0"
               >
-                Cancel
+                <Link href="/users">cancel</Link>
               </button>
               <button
                 type="submit"
                 className="ti-btn bg-green rounded-sm !mb-0"
               >
-                Create User
+                {user ? "Update User" : "Create User"}
               </button>
             </div>
           </div>

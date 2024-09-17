@@ -74,147 +74,21 @@ export const MenuItems: any = [
 
   {
     icon: DashboardIcon,
-    title: "Dashboards",
-    type: "sub",
+    title: "Dashboard", // Update title to match the desired link text
+    path: "/dashboard", // Direct path to /dashboard
+    type: "link", // Indicates it's a direct link
     active: false,
-    children: [
-      // {
-      //   path: "/components/dashboards/crm",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "CRM",
-      // },
-      // {
-      //   path: "/components/dashboards/ecommerce",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "Ecommerce",
-      // },
-      // {
-      //   path: "/components/dashboards/crypto",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "Crypto",
-      // },
-      // {
-      //   path: "/components/dashboards/jobs",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "Jobs",
-      // },
-      // {
-      //   path: "/components/dashboards/nft",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "NFT",
-      // },
-      // {
-      //   path: "/components/dashboards/sales",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "Sales",
-      // },
-      {
-        path: "/components/dashboards/analytics",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Analytics",
-      },
-      // {
-      //   path: "/components/dashboards/user-management",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "User Management",
-      // },
-      // {
-      //   path: "/components/dashboards/projects",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "Projects",
-      // },
-      // {
-      //   path: "/components/dashboards/hrm",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "HRM",
-      // },
-      // {
-      //   path: "/components/dashboards/stocks",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "Stocks",
-      // },
-      // {
-      //   path: "/components/dashboards/courses",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "Courses",
-      // },
-      // {
-      //   path: "/components/dashboards/personal",
-      //   type: "link",
-      //   active: false,
-      //   selected: false,
-      //   title: "Personal",
-      // },
-    ],
+    selected: false,
   },
+  
 
   {
     icon: UserIcon,
-
-    title: "User",
-    type: "sub",
+    title: "Users", // Updated title to match the desired link text
+    path: "/users", // Direct path to /users
+    type: "link",
     active: false,
-    children: [
-      {
-        path: "/components/user-management/users",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Users List",
-      },
-      {
-        path: "/components/user-management/Userdetails",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "User Details",
-      },
-      {
-        path: "/components/user-management/CreateUser",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Create New User",
-      },
-      {
-        path: "/components/user-management/EditUser",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Edit User",
-      },
-      {
-        path: "/components/user-management/Roles",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Roles",
-      },
-    ],
+    selected: false,
   },
 
   {

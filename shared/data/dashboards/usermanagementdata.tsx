@@ -1,7 +1,8 @@
 export const Userslists = [
   {
     id: "1",
-    name: "Mayor Kelly",
+    firstName: "Mayor",
+    lastName: "Kelly",
     email: "mayorkelly@gmail.com",
     role: "Founder",
     status: "Active",
@@ -18,7 +19,8 @@ export const Userslists = [
   },
   {
     id: "2",
-    name: "Andrew Garfield",
+    firstName: "Andrew",
+    lastName: "Garfield",
     email: "andrewgarfield@gmail.com",
     role: "Advisor",
     status: "Active",
@@ -33,7 +35,8 @@ export const Userslists = [
   },
   {
     id: "3",
-    name: "Simon Cowel",
+    firstName: "Simon",
+    lastName: "Cowel",
     email: "simoncowel234@gmail.com",
     role: "Investor",
     status: "Inactive",
@@ -48,7 +51,8 @@ export const Userslists = [
   },
   {
     id: "4",
-    name: "Mirinda Hers",
+    firstName: "Mirinda",
+    lastName: "Hers",
     email: "mirindahers@gmail.com",
     role: "Partner",
     status: "Active",
@@ -63,7 +67,8 @@ export const Userslists = [
   },
   {
     id: "5",
-    name: "Jacob Smith",
+    firstName: "Jacob",
+    lastName: "Smith",
     email: "jacobsmith@gmail.com",
     role: "Founder",
     status: "Inactive",

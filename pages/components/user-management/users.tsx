@@ -80,7 +80,9 @@ const Users = () => {
                 type="button"
                 className="bg-green text-white px-3 py-1.5 rounded-md"
               >
-                Create new user
+                 <Link href="/users/create">
+                  Create New User
+                </Link>
               </button>
             </div>
           </div>
@@ -102,7 +104,13 @@ const Users = () => {
                       scope="col"
                       className="!text-start !text-[0.85rem] min-w-[200px]"
                     >
-                      Name
+                      First Name
+                    </th>
+                    <th
+                      scope="col"
+                      className="!text-start !text-[0.85rem] min-w-[200px]"
+                    >
+                      Last Name
                     </th>
                     <th scope="col" className="!text-start !text-[0.85rem]">
                       Role
@@ -134,7 +142,8 @@ const Users = () => {
                           aria-label="..."
                         />
                       </th>
-                      <td>{idx.name}</td>
+                      <td>{idx.firstName}</td>
+                      <td>{idx.lastName}</td>
                       <td>{idx.role}</td>
                       <td>{idx.email}</td>
                       <td
@@ -148,7 +157,7 @@ const Users = () => {
                       <td>
                         <div className="flex flex-row gap-4 items-center">
                           <Link
-                            href={`components/user-management/user/${idx.id}`}
+                            href={`/users/${idx.id}`}
                           >
                             <button className="bg-transparent border-[1px] border-primary text-primary  px-3 py-1.5 rounded-md">
                               View
@@ -156,7 +165,8 @@ const Users = () => {
                           </Link>
 
                           <button className="bg-[#FFB140] text-black px-3 py-1.5 rounded-md">
-                            Edit
+                            <Link href={`/users/edit/${idx.id}`}>edit</Link>
+                          
                           </button>
                           <button className="text-primary">Deactivate</button>
                         </div>

@@ -51,7 +51,7 @@ const Firebaselogin = () => {
 
   let navigate = useRouter();
   const RouteChange = () => {
-    let path = "/components/dashboards/analytics/";
+    let path = "/dashboard";
     navigate.push(path);
   };
 

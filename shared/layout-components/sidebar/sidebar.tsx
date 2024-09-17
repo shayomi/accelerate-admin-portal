@@ -1,8 +1,9 @@
+"use client"
 import React, { Fragment, useState, useEffect } from "react";
 import { connect } from "react-redux";
 import MenuItems from "./nav";
 import { ThemeChanger } from "../../redux/action";
-import { useRouter } from "next/router";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import { basePath } from "@/next.config";
 import store from "@/shared/redux/store";
@@ -11,6 +12,7 @@ import Menuloop from "./menuloop";
 
 const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
   const [menuitems, setMenuitems] = useState(MenuItems);
+  const pathname = usePathname(); // Get the current pathname
 
   function closeMenu() {
     const closeMenudata = (items: any) => {
@@ -450,14 +452,23 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
 
     // Start observing the target element
     observer.observe(targetElement, config);
-    let currentPath = location.pathname.endsWith("/")
-      ? location.pathname.slice(0, -1)
-      : location.pathname;
+
+    // Cleanup observer on component unmount
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!pathname) return; // If pathname is null, exit early
+
+    // Update the menu based on the current pathname
+    let currentPath = pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
     if (currentPath !== previousUrl) {
       setMenuUsingUrl(currentPath);
       setPreviousUrl(currentPath);
     }
-  }, [location]);
+  }, [pathname]); 
 
   function toggleSidemenu(
     event: any,
@@ -622,25 +633,25 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
     }
   };
 
-  function handleAttributeChange(mutationsList: any) {
+  const handleAttributeChange = (mutationsList:any, currentPath:any) => {
     for (const mutation of mutationsList) {
       if (
-        mutation.type === "attributes" &&
-        mutation.attributeName === "data-nav-layout"
+        mutation.type === 'attributes' &&
+        mutation.attributeName === 'data-nav-layout'
       ) {
-        const newValue = mutation.target.getAttribute("data-nav-layout");
-        if (newValue == "vertical") {
-          let currentPath = location.pathname.endsWith("/")
-            ? location.pathname.slice(0, -1)
-            : location.pathname;
-          currentPath = !currentPath ? "/dashboard/ecommerce" : currentPath;
-          setMenuUsingUrl(currentPath);
+        const newValue = mutation.target.getAttribute('data-nav-layout');
+        if (newValue === 'vertical') {
+          let path = currentPath.endsWith('/')
+            ? currentPath.slice(0, -1)
+            : currentPath;
+          path = !path ? '/dashboard/ecommerce' : path;
+          setMenuUsingUrl(path);
         } else {
           closeMenu();
         }
       }
     }
-  }
+  };
   return (
     <Fragment>
       <div
