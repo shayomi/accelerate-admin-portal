@@ -41,9 +41,7 @@ const Industry = () => {
         activepage="Dashboards"
         mainpage="Startups"
       />
-      <div className="page-header">
-        <h2>Industry Management</h2>
-      </div>
+     
 
       <div className="">
         <div className="box custom-card">
