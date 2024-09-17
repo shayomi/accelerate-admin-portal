@@ -30,8 +30,8 @@
           "double"
       ],
       "semi": [
-          "error",
-          "always"
+          "off",
+          "off"
       ],
       "no-multiple-empty-lines":["error", { "max": 1, "maxEOF": 1 }],
       "no-console":"off",
@@ -51,7 +51,7 @@
       "no-unused-vars":"off",
       "eslint no-lone-blocks": "off",
       "react/no-unescaped-entities": "off",
-      "eslint no-mixed-spaces-and-tabs": "off"
+      "eslint no-mixed-spaces-and-tabs": "smart-tabs"
       
   }
 }
