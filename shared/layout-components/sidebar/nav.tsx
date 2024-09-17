@@ -93,33 +93,11 @@ export const MenuItems: any = [
 
   {
     icon: ApplicationIcon,
-
     title: "Application",
-    type: "sub",
+    path: "/application",
+    type: "link",
     active: false,
-    children: [
-      {
-        path: "/components/applications/investors",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Investors",
-      },
-      {
-        path: "/components/applications/partners",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Partners",
-      },
-      {
-        path: "/components/applications/applicationdetails",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Details",
-      },
-    ],
+    selected:false
   },
 
   {
@@ -130,46 +108,18 @@ export const MenuItems: any = [
     active: false,
     children: [
       {
-        path: "/components/startup/startups",
+        path: "/startup/startups",
         type: "link",
         active: false,
         selected: false,
         title: "Startups",
       },
       {
-        path: "/components/startup/details/startupdetails",
+        path: "/startup/industry",
         type: "link",
         active: false,
         selected: false,
-        title: "Startup Details",
-      },
-      {
-        path: "/components/startup/create",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Create Startup",
-      },
-      {
-        path: "/components/startup/edit",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Edit Startup",
-      },
-      {
-        path: "/components/startup/industry",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Industry",
-      },
-      {
-        path: "/components/startup/industrydetails",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Industry Details",
+        title: "industry",
       },
     ],
   },

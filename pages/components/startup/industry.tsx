@@ -4,26 +4,31 @@ import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 
 // Industry data with 5 entries
-const IndustriesList = [
+export const IndustriesList = [
   {
     id: 1,
     name: "Technology",
+    startupIds:[1,2]
   },
   {
     id: 2,
     name: "Healthcare",
+    startupIds:[1,2]
   },
   {
     id: 3,
     name: "Finance",
+    startupIds:[1,2]
   },
   {
     id: 4,
     name: "Real Estate",
+    startupIds:[1,2]
   },
   {
     id: 5,
     name: "Education",
+    startupIds:[1,2]
   },
 ];
 
@@ -54,7 +59,7 @@ const Industry = () => {
                 />
               </div>
               <div>
-                <Link href="/create-new-industry">
+                <Link href="/startup/industry/create">
                   <button className="ti-btn ti-btn-primary !bg-primary !text-white !py-1 !px-3 !text-[0.75rem]">
                     Create New Industry
                   </button>
@@ -104,12 +109,18 @@ const Industry = () => {
                       </th>
                       <td>{industry.name}</td>
                       <td>
-                        <div className="flex flex-row gap-2">
-                          <Link href={`/industry/${industry.id}`}>
-                            <button className="text-primary hover:underline">
+                        <div className="flex flex-row gap-4">
+                          <Link href={`/startup/industry/edit/${industry.id}`}>
+                            <button className="bg-yellow text-black rounded-md px-4 py-2 ">
                               Edit
                             </button>
                           </Link>
+
+                          
+                            <button className="text-primary hover:underline">
+                              Delete
+                            </button>
+                          
                         </div>
                       </td>
                     </tr>

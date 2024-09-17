@@ -7,12 +7,7 @@ import React, { Fragment } from "react";
 const Investors = () => {
   return (
     <Fragment>
-      <Seo title={"Application Management"} />
-      <Pageheader
-        currentpage="Investors"
-        activepage="Dashboards"
-        mainpage="Application Management"
-      />
+     
 
       <div className="">
         <div className="box custom-card">
@@ -124,7 +119,7 @@ const Investors = () => {
 
                       <td>
                         <div className="flex flex-row gap-5">
-                          <Link href="">
+                          <Link href={`/application/investor/${investor.id}`}>
                             <button className="bg-transparent border-[1px] border-primary text-primary  px-3 py-1.5 rounded-md">
                               View detail
                             </button>
@@ -186,6 +181,6 @@ const Investors = () => {
     </Fragment>
   );
 };
-Investors.layout = "Contentlayout";
+
 
 export default Investors;

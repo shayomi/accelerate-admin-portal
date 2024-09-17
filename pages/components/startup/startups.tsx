@@ -72,7 +72,7 @@ const Startups = () => {
                 type="button"
                 className="bg-green text-white px-3 py-1.5 rounded-md"
               >
-                Create new startup
+                <Link href="/startup/startups/create">Create new startup</Link>
               </button>
             </div>
           </div>
@@ -112,9 +112,9 @@ const Startups = () => {
                       key={startup.id}
                     >
                       <td>{startup.companyName}</td>
-                      <td>{startup.industry}</td>
+                      <td>{startup.industries}</td>
                       <td>{startup.cohort}</td>
-                      <td>{startup.founders.join(", ")}</td>
+                      <td>{startup.founders.map((founder) => founder.name).join(", ")}</td>
                       <td
                         className={
                           startup.status === "Active"
@@ -127,13 +127,12 @@ const Startups = () => {
 
                       <td>
                         <div className="flex flex-row gap-2">
-                          <Link
-                            href={`components/startup-management/startup/${startup.id}`}
-                          >
-                            <button className="text-primary hover:underline">
+                          <button className="text-primary hover:underline">
+                            <Link href={`/startup/startups/${startup.id}`}>
+                              {" "}
                               View
-                            </button>
-                          </Link>
+                            </Link>
+                          </button>
                         </div>
                       </td>
                     </tr>

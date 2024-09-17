@@ -1,31 +1,59 @@
+import { GetServerSideProps } from "next";
 import { StartupsList } from "@/shared/data/dashboards/startupsdata";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import React, { Fragment } from "react";
+import { Startup } from "@/pages/types";
 import StartupHighlight from "./startuphighlight";
-import StartupFounders from "./StartupFounders";
 import StartupDescription from "./startupdescription";
+import { Fragment } from "react";
+import Link from "next/link";
 
-const StartupDetails = () => {
+type Props = {
+  startup: Startup;
+};
+
+const StartupDetails = ({ startup }: Props) => {
   return (
     <Fragment>
-      <Seo title={"Startup Management"} />
+      <Seo title="Startup Management" />
       <Pageheader
-        currentpage="Startup Details"
+        currentpage="Startups"
         activepage="Dashboards"
         mainpage="Startup Details"
       />
-      <div className="box">
-        <StartupHighlight />
+      <div>
+        <StartupHighlight startup={startup} />
       </div>
-      <div className=" mt-6">
-        <StartupDescription />
+      <div className="mt-6">
+        <StartupDescription startup={startup} />
+      </div>
+
+      <div className="flex justify-end mt-4 mb-8">
+        <button className="bg-primary text-white rounded-md px-4 py-2">
+          <Link href={`/startup/startups/edit/${startup.id}`}>Edit startup</Link>
+        </button>
       </div>
     </Fragment>
   );
 };
 
-StartupDetails.layout = "Contentlayout";
+export const getServerSideProps: GetServerSideProps<Props> = async (
+  context
+) => {
+  const { id } = context.params as { id: string };
+  const startup = StartupsList.find((startup) => startup.id === id);
+
+  if (!startup) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      startup,
+    },
+  };
+};
 
 export default StartupDetails;
