@@ -50,8 +50,8 @@
       "react/no-unknown-property":"off",
       "no-unused-vars":"off",
       "eslint no-lone-blocks": "off",
-      "react/no-unescaped-entities": "off",
-      "eslint no-mixed-spaces-and-tabs": "smart-tabs"
+      "react/no-unescaped-entities": "off"
+      
       
   }
 }
