@@ -1,5 +1,3 @@
-// pages/edit/[id].tsx
-
 import React from 'react';
 import { useRouter } from 'next/router';
 import { StartupsList } from '@/shared/data/dashboards/startupsdata';

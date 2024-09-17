@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { StartupsList} from '@/shared/data/dashboards/startupsdata';
 import { Startup } from '@/types';
 import StartupDetails from '@/pages/components/startup/details/startupdetails';
+import React from 'react';
 
 
 const StartupPage = () => {
