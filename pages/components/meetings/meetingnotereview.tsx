@@ -62,7 +62,7 @@ const MeetingNoteReview = () => {
         {meetings.map((meeting) => (
           <div
             key={meeting.id}
-            className="border border-gray-300 bg-[#F6F6F6] hs-dark-mode-active:bg-[#1a1e25] rounded-md p-4"
+            className="border border-black hs-dark-mode-active:bg-[#1a1e25] rounded-md p-4"
           >
             <div
               className="cursor-pointer flex justify-between"

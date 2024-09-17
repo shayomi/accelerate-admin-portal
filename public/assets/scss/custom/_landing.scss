@@ -48,7 +48,7 @@
     }
     .landing-body {
       .app-sidebar {
-        @apply bg-primary/10 dark:bg-primary/10 py-4;
+        @apply bg-[#1a1e25] dark:bg-primary/10 py-4;
         .side-menu__item .side-menu__angle {
           @apply text-white dark:text-defaulttextcolor/10 #{!important};
         }

@@ -1,6 +1,6 @@
 /* Start::app-header */
 .app-header {
-  @apply w-full max-w-full h-[3.75rem] z-[49] fixed top-0 start-0 border-b border-b-headerbordercolor dark:border-white/10 transition-all ease-linear duration-[0.1s] bg-[#1a1e25] dark:bg-[#1a1e25];
+  @apply w-full max-w-full h-[3.75rem] z-[49] fixed top-0 start-0 border-b border-b-headerbordercolor dark:border-white/10 transition-all ease-linear duration-[0.1s] ;
 
   #mainHeaderProfile {
     @apply text-headerprimecolor;

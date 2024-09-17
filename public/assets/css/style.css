@@ -163,7 +163,7 @@ Background Image
 
 /* Start::app-header */
 .app-header {
-  @apply w-full max-w-full h-[3.75rem] z-[49] fixed top-0 start-0 border-b border-b-headerbordercolor dark:border-white/10 transition-all ease-linear duration-[0.1s] bg-[#1a1e25] dark:bg-[#1a1e25];
+  @apply w-full max-w-full h-[3.75rem] z-[49] fixed top-0 start-0 border-b border-b-headerbordercolor dark:border-white/10 transition-all ease-linear duration-[0.1s] bg-[#fdf9e2] dark:bg-[#1a1e25];
 }
 .app-header #mainHeaderProfile {
   @apply text-headerprimecolor;
@@ -8629,13 +8629,13 @@ label {
 }
 
 [data-header-styles="light"] .app-header {
-  @apply bg-[#1a1e25] border-[#f3f3f3] !important;
+  @apply bg-[#fdf9e2] border-[#f3f3f3] !important;
 }
 [data-header-styles="light"]
   .app-header
   .main-header-container
   .header-link-icon {
-  @apply hover:bg-white/20 text-white fill-black/60 !important;
+  @apply hover:bg-white/20 text-black fill-black/60 !important;
 }
 [data-header-styles="light"] .app-header .animated-arrow span {
   @apply bg-[#536485];
@@ -8696,7 +8696,7 @@ label {
 }
 
 [data-header-styles="transparent"] .app-header {
-  @apply bg-bodybg border-b border-black/[0.07] !important;
+  @apply bg-[#fdf9e2] border-b border-black/[0.07] !important;
 }
 [data-header-styles="transparent"] .app-header .sidebar-toggle {
   @apply bg-transparent text-[#536485] focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white;
@@ -10605,13 +10605,13 @@ label {
 
 [data-menu-styles="light"] .app-sidebar {
   --menu-prime-color: 128 135 147;
-  @apply bg-white border-[#f3f3f3] !important;
+  @apply bg-[#fdf9e2] border-[#f3f3f3] !important;
 }
 [data-menu-styles="light"] .app-sidebar .slide__category::before {
   @apply border-black/50;
 }
 [data-menu-styles="light"] .app-sidebar .main-sidebar-header {
-  @apply bg-white border-[#f3f3f3] backdrop-blur-3xl !important;
+  @apply bg-[#fdf9e2] border-[#f3f3f3] backdrop-blur-3xl !important;
 }
 [data-menu-styles="light"] .app-sidebar .main-sidebar-header .header-logo img {
   @apply h-8 leading-8;
@@ -10646,7 +10646,7 @@ label {
   @apply hidden;
 }
 [data-menu-styles="light"] .app-sidebar .app-sidebar {
-  @apply bg-white border-[#f3f3f3] !important;
+  @apply bg-[#fdf9e2] border-[#f3f3f3] !important;
 }
 [data-menu-styles="light"] .app-sidebar .side-menu__label {
   @apply text-[#536485] !important;
@@ -11770,7 +11770,7 @@ label {
 
 [data-menu-styles="transparent"] .app-sidebar {
   --menu-prime-color: 128 135 147;
-  @apply bg-bodybg border-black/[0.07];
+  @apply bg-[#1a1e25] border-black/[0.07];
 }
 [data-menu-styles="transparent"] .app-sidebar .slide__category::before {
   @apply border-black/50;
@@ -15918,7 +15918,7 @@ body {
 }
 
 .box {
-  @apply flex flex-col shadow-sm rounded-md text-defaulttextcolor dark:text-defaulttextcolor/70 bg-[#F4F5F7]  text-[0.813rem]  mb-6 relative dark:bg-bodybg;
+  @apply flex flex-col shadow-sm rounded-md text-defaulttextcolor dark:text-defaulttextcolor/70 bg-[#fdf9e2] border-black/30 dark:border-white/50 border-[1px]   text-[0.813rem]  mb-6 relative dark:bg-bodybg;
 }
 
 .box-header {
@@ -16357,7 +16357,7 @@ html[dir="rtl"] {
 }
 
 body {
-  @apply scroll-smooth bg-bodybg h-full text-defaulttextcolor dark:text-white m-0 font-inter font-normal text-[0.813rem] relative text-start rtl:dir-rtl;
+  @apply scroll-smooth bg-[#fdf9e2] dark:bg-[#1a1e25] h-full text-defaulttextcolor dark:text-white m-0 font-inter font-normal text-[0.813rem] relative text-start rtl:dir-rtl;
 }
 
 .page {

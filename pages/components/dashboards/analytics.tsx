@@ -45,7 +45,7 @@ const Analytics = () => {
         mainpage="Analytics"
       />
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* user by role */}
         <div className="">
           <div className="box">
@@ -261,7 +261,7 @@ const Analytics = () => {
 
         {/* total startup */}
         <div className="">
-          <div className="box overflow-hidden">
+          <div className="overflow-hidden">
             <div className="grid grid-cols-12 gap-x-2">
               <div className="xxl:col-span-6 xl:col-span-6 col-span-12">
                 <div className="box overflow-hidden">

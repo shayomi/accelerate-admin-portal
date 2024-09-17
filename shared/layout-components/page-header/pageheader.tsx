@@ -5,7 +5,7 @@ const Pageheader = (props: any) => {
     <Fragment>
       <div className="block justify-between page-header md:flex">
         <div>
-          <h3 className="!text-white dark:!text-defaulttextcolor/70 dark:text-black  dark:hover:text-white text-[1.125rem] font-semibold">
+          <h3 className="!text-black dark:!text-defaulttextcolor/70 dark:text-black  dark:hover:text-white text-[1.125rem] font-semibold">
             {props.currentpage}
           </h3>
         </div>
@@ -20,7 +20,7 @@ const Pageheader = (props: any) => {
             </a>
           </li>
           <li
-            className="text-[0.813rem] text-white font-semibold hover:text-red dark:text-white dark:text-white/50 "
+            className="text-[0.813rem] text-black font-semibold hover:text-red dark:text-white dark:text-white/50 "
             aria-current="page"
           >
             {props.mainpage}
