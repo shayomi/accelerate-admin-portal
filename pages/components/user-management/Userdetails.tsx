@@ -2,6 +2,7 @@
 import React, { Fragment } from 'react';
 import Pageheader from '@/shared/layout-components/page-header/pageheader';
 import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
 
 interface ActivityLog {
   date: string;
@@ -46,7 +47,7 @@ const Userdetails: React.FC<UserDetailsProps> = ({ user }) => {
           {/* Top Row */}
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-xl font-bold text-gray-800 hs-dark-mode-active:text-white">
-              {user.firstName} {" "} {user.lastName}
+              {user.firstName}  {user.lastName}
             </h1>
             <div className="flex items-center space-x-4">
               <p className="text-sm text-gray-600">
@@ -148,7 +149,8 @@ const Userdetails: React.FC<UserDetailsProps> = ({ user }) => {
         {/* Edit User Button */}
         <div className="flex justify-end mt-6">
           <button className="border-[1px] bg-transparent text-primary border-primary py-2 px-4 rounded-md transition">
-            Edit User
+          <Link href={`/users/edit/${user.id}`}>edit user</Link>
+          
           </button>
         </div>
       </div>
