@@ -142,7 +142,8 @@ const Analytics = () => {
                           aria-label="..."
                         />
                       </th>
-                      <td>{idx.name}</td>
+                      <td>{idx.firstName}</td>
+                      <td>{idx.lastName}</td>
                       <td>{idx.role}</td>
                       <td>{idx.email}</td>
                       <td>{idx.status}</td>
