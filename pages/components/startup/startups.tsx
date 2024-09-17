@@ -116,7 +116,7 @@ const Startups = () => {
                       <td>{startup.cohort}</td>
                       <td>
                         {startup.founders
-                          .map((founder) => founder.name)
+                          .map((founder: { name: any; }) => founder.name)
                           .join(", ")}
                       </td>
                       <td

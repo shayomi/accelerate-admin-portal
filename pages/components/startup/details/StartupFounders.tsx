@@ -1,4 +1,4 @@
-import { Founder } from "@/pages/types";
+import { Founder } from "@/types";
 import React from "react";
 
 type Props = {

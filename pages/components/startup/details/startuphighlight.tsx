@@ -1,4 +1,4 @@
-import { Startup } from "@/pages/types";
+import { Startup } from "@/types";
 import React from "react";
 
 type Props = {

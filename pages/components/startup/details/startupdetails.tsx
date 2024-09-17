@@ -2,7 +2,7 @@ import { GetServerSideProps } from "next";
 import { StartupsList } from "@/shared/data/dashboards/startupsdata";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
-import { Startup } from "@/pages/types";
+import { Startup } from "@/types";
 import StartupHighlight from "./startuphighlight";
 import StartupDescription from "./startupdescription";
 import { Fragment } from "react";

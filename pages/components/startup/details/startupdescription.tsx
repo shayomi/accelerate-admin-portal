@@ -1,7 +1,7 @@
 import React from "react";
 import AdvisorsList from "./advisorslist";
 import StartupFounders from "./StartupFounders";
-import { Startup } from "@/pages/types";
+import { Startup } from "@/types";
 
 type Props = {
   startup: Startup;

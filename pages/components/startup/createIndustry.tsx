@@ -1,5 +1,6 @@
 
-import { Industry } from '@/pages/types';
+
+import { Industry } from '@/types';
 import React, { useState, useEffect, Fragment } from 'react';
 
 

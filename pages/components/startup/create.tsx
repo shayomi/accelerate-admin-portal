@@ -3,7 +3,7 @@
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import React, { ChangeEvent, Fragment, useState, useEffect } from "react";
-import { Startup, Founder } from "@/pages/types"; // Adjust import path as needed
+import { Startup, Founder } from "@/types"; // Adjust import path as needed
 
 interface CreateStartupProps {
   startupData?: Startup; // Optional prop to receive startup data for editing
