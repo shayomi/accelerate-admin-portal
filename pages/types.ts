@@ -1,4 +1,5 @@
-// types.ts
+import React from "react";
+
 
 export type Founder = {
     name: string;
