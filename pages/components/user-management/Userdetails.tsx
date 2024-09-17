@@ -33,6 +33,11 @@ interface UserDetailsProps {
 }
 
 const Userdetails: React.FC<UserDetailsProps> = ({ user }) => {
+  // If the user object is not available, return null or a loading state
+  if (!user) {
+    return <div>Loading...</div>; // or return null; to render nothing
+  }
+
   return (
     <Fragment>
       <Seo title={"User Management"} />
@@ -47,7 +52,7 @@ const Userdetails: React.FC<UserDetailsProps> = ({ user }) => {
           {/* Top Row */}
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-xl font-bold text-gray-800 hs-dark-mode-active:text-white">
-              {user.firstName}  {user.lastName}
+              {user.firstName} {user.lastName}
             </h1>
             <div className="flex items-center space-x-4">
               <p className="text-sm text-gray-600">
@@ -149,8 +154,7 @@ const Userdetails: React.FC<UserDetailsProps> = ({ user }) => {
         {/* Edit User Button */}
         <div className="flex justify-end mt-6">
           <button className="border-[1px] bg-transparent text-primary border-primary py-2 px-4 rounded-md transition">
-          <Link href={`/users/edit/${user.id}`}>edit user</Link>
-          
+            <Link href={`/users/edit/${user.id}`}>edit user</Link>
           </button>
         </div>
       </div>
