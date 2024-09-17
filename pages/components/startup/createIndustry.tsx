@@ -1,5 +1,3 @@
-
-
 import { Industry } from '@/types';
 import React, { useState, useEffect, Fragment } from 'react';
 

@@ -1,5 +1,3 @@
-// pages/industry/[id].tsx (for editing)
-
 import React from 'react';
 import { useRouter } from 'next/router';
 import { IndustriesList } from '@/pages/components/startup/industry';

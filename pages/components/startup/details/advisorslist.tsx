@@ -1,5 +1,6 @@
-const AdvisorsList = () => {
+import React from "react";
 
+const AdvisorsList = () => {
   const advisors = [
     {
       id: 1,

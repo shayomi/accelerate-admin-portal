@@ -1,4 +1,3 @@
-// components/partners/PartnerDetails.tsx
 import React, { useState } from "react";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";

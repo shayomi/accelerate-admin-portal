@@ -1,4 +1,3 @@
-// components/investors/InvestorDetails.tsx
 import React, { Fragment } from "react";
 import Seo from "@/shared/layout-components/seo/seo";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
