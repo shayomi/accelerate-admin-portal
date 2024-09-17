@@ -1,6 +1,4 @@
- // Adjust the path as needed
-
-import { Startup } from "@/pages/types";
+import { Startup } from "@/types";
 
 export const StartupsList: Startup[] = [
   {

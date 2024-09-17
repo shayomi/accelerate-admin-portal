@@ -5,7 +5,7 @@ import Seo from "@/shared/layout-components/seo/seo";
 import { Startup } from "@/types";
 import StartupHighlight from "./startuphighlight";
 import StartupDescription from "./startupdescription";
-import { Fragment } from "react";
+import React,{ Fragment } from "react";
 import Link from "next/link";
 
 type Props = {
