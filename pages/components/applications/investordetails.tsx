@@ -1,31 +1,31 @@
 // components/investors/InvestorDetails.tsx
-import React, { Fragment } from 'react';
-import Seo from '@/shared/layout-components/seo/seo';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import React, { Fragment } from "react";
+import Seo from "@/shared/layout-components/seo/seo";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
 
 interface Action {
-    date: string;
-    action: string;
+  date: string;
+  action: string;
+}
+
+interface Investor {
+  id: string;
+  name: string;
+  company: string;
+  dateApplied: string;
+  status: string;
+  actions: Action[];
+}
+
+interface InvestorDetailsProps {
+  investor?: Investor; // Allow 'investor' to be undefined
+}
+
+const InvestorDetails: React.FC<InvestorDetailsProps> = ({ investor }) => {
+  // Render a not found message if the investor is not provided
+  if (!investor) {
+    return <p>Investor not found...</p>;
   }
-  
-  interface Investor {
-    id: string;
-    name: string;
-    company: string;
-    dateApplied: string;
-    status: string;
-    actions: Action[];
-  }
-  
-  interface InvestorDetailsProps {
-    investor?: Investor; // Allow 'investor' to be undefined
-  }
-  
-  const InvestorDetails: React.FC<InvestorDetailsProps> = ({ investor }) => {
-    // Render a not found message if the investor is not provided
-    if (!investor) {
-      return <p>Investor not found...</p>;
-    }
 
   return (
     <Fragment>

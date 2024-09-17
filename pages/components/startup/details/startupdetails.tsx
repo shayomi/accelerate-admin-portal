@@ -30,7 +30,9 @@ const StartupDetails = ({ startup }: Props) => {
 
       <div className="flex justify-end mt-4 mb-8">
         <button className="bg-primary text-white rounded-md px-4 py-2">
-          <Link href={`/startup/startups/edit/${startup.id}`}>Edit startup</Link>
+          <Link href={`/startup/startups/edit/${startup.id}`}>
+            Edit startup
+          </Link>
         </button>
       </div>
     </Fragment>

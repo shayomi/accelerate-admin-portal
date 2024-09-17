@@ -1,7 +1,6 @@
 import { Startup } from "@/pages/types";
 import React from "react";
 
-
 type Props = {
   startup: Startup;
 };
@@ -63,7 +62,11 @@ const StartupHighlight: React.FC<Props> = ({ startup }) => {
                   Website:
                 </span>
                 <span className="font-normal text-accent hover:underline hs-dark-mode-active:!text-primary">
-                  <a href={startup.website} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={startup.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {startup.website}
                   </a>
                 </span>

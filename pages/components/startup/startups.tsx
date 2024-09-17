@@ -114,7 +114,11 @@ const Startups = () => {
                       <td>{startup.companyName}</td>
                       <td>{startup.industries}</td>
                       <td>{startup.cohort}</td>
-                      <td>{startup.founders.map((founder) => founder.name).join(", ")}</td>
+                      <td>
+                        {startup.founders
+                          .map((founder) => founder.name)
+                          .join(", ")}
+                      </td>
                       <td
                         className={
                           startup.status === "Active"

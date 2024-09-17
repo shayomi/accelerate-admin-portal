@@ -1,5 +1,5 @@
 const AdvisorsList = () => {
-  // Hardcoded data for advisors
+
   const advisors = [
     {
       id: 1,

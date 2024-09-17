@@ -16,7 +16,10 @@ const StartupDescription: React.FC<Props> = ({ startup }) => {
 
           <div className="h-[18rem] sm:h-[18rem] rounded-lg overflow-hidden">
             <iframe
-              src={startup.pitchDeckLink || "https://www.youtube.com/embed/dQw4w9WgXcQ"} 
+              src={
+                startup.pitchDeckLink ||
+                "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              }
               title="Pitch Presentation"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

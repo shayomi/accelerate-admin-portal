@@ -7,8 +7,6 @@ import React, { Fragment } from "react";
 const Partners = () => {
   return (
     <Fragment>
-     
-
       <div className="">
         <div className="box custom-card">
           <div className="box-header justify-between gap-8">
@@ -167,7 +165,5 @@ const Partners = () => {
     </Fragment>
   );
 };
-
-
 
 export default Partners;

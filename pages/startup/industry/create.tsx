@@ -1,5 +1,3 @@
-// pages/industry/create.tsx
-
 import ManageIndustry from '@/pages/components/startup/createIndustry';
 import { StartupsList } from '@/shared/data/dashboards/startupsdata';
 import React from 'react';

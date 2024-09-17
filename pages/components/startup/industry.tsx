@@ -8,27 +8,27 @@ export const IndustriesList = [
   {
     id: 1,
     name: "Technology",
-    startupIds:[1,2]
+    startupIds: [1, 2],
   },
   {
     id: 2,
     name: "Healthcare",
-    startupIds:[1,2]
+    startupIds: [1, 2],
   },
   {
     id: 3,
     name: "Finance",
-    startupIds:[1,2]
+    startupIds: [1, 2],
   },
   {
     id: 4,
     name: "Real Estate",
-    startupIds:[1,2]
+    startupIds: [1, 2],
   },
   {
     id: 5,
     name: "Education",
-    startupIds:[1,2]
+    startupIds: [1, 2],
   },
 ];
 
@@ -41,7 +41,6 @@ const Industry = () => {
         activepage="Dashboards"
         mainpage="Startups"
       />
-     
 
       <div className="">
         <div className="box custom-card">
@@ -114,11 +113,9 @@ const Industry = () => {
                             </button>
                           </Link>
 
-                          
-                            <button className="text-primary hover:underline">
-                              Delete
-                            </button>
-                          
+                          <button className="text-primary hover:underline">
+                            Delete
+                          </button>
                         </div>
                       </td>
                     </tr>

@@ -10,27 +10,61 @@ interface CreateStartupProps {
 }
 
 const CreateStartup = ({ startupData }: CreateStartupProps) => {
-  const [companyName, setCompanyName] = useState(startupData?.companyName || "");
+  const [companyName, setCompanyName] = useState(
+    startupData?.companyName || ""
+  );
   const [slug, setSlug] = useState(""); // Will be auto-generated
-  const [companyEmail, setCompanyEmail] = useState(startupData?.companyEmail || "");
+  const [companyEmail, setCompanyEmail] = useState(
+    startupData?.companyEmail || ""
+  );
   const [city, setCity] = useState(startupData?.location?.city || "");
   const [country, setCountry] = useState(startupData?.location?.country || "");
   const [website, setWebsite] = useState(startupData?.website || "");
-  const [companySize, setCompanySize] = useState<number | undefined>(startupData?.companySize);
-  const [companyDescription, setCompanyDescription] = useState(startupData?.description || "");
-  const [fundraisingAmount, setFundraisingAmount] = useState<number | undefined>(startupData?.fundraisingAmount);
-  const [valuation, setValuation] = useState<number | undefined>(startupData?.valuation);
-  const [yearFounded, setYearFounded] = useState<number | undefined>(startupData?.founded);
-  const [pitchVideoLink, setPitchVideoLink] = useState(startupData?.pitchVideoLink || "");
-  const [pitchDeckLink, setPitchDeckLink] = useState(startupData?.pitchDeckLink || "");
-  const [calendlyLink, setCalendlyLink] = useState(startupData?.calendlyLink || "");
+  const [companySize, setCompanySize] = useState<number | undefined>(
+    startupData?.companySize
+  );
+  const [companyDescription, setCompanyDescription] = useState(
+    startupData?.description || ""
+  );
+  const [fundraisingAmount, setFundraisingAmount] = useState<
+    number | undefined
+  >(startupData?.fundraisingAmount);
+  const [valuation, setValuation] = useState<number | undefined>(
+    startupData?.valuation
+  );
+  const [yearFounded, setYearFounded] = useState<number | undefined>(
+    startupData?.founded
+  );
+  const [pitchVideoLink, setPitchVideoLink] = useState(
+    startupData?.pitchVideoLink || ""
+  );
+  const [pitchDeckLink, setPitchDeckLink] = useState(
+    startupData?.pitchDeckLink || ""
+  );
+  const [calendlyLink, setCalendlyLink] = useState(
+    startupData?.calendlyLink || ""
+  );
   const [cohort, setCohort] = useState(startupData?.cohort || "");
 
-  const [selectedIndustries, setSelectedIndustries] = useState<string[]>(startupData?.industries || []);
-  const [selectedFounders, setSelectedFounders] = useState<Founder[]>(startupData?.founders || []);
+  const [selectedIndustries, setSelectedIndustries] = useState<string[]>(
+    startupData?.industries || []
+  );
+  const [selectedFounders, setSelectedFounders] = useState<Founder[]>(
+    startupData?.founders || []
+  );
 
-  const industryOptions: string[] = ["Tech", "Finance", "Healthcare", "Education"];
-  const founderOptions: string[] = ["Alice Johnson", "Bob Smith", "Claire Adams", "David Lee"]; // These could be fetched from an API
+  const industryOptions: string[] = [
+    "Tech",
+    "Finance",
+    "Healthcare",
+    "Education",
+  ];
+  const founderOptions: string[] = [
+    "Alice Johnson",
+    "Bob Smith",
+    "Claire Adams",
+    "David Lee",
+  ]; // These could be fetched from an API
 
   // Handle Industry Change
   const handleIndustryChange = (e: ChangeEvent<HTMLSelectElement>): void => {
@@ -43,31 +77,39 @@ const CreateStartup = ({ startupData }: CreateStartupProps) => {
   // Handle Founder Change
   const handleFounderChange = (e: ChangeEvent<HTMLSelectElement>): void => {
     const selectedValue = e.target.value;
-    const founderData: Founder = { // Placeholder for actual founder data
+    const founderData: Founder = {
+      // Placeholder for actual founder data
       name: selectedValue,
       role: "Unknown",
       linkedin: "",
-      image: "https://via.placeholder.com/50"
+      image: "https://via.placeholder.com/50",
     };
-    if (selectedValue && !selectedFounders.some(founder => founder.name === selectedValue)) {
+    if (
+      selectedValue &&
+      !selectedFounders.some((founder) => founder.name === selectedValue)
+    ) {
       setSelectedFounders([...selectedFounders, founderData]);
     }
   };
 
   // Remove a selected industry
   const removeIndustry = (industry: string): void => {
-    setSelectedIndustries(selectedIndustries.filter((item) => item !== industry));
+    setSelectedIndustries(
+      selectedIndustries.filter((item) => item !== industry)
+    );
   };
 
   // Remove a selected founder
   const removeFounder = (founder: Founder): void => {
-    setSelectedFounders(selectedFounders.filter((item) => item.name !== founder.name));
+    setSelectedFounders(
+      selectedFounders.filter((item) => item.name !== founder.name)
+    );
   };
 
   useEffect(() => {
     // Generate slug when company name changes
     if (companyName) {
-      const generatedSlug = companyName.toLowerCase().replace(/\s+/g, '-');
+      const generatedSlug = companyName.toLowerCase().replace(/\s+/g, "-");
       setSlug(generatedSlug);
     }
   }, [companyName]);
@@ -75,14 +117,21 @@ const CreateStartup = ({ startupData }: CreateStartupProps) => {
   return (
     <Fragment>
       <Seo title={"Startup Management"} />
-      <Pageheader currentpage="Create Startup" activepage="Dashboards" mainpage="Startups" />
+      <Pageheader
+        currentpage="Create Startup"
+        activepage="Dashboards"
+        mainpage="Startups"
+      />
       <div className="">
         <div className="col-span-12">
           <div className="flex flex-row gap-4 justify-end">
             <button type="button" className="ti-btn ti-btn-primary-full">
               Save
             </button>
-            <button type="button" className="ti-btn bg-yellow ti-btn-yellow-full">
+            <button
+              type="button"
+              className="ti-btn bg-yellow ti-btn-yellow-full"
+            >
               Publish
             </button>
           </div>
@@ -94,8 +143,13 @@ const CreateStartup = ({ startupData }: CreateStartupProps) => {
             <div className="col-span-12 mb-4">
               <label className="form-label mt-4">Company Logo</label>
               <div className="border-2 border-dashed bg-[#E3E4E8] hs-dark-mode-active:bg-[#1a1e25] p-6 text-center square-container w-[30%] h-48 flex flex-col gap-4 items-center mx-auto justify-center">
-                <p className="mb-2">Drag & drop your image here or click to upload</p>
-                <input type="file" className="form-control flex justify-center" />
+                <p className="mb-2">
+                  Drag & drop your image here or click to upload
+                </p>
+                <input
+                  type="file"
+                  className="form-control flex justify-center"
+                />
               </div>
             </div>
 
@@ -123,7 +177,13 @@ const CreateStartup = ({ startupData }: CreateStartupProps) => {
                   value={slug}
                   readOnly
                 />
-                <button type="button" className="ti-btn ti-btn-light" onClick={() => setSlug(companyName.toLowerCase().replace(/\s+/g, '-'))}>
+                <button
+                  type="button"
+                  className="ti-btn ti-btn-light"
+                  onClick={() =>
+                    setSlug(companyName.toLowerCase().replace(/\s+/g, "-"))
+                  }
+                >
                   Refresh
                 </button>
               </div>
@@ -300,7 +360,11 @@ const CreateStartup = ({ startupData }: CreateStartupProps) => {
                 {selectedIndustries.map((industry) => (
                   <li key={industry} className="flex justify-between">
                     {industry}
-                    <button type="button" onClick={() => removeIndustry(industry)} className="text-red-500">
+                    <button
+                      type="button"
+                      onClick={() => removeIndustry(industry)}
+                      className="text-red-500"
+                    >
                       Remove
                     </button>
                   </li>
@@ -323,7 +387,11 @@ const CreateStartup = ({ startupData }: CreateStartupProps) => {
                 {selectedFounders.map((founder) => (
                   <li key={founder.name} className="flex justify-between">
                     {founder.name}
-                    <button type="button" onClick={() => removeFounder(founder)} className="text-red-500">
+                    <button
+                      type="button"
+                      onClick={() => removeFounder(founder)}
+                      className="text-red-500"
+                    >
                       Remove
                     </button>
                   </li>

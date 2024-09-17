@@ -1,7 +1,7 @@
 // components/partners/PartnerDetails.tsx
-import React, { useState } from 'react';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
+import React, { useState } from "react";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
 
 interface PartnerDetailsProps {
   partner?: {
@@ -18,7 +18,7 @@ interface PartnerDetailsProps {
 }
 
 const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
-  const [rejectionReason, setRejectionReason] = useState('');
+  const [rejectionReason, setRejectionReason] = useState("");
   const [showRejectReason, setShowRejectReason] = useState(false);
 
   // Handle the case when partner is undefined
@@ -27,7 +27,7 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
   }
 
   const handleApprove = () => {
-    alert('Partner Approved');
+    alert("Partner Approved");
   };
 
   const handleReject = () => {
@@ -41,7 +41,11 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
   return (
     <>
       <Seo title={`${partner.name} - Partner Details`} />
-      <Pageheader currentpage="Partner Detail" activepage="Partners" mainpage="Dashboard" />
+      <Pageheader
+        currentpage="Partner Detail"
+        activepage="Partners"
+        mainpage="Dashboard"
+      />
 
       <div className="bg-white hs-dark-mode-active:bg-[#1a1e25] rounded-md overflow-hidden">
         <div className="box-body !p-0">
@@ -152,12 +156,17 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
 
           {/* Actions */}
           <div className="p-6 border-b dark:border-defaultborder/10 border-dashed">
-            <p className="text-[.9375rem] mb-2 me-6 font-semibold">
-              Actions:
-            </p>
+            <p className="text-[.9375rem] mb-2 me-6 font-semibold">Actions:</p>
             <div className="flex items-center mb-2">
-              <button onClick={handleApprove} className="ti-btn ti-btn-success me-2">Approve</button>
-              <button onClick={handleReject} className="ti-btn ti-btn-danger">Reject</button>
+              <button
+                onClick={handleApprove}
+                className="ti-btn ti-btn-success me-2"
+              >
+                Approve
+              </button>
+              <button onClick={handleReject} className="ti-btn ti-btn-danger">
+                Reject
+              </button>
             </div>
             {showRejectReason && (
               <div className="mt-2">
@@ -167,7 +176,10 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
                   onChange={(e) => setRejectionReason(e.target.value)}
                   className="form-textarea w-full border border-gray-300 rounded-md p-2"
                 ></textarea>
-                <button onClick={handleSubmitRejection} className="ti-btn ti-btn-danger mt-2">
+                <button
+                  onClick={handleSubmitRejection}
+                  className="ti-btn ti-btn-danger mt-2"
+                >
                   Submit Rejection
                 </button>
               </div>

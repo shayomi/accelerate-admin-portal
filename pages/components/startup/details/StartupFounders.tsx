@@ -1,7 +1,6 @@
 import { Founder } from "@/pages/types";
 import React from "react";
 
-
 type Props = {
   founders: Founder[];
 };
@@ -24,7 +23,11 @@ const StartupFounders: React.FC<Props> = ({ founders }) => {
                 <span className="text-sm font-semibold hs-dark-mode-active:text-white">
                   {founder.name}
                 </span>
-                <a href={founder.linkedin} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={founder.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src="/assets/images/linkedin-colored.svg"
                     alt="LinkedIn Logo"
