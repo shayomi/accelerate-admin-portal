@@ -2,30 +2,11 @@ import React, { Fragment, useState } from "react";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import Link from "next/link";
+import { eventsData } from "./eventdata";
 
-const eventsData = [
-  {
-    name: "Tech Conference",
-    date: "2024-09-15",
-    location: "New York",
-    status: "Upcoming",
-    registrations: 150,
-  },
-  {
-    name: "Startup Summit",
-    date: "2024-08-30",
-    location: "San Francisco",
-    status: "Ongoing",
-    registrations: 300,
-  },
-  {
-    name: "Developer Meetup",
-    date: "2024-07-20",
-    location: "Chicago",
-    status: "Past",
-    registrations: 120,
-  },
-];
+interface EventDetailProps {
+  event: Event;
+}
 
 const Events = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -107,7 +88,7 @@ const Events = () => {
                 {filteredEvents.map((event, index) => (
                   <tr key={index} className="border-b">
                     <td className="p-2">{event.name}</td>
-                    <td className="p-2">{event.date}</td>
+                    <td className="p-2">{event.dateTime}</td>
                     <td className="p-2">{event.location}</td>
                     <td className="p-2">
                       <span
@@ -122,7 +103,7 @@ const Events = () => {
                         {event.status}
                       </span>
                     </td>
-                    <td className="p-2">{event.registrations}</td>
+                    <td className="p-2">{event.maxAttendees}</td>
                     <td className="p-2 flex flex-row gap-4">
                       <button className="border-[1px] border-primary hs-dark-mode-active:bg-[#ffffff] hs-dark-mode-active:border-none text-primary bg-transparent px-3 py-1.5 rounded-md">
                         View
