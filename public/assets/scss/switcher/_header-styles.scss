@@ -1,7 +1,6 @@
 /* Start Header Styles */
-[data-header-styles="dark"] {
+[data-header-styles='dark'] {
   .app-header {
-
     --header-prime-color: 255 255 255;
     @apply bg-[#111c43] border-white/10;
 
@@ -30,7 +29,7 @@
       .ti-dropdown-toggle {
         @apply bg-transparent hover:bg-transparent border-transparent focus:ring-offset-transparent #{!important};
         img {
-          @apply hover:bg-black/10
+          @apply hover:bg-black/10;
         }
       }
     }
@@ -88,7 +87,6 @@
     @media (min-width: 992px) {
       .horizontal-logo {
         .header-logo {
-
           .desktop-logo,
           .desktop-dark {
             @apply hidden #{!important};
@@ -103,7 +101,7 @@
   }
 }
 
-[data-header-styles="color"] {
+[data-header-styles='color'] {
   .app-header {
     --header-prime-color: 255 255 255 0.1;
     @apply bg-primary border-white/20 #{!important};
@@ -182,7 +180,6 @@
     @media (min-width: 992px) {
       .horizontal-logo {
         .header-logo {
-
           .desktop-logo,
           .desktop-dark {
             @apply hidden #{!important};
@@ -198,7 +195,6 @@
     @media (max-width: 991.98px) {
       .horizontal-logo {
         .header-logo {
-
           .toggle-logo,
           .desktop-white {
             @apply hidden;
@@ -213,7 +209,7 @@
   }
 }
 
-[data-header-styles="gradient"] {
+[data-header-styles='gradient'] {
   .app-header {
     --header-prime-color: 255 255 255;
     @apply bg-gradient-to-r from-primary to-secondary border-white/20 before:absolute before:h-full before:w-full before:inset-0 before:-z-[1] #{!important};
@@ -292,7 +288,6 @@
     @media (min-width: 992px) {
       .horizontal-logo {
         .header-logo {
-
           .desktop-logo,
           .desktop-dark {
             @apply hidden #{!important};
@@ -308,7 +303,6 @@
     @media (max-width: 991.98px) {
       .horizontal-logo {
         .header-logo {
-
           .toggle-logo,
           .desktop-white {
             @apply hidden;
@@ -323,7 +317,7 @@
   }
 }
 
-[data-header-styles="light"] {
+[data-header-styles='light'] {
   .app-header {
     @apply bg-white border-[#f3f3f3] #{!important};
 
@@ -385,7 +379,6 @@
     @media screen and (min-width: 992px) {
       .horizontal-logo {
         .header-logo {
-
           .desktop-white,
           .desktop-dark {
             @apply hidden #{!important};
@@ -400,7 +393,7 @@
   }
 }
 
-[data-header-styles="transparent"] {
+[data-header-styles='transparent'] {
   .app-header {
     @apply bg-bodybg border-b border-black/[0.07] #{!important};
 
@@ -441,7 +434,6 @@
     @media (min-width: 992px) {
       .horizontal-logo {
         .header-logo {
-
           .desktop-dark,
           .desktop-white {
             @apply hidden;
@@ -457,7 +449,6 @@
     @media (max-width: 991.98px) {
       .horizontal-logo {
         .header-logo {
-
           .toggle-dark,
           .desktop-white {
             @apply hidden;
@@ -537,7 +528,6 @@
       @media (min-width: 992px) {
         .horizontal-logo {
           .header-logo {
-
             .desktop-logo,
             .desktop-dark,
             .toggle-logo,

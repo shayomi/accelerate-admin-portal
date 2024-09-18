@@ -1,6 +1,6 @@
-import dynamic from "next/dynamic";
-import { useState, useEffect, useRef } from "react";
-const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+import dynamic from 'next/dynamic';
+import { useState, useEffect, useRef } from 'react';
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 interface Editor1State {
   editorHtml: string;
@@ -22,14 +22,14 @@ const defaultContent = `
 
 const Editor1: React.FC = () => {
   const [editorHtml, setEditorHtml] = useState<string>(defaultContent);
-  const [theme, setTheme] = useState<string>("snow");
+  const [theme, setTheme] = useState<string>('snow');
   const [showToolbar, setShowToolbar] = useState<boolean>(false);
   const quillRef = useRef<any>(null);
 
   const modules = {
     toolbar: [
-      [{ "header": "1" }, { "header": "2" }, { "blockquote": "blockquote" }],
-      ["bold", "italic", "link"],
+      [{ header: '1' }, { header: '2' }, { blockquote: 'blockquote' }],
+      ['bold', 'italic', 'link'],
     ],
     clipboard: {
       matchVisual: false,
@@ -40,12 +40,12 @@ const Editor1: React.FC = () => {
     const quill = quillRef.current;
 
     if (quill) {
-      quill.on("selection-change", handleSelectionChange);
+      quill.on('selection-change', handleSelectionChange);
     }
 
     return () => {
       if (quill) {
-        quill.off("selection-change", handleSelectionChange);
+        quill.off('selection-change', handleSelectionChange);
       }
     };
   }, []);
@@ -66,10 +66,7 @@ const Editor1: React.FC = () => {
         value={editorHtml}
         modules={modules}
       />
-      {showToolbar && (
-        <div className="toolbar">
-        </div>
-      )}
+      {showToolbar && <div className="toolbar"></div>}
     </>
   );
 };

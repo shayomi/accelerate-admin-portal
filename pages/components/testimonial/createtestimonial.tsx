@@ -1,9 +1,9 @@
-import React, { Fragment, useState } from "react";
-import Seo from "@/shared/layout-components/seo/seo";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import React, { Fragment, useState } from 'react';
+import Seo from '@/shared/layout-components/seo/seo';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
 
 const CreateTestimonial = () => {
-  const [embeddedLink, setEmbeddedLink] = useState("");
+  const [embeddedLink, setEmbeddedLink] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,7 +15,7 @@ const CreateTestimonial = () => {
 
   return (
     <Fragment>
-      <Seo title={"Create New Testimonial"} />
+      <Seo title={'Create New Testimonial'} />
       <Pageheader
         currentpage="Create Testimonial"
         activepage="Dashboards"
@@ -56,5 +56,5 @@ const CreateTestimonial = () => {
   );
 };
 
-CreateTestimonial.layout = "Contentlayout";
+CreateTestimonial.layout = 'Contentlayout';
 export default CreateTestimonial;

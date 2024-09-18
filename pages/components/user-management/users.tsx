@@ -1,13 +1,13 @@
-import { Userslists } from "@/shared/data/dashboards/usermanagementdata";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import React, { Fragment } from "react";
+import { Userslists } from '@/shared/data/dashboards/usermanagementdata';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import React, { Fragment } from 'react';
 
 const Users = () => {
   return (
     <Fragment>
-      <Seo title={"User Management"} />
+      <Seo title={'User Management'} />
       <Pageheader
         currentpage="Users List"
         activepage="Dashboards"
@@ -80,9 +80,7 @@ const Users = () => {
                 type="button"
                 className="bg-green text-white px-3 py-1.5 rounded-md"
               >
-                 <Link href="/users/create">
-                  Create New User
-                </Link>
+                <Link href="/users/create">Create New User</Link>
               </button>
             </div>
           </div>
@@ -137,7 +135,7 @@ const Users = () => {
                         <input
                           className="form-check-input"
                           type="checkbox"
-                          defaultChecked={idx.checked === "defaultChecked"}
+                          defaultChecked={idx.checked === 'defaultChecked'}
                           value=""
                           aria-label="..."
                         />
@@ -148,7 +146,7 @@ const Users = () => {
                       <td>{idx.email}</td>
                       <td
                         className={
-                          idx.status === "Active" ? "text-green" : "text-yellow"
+                          idx.status === 'Active' ? 'text-green' : 'text-yellow'
                         }
                       >
                         {idx.status}
@@ -156,9 +154,7 @@ const Users = () => {
 
                       <td>
                         <div className="flex flex-row gap-4 items-center">
-                          <Link
-                            href={`/users/${idx.id}`}
-                          >
+                          <Link href={`/users/${idx.id}`}>
                             <button className="bg-transparent border-[1px] border-primary text-primary  px-3 py-1.5 rounded-md">
                               View
                             </button>
@@ -166,7 +162,6 @@ const Users = () => {
 
                           <button className="bg-[#FFB140] text-black px-3 py-1.5 rounded-md">
                             <Link href={`/users/edit/${idx.id}`}>edit</Link>
-                          
                           </button>
                           <button className="text-primary">Deactivate</button>
                         </div>
@@ -182,7 +177,7 @@ const Users = () => {
       <div className="box-footer">
         <div className="sm:flex items-center">
           <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-            Showing 5 Entries{" "}
+            Showing 5 Entries{' '}
             <i className="bi bi-arrow-right ms-2 font-semibold"></i>
           </div>
           <div className="ms-auto">
@@ -216,6 +211,6 @@ const Users = () => {
     </Fragment>
   );
 };
-Users.layout = "Contentlayout";
+Users.layout = 'Contentlayout';
 
 export default Users;

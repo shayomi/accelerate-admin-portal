@@ -27,10 +27,8 @@ const EditAuthorPage = () => {
     }
   };
 
-  return (
-    <AuthorForm authorData={author} onSubmit={handleEditAuthor} />
-  );
+  return <AuthorForm authorData={author} onSubmit={handleEditAuthor} />;
 };
 
-EditAuthorPage.layout = "Contentlayout";
+EditAuthorPage.layout = 'Contentlayout';
 export default EditAuthorPage;

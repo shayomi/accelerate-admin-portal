@@ -19,20 +19,21 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           babelrc: false,
-          presets: [
-              ['env', { modules: false, targets: { uglify: true } }],
-          ],
+          presets: [['env', { modules: false, targets: { uglify: true } }]],
           plugins: [
-            ['babel-plugin-transform-builtin-classes', {
-              globals: ['Array', 'Error', 'HTMLElement'],
-            }],
+            [
+              'babel-plugin-transform-builtin-classes',
+              {
+                globals: ['Array', 'Error', 'HTMLElement'],
+              },
+            ],
           ],
         },
       },
       {
         test: /\.css$/,
         use: [
-            { loader: 'to-string-loader' },
+          { loader: 'to-string-loader' },
           {
             loader: 'css-loader',
             options: {
@@ -186,4 +187,3 @@ ____SPLIT_HERE____
 
   return getWrapper[type];
 }
-

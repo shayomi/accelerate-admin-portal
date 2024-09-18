@@ -1,27 +1,27 @@
-import React, { Fragment, useState } from "react";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment, useState } from 'react';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
 
 // Sample speaker and events data for the purpose of display
 const speakerData = {
-  name: "John Doe",
-  company: "Tech Innovators Inc.",
-  bio: "John has over 15 years of experience in the tech industry, speaking at major conferences and events worldwide.",
-  linkedin: "https://linkedin.com/in/johndoe",
-  twitter: "https://twitter.com/johndoe",
-  location: "New York, USA",
-  image: "/path/to/image.jpg", // Replace with actual image path
-  events: ["Tech Conference", "Startup Summit", "Developer Meetup"],
+  name: 'John Doe',
+  company: 'Tech Innovators Inc.',
+  bio: 'John has over 15 years of experience in the tech industry, speaking at major conferences and events worldwide.',
+  linkedin: 'https://linkedin.com/in/johndoe',
+  twitter: 'https://twitter.com/johndoe',
+  location: 'New York, USA',
+  image: '/path/to/image.jpg', // Replace with actual image path
+  events: ['Tech Conference', 'Startup Summit', 'Developer Meetup'],
 };
 
 const allEvents = [
-  { id: 1, name: "Tech Conference" },
-  { id: 2, name: "Startup Summit" },
-  { id: 3, name: "Developer Meetup" },
+  { id: 1, name: 'Tech Conference' },
+  { id: 2, name: 'Startup Summit' },
+  { id: 3, name: 'Developer Meetup' },
 ];
 
 const SpeakerDetails = () => {
-  const [selectedEvent, setSelectedEvent] = useState("");
+  const [selectedEvent, setSelectedEvent] = useState('');
   const [speakerEvents, setSpeakerEvents] = useState(speakerData.events);
 
   const handleEventSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -48,7 +48,7 @@ const SpeakerDetails = () => {
                 src={speakerData.image}
                 alt={speakerData.name}
                 className="rounded-md mb-4"
-                style={{ width: "100%", height: "auto" }}
+                style={{ width: '100%', height: 'auto' }}
               />
               <h2 className="text-2xl font-bold mb-2">{speakerData.name}</h2>
               <p className="text-gray-500 mb-2">{speakerData.company}</p>
@@ -94,7 +94,7 @@ const SpeakerDetails = () => {
                       className="text-primary"
                       onClick={() =>
                         setSpeakerEvents(
-                          speakerEvents.filter((e) => e !== event)
+                          speakerEvents.filter((e) => e !== event),
                         )
                       }
                     >
@@ -124,7 +124,7 @@ const SpeakerDetails = () => {
                 onClick={() => {
                   if (selectedEvent && !speakerEvents.includes(selectedEvent)) {
                     setSpeakerEvents([...speakerEvents, selectedEvent]);
-                    setSelectedEvent("");
+                    setSelectedEvent('');
                   }
                 }}
               >
@@ -138,6 +138,6 @@ const SpeakerDetails = () => {
   );
 };
 
-SpeakerDetails.layout = "Contentlayout";
+SpeakerDetails.layout = 'Contentlayout';
 
 export default SpeakerDetails;

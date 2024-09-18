@@ -3,7 +3,6 @@
 // import { eventsData } from "@/pages/components/event/eventdata";
 // import EventDetail from "@/pages/components/event/eventdetail";
 
-
 // const EventDetailPage = () => {
 //   const router = useRouter();
 //   const { id } = router.query;

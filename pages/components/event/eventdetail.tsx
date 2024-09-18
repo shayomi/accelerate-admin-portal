@@ -1,16 +1,16 @@
-import React, { Fragment } from "react";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import EventDetailsTab from "./eventdetailtab";
-import RegistrationsTab from "./registrationstab";
-import SpeakersTab from "./speakertab";
-import AgendaTab from "./agendatab";
+import React, { Fragment } from 'react';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import EventDetailsTab from './eventdetailtab';
+import RegistrationsTab from './registrationstab';
+import SpeakersTab from './speakertab';
+import AgendaTab from './agendatab';
 
 const EventDetail = () => {
   return (
     <Fragment>
-      <Seo title={"Event Management"} />
+      <Seo title={'Event Management'} />
       <Pageheader
         currentpage="Event Details"
         activepage="Dashboard"
@@ -117,5 +117,5 @@ const EventDetail = () => {
   );
 };
 
-EventDetail.layout = "Contentlayout";
+EventDetail.layout = 'Contentlayout';
 export default EventDetail;

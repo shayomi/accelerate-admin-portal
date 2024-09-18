@@ -1,6 +1,5 @@
 module.exports = {
-	
-   plugins: [
+  plugins: [
     'removeDoctype',
     'removeXMLProcInst',
     'removeComments',
@@ -35,26 +34,25 @@ module.exports = {
     'sortDefsChildren',
     'removeTitle',
     'removeDesc',
-	{
-    name: 'addAttributesToSVGElement',
-    params: {
-      attributes: [
-        {
-          viewBox: '0 0 24 24'
-        },
-		{
-          width: '24'
-        },
-		{
-          height: '24'
-        },
-		{
-			xmlns:'http://www.w3.org/2000/svg'
-		}
-		
-      ]
-    }
-  },
-  { name: 'removeAttrs', params: { attrs: '(stroke|fill)' } },
-  ]
-}
+    {
+      name: 'addAttributesToSVGElement',
+      params: {
+        attributes: [
+          {
+            viewBox: '0 0 24 24',
+          },
+          {
+            width: '24',
+          },
+          {
+            height: '24',
+          },
+          {
+            xmlns: 'http://www.w3.org/2000/svg',
+          },
+        ],
+      },
+    },
+    { name: 'removeAttrs', params: { attrs: '(stroke|fill)' } },
+  ],
+};

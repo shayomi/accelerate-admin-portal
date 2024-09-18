@@ -1,15 +1,13 @@
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import React, { Fragment } from "react";
-import { TestimonialList } from "./testimonaildata";
-
-
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import React, { Fragment } from 'react';
+import { TestimonialList } from './testimonaildata';
 
 const Testimonials = () => {
   return (
     <Fragment>
-      <Seo title={"Testimonial Management"} />
+      <Seo title={'Testimonial Management'} />
       <Pageheader
         currentpage="Testimonials List"
         activepage="Dashboards"
@@ -24,8 +22,7 @@ const Testimonials = () => {
               type="button"
               className="bg-green text-white px-3 py-1.5 rounded-md"
             >
-              <Link href="/testimonials/create">  Add New Testimonial</Link>
-            
+              <Link href="/testimonials/create"> Add New Testimonial</Link>
             </button>
           </div>
         </div>
@@ -61,7 +58,7 @@ const Testimonials = () => {
                         href={testimonial.embeddedLink}
                         className="text-primary hover:underline"
                       >
-                        {" "}
+                        {' '}
                         View Testimonial
                       </Link>
                     </td>
@@ -75,7 +72,7 @@ const Testimonials = () => {
                           </button>
                         </Link>
                         <Link href={`/testimonials/edit/${testimonial.id}`}>
-                        <button className="text-primary">Edit</button>
+                          <button className="text-primary">Edit</button>
                         </Link>
                       </div>
                     </td>
@@ -90,7 +87,7 @@ const Testimonials = () => {
       <div className="box-footer">
         <div className="sm:flex items-center">
           <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-            Showing {TestimonialList.length} Entries{" "}
+            Showing {TestimonialList.length} Entries{' '}
             <i className="bi bi-arrow-right ms-2 font-semibold"></i>
           </div>
           <div className="ms-auto">
@@ -125,6 +122,6 @@ const Testimonials = () => {
   );
 };
 
-Testimonials.layout = "Contentlayout";
+Testimonials.layout = 'Contentlayout';
 
 export default Testimonials;

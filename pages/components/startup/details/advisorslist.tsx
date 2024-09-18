@@ -1,27 +1,27 @@
-import React from "react";
+import React from 'react';
 
 const AdvisorsList = () => {
   const advisors = [
     {
       id: 1,
-      name: "Darlene Roberts",
-      imageUrl: "/assets/images/p3.png",
-      skill: "Storytelling",
-      affiliation: "Future Africa",
+      name: 'Darlene Roberts',
+      imageUrl: '/assets/images/p3.png',
+      skill: 'Storytelling',
+      affiliation: 'Future Africa',
     },
     {
       id: 2,
-      name: "John Smith",
-      imageUrl: "/assets/images/p2.png",
-      skill: "Business Strategy",
-      affiliation: "Startup Hub",
+      name: 'John Smith',
+      imageUrl: '/assets/images/p2.png',
+      skill: 'Business Strategy',
+      affiliation: 'Startup Hub',
     },
     {
       id: 3,
-      name: "Emma Thompson",
-      imageUrl: "/assets/images/p1.png",
-      skill: "Marketing",
-      affiliation: "InnovateX",
+      name: 'Emma Thompson',
+      imageUrl: '/assets/images/p1.png',
+      skill: 'Marketing',
+      affiliation: 'InnovateX',
     },
   ];
 

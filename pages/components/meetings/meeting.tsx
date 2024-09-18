@@ -1,15 +1,14 @@
-import React, { Fragment, useState } from "react";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import { meetings } from "./meetingsdata";
-import Link from "next/link";
-
+import React, { Fragment, useState } from 'react';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import { meetings } from './meetingsdata';
+import Link from 'next/link';
 
 const Meeting = () => {
   const [filter, setFilter] = useState({
-    dateRange: "",
-    meetingType: "",
-    status: "",
+    dateRange: '',
+    meetingType: '',
+    status: '',
   });
 
   // Separate handler for input change
@@ -32,7 +31,7 @@ const Meeting = () => {
 
   return (
     <Fragment>
-      <Seo title={"Meeting Management"} />
+      <Seo title={'Meeting Management'} />
       <Pageheader
         currentpage="Meetings List"
         activepage="Dashboards"
@@ -118,18 +117,21 @@ const Meeting = () => {
                       <td>{meeting.type}</td>
                       <td
                         className={
-                          meeting.status === "Scheduled"
-                            ? "text-green"
-                            : meeting.status === "Completed"
-                            ? "text-yellow"
-                            : "text-red"
+                          meeting.status === 'Scheduled'
+                            ? 'text-green'
+                            : meeting.status === 'Completed'
+                              ? 'text-yellow'
+                              : 'text-red'
                         }
                       >
                         {meeting.status}
                       </td>
                       <td>
                         <button className="text-primary hover:underline">
-                          <Link href={`/meeting/${meeting.id}`}> View Details</Link>
+                          <Link href={`/meeting/${meeting.id}`}>
+                            {' '}
+                            View Details
+                          </Link>
                         </button>
                       </td>
                     </tr>
@@ -141,7 +143,7 @@ const Meeting = () => {
         <div className="box-footer">
           <div className="sm:flex items-center">
             <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-              Showing {meetings.length} Entries{" "}
+              Showing {meetings.length} Entries{' '}
               <i className="bi bi-arrow-right ms-2 font-semibold"></i>
             </div>
             <div className="ms-auto">
@@ -177,6 +179,6 @@ const Meeting = () => {
   );
 };
 
-Meeting.layout = "Contentlayout";
+Meeting.layout = 'Contentlayout';
 
 export default Meeting;

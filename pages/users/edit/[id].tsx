@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { Userslists } from '@/shared/data/dashboards/usermanagementdata';
 import CreateUser from '@/pages/components/user-management/CreateUser';
 
-
 const EditUserPage = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -18,6 +17,6 @@ const EditUserPage = () => {
   return <CreateUser user={user} />;
 };
 
-EditUserPage.layout = "Contentlayout"
+EditUserPage.layout = 'Contentlayout';
 
 export default EditUserPage;

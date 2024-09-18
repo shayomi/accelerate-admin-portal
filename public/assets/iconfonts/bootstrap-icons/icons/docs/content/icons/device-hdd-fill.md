@@ -4,5 +4,5 @@ categories:
   - Devices
 tags:
   - drive
-  - "hard drive"
+  - 'hard drive'
 ---

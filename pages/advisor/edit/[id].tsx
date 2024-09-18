@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { AdvisorList } from '@/shared/data/dashboards/advisorsdata';
 import CreateAdvisor from '@/pages/components/advisor/create';
 
-
 const EditAdvisorPage = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -18,6 +17,6 @@ const EditAdvisorPage = () => {
   return <CreateAdvisor advisorData={advisor} />;
 };
 
-EditAdvisorPage.layout = "Contentlayout";
+EditAdvisorPage.layout = 'Contentlayout';
 
 export default EditAdvisorPage;

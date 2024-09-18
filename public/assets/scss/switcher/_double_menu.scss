@@ -1,5 +1,5 @@
 /* Start Double-Menu Styles */
-[data-vertical-style="doublemenu"] {
+[data-vertical-style='doublemenu'] {
   @media screen and (min-width: 992px) {
     .app-sidebar {
       .slide {
@@ -76,10 +76,8 @@
 
           &.side-menu__label1 {
             @apply my-0;
-
           }
         }
-
       }
 
       .simplebar-content-wrapper {
@@ -118,7 +116,6 @@
 
       .main-sidebar-header {
         .header-logo {
-
           .desktop-logo,
           .desktop-dark,
           .desktop-white {
@@ -157,7 +154,6 @@
 
         .main-sidebar-header {
           .header-logo {
-
             .toggle-logo,
             .toggle-white {
               @apply hidden;
@@ -175,7 +171,7 @@
       @apply block #{!important};
     }
 
-    &[data-toggled="double-menu-close"] {
+    &[data-toggled='double-menu-close'] {
       .slide.has-sub .slide-menu.child1 {
         @apply hidden #{!important};
       }
@@ -226,7 +222,7 @@
       @apply ps-20;
     }
 
-    &[data-toggled="double-menu-open"] {
+    &[data-toggled='double-menu-open'] {
       .content {
         @apply ms-[17rem];
       }
@@ -236,7 +232,7 @@
       }
     }
 
-    &[data-toggled="double-menu-close"] {
+    &[data-toggled='double-menu-close'] {
       .content {
         @apply ms-20;
       }

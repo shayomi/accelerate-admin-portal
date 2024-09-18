@@ -1,8 +1,8 @@
-import { InvestorsList } from "@/shared/data/dashboards/applicationdata";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import React, { Fragment } from "react";
+import { InvestorsList } from '@/shared/data/dashboards/applicationdata';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import React, { Fragment } from 'react';
 
 const Investors = () => {
   return (
@@ -140,7 +140,7 @@ const Investors = () => {
           <div className="box-footer">
             <div className="sm:flex items-center">
               <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-                Showing {InvestorsList.length} Entries{" "}
+                Showing {InvestorsList.length} Entries{' '}
                 <i className="bi bi-arrow-right ms-2 font-semibold"></i>
               </div>
               <div className="ms-auto">

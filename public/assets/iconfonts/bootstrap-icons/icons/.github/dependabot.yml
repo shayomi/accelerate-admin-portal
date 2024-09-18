@@ -1,10 +1,10 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: "/"
+    directory: '/'
     schedule:
       interval: monthly
-      time: "12:00"
+      time: '12:00'
       timezone: Europe/Athens
     open-pull-requests-limit: 10
     reviewers:
@@ -12,9 +12,9 @@ updates:
     labels:
       - dependencies
     versioning-strategy: increase
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
       interval: monthly
-      time: "12:00"
+      time: '12:00'
       timezone: Europe/Athens

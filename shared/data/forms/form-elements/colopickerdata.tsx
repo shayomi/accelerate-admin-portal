@@ -1,6 +1,6 @@
-import React, { Component, useState } from "react";
-import { SketchPicker } from "react-color";
-import ColorLensIcon from "@mui/icons-material/ColorLens";
+import React, { Component, useState } from 'react';
+import { SketchPicker } from 'react-color';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
 
 export class SketchExample extends Component {
   state = {
@@ -20,25 +20,29 @@ export class SketchExample extends Component {
     this.setState({ displayColorPicker: false });
   };
 
-  handleChange = (color: { rgb: any; }) => {
+  handleChange = (color: { rgb: any }) => {
     this.setState({ color: color.rgb });
   };
   render() {
-
     return (
       <div>
-        <div className="theme-container1 active ti-btn ti-btn-primary-full" onClick={this.handleClick}>
+        <div
+          className="theme-container1 active ti-btn ti-btn-primary-full"
+          onClick={this.handleClick}
+        >
           <ColorLensIcon />
-
         </div>
-        {this.state.displayColorPicker ? <div >
-          <div onClick={this.handleClose} />
-          <SketchPicker className='mt-3' color={this.state.color} onChange={this.handleChange} />
-        </div> : null}
-
+        {this.state.displayColorPicker ? (
+          <div>
+            <div onClick={this.handleClose} />
+            <SketchPicker
+              className="mt-3"
+              color={this.state.color}
+              onChange={this.handleChange}
+            />
+          </div>
+        ) : null}
       </div>
-
     );
   }
 }
-

@@ -1,13 +1,13 @@
-import { AdvisorList } from "@/shared/data/dashboards/advisorsdata";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import React, { Fragment } from "react";
+import { AdvisorList } from '@/shared/data/dashboards/advisorsdata';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import React, { Fragment } from 'react';
 
 const Advisors = () => {
   return (
     <Fragment>
-      <Seo title={"Advisor Management"} />
+      <Seo title={'Advisor Management'} />
       <Pageheader
         currentpage="Advisors List"
         activepage="Dashboards"
@@ -153,7 +153,7 @@ const Advisors = () => {
       <div className="box-footer">
         <div className="sm:flex items-center">
           <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-            Showing {AdvisorList.length} Entries{" "}
+            Showing {AdvisorList.length} Entries{' '}
             <i className="bi bi-arrow-right ms-2 font-semibold"></i>
           </div>
           <div className="ms-auto">
@@ -187,6 +187,6 @@ const Advisors = () => {
     </Fragment>
   );
 };
-Advisors.layout = "Contentlayout";
+Advisors.layout = 'Contentlayout';
 
 export default Advisors;

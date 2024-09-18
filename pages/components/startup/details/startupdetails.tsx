@@ -1,12 +1,12 @@
-import { GetServerSideProps } from "next";
-import { StartupsList } from "@/shared/data/dashboards/startupsdata";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import { Startup } from "@/types";
-import StartupHighlight from "./startuphighlight";
-import StartupDescription from "./startupdescription";
-import React,{ Fragment } from "react";
-import Link from "next/link";
+import { GetServerSideProps } from 'next';
+import { StartupsList } from '@/shared/data/dashboards/startupsdata';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import { Startup } from '@/types';
+import StartupHighlight from './startuphighlight';
+import StartupDescription from './startupdescription';
+import React, { Fragment } from 'react';
+import Link from 'next/link';
 
 type Props = {
   startup: Startup;
@@ -40,7 +40,7 @@ const StartupDetails = ({ startup }: Props) => {
 };
 
 export const getServerSideProps: GetServerSideProps<Props> = async (
-  context
+  context,
 ) => {
   const { id } = context.params as { id: string };
   const startup = StartupsList.find((startup) => startup.id === id);

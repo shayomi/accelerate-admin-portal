@@ -24,7 +24,8 @@
       }
     }
   }
-  .responsive-chat-close,button.responsive-userinfo-open {
+  .responsive-chat-close,
+  button.responsive-userinfo-open {
     @apply hidden;
   }
   .chat-info {
@@ -34,7 +35,7 @@
     }
     .nav-link {
       @apply rounded-none text-[#8c9097];
-      &.active{
+      &.active {
         @apply bg-primary/10;
       }
     }
@@ -118,9 +119,9 @@
     }
     .shared-files {
       li {
-        @apply mb-1 ;
+        @apply mb-1;
         &:last-child {
-          @apply mb-0 ;
+          @apply mb-0;
         }
       }
       .shared-file-icon i {
@@ -228,7 +229,7 @@
       @apply block;
     }
   }
-  @media (max-width:1400px) {
+  @media (max-width: 1400px) {
     .chat-user-details {
       @apply hidden absolute;
       &.open {
@@ -240,7 +241,7 @@
     }
   }
 }
-@media (max-width:991.98px) {
+@media (max-width: 991.98px) {
   .main-chart-wrapper {
     &.responsive-chat-open {
       .chat-info {
@@ -253,16 +254,22 @@
   }
 }
 @media (max-width: 767.98px) {
-  .main-chart-wrapper .main-chat-area .chat-content .main-chat-msg div .chat-media-image {
+  .main-chart-wrapper
+    .main-chat-area
+    .chat-content
+    .main-chat-msg
+    div
+    .chat-media-image {
     @apply w-[2.5rem] h-[2.5rem];
   }
 }
 @media (max-width: 354px) {
-  .main-chart-wrapper .chat-calls-tab,  .main-chart-wrapper .chat-users-tab {
+  .main-chart-wrapper .chat-calls-tab,
+  .main-chart-wrapper .chat-users-tab {
     @apply max-h-[calc(100vh-22rem)];
   }
 }
-[dir="rtl"] {
+[dir='rtl'] {
   .chat-footer .btn-send {
     @apply rotate-180;
   }
@@ -276,7 +283,7 @@
     }
     .nav-link {
       @apply border-0;
-      i { 
+      i {
         @apply w-[1.875rem] h-[1.875rem] p-[0.4rem] rounded-[50px] bg-light text-defaulttextcolor dark:text-defaulttextcolor/70 inline-flex;
       }
       &:hover {
@@ -284,7 +291,7 @@
       }
       &.active {
         @apply bg-primary/10 relative border-0 text-primary;
-        i { 
+        i {
           @apply bg-primary/10 text-primary before:absolute before:start-[45%] before:end-0 before:bottom-0 before:w-[20%] before:h-[0.175rem] before:bg-primary before:rounded-[50px];
         }
       }

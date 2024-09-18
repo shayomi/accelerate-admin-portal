@@ -1,11 +1,13 @@
-import React from 'react'
-import CreateUser from '../components/user-management/CreateUser'
+import React from 'react';
+import CreateUser from '../components/user-management/CreateUser';
 
 const create = () => {
   return (
-    <div><CreateUser /></div>
-  )
-}
+    <div>
+      <CreateUser />
+    </div>
+  );
+};
 
-create.layout = "Contentlayout"
-export default create
+create.layout = 'Contentlayout';
+export default create;

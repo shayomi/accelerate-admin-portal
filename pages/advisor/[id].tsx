@@ -6,13 +6,15 @@ import Pageheader from '@/shared/layout-components/page-header/pageheader';
 import { AdvisorList } from '@/shared/data/dashboards/advisorsdata';
 import AdvisorDetails from '../components/advisor/advisordetails';
 
-
 const AdvisorDetailPage = () => {
   const router = useRouter();
   const { id } = router.query;
 
   // Check if the id is a string and find the advisor by id
-  const advisor = typeof id === 'string' ? AdvisorList.find((advisor) => advisor.name === id) : undefined;
+  const advisor =
+    typeof id === 'string'
+      ? AdvisorList.find((advisor) => advisor.name === id)
+      : undefined;
 
   if (!advisor) {
     return <div>Advisor not found</div>;
@@ -25,6 +27,6 @@ const AdvisorDetailPage = () => {
   );
 };
 
-AdvisorDetailPage.layout = "Contentlayout"
+AdvisorDetailPage.layout = 'Contentlayout';
 
 export default AdvisorDetailPage;

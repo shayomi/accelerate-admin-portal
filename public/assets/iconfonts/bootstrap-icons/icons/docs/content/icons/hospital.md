@@ -4,5 +4,5 @@ categories:
   - Medical
 tags:
   - health
-  - "emergency room"
+  - 'emergency room'
 ---

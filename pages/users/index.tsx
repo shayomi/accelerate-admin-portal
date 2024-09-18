@@ -1,12 +1,14 @@
-import React from 'react'
-import Users from '../components/user-management/users'
+import React from 'react';
+import Users from '../components/user-management/users';
 
 const index = () => {
   return (
-    <div><Users/></div>
-  )
-}
+    <div>
+      <Users />
+    </div>
+  );
+};
 
-index.layout = "Contentlayout"
+index.layout = 'Contentlayout';
 
-export default index
+export default index;

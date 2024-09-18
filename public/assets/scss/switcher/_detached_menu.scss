@@ -1,5 +1,5 @@
 /* Start Detached-Menu Styles */
-[data-vertical-style="detached"] {
+[data-vertical-style='detached'] {
   @media screen and (min-width: 992px) {
     .app-header {
       @apply z-[50] px-0 shadow-none #{!important};
@@ -10,7 +10,7 @@
     }
 
     .main-header-container {
-      @apply  mx-auto w-[94%];
+      @apply mx-auto w-[94%];
     }
 
     .page {
@@ -18,9 +18,9 @@
     }
 
     .horizontal-logo {
-      @apply block -order-1; 
+      @apply block -order-1;
       img {
-        @apply h-8 leading-8 ;
+        @apply h-8 leading-8;
       }
     }
 
@@ -46,13 +46,12 @@
 
     .horizontal-logo {
       .header-logo {
-
         .desktop-dark,
         .toggle-logo,
         .toggle-dark,
-        .desktop-white,.toggle-white {
+        .desktop-white,
+        .toggle-white {
           @apply hidden;
-
         }
 
         .desktop-logo {
@@ -61,16 +60,15 @@
       }
     }
 
-    [data-header-styles="dark"] {
+    [data-header-styles='dark'] {
       .horizontal-logo {
         .header-logo {
-
           .desktop-logo,
           .toggle-logo,
           .toggle-dark,
-          .desktop-white ,.toggle-white{
+          .desktop-white,
+          .toggle-white {
             @apply hidden #{!important};
-
           }
 
           .desktop-dark {
@@ -83,12 +81,11 @@
     &.dark {
       .horizontal-logo {
         .header-logo {
-
           .desktop-logo,
           .toggle-logo,
-          .toggle-dark,.toggle-white {
+          .toggle-dark,
+          .toggle-white {
             @apply hidden #{!important};
-
           }
 
           .desktop-dark {
@@ -98,8 +95,8 @@
       }
     }
 
-    &[data-toggled="detached-close"] {
-      &:not([icon-overlay="open"]) {
+    &[data-toggled='detached-close'] {
+      &:not([icon-overlay='open']) {
         .app-sidebar {
           @apply w-[5rem];
 
@@ -139,16 +136,15 @@
           }
         }
 
-        [data-header-styles="dark"] {
+        [data-header-styles='dark'] {
           .horizontal-logo {
             .header-logo {
-
               .desktop-logo,
               .toggle-logo,
               .toggle-dark,
-              .desktop-white,.toggle-white {
+              .desktop-white,
+              .toggle-white {
                 @apply hidden #{!important};
-
               }
 
               .desktop-dark {
@@ -162,10 +158,10 @@
           .app-sidebar {
             .main-header {
               .header-logo {
-
                 .toggle-logo,
                 .desktop-logo,
-                .toggle-dark,.toggle-white {
+                .toggle-dark,
+                .toggle-white {
                   @apply hidden;
                 }
 

@@ -4,7 +4,6 @@ about: Report a problem with an icon or our documentation.
 title: ''
 labels: bug
 assignees: ''
-
 ---
 
 Before opening, [search for duplicate or closed issues](https://github.com/twbs/icons/issues?utf8=%E2%9C%93&q=is%3Aissue).

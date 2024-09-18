@@ -1,10 +1,8 @@
-import React from "react";
-import { useRouter } from "next/router";
-import { Partner } from "@/types";
-import { partners } from "@/pages/components/cohort/partnerdata";
-import PartnerDetails from "@/pages/components/cohort/partnerdetails";
-
-
+import React from 'react';
+import { useRouter } from 'next/router';
+import { Partner } from '@/types';
+import { partners } from '@/pages/components/cohort/partnerdata';
+import PartnerDetails from '@/pages/components/cohort/partnerdetails';
 
 const PartnerDetailPage = () => {
   const router = useRouter();
@@ -19,6 +17,6 @@ const PartnerDetailPage = () => {
   return <PartnerDetails partner={partner} />;
 };
 
-PartnerDetailPage.layout = "Contentlayout";
+PartnerDetailPage.layout = 'Contentlayout';
 
 export default PartnerDetailPage;

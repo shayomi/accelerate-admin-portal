@@ -1,11 +1,13 @@
-import React from 'react'
-import Cohorts from '../../components/cohort/cohorts'
+import React from 'react';
+import Cohorts from '../../components/cohort/cohorts';
 
 const index = () => {
   return (
-    <div><Cohorts /></div>
-  )
-}
+    <div>
+      <Cohorts />
+    </div>
+  );
+};
 
-index.layout = "Contentlayout"
-export default index
+index.layout = 'Contentlayout';
+export default index;

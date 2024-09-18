@@ -1,35 +1,35 @@
-"use client";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import React, { Fragment, useState } from "react";
+'use client';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import React, { Fragment, useState } from 'react';
 
 const roles = [
   {
-    title: "Founder",
+    title: 'Founder',
     details:
-      "Start up founders whose startups has been accepted in any cohort of accelerate africa",
+      'Start up founders whose startups has been accepted in any cohort of accelerate africa',
   },
   {
-    title: "Advisors",
+    title: 'Advisors',
     details:
-      "Start up founders whose startups has been accepted in any cohort of accelerate africa",
+      'Start up founders whose startups has been accepted in any cohort of accelerate africa',
   },
   {
-    title: "Venture Partners",
+    title: 'Venture Partners',
     details:
-      "Start up founders whose startups has been accepted in any cohort of accelerate africa",
+      'Start up founders whose startups has been accepted in any cohort of accelerate africa',
   },
   {
-    title: "Investors",
+    title: 'Investors',
     details:
-      "Start up founders whose startups has been accepted in any cohort of accelerate africa",
+      'Start up founders whose startups has been accepted in any cohort of accelerate africa',
   },
 ];
 
 const Roles = () => {
   return (
     <Fragment>
-      <Seo title={"User Management"} />
+      <Seo title={'User Management'} />
       <Pageheader
         currentpage="Roles"
         activepage="Dashboards"
@@ -42,5 +42,5 @@ const Roles = () => {
   );
 };
 
-Roles.layout = "Contentlayout";
+Roles.layout = 'Contentlayout';
 export default Roles;

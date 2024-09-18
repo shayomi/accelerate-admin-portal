@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const DashboardIcon = <i className="bx bx-home side-menu__icon"></i>;
 const UserIcon = <i className="bx bx-user side-menu__icon"></i>;
@@ -69,68 +69,67 @@ const badge4 = (
 
 export const MenuItems: any = [
   {
-    menutitle: "MAIN",
+    menutitle: 'MAIN',
   },
 
   {
     icon: DashboardIcon,
-    title: "Dashboard", // Update title to match the desired link text
-    path: "/dashboard", // Direct path to /dashboard
-    type: "link", // Indicates it's a direct link
+    title: 'Dashboard', // Update title to match the desired link text
+    path: '/dashboard', // Direct path to /dashboard
+    type: 'link', // Indicates it's a direct link
     active: false,
     selected: false,
   },
-  
 
   {
     icon: UserIcon,
-    title: "Users", // Updated title to match the desired link text
-    path: "/users", // Direct path to /users
-    type: "link",
+    title: 'Users', // Updated title to match the desired link text
+    path: '/users', // Direct path to /users
+    type: 'link',
     active: false,
     selected: false,
   },
 
   {
     icon: ApplicationIcon,
-    title: "Application",
-    path: "/application",
-    type: "link",
+    title: 'Application',
+    path: '/application',
+    type: 'link',
     active: false,
-    selected:false
+    selected: false,
   },
 
   {
     icon: StartupIcon,
 
-    title: "Startup",
-    type: "sub",
+    title: 'Startup',
+    type: 'sub',
     active: false,
     children: [
       {
-        path: "/startup/startups",
-        type: "link",
+        path: '/startup/startups',
+        type: 'link',
         active: false,
         selected: false,
-        title: "Startups",
+        title: 'Startups',
       },
       {
-        path: "/startup/industry",
-        type: "link",
+        path: '/startup/industry',
+        type: 'link',
         active: false,
         selected: false,
-        title: "industry",
+        title: 'industry',
       },
     ],
   },
 
   {
     icon: AdvisorIcon,
-    title: "Advisor",
-    path: "/advisor",
-    type: "link",
+    title: 'Advisor',
+    path: '/advisor',
+    type: 'link',
     active: false,
-    selected:false
+    selected: false,
   },
 
   // {
@@ -179,33 +178,33 @@ export const MenuItems: any = [
 
   {
     icon: MeetingsIcon,
-    title: "Meetings",
-    path: "/meeting",
-    type: "link",
+    title: 'Meetings',
+    path: '/meeting',
+    type: 'link',
     active: false,
-    selected:false
+    selected: false,
   },
 
   {
     icon: CohortIcon,
 
-    title: "Cohort",
-    type: "sub",
+    title: 'Cohort',
+    type: 'sub',
     active: false,
     children: [
       {
-        path: "/cohort/cohorts",
-        type: "link",
+        path: '/cohort/cohorts',
+        type: 'link',
         active: false,
         selected: false,
-        title: "Cohort",
+        title: 'Cohort',
       },
       {
-        path: "/cohort/partner",
-        type: "link",
+        path: '/cohort/partner',
+        type: 'link',
         active: false,
         selected: false,
-        title: "Program Partner",
+        title: 'Program Partner',
       },
     ],
   },
@@ -250,103 +249,102 @@ export const MenuItems: any = [
 
   {
     icon: ArticlesIcon,
-    title: "Articles",
-    path: "/articles",
-    type: "link",
+    title: 'Articles',
+    path: '/articles',
+    type: 'link',
     active: false,
-    selected:false
+    selected: false,
   },
 
   {
     icon: AuthorsIcon,
-    title: "Authors",
-    path: "/authors",
-    type: "link",
+    title: 'Authors',
+    path: '/authors',
+    type: 'link',
     active: false,
-    selected:false
+    selected: false,
   },
 
   {
     icon: TestimonialsIcon,
-    title: "Testimonials",
-    path: "/testimonials",
-    type: "link",
+    title: 'Testimonials',
+    path: '/testimonials',
+    type: 'link',
     active: false,
-    selected:false
+    selected: false,
   },
 
   {
     icon: EventsIcon,
-    title: "Events",
-    path: "/events",
-    type: "link",
+    title: 'Events',
+    path: '/events',
+    type: 'link',
     active: false,
-    selected:false
+    selected: false,
   },
-
 
   {
     icon: EventsIcon,
 
-    title: "Events",
-    type: "sub",
+    title: 'Events',
+    type: 'sub',
     active: false,
     children: [
       {
-        path: "/components/event/events",
-        type: "link",
+        path: '/components/event/events',
+        type: 'link',
         active: false,
         selected: false,
-        title: "Events",
+        title: 'Events',
       },
       {
-        path: "/components/event/createEvent",
-        type: "link",
+        path: '/components/event/createEvent',
+        type: 'link',
         active: false,
         selected: false,
-        title: "Create Event",
+        title: 'Create Event',
       },
       {
-        path: "/components/event/editEvent",
-        type: "link",
+        path: '/components/event/editEvent',
+        type: 'link',
         active: false,
         selected: false,
-        title: "Edit Event",
+        title: 'Edit Event',
       },
       {
-        path: "/components/event/eventdetail",
-        type: "link",
+        path: '/components/event/eventdetail',
+        type: 'link',
         active: false,
         selected: false,
-        title: "Event Detail",
+        title: 'Event Detail',
       },
       {
-        path: "/components/event/registration",
-        type: "link",
+        path: '/components/event/registration',
+        type: 'link',
         active: false,
         selected: false,
-        title: "Event Registration",
+        title: 'Event Registration',
       },
       {
-        path: "/components/event/speakers",
-        type: "link",
+        path: '/components/event/speakers',
+        type: 'link',
         active: false,
         selected: false,
-        title: "Speakers",
+        title: 'Speakers',
       },
       {
-        path: "/components/event/createspeaker",
-        type: "link",
+        path: '/components/event/createspeaker',
+        type: 'link',
         active: false,
         selected: false,
-        title: "Create Speaker",
+        title: 'Create Speaker',
       },
       {
-        path: "/components/event/speakerdetails",
-        type: "link",
+        path: '/components/event/speakerdetails',
+        type: 'link',
         active: false,
         selected: false,
-        title: "Speaker Details",
+        title: 'Speaker Details',
       },
     ],
   },

@@ -1,16 +1,18 @@
 // components/meetings/MeetingDetail.tsx
-import React, { Fragment, useState } from "react";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import { Meeting } from "@/types";
+import React, { Fragment, useState } from 'react';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import { Meeting } from '@/types';
 
 interface MeetingDetailProps {
   meeting: Meeting;
 }
 
-const MeetingDetail= ({ meeting }:MeetingDetailProps) => {
-  const [feedback, setFeedback] = useState("");
-  const [submittedFeedback, setSubmittedFeedback] = useState<string | null>(null);
+const MeetingDetail = ({ meeting }: MeetingDetailProps) => {
+  const [feedback, setFeedback] = useState('');
+  const [submittedFeedback, setSubmittedFeedback] = useState<string | null>(
+    null,
+  );
 
   const handleFeedbackChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setFeedback(e.target.value);
@@ -19,7 +21,7 @@ const MeetingDetail= ({ meeting }:MeetingDetailProps) => {
   const handleFeedbackSubmit = () => {
     if (feedback.trim()) {
       setSubmittedFeedback(feedback);
-      setFeedback("");
+      setFeedback('');
     }
   };
 
@@ -35,29 +37,41 @@ const MeetingDetail= ({ meeting }:MeetingDetailProps) => {
       <div className="mx-auto p-6 shadow-sm rounded-lg">
         <div className="flex flex-col md:flex-row md:items-start">
           <div className="flex-shrink-0 mb-6 md:mb-0">
-          
             <img
-              src="/path-to-your-image" 
+              src="/path-to-your-image"
               alt="Meeting"
               className="w-full max-w-sm md:max-w-md h-auto rounded-lg object-cover border-2 border-gray-300"
             />
           </div>
           <div className="md:ml-6">
-            <h1 className="text-4xl font-extrabold text-gray-900 mb-4">{meeting.date}</h1>
-            <p className="text-lg text-gray-700 mb-2"><span className="font-semibold">Time:</span> {meeting.time}</p>
-            <p className="text-lg text-gray-700 mb-2"><span className="font-semibold">Participants:</span> {meeting.participants}</p>
-            <p className="text-lg text-gray-700 mb-4"><span className="font-semibold">Type:</span> {meeting.type}</p>
-            
+            <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
+              {meeting.date}
+            </h1>
+            <p className="text-lg text-gray-700 mb-2">
+              <span className="font-semibold">Time:</span> {meeting.time}
+            </p>
+            <p className="text-lg text-gray-700 mb-2">
+              <span className="font-semibold">Participants:</span>{' '}
+              {meeting.participants}
+            </p>
+            <p className="text-lg text-gray-700 mb-4">
+              <span className="font-semibold">Type:</span> {meeting.type}
+            </p>
+
             {meeting.summary && (
               <div className="mb-6">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-2">Summary</h2>
+                <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+                  Summary
+                </h2>
                 <p className="text-gray-600">{meeting.summary}</p>
               </div>
             )}
-            
+
             {meeting.notes && (
               <div>
-                <h2 className="text-xl font-semibold text-gray-800 mb-2">Notes</h2>
+                <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                  Notes
+                </h2>
                 <p className="text-gray-600">{meeting.notes}</p>
               </div>
             )}
@@ -94,6 +108,6 @@ const MeetingDetail= ({ meeting }:MeetingDetailProps) => {
   );
 };
 
-MeetingDetail.layout = "Contentlayout";
+MeetingDetail.layout = 'Contentlayout';
 
 export default MeetingDetail;

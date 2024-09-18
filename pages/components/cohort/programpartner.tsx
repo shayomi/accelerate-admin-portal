@@ -1,7 +1,7 @@
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Link from "next/link";
-import React, { Fragment } from "react";
-import { partners } from "./partnerdata";
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Link from 'next/link';
+import React, { Fragment } from 'react';
+import { partners } from './partnerdata';
 
 const ProgramPartner = () => {
   return (
@@ -49,9 +49,9 @@ const ProgramPartner = () => {
                     </td>
                     <td
                       className={
-                        partner.status === "Active"
-                          ? "text-green"
-                          : "text-yellow"
+                        partner.status === 'Active'
+                          ? 'text-green'
+                          : 'text-yellow'
                       }
                     >
                       {partner.status}
@@ -59,10 +59,14 @@ const ProgramPartner = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-black/50">
                       <div className="flex gap-4">
                         <button className="bg-transparent border-[1px] border-primary hs-dark-mode-active:bg-white hs-dark-mode-active:border-none  text-primary  px-3 py-1.5 rounded-md">
-                        <Link href={`/cohort/partner/${partner.id}`}>View</Link>
+                          <Link href={`/cohort/partner/${partner.id}`}>
+                            View
+                          </Link>
                         </button>
                         <button className="text-primary hover:underline">
-                        <Link href={`/cohort/partner/edit/${partner.id}`}>Edit</Link>
+                          <Link href={`/cohort/partner/edit/${partner.id}`}>
+                            Edit
+                          </Link>
                         </button>
                       </div>
                     </td>
@@ -75,7 +79,7 @@ const ProgramPartner = () => {
         <div className="box-footer">
           <div className="sm:flex items-center">
             <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-              Showing 5 Entries{" "}
+              Showing 5 Entries{' '}
               <i className="bi bi-arrow-right ms-2 font-semibold"></i>
             </div>
             <div className="ms-auto">
@@ -111,5 +115,5 @@ const ProgramPartner = () => {
   );
 };
 
-ProgramPartner.layout = "Contentlayout";
+ProgramPartner.layout = 'Contentlayout';
 export default ProgramPartner;

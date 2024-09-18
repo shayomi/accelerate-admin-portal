@@ -1,4 +1,4 @@
-[data-nav-layout="horizontal"] {
+[data-nav-layout='horizontal'] {
   @media (min-width: 992px) {
     .simplebar-track.simplebar-horizontal {
       @apply hidden;
@@ -68,12 +68,13 @@
         .desktop-dark,
         .toggle-logo,
         .toggle-dark,
-        .desktop-white,.toggle-white {
+        .desktop-white,
+        .toggle-white {
           @apply hidden;
         }
       }
     }
-    [data-header-styles="dark"] {
+    [data-header-styles='dark'] {
       .horizontal-logo {
         @apply py-[0.85rem] px-0 block;
         .header-logo {
@@ -86,7 +87,8 @@
           .desktop-logo,
           .toggle-logo,
           .toggle-dark,
-          .desktop-white,.toggle-white {
+          .desktop-white,
+          .toggle-white {
             @apply hidden #{!important};
           }
         }
@@ -124,7 +126,7 @@
       }
       .slide.has-sub .slide-menu {
         &.child1 {
-          @apply start-auto p-0 rounded-b-sm shadow-[.063rem_.188rem_.5rem_rgba(0,0,0,0.1)]  dark:shadow-[.063rem_.188rem_.5rem_rgba(255,255,255,0.1)] #{!important} ;
+          @apply start-auto p-0 rounded-b-sm shadow-[.063rem_.188rem_.5rem_rgba(0,0,0,0.1)]  dark:shadow-[.063rem_.188rem_.5rem_rgba(255,255,255,0.1)] #{!important};
         }
         &.child2,
         &.child3 {
@@ -206,12 +208,12 @@
         @apply start-[-3%];
       }
     }
-    &[page-style="classic"] {
+    &[page-style='classic'] {
       .app-sidebar {
         @apply border-b border-b-defaultborder;
       }
     }
-    &[dir="rtl"] {
+    &[dir='rtl'] {
       .main-menu-container {
         .slide-right,
         .slide-left {
@@ -227,7 +229,8 @@
         .toggle-logo,
         .desktop-logo,
         .toggle-logo,
-        .desktop-white,.toggle-white {
+        .desktop-white,
+        .toggle-white {
           @apply hidden;
         }
       }

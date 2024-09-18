@@ -1,7 +1,7 @@
-import { ApexOptions } from "apexcharts";
-import dynamic from "next/dynamic";
-import { Component } from "react";
-const ReactApexChart = dynamic(() => import("react-apexcharts"), {
+import { ApexOptions } from 'apexcharts';
+import dynamic from 'next/dynamic';
+import { Component } from 'react';
+const ReactApexChart = dynamic(() => import('react-apexcharts'), {
   ssr: false,
 });
 
@@ -9,7 +9,7 @@ interface spark3 {
   options?: ApexOptions;
   width?: number;
   height?: string | number;
-  series?: ApexOptions["series"];
+  series?: ApexOptions['series'];
   label?: XAxisAnnotations;
   color?: string | string[] | (string & string[]) | undefined;
   endingShape?: string;
@@ -23,13 +23,13 @@ export class Totalusers extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Value",
+          name: 'Value',
           data: [0, 21, 54, 38, 56, 24, 65],
         },
       ],
       options: {
         chart: {
-          type: "line",
+          type: 'line',
           height: 40,
           width: 120,
           sparkline: {
@@ -41,7 +41,7 @@ export class Totalusers extends Component<{}, spark3> {
             top: 0,
             left: 0,
             blur: 3,
-            color: "#000",
+            color: '#000',
             opacity: 0.1,
           },
           events: {
@@ -65,8 +65,8 @@ export class Totalusers extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "straight",
-          lineCap: "butt",
+          curve: 'straight',
+          lineCap: 'butt',
           colors: undefined,
           width: 1.5,
           dashArray: 0,
@@ -87,7 +87,7 @@ export class Totalusers extends Component<{}, spark3> {
             show: false,
           },
         },
-        colors: ["#23b7e5"],
+        colors: ['#23b7e5'],
       },
     };
   }
@@ -116,13 +116,13 @@ export class Bouncerate extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Value",
+          name: 'Value',
           data: [54, 38, 56, 35, 65, 43, 53, 45, 62, 80, 35, 48],
         },
       ],
       options: {
         chart: {
-          type: "line",
+          type: 'line',
           height: 45,
           sparkline: {
             enabled: true,
@@ -133,7 +133,7 @@ export class Bouncerate extends Component<{}, spark3> {
             top: 0,
             left: 0,
             blur: 1,
-            color: "#fff",
+            color: '#fff',
             opacity: 0.05,
           },
           events: {
@@ -144,8 +144,8 @@ export class Bouncerate extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "butt",
+          curve: 'smooth',
+          lineCap: 'butt',
           colors: undefined,
           width: 2,
           dashArray: 0,
@@ -163,7 +163,7 @@ export class Bouncerate extends Component<{}, spark3> {
             show: false,
           },
         },
-        colors: ["rgba(132, 90, 223, 0.1)"],
+        colors: ['rgba(132, 90, 223, 0.1)'],
         tooltip: {
           enabled: false,
         },
@@ -194,13 +194,13 @@ export class AudienceReport extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Views",
-          type: "column",
+          name: 'Views',
+          type: 'column',
           data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 45, 35],
         },
         {
-          name: "Followers",
-          type: "line",
+          name: 'Followers',
+          type: 'line',
           data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43, 27],
         },
       ],
@@ -214,50 +214,50 @@ export class AudienceReport extends Component<{}, spark3> {
           toolbar: {
             show: false,
           },
-          type: "line",
+          type: 'line',
           height: 250,
         },
         grid: {
-          borderColor: "#f1f1f1",
+          borderColor: '#f1f1f1',
           strokeDashArray: 3,
         },
         labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
+          'Jan',
+          'Feb',
+          'Mar',
+          'Apr',
+          'May',
+          'Jun',
+          'Jul',
+          'Aug',
+          'Sep',
+          'Oct',
+          'Nov',
+          'Dec',
         ],
         dataLabels: {
           enabled: false,
         },
         stroke: {
           width: [1, 1.1],
-          curve: ["straight", "smooth"],
+          curve: ['straight', 'smooth'],
         },
         legend: {
           show: true,
-          position: "top",
+          position: 'top',
         },
         xaxis: {
           axisBorder: {
-            color: "#e9e9e9",
+            color: '#e9e9e9',
           },
         },
         plotOptions: {
           bar: {
-            columnWidth: "20%",
+            columnWidth: '20%',
             borderRadius: 2,
           },
         },
-        colors: ["rgba(132, 90, 223, 1)", "#23b7e5"],
+        colors: ['rgba(132, 90, 223, 1)', '#23b7e5'],
       },
     };
   }
@@ -293,27 +293,27 @@ export class Impressions extends Component<{}, spark3> {
           },
           height: 120,
           width: 100,
-          type: "radialBar",
+          type: 'radialBar',
         },
-        colors: ["#23b7e5"],
+        colors: ['#23b7e5'],
         plotOptions: {
           radialBar: {
             hollow: {
               margin: 0,
-              size: "50%",
-              background: "#fff",
+              size: '50%',
+              background: '#fff',
             },
             dataLabels: {
               name: {
                 offsetY: -10,
-                color: "#4b9bfa",
-                fontSize: "10px",
+                color: '#4b9bfa',
+                fontSize: '10px',
                 show: false,
               },
               value: {
                 offsetY: 5,
-                color: "#4b9bfa",
-                fontSize: "12px",
+                color: '#4b9bfa',
+                fontSize: '12px',
                 show: true,
                 fontWeight: 800,
               },
@@ -321,9 +321,9 @@ export class Impressions extends Component<{}, spark3> {
           },
         },
         stroke: {
-          lineCap: "round",
+          lineCap: 'round',
         },
-        labels: ["Followers"],
+        labels: ['Followers'],
       },
     };
   }
@@ -360,27 +360,27 @@ export class Clicks extends Component<{}, spark3> {
           },
           height: 120,
           width: 100,
-          type: "radialBar",
+          type: 'radialBar',
         },
-        colors: ["#f7b731"],
+        colors: ['#f7b731'],
         plotOptions: {
           radialBar: {
             hollow: {
               margin: 0,
-              size: "50%",
-              background: "#fff",
+              size: '50%',
+              background: '#fff',
             },
             dataLabels: {
               name: {
                 offsetY: -10,
-                color: "#4b9bfa",
-                fontSize: "10px",
+                color: '#4b9bfa',
+                fontSize: '10px',
                 show: false,
               },
               value: {
                 offsetY: 5,
-                color: "#4b9bfa",
-                fontSize: "12px",
+                color: '#4b9bfa',
+                fontSize: '12px',
                 show: true,
                 fontWeight: 800,
               },
@@ -388,9 +388,9 @@ export class Clicks extends Component<{}, spark3> {
           },
         },
         stroke: {
-          lineCap: "round",
+          lineCap: 'round',
         },
-        labels: ["Views"],
+        labels: ['Views'],
       },
     };
   }
@@ -419,10 +419,10 @@ export class UsersByCategory extends Component<{}, spark3> {
     this.state = {
       series: [500, 300, 150, 100], // Example data for founders, advisors, venture partners, investors
       options: {
-        labels: ["Founders", "Advisors", "Venture Partners", "Investors"],
+        labels: ['Founders', 'Advisors', 'Venture Partners', 'Investors'],
         chart: {
           height: 250,
-          type: "donut",
+          type: 'donut',
           events: {
             mounted: (chart) => {
               chart.windowResizeHandler();
@@ -438,9 +438,9 @@ export class UsersByCategory extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "round",
-          colors: ["#fff"],
+          curve: 'smooth',
+          lineCap: 'round',
+          colors: ['#fff'],
           width: 0,
           dashArray: 0,
         },
@@ -448,36 +448,36 @@ export class UsersByCategory extends Component<{}, spark3> {
           pie: {
             expandOnClick: false,
             donut: {
-              size: "80%",
-              background: "transparent",
+              size: '80%',
+              background: 'transparent',
               labels: {
                 show: true,
                 name: {
                   show: true,
-                  fontSize: "20px",
-                  color: "#495057",
+                  fontSize: '20px',
+                  color: '#495057',
                   offsetY: -4,
                 },
                 value: {
                   show: true,
-                  fontSize: "18px",
+                  fontSize: '18px',
                   color: undefined,
                   offsetY: 8,
                   formatter: function (val) {
-                    return val + "%";
+                    return val + '%';
                   },
                 },
                 total: {
                   show: true,
                   showAlways: true,
-                  label: "Total",
-                  fontSize: "22px",
+                  label: 'Total',
+                  fontSize: '22px',
                   fontWeight: 600,
-                  color: "#495057",
+                  color: '#495057',
                   formatter: function (w) {
                     return w.globals.seriesTotals.reduce(
                       (a: any, b: any) => a + b,
-                      0
+                      0,
                     );
                   },
                 },
@@ -486,10 +486,10 @@ export class UsersByCategory extends Component<{}, spark3> {
           },
         },
         colors: [
-          "rgba(132, 90, 223, 1)",
-          "rgba(35, 183, 229, 1)",
-          "rgba(38, 191, 148, 1)",
-          "rgba(245, 184, 73, 1)",
+          'rgba(132, 90, 223, 1)',
+          'rgba(35, 183, 229, 1)',
+          'rgba(38, 191, 148, 1)',
+          'rgba(245, 184, 73, 1)',
         ],
       },
     };
@@ -518,10 +518,10 @@ export class Sessionbydevice extends Component<{}, spark3> {
     this.state = {
       series: [1754, 1234, 878, 270],
       options: {
-        labels: ["Mobile", "Tablet", "Desktop", "Others"],
+        labels: ['Mobile', 'Tablet', 'Desktop', 'Others'],
         chart: {
           height: 250,
-          type: "donut",
+          type: 'donut',
           events: {
             mounted: (chart) => {
               chart.windowResizeHandler();
@@ -537,9 +537,9 @@ export class Sessionbydevice extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "round",
-          colors: ["#fff"],
+          curve: 'smooth',
+          lineCap: 'round',
+          colors: ['#fff'],
           width: 0,
           dashArray: 0,
         },
@@ -547,42 +547,42 @@ export class Sessionbydevice extends Component<{}, spark3> {
           pie: {
             expandOnClick: false,
             donut: {
-              size: "80%",
-              background: "transparent",
+              size: '80%',
+              background: 'transparent',
               labels: {
                 show: true,
                 name: {
                   show: true,
-                  fontSize: "20px",
-                  color: "#495057",
+                  fontSize: '20px',
+                  color: '#495057',
                   offsetY: -4,
                 },
                 value: {
                   show: true,
-                  fontSize: "18px",
+                  fontSize: '18px',
                   color: undefined,
                   offsetY: 8,
                   formatter: function (val) {
-                    return val + "%";
+                    return val + '%';
                   },
                 },
                 total: {
                   show: true,
                   showAlways: true,
-                  label: "Total",
-                  fontSize: "22px",
+                  label: 'Total',
+                  fontSize: '22px',
                   fontWeight: 600,
-                  color: "#495057",
+                  color: '#495057',
                 },
               },
             },
           },
         },
         colors: [
-          "rgba(132, 90, 223, 1)",
-          "rgba(35, 183, 229, 1)",
-          "rgba(38, 191, 148, 1)",
-          "rgba(245, 184, 73, 1)",
+          'rgba(132, 90, 223, 1)',
+          'rgba(35, 183, 229, 1)',
+          'rgba(38, 191, 148, 1)',
+          'rgba(245, 184, 73, 1)',
         ],
       },
     };
@@ -611,14 +611,14 @@ export class Countries extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Session",
+          name: 'Session',
           data: [24, 23, 20, 25, 27, 26, 24, 23, 23, 25, 23, 23],
-          type: "line",
+          type: 'line',
         },
         {
-          name: "Bounce Rate",
+          name: 'Bounce Rate',
           data: [20, 23, 26, 22, 20, 26, 28, 26, 22, 27, 25, 26],
-          type: "bar",
+          type: 'bar',
         },
       ],
       options: {
@@ -637,44 +637,44 @@ export class Countries extends Component<{}, spark3> {
           enabled: false,
         },
         grid: {
-          borderColor: "#f1f1f1",
+          borderColor: '#f1f1f1',
           strokeDashArray: 3,
         },
         legend: {
           show: true,
-          position: "top",
+          position: 'top',
         },
         plotOptions: {
           bar: {
             borderRadius: 5,
-            columnWidth: "40%",
+            columnWidth: '40%',
             dataLabels: {
-              position: "top", // top, center, bottom
+              position: 'top', // top, center, bottom
             },
           },
         },
-        colors: ["rgb(132, 90, 223)", "#ededed"],
+        colors: ['rgb(132, 90, 223)', '#ededed'],
         stroke: {
-          curve: ["smooth", "stepline"],
+          curve: ['smooth', 'stepline'],
           width: [2, 0],
         },
         xaxis: {
           categories: [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
           ],
           axisBorder: {
-            color: "#e9e9e9",
+            color: '#e9e9e9',
           },
         },
       },
@@ -704,14 +704,14 @@ export class Startups extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Value",
+          name: 'Value',
           data: [20, 14, 19, 10, 23, 20, 22, 9, 12],
         },
       ],
       options: {
-        colors: ["rgb(132, 90, 223)"],
+        colors: ['rgb(132, 90, 223)'],
         chart: {
-          type: "line",
+          type: 'line',
           height: 40,
           width: 100,
           sparkline: {
@@ -725,14 +725,14 @@ export class Startups extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "butt",
+          curve: 'smooth',
+          lineCap: 'butt',
           colors: undefined,
           width: 1.5,
           dashArray: 0,
         },
         fill: {
-          type: "gradient",
+          type: 'gradient',
           gradient: {
             opacityFrom: 0.9,
             opacityTo: 0.9,
@@ -783,14 +783,14 @@ export class Investor extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Value",
+          name: 'Value',
           data: [20, 14, 20, 22, 9, 12, 19, 10, 25],
         },
       ],
       options: {
-        colors: ["rgb(35, 183, 229)"],
+        colors: ['rgb(35, 183, 229)'],
         chart: {
-          type: "line",
+          type: 'line',
           height: 40,
           width: 100,
           sparkline: {
@@ -804,14 +804,14 @@ export class Investor extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "butt",
+          curve: 'smooth',
+          lineCap: 'butt',
           colors: undefined,
           width: 1.5,
           dashArray: 0,
         },
         fill: {
-          type: "gradient",
+          type: 'gradient',
           gradient: {
             opacityFrom: 0.9,
             opacityTo: 0.9,
@@ -861,14 +861,14 @@ export class UpcomingMeetings extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Value",
+          name: 'Value',
           data: [20, 20, 22, 9, 12, 14, 19, 10, 25],
         },
       ],
       options: {
-        colors: ["rgb(245, 184, 73)"],
+        colors: ['rgb(245, 184, 73)'],
         chart: {
-          type: "line",
+          type: 'line',
           height: 40,
           width: 100,
           sparkline: {
@@ -882,14 +882,14 @@ export class UpcomingMeetings extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "butt",
+          curve: 'smooth',
+          lineCap: 'butt',
           colors: undefined,
           width: 1.5,
           dashArray: 0,
         },
         fill: {
-          type: "gradient",
+          type: 'gradient',
           gradient: {
             opacityFrom: 0.9,
             opacityTo: 0.9,
@@ -940,14 +940,14 @@ export class ActiveAdvisors extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Value",
+          name: 'Value',
           data: [20, 20, 22, 9, 12, 14, 19, 10, 25],
         },
       ],
       options: {
-        colors: ["rgb(245, 184, 73)"],
+        colors: ['rgb(245, 184, 73)'],
         chart: {
-          type: "line",
+          type: 'line',
           height: 40,
           width: 100,
           sparkline: {
@@ -961,14 +961,14 @@ export class ActiveAdvisors extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "butt",
+          curve: 'smooth',
+          lineCap: 'butt',
           colors: undefined,
           width: 1.5,
           dashArray: 0,
         },
         fill: {
-          type: "gradient",
+          type: 'gradient',
           gradient: {
             opacityFrom: 0.9,
             opacityTo: 0.9,
@@ -1019,26 +1019,26 @@ export class Sessionduration extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "New Users",
+          name: 'New Users',
           data: [32, 15, 63, 51, 36, 62, 99, 42, 78, 76, 32, 120],
         },
         {
-          name: "Sessions",
+          name: 'Sessions',
           data: [56, 58, 38, 50, 64, 45, 55, 32, 15, 63, 51, 136],
         },
         {
-          name: "Avg Session Duration",
+          name: 'Avg Session Duration',
           data: [48, 29, 50, 69, 20, 59, 52, 12, 48, 28, 17, 98],
         },
       ],
       options: {
         chart: {
           height: 385,
-          type: "line",
+          type: 'line',
           toolbar: {
             show: false,
           },
-          background: "none",
+          background: 'none',
           events: {
             mounted: (chart) => {
               chart.windowResizeHandler();
@@ -1046,45 +1046,45 @@ export class Sessionduration extends Component<{}, spark3> {
           },
         },
         grid: {
-          borderColor: "#f2f6f7",
+          borderColor: '#f2f6f7',
         },
-        colors: ["rgb(132, 90, 223)", "#23b7e5", "#f5b849"],
+        colors: ['rgb(132, 90, 223)', '#23b7e5', '#f5b849'],
         dataLabels: {
           enabled: false,
         },
         stroke: {
-          curve: "straight",
+          curve: 'straight',
           width: 3,
         },
         legend: {
           show: true,
-          position: "top",
+          position: 'top',
         },
         xaxis: {
           categories: [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
           ],
           axisBorder: {
             show: false,
-            color: "rgba(119, 119, 142, 0.05)",
+            color: 'rgba(119, 119, 142, 0.05)',
             offsetX: 0,
             offsetY: 0,
           },
           axisTicks: {
             show: false,
-            borderType: "solid",
-            color: "rgba(119, 119, 142, 0.05)",
+            borderType: 'solid',
+            color: 'rgba(119, 119, 142, 0.05)',
             offsetX: 0,
             offsetY: 0,
           },
@@ -1103,7 +1103,7 @@ export class Sessionduration extends Component<{}, spark3> {
         },
         tooltip: {
           x: {
-            format: "dd/MM/yy HH:mm",
+            format: 'dd/MM/yy HH:mm',
           },
         },
       },
@@ -1131,18 +1131,18 @@ export class PlatformEngagement extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Platform Engagement",
+          name: 'Platform Engagement',
           data: [32, 45, 28, 53, 61, 47, 85, 69, 73, 81, 62, 90], // Example engagement data for each month
         },
       ],
       options: {
         chart: {
           height: 300,
-          type: "line",
+          type: 'line',
           toolbar: {
             show: false,
           },
-          background: "none",
+          background: 'none',
           events: {
             mounted: (chart) => {
               chart.windowResizeHandler();
@@ -1150,14 +1150,14 @@ export class PlatformEngagement extends Component<{}, spark3> {
           },
         },
         grid: {
-          borderColor: "#f2f6f7",
+          borderColor: '#f2f6f7',
         },
-        colors: ["rgb(132, 90, 223)"], // Single color for one line
+        colors: ['rgb(132, 90, 223)'], // Single color for one line
         dataLabels: {
           enabled: false,
         },
         stroke: {
-          curve: "straight",
+          curve: 'straight',
           width: 3,
         },
         legend: {
@@ -1165,29 +1165,29 @@ export class PlatformEngagement extends Component<{}, spark3> {
         },
         xaxis: {
           categories: [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
           ],
           axisBorder: {
             show: false,
-            color: "rgba(119, 119, 142, 0.05)",
+            color: 'rgba(119, 119, 142, 0.05)',
             offsetX: 0,
             offsetY: 0,
           },
           axisTicks: {
             show: false,
-            borderType: "solid",
-            color: "rgba(119, 119, 142, 0.05)",
+            borderType: 'solid',
+            color: 'rgba(119, 119, 142, 0.05)',
             offsetX: 0,
             offsetY: 0,
           },
@@ -1206,7 +1206,7 @@ export class PlatformEngagement extends Component<{}, spark3> {
         },
         tooltip: {
           x: {
-            format: "dd/MM/yy HH:mm",
+            format: 'dd/MM/yy HH:mm',
           },
         },
       },
@@ -1230,69 +1230,69 @@ export class PlatformEngagement extends Component<{}, spark3> {
 export const Visitorsbychannel = [
   {
     id: 1,
-    icon: "search-2-line",
-    name: "Organic Search",
-    session: "782",
-    rate: "32.09%",
-    avg: "	0 hrs : 0 mins : 32 secs",
-    goal: "278",
-    pages: "2.9",
-    color: "primary",
+    icon: 'search-2-line',
+    name: 'Organic Search',
+    session: '782',
+    rate: '32.09%',
+    avg: '	0 hrs : 0 mins : 32 secs',
+    goal: '278',
+    pages: '2.9',
+    color: 'primary',
   },
   {
     id: 2,
-    icon: "globe-line ",
-    name: "Direct",
-    session: "882",
-    rate: "39.38%",
-    avg: "0 hrs : 2 mins : 45 secs",
-    goal: "782",
-    pages: "1.5",
-    color: "secondary",
+    icon: 'globe-line ',
+    name: 'Direct',
+    session: '882',
+    rate: '39.38%',
+    avg: '0 hrs : 2 mins : 45 secs',
+    goal: '782',
+    pages: '1.5',
+    color: 'secondary',
   },
   {
     id: 3,
-    icon: "share-forward-line",
-    name: "Referral",
-    session: "322",
-    rate: "22.67%",
-    avg: "0 hrs : 38 mins : 28 secs",
-    goal: "622",
-    pages: "3.2",
-    color: "success",
+    icon: 'share-forward-line',
+    name: 'Referral',
+    session: '322',
+    rate: '22.67%',
+    avg: '0 hrs : 38 mins : 28 secs',
+    goal: '622',
+    pages: '3.2',
+    color: 'success',
   },
   {
     id: 4,
-    icon: "reactjs-line",
-    name: "Social",
-    session: "389",
-    rate: "25.11%",
-    avg: "0 hrs : 12 mins : 89 secs",
-    goal: "142",
-    pages: "1.4",
-    color: "info",
+    icon: 'reactjs-line',
+    name: 'Social',
+    session: '389',
+    rate: '25.11%',
+    avg: '0 hrs : 12 mins : 89 secs',
+    goal: '142',
+    pages: '1.4',
+    color: 'info',
   },
   {
     id: 5,
-    icon: "mail-line",
-    name: "Email",
-    session: "378",
-    rate: "23.79%",
-    avg: "0 hrs : 14 mins : 27 secs",
-    goal: "178",
-    pages: "1.6",
-    color: "warning",
+    icon: 'mail-line',
+    name: 'Email',
+    session: '378',
+    rate: '23.79%',
+    avg: '0 hrs : 14 mins : 27 secs',
+    goal: '178',
+    pages: '1.6',
+    color: 'warning',
   },
   {
     id: 6,
-    icon: "bank-card-line",
-    name: "Paid Search",
-    session: "488",
-    rate: "28.77%",
-    avg: "0 hrs : 16 mins : 28 secs",
-    goal: "578",
-    pages: "2.5",
-    color: "danger",
+    icon: 'bank-card-line',
+    name: 'Paid Search',
+    session: '488',
+    rate: '28.77%',
+    avg: '0 hrs : 16 mins : 28 secs',
+    goal: '578',
+    pages: '2.5',
+    color: 'danger',
   },
 ];
 

@@ -1,7 +1,7 @@
 /* Start IconText-Menu Styles */
-[data-vertical-style="icontext"][data-toggled="icon-text-close"] {
+[data-vertical-style='icontext'][data-toggled='icon-text-close'] {
   @media screen and (min-width: 992px) {
-    &:not([icon-text="open"]) {
+    &:not([icon-text='open']) {
       .app-sidebar {
         @apply w-[9.5rem] #{!important};
         .slide__category,
@@ -26,7 +26,8 @@
           @apply w-[9.5rem] #{!important};
           .header-logo {
             .desktop-logo,
-            .toggle-logo,.toggle-white,
+            .toggle-logo,
+            .toggle-white,
             .desktop-white {
               @apply hidden;
             }
@@ -47,7 +48,8 @@
           .main-sidebar-header {
             .header-logo {
               .toggle-logo,
-              .toggle-dark ,.toggle-white{
+              .toggle-dark,
+              .toggle-white {
                 @apply hidden;
               }
               .desktop-dark {

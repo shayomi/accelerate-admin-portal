@@ -3,23 +3,20 @@ import React, { Fragment, useEffect } from 'react';
 import { Provider } from 'react-redux';
 import Landingswitcher from '../switcher/landingswitcher';
 
-const Landinglayout = ({children}:any) => {
-
+const Landinglayout = ({ children }: any) => {
   useEffect(() => {
-		import("preline");
-
-	}, []);
-
+    import('preline');
+  }, []);
 
   return (
     <Fragment>
-    <Provider store={store}>
+      <Provider store={store}>
         <Landingswitcher />
         {children}
-      <div id="responsive-overlay"></div>
-    </Provider>
-  </Fragment>
-  )
-}
+        <div id="responsive-overlay"></div>
+      </Provider>
+    </Fragment>
+  );
+};
 
-export default Landinglayout
+export default Landinglayout;

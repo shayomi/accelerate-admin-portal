@@ -1,28 +1,28 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
 const registrationData = [
-  { name: "Alice Johnson", email: "alice@example.com", company: "TechCorp" },
-  { name: "Bob Brown", email: "bob@example.com", company: "InnovateInc" },
+  { name: 'Alice Johnson', email: 'alice@example.com', company: 'TechCorp' },
+  { name: 'Bob Brown', email: 'bob@example.com', company: 'InnovateInc' },
   {
-    name: "Charlie Davis",
-    email: "charlie@example.com",
-    company: "CodeMasters",
+    name: 'Charlie Davis',
+    email: 'charlie@example.com',
+    company: 'CodeMasters',
   },
   {
-    name: "Charlie Davis",
-    email: "charlie@example.com",
-    company: "CodeMasters",
+    name: 'Charlie Davis',
+    email: 'charlie@example.com',
+    company: 'CodeMasters',
   },
   {
-    name: "Charlie Davis",
-    email: "charlie@example.com",
-    company: "CodeMasters",
+    name: 'Charlie Davis',
+    email: 'charlie@example.com',
+    company: 'CodeMasters',
   },
   {
-    name: "Charlie Davis",
-    email: "charlie@example.com",
-    company: "CodeMasters",
+    name: 'Charlie Davis',
+    email: 'charlie@example.com',
+    company: 'CodeMasters',
   },
 ];
 
@@ -66,7 +66,7 @@ const RegistrationsTab = () => {
       <div className="box-footer">
         <div className="sm:flex items-center">
           <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-            Showing {registrationData.length} Entries{" "}
+            Showing {registrationData.length} Entries{' '}
             <i className="bi bi-arrow-right ms-2 font-semibold"></i>
           </div>
           <div className="ms-auto">

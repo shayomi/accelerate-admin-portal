@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import React, { useState, ChangeEvent, Fragment } from "react";
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import React, { useState, ChangeEvent, Fragment } from 'react';
 
 type Startup = {
   id: number;
@@ -17,40 +17,40 @@ type Advisor = {
 };
 
 const AdvisorAssignment = () => {
-  const [searchStartups, setSearchStartups] = useState("");
-  const [searchAdvisors, setSearchAdvisors] = useState("");
+  const [searchStartups, setSearchStartups] = useState('');
+  const [searchAdvisors, setSearchAdvisors] = useState('');
   const [selectedAssignments, setSelectedAssignments] = useState<
     { startupId: number; advisorIds: number[] }[]
   >([]);
 
   // Example startup and advisor data
   const startups: Startup[] = [
-    { id: 1, name: "TechCorp", industry: "Technology" },
-    { id: 2, name: "HealthPlus", industry: "Healthcare" },
-    { id: 3, name: "EduStart", industry: "Education" },
+    { id: 1, name: 'TechCorp', industry: 'Technology' },
+    { id: 2, name: 'HealthPlus', industry: 'Healthcare' },
+    { id: 3, name: 'EduStart', industry: 'Education' },
   ];
 
   const advisors: Advisor[] = [
-    { id: 1, name: "Alice Johnson", focusArea: "Corporate Strategy" },
-    { id: 2, name: "Bob Smith", focusArea: "Finance" },
-    { id: 3, name: "Claire Adams", focusArea: "Marketing" },
+    { id: 1, name: 'Alice Johnson', focusArea: 'Corporate Strategy' },
+    { id: 2, name: 'Bob Smith', focusArea: 'Finance' },
+    { id: 3, name: 'Claire Adams', focusArea: 'Marketing' },
   ];
 
   const filteredStartups = startups.filter((startup) =>
-    startup.name.toLowerCase().includes(searchStartups.toLowerCase())
+    startup.name.toLowerCase().includes(searchStartups.toLowerCase()),
   );
   const filteredAdvisors = advisors.filter((advisor) =>
-    advisor.name.toLowerCase().includes(searchAdvisors.toLowerCase())
+    advisor.name.toLowerCase().includes(searchAdvisors.toLowerCase()),
   );
 
   const handleAdvisorToggle = (startupId: number, advisorId: number) => {
     const existingAssignment = selectedAssignments.find(
-      (assignment) => assignment.startupId === startupId
+      (assignment) => assignment.startupId === startupId,
     );
 
     if (existingAssignment) {
       const updatedAdvisorIds = existingAssignment.advisorIds.includes(
-        advisorId
+        advisorId,
       )
         ? existingAssignment.advisorIds.filter((id) => id !== advisorId)
         : [...existingAssignment.advisorIds, advisorId];
@@ -59,8 +59,8 @@ const AdvisorAssignment = () => {
         selectedAssignments.map((assignment) =>
           assignment.startupId === startupId
             ? { ...assignment, advisorIds: updatedAdvisorIds }
-            : assignment
-        )
+            : assignment,
+        ),
       );
     } else {
       setSelectedAssignments([
@@ -72,18 +72,18 @@ const AdvisorAssignment = () => {
 
   const isAdvisorAssigned = (startupId: number, advisorId: number) => {
     const assignment = selectedAssignments.find(
-      (assignment) => assignment.startupId === startupId
+      (assignment) => assignment.startupId === startupId,
     );
     return assignment?.advisorIds.includes(advisorId) || false;
   };
 
   const handleSaveAssignments = () => {
-    console.log("Assignments saved:", selectedAssignments);
+    console.log('Assignments saved:', selectedAssignments);
   };
 
   return (
     <Fragment>
-      <Seo title={"Advisor Management"} />
+      <Seo title={'Advisor Management'} />
       <Pageheader
         currentpage="Advisors Assignment"
         activepage="Dashboards"
@@ -173,6 +173,6 @@ const AdvisorAssignment = () => {
   );
 };
 
-AdvisorAssignment.layout = "Contentlayout";
+AdvisorAssignment.layout = 'Contentlayout';
 
 export default AdvisorAssignment;

@@ -1,9 +1,9 @@
-import React, { useState, useEffect, Fragment } from "react";
-import { useRouter } from "next/router";
-import { Authors } from "@/types";
-import { articlesData } from "../article/articledata";
-import Seo from "@/shared/layout-components/seo/seo";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import React, { useState, useEffect, Fragment } from 'react';
+import { useRouter } from 'next/router';
+import { Authors } from '@/types';
+import { articlesData } from '../article/articledata';
+import Seo from '@/shared/layout-components/seo/seo';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
 
 interface AuthorFormProps {
   authorData?: Authors;
@@ -11,11 +11,11 @@ interface AuthorFormProps {
 }
 
 const AuthorForm = ({ authorData, onSubmit }: AuthorFormProps) => {
-  const [firstName, setFirstName] = useState(authorData?.firstName || "");
-  const [lastName, setLastName] = useState(authorData?.lastName || "");
-  const [profilePic, setProfilePic] = useState(authorData?.profilePic || "");
+  const [firstName, setFirstName] = useState(authorData?.firstName || '');
+  const [lastName, setLastName] = useState(authorData?.lastName || '');
+  const [profilePic, setProfilePic] = useState(authorData?.profilePic || '');
   const [selectedArticles, setSelectedArticles] = useState<number[]>(
-    authorData?.articles.map((article) => article.id) || []
+    authorData?.articles.map((article) => article.id) || [],
   );
 
   const handleArticleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -39,7 +39,7 @@ const AuthorForm = ({ authorData, onSubmit }: AuthorFormProps) => {
       profilePic,
       articles: selectedArticles.map((id) => {
         const article = articlesData.find((article) => article.id === id);
-        return { id, title: article?.title || "Unknown" };
+        return { id, title: article?.title || 'Unknown' };
       }),
     };
 
@@ -48,9 +48,9 @@ const AuthorForm = ({ authorData, onSubmit }: AuthorFormProps) => {
 
   return (
     <Fragment>
-      <Seo title={authorData ? "Edit Author" : "Create Author"} />
+      <Seo title={authorData ? 'Edit Author' : 'Create Author'} />
       <Pageheader
-        currentpage={authorData ? "Edit Author" : "Create Author"}
+        currentpage={authorData ? 'Edit Author' : 'Create Author'}
         activepage="Authors Management"
         mainpage="Authors"
       />
@@ -59,7 +59,10 @@ const AuthorForm = ({ authorData, onSubmit }: AuthorFormProps) => {
         <div className="box-body">
           <form onSubmit={handleSubmit} className="">
             <div className="mb-4">
-              <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="firstName"
+                className="block text-sm font-medium text-gray-700"
+              >
                 First Name
               </label>
               <input
@@ -73,7 +76,10 @@ const AuthorForm = ({ authorData, onSubmit }: AuthorFormProps) => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="lastName"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Last Name
               </label>
               <input
@@ -87,7 +93,10 @@ const AuthorForm = ({ authorData, onSubmit }: AuthorFormProps) => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="profilePic" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="profilePic"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Profile Picture URL
               </label>
               <input
@@ -101,7 +110,10 @@ const AuthorForm = ({ authorData, onSubmit }: AuthorFormProps) => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="articles" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="articles"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Select Articles
               </label>
               <select
@@ -129,8 +141,13 @@ const AuthorForm = ({ authorData, onSubmit }: AuthorFormProps) => {
                 {selectedArticles.map((articleId) => {
                   const article = articlesData.find((a) => a.id === articleId);
                   return (
-                    <div key={articleId} className="flex items-center justify-between p-2 border border-gray-300 rounded-md mb-2">
-                      <span className="text-sm text-gray-700">{article?.title || "Unknown Article"}</span>
+                    <div
+                      key={articleId}
+                      className="flex items-center justify-between p-2 border border-gray-300 rounded-md mb-2"
+                    >
+                      <span className="text-sm text-gray-700">
+                        {article?.title || 'Unknown Article'}
+                      </span>
                       <button
                         type="button"
                         className="text-red-500 text-sm"
@@ -149,7 +166,7 @@ const AuthorForm = ({ authorData, onSubmit }: AuthorFormProps) => {
                 type="submit"
                 className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
               >
-                {authorData ? "Update Author" : "Create Author"}
+                {authorData ? 'Update Author' : 'Create Author'}
               </button>
             </div>
           </form>
@@ -159,5 +176,5 @@ const AuthorForm = ({ authorData, onSubmit }: AuthorFormProps) => {
   );
 };
 
-AuthorForm.layout = "Contentlayout";
+AuthorForm.layout = 'Contentlayout';
 export default AuthorForm;

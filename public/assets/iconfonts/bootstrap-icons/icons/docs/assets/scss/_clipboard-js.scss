@@ -18,16 +18,16 @@
 
 .btn-clipboard {
   position: absolute;
-  top: .75em;
-  right: .5em;
+  top: 0.75em;
+  right: 0.5em;
   z-index: 10;
   display: block;
-  padding: .5em .75em .625em;
+  padding: 0.5em 0.75em 0.625em;
   line-height: 1;
   color: var(--bs-gray-900);
   background-color: var(--bs-gray-100);
   border: 0;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 
   &:hover {
     color: var(--bs-primary);

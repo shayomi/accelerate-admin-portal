@@ -1,5 +1,5 @@
 /* Start Classic-Page Styles */
-[data-page-style="classic"] {
+[data-page-style='classic'] {
   body {
     @apply bg-white dark:bg-bodybg;
   }
@@ -8,11 +8,10 @@
     @apply shadow-none shadow-transparent border;
   }
 
-  &[data-nav-layout="horizontal"]{
-
-      .app-sidebar {
-        @apply border-b border-defaultborder;
-      }
+  &[data-nav-layout='horizontal'] {
+    .app-sidebar {
+      @apply border-b border-defaultborder;
+    }
   }
 
   &.dark {
@@ -22,18 +21,18 @@
     .box {
       @apply shadow-none shadow-transparent border border-defaultborder/10;
     }
-    &[data-width="boxed"] {
+    &[data-width='boxed'] {
       .page {
         @apply bg-bodybg #{!important};
       }
     }
-    &[data-nav-layout="horizontal"]{
-        .app-sidebar {
-          @apply border-b border-defaultborder/10;
-        }
+    &[data-nav-layout='horizontal'] {
+      .app-sidebar {
+        @apply border-b border-defaultborder/10;
+      }
     }
   }
-  &[data-width="boxed"] {
+  &[data-width='boxed'] {
     .page {
       @apply bg-white bg-bodybg #{!important};
     }
@@ -43,7 +42,7 @@
 /* End Classic-Page Styles */
 
 // page styles modern start
-[data-page-style="modern"] {
+[data-page-style='modern'] {
   --light: 255 255 255;
   --custom-white: 243 246 248;
   --default-border: 230 235 241;
@@ -57,7 +56,7 @@
   .box {
     @apply shadow-none bg-[#f3f6f8];
   }
-  &[class="dark"] {
+  &[class='dark'] {
     --light: 20, 20, 20;
     --custom-white: rgb(var(--body-bg));
     .box {
@@ -88,12 +87,11 @@
     @apply shadow-none;
   }
   @media (min-width: 992px) {
-    &[data-menu-styles][data-nav-layout="horizontal"] .app-sidebar {
+    &[data-menu-styles][data-nav-layout='horizontal'] .app-sidebar {
       @apply border-b border-[243,243,243] #{!important};
     }
     &.dark {
-
-      &[data-menu-styles][data-nav-layout="horizontal"] .app-sidebar {
+      &[data-menu-styles][data-nav-layout='horizontal'] .app-sidebar {
         @apply border-white/10 #{!important};
       }
     }

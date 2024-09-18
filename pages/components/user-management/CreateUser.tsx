@@ -1,31 +1,31 @@
-"use client";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import React, { Fragment, useState, useEffect } from "react";
+'use client';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import React, { Fragment, useState, useEffect } from 'react';
 
-const CreateUser = ({ user }:any) => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [role, setRole] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+const CreateUser = ({ user }: any) => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [role, setRole] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   useEffect(() => {
     if (user) {
-      setFirstName(user.firstName || ""); 
-      setLastName(user.lastName || "");
-      setEmail(user.email || "");
-      setRole(user.role || "");
+      setFirstName(user.firstName || '');
+      setLastName(user.lastName || '');
+      setEmail(user.email || '');
+      setRole(user.role || '');
     }
   }, [user]);
 
   return (
     <Fragment>
-      <Seo title={"User Management"} />
+      <Seo title={'User Management'} />
       <Pageheader
-        currentpage={user ? "Edit User" : "Create New User"}
+        currentpage={user ? 'Edit User' : 'Create New User'}
         activepage="Dashboards"
         mainpage="User Management"
       />
@@ -39,7 +39,7 @@ const CreateUser = ({ user }:any) => {
                 className="form-control"
                 placeholder="First name"
                 aria-label="First name"
-                value={firstName} 
+                value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
             </div>
@@ -129,7 +129,7 @@ const CreateUser = ({ user }:any) => {
                 type="submit"
                 className="ti-btn bg-green rounded-sm !mb-0"
               >
-                {user ? "Update User" : "Create User"}
+                {user ? 'Update User' : 'Create User'}
               </button>
             </div>
           </div>
@@ -139,5 +139,5 @@ const CreateUser = ({ user }:any) => {
   );
 };
 
-CreateUser.layout = "Contentlayout";
+CreateUser.layout = 'Contentlayout';
 export default CreateUser;

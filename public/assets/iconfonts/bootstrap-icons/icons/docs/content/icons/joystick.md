@@ -5,5 +5,5 @@ categories:
 tags:
   - gaming
   - game
-  - "video games"
+  - 'video games'
 ---

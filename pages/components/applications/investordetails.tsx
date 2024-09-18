@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
-import Seo from "@/shared/layout-components/seo/seo";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import React, { Fragment } from 'react';
+import Seo from '@/shared/layout-components/seo/seo';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
 
 interface Action {
   date: string;
@@ -28,7 +28,7 @@ const InvestorDetails: React.FC<InvestorDetailsProps> = ({ investor }) => {
 
   return (
     <Fragment>
-      <Seo title={"Investor Details"} />
+      <Seo title={'Investor Details'} />
       <Pageheader
         currentpage="Investor Detail"
         activepage="Investors"

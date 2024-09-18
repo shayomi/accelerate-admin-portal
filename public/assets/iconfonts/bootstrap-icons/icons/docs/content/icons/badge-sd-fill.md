@@ -5,5 +5,5 @@ categories:
 tags:
   - display
   - resolution
-  - "standard definition"
+  - 'standard definition'
 ---

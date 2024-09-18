@@ -46,7 +46,6 @@
 }
 
 .apexcharts-radar-series.apexcharts-plot-series {
-
   polygon,
   line {
     @apply dark:stroke-black/20;
@@ -54,7 +53,6 @@
 }
 
 .apexcharts-pie {
-
   line,
   circle {
     @apply dark:stroke-black/20;
@@ -79,7 +77,6 @@
 }
 
 .apexcharts-text {
-
   title,
   tspan {
     @apply text-gray-500 fill-gray-500;
@@ -93,7 +90,6 @@
 #bubble-3d,
 #heatmap-basic,
 #treemap-basic {
-
   .apexcharts-title-text,
   .apexcharts-subtitle-text {
     @apply rtl:translate-x-56;
@@ -123,7 +119,6 @@
 }
 
 #boxplot-basic {
-
   .apexcharts-series {
     path {
       @apply dark:stroke-white/10;

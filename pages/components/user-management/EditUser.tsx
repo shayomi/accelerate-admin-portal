@@ -1,14 +1,14 @@
-"use client";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import React, { Fragment, useState } from "react";
+'use client';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import React, { Fragment, useState } from 'react';
 
 const EditUser = () => {
-  const [role, setRole] = useState("");
+  const [role, setRole] = useState('');
 
   return (
     <Fragment>
-      <Seo title={"User Management"} />
+      <Seo title={'User Management'} />
       <Pageheader
         currentpage="Edit User"
         activepage="Dashboards"
@@ -114,5 +114,5 @@ const EditUser = () => {
   );
 };
 
-EditUser.layout = "Contentlayout";
+EditUser.layout = 'Contentlayout';
 export default EditUser;

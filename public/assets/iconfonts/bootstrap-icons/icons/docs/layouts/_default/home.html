@@ -4,17 +4,13 @@
     {{ partial "head" . }}
   </head>
   <body id="icons-body">
-    {{ partialCached "skippy" . }}
-    {{ partialCached "navbar" . }}
-    {{ partialCached "home/hero" . }}
+    {{ partialCached "skippy" . }} {{ partialCached "navbar" . }} {{
+    partialCached "home/hero" . }}
 
     <main class="container" id="content">
-      {{ partialCached "icons" . }}
-
-      {{ .Content }}
+      {{ partialCached "icons" . }} {{ .Content }}
     </main>
 
-    {{- partialCached "footer" . }}
-    {{- partialCached "scripts" . "home" }}
+    {{- partialCached "footer" . }} {{- partialCached "scripts" . "home" }}
   </body>
 </html>

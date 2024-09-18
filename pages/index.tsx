@@ -1,25 +1,25 @@
-import { basePath } from "@/next.config";
-import { auth } from "@/shared/firebase/firebaseapi";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { Fragment, useEffect, useState } from "react";
+import { basePath } from '@/next.config';
+import { auth } from '@/shared/firebase/firebaseapi';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React, { Fragment, useEffect, useState } from 'react';
 
 const Firebaselogin = () => {
   useEffect(() => {
-    import("preline");
+    import('preline');
   }, []);
 
   const [passwordshow1, setpasswordshow1] = useState(false);
 
-  const [err, setError] = useState("");
+  const [err, setError] = useState('');
   const [data, setData] = useState({
-    email: "adminnextjs@gmail.com",
-    password: "1234567890",
+    email: 'adminnextjs@gmail.com',
+    password: '1234567890',
   });
   const { email, password } = data;
   const changeHandler = (e: any) => {
     setData({ ...data, [e.target.name]: e.target.value });
-    setError("");
+    setError('');
   };
   const Login = (e: any) => {
     e.preventDefault();
@@ -36,28 +36,28 @@ const Firebaselogin = () => {
 
   const Login1 = (_e: any) => {
     if (
-      data.email == "adminnextjs@gmail.com" &&
-      data.password == "1234567890"
+      data.email == 'adminnextjs@gmail.com' &&
+      data.password == '1234567890'
     ) {
       RouteChange();
     } else {
-      setError("The Auction details did not Match");
+      setError('The Auction details did not Match');
       setData({
-        email: "adminnextjs@gmail.com",
-        password: "1234567890",
+        email: 'adminnextjs@gmail.com',
+        password: '1234567890',
       });
     }
   };
 
   let navigate = useRouter();
   const RouteChange = () => {
-    let path = "/dashboard";
+    let path = '/dashboard';
     navigate.push(path);
   };
 
   let loader = (
     <div role="status">
-      {" "}
+      {' '}
       <svg
         aria-hidden="true"
         className="inline w-4 h-4 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
@@ -65,7 +65,7 @@ const Firebaselogin = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {" "}
+        {' '}
         <path
           d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
           fill="currentColor"
@@ -90,14 +90,14 @@ const Firebaselogin = () => {
                 <Link href="/components/dashboards/crm/">
                   <img
                     src={`${
-                      process.env.NODE_ENV === "production" ? basePath : ""
+                      process.env.NODE_ENV === 'production' ? basePath : ''
                     }/assets/images/brand-logos/desktop-logo.png`}
                     alt="logo"
                     className="desktop-logo"
                   />
                   <img
                     src={`${
-                      process.env.NODE_ENV === "production" ? basePath : ""
+                      process.env.NODE_ENV === 'production' ? basePath : ''
                     }/assets/images/brand-logos/desktop-dark.png`}
                     alt="logo"
                     className="desktop-dark"
@@ -120,7 +120,7 @@ const Firebaselogin = () => {
                     >
                       <img
                         src={`${
-                          process.env.NODE_ENV === "production" ? basePath : ""
+                          process.env.NODE_ENV === 'production' ? basePath : ''
                         }/assets/images/brand-logos/nextjs.png`}
                         alt="user-img"
                         className="avatar avatar-sm w-6 h-6 rounded-full ring-0"
@@ -135,7 +135,7 @@ const Firebaselogin = () => {
                     >
                       <img
                         src={`${
-                          process.env.NODE_ENV === "production" ? basePath : ""
+                          process.env.NODE_ENV === 'production' ? basePath : ''
                         }/assets/images/brand-logos/firbase.png`}
                         alt="user-img"
                         className="avatar avatar-sm w-6 h-6 rounded-full ring-0"
@@ -196,7 +196,7 @@ const Firebaselogin = () => {
                       <div className="input-group">
                         <input
                           name="password"
-                          type={passwordshow1 ? "text" : "password"}
+                          type={passwordshow1 ? 'text' : 'password'}
                           value={password}
                           onChange={changeHandler}
                           className="form-control form-control-lg !rounded-s-md"
@@ -212,7 +212,7 @@ const Firebaselogin = () => {
                         >
                           <i
                             className={`${
-                              passwordshow1 ? "ri-eye-line" : "ri-eye-off-line"
+                              passwordshow1 ? 'ri-eye-line' : 'ri-eye-off-line'
                             } align-middle`}
                           ></i>
                         </button>
@@ -246,7 +246,7 @@ const Firebaselogin = () => {
                   </div>
                   <div className="text-center">
                     <p className="text-[0.75rem] text-[#8c9097] dark:text-white/50 mt-4">
-                      Dont have an account?{" "}
+                      Dont have an account?{' '}
                       <Link href="/signup/" className="text-primary">
                         Sign Up
                       </Link>
@@ -331,7 +331,7 @@ const Firebaselogin = () => {
                       <div className="input-group">
                         <input
                           name="password"
-                          type={passwordshow1 ? "text" : "password"}
+                          type={passwordshow1 ? 'text' : 'password'}
                           value={password}
                           onChange={changeHandler}
                           className="form-control form-control-lg !rounded-s-md"
@@ -347,7 +347,7 @@ const Firebaselogin = () => {
                         >
                           <i
                             className={`${
-                              passwordshow1 ? "ri-eye-line" : "ri-eye-off-line"
+                              passwordshow1 ? 'ri-eye-line' : 'ri-eye-off-line'
                             } align-middle`}
                           ></i>
                         </button>
@@ -381,7 +381,7 @@ const Firebaselogin = () => {
                   </div>
                   <div className="text-center">
                     <p className="text-[0.75rem] text-[#8c9097] dark:text-white/50 mt-4">
-                      Dont have an account?{" "}
+                      Dont have an account?{' '}
                       <Link href="/signup" className="text-primary">
                         Sign Up
                       </Link>

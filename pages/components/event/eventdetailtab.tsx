@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const EventDetailsTab = () => {
   return (
@@ -21,7 +21,7 @@ const EventDetailsTab = () => {
           <h3 className="text-sm font-semibold">Location</h3>
           <p>123 Main St, San Francisco, CA</p>
           <p>
-            Virtual Link:{" "}
+            Virtual Link:{' '}
             <a href="#" className="text-blue underline">
               Zoom Link
             </a>

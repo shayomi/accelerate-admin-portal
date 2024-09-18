@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { StartupsList } from '@/shared/data/dashboards/startupsdata';
 import CreateStartup from '@/pages/components/startup/create';
 
-
 const EditStartupPage = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -19,8 +18,8 @@ const EditStartupPage = () => {
   return <CreateStartup startupData={startup} />;
 };
 
-EditStartupPage.layout = "Contentlayout";
+EditStartupPage.layout = 'Contentlayout';
 
-EditStartupPage.layout = "Contentlayout"
+EditStartupPage.layout = 'Contentlayout';
 
 export default EditStartupPage;

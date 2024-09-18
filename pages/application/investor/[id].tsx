@@ -1,4 +1,3 @@
-
 import InvestorDetails from '@/pages/components/applications/investordetails';
 import { InvestorsList } from '@/shared/data/dashboards/applicationdata';
 import { useRouter } from 'next/router';
@@ -19,5 +18,5 @@ const InvestorDetailPage = () => {
   );
 };
 
-InvestorDetailPage.layout = "Contentlayout"
+InvestorDetailPage.layout = 'Contentlayout';
 export default InvestorDetailPage;

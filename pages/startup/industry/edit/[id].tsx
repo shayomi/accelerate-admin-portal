@@ -4,13 +4,14 @@ import { IndustriesList } from '@/pages/components/startup/industry';
 import { StartupsList } from '@/shared/data/dashboards/startupsdata';
 import ManageIndustry from '@/pages/components/startup/createIndustry';
 
-
 const EditIndustryPage = () => {
   const router = useRouter();
   const { id } = router.query;
 
   // Find the industry by ID
-  const industry = IndustriesList.find((industry) => industry.id === Number(id)) || {
+  const industry = IndustriesList.find(
+    (industry) => industry.id === Number(id),
+  ) || {
     id: Number(id),
     name: '',
     slug: '',
@@ -18,7 +19,7 @@ const EditIndustryPage = () => {
   };
 
   // Extract startup names for the multi-select dropdown
-  const startupOptions = StartupsList.map(startup => startup.companyName);
+  const startupOptions = StartupsList.map((startup) => startup.companyName);
 
   return (
     <div>
@@ -30,6 +31,6 @@ const EditIndustryPage = () => {
   );
 };
 
-EditIndustryPage.layout = "Contentlayout";
+EditIndustryPage.layout = 'Contentlayout';
 
 export default EditIndustryPage;

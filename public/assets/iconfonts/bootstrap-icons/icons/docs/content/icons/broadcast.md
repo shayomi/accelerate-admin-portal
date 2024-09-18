@@ -4,7 +4,7 @@ categories:
   - Communications
 tags:
   - radio
-  - "radio wave"
+  - 'radio wave'
   - amplify
   - wavelength
 ---

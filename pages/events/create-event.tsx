@@ -16,5 +16,5 @@ const CreateEvent = () => {
   );
 };
 
-CreateEvent.layout = "Contentlayout"
+CreateEvent.layout = 'Contentlayout';
 export default CreateEvent;

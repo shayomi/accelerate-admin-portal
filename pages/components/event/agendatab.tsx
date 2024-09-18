@@ -1,14 +1,14 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
 const agendaData = [
-  { session: "Opening Keynote", time: "09:00 AM", speaker: "John Doe" },
-  { session: "Tech Innovations", time: "10:30 AM", speaker: "Jane Smith" },
-  { session: "Panel Discussion", time: "01:00 PM", speaker: "Panelists" },
-  { session: "Panel Discussion", time: "01:00 PM", speaker: "Panelists" },
-  { session: "Panel Discussion", time: "01:00 PM", speaker: "Panelists" },
-  { session: "Panel Discussion", time: "01:00 PM", speaker: "Panelists" },
-  { session: "Panel Discussion", time: "01:00 PM", speaker: "Panelists" },
+  { session: 'Opening Keynote', time: '09:00 AM', speaker: 'John Doe' },
+  { session: 'Tech Innovations', time: '10:30 AM', speaker: 'Jane Smith' },
+  { session: 'Panel Discussion', time: '01:00 PM', speaker: 'Panelists' },
+  { session: 'Panel Discussion', time: '01:00 PM', speaker: 'Panelists' },
+  { session: 'Panel Discussion', time: '01:00 PM', speaker: 'Panelists' },
+  { session: 'Panel Discussion', time: '01:00 PM', speaker: 'Panelists' },
+  { session: 'Panel Discussion', time: '01:00 PM', speaker: 'Panelists' },
 ];
 
 const AgendaTab = () => {
@@ -49,7 +49,7 @@ const AgendaTab = () => {
       <div className="box-footer">
         <div className="sm:flex items-center">
           <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-            Showing {agendaData.length} Entries{" "}
+            Showing {agendaData.length} Entries{' '}
             <i className="bi bi-arrow-right ms-2 font-semibold"></i>
           </div>
           <div className="ms-auto">

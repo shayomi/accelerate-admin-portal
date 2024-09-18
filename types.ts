@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export type Founder = {
   name: string;
@@ -58,20 +58,20 @@ export interface Meeting {
   time: string;
   participants: string;
   type: string;
-  status: string; 
+  status: string;
   summary?: string;
-  notes?: string;  
+  notes?: string;
 }
 
 export interface Cohort {
   id: string;
   name: string;
-  shortName:string;
+  shortName: string;
   startDate: string;
   endDate: string;
   description: string;
   startups: Startup[];
-  schedule: string; 
+  schedule: string;
 }
 
 export interface Partner {
@@ -105,7 +105,7 @@ export type Article = {
   excerpt: string;
   featured: boolean;
   authors: Author[];
-  status:string;
+  status: string;
 };
 
 export interface Authors {
@@ -121,8 +121,8 @@ export interface Authors {
 export interface Speaker {
   id: number;
   name: string;
-  bio?: string; 
-  profilePic?: string; 
+  bio?: string;
+  profilePic?: string;
 }
 
 export interface Event {
@@ -136,10 +136,10 @@ export interface Event {
   bannerImage: string;
   maxAttendees?: string;
   registrationDeadline?: string;
-  agenda?: Array<{ time: string; activity: string }>; 
-  speakers: Speaker[]; 
-  sponsors?: string[]; 
-  relatedCohort?: string; 
-  registrationFields?: string[]; 
-  status: 'draft' | 'published'; 
+  agenda?: Array<{ time: string; activity: string }>;
+  speakers: Speaker[];
+  sponsors?: string[];
+  relatedCohort?: string;
+  registrationFields?: string[];
+  status: 'draft' | 'published';
 }

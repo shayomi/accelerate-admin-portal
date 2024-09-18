@@ -1,7 +1,7 @@
-import React from "react";
-import AdvisorsList from "./advisorslist";
-import StartupFounders from "./StartupFounders";
-import { Startup } from "@/types";
+import React from 'react';
+import AdvisorsList from './advisorslist';
+import StartupFounders from './StartupFounders';
+import { Startup } from '@/types';
 
 type Props = {
   startup: Startup;
@@ -18,7 +18,7 @@ const StartupDescription: React.FC<Props> = ({ startup }) => {
             <iframe
               src={
                 startup.pitchDeckLink ||
-                "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                'https://www.youtube.com/embed/dQw4w9WgXcQ'
               }
               title="Pitch Presentation"
               frameBorder="0"

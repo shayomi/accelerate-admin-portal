@@ -15,6 +15,7 @@ Install [Bootstrap Icons](https://www.npmjs.com/package/bootstrap-icons)—inclu
 npm i bootstrap-icons
 {{< /highlight >}}
 {{< /md >}}
+
   </div>
   <div class="col-md-4">
 {{< md >}}
@@ -23,6 +24,7 @@ npm i bootstrap-icons
 
 <a class="btn btn-outline-primary" href="https://github.com/twbs/icons/releases/latest/">Download latest ZIP</a>
 {{< /md >}}
+
   </div>
   <div class="col-md-4">
 {{< md >}}
@@ -37,6 +39,7 @@ Include the icon fonts stylesheet—in your website `<head>` or via `@import` in
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@{{< param version >}}/font/bootstrap-icons.css");
 {{< /highlight >}}
 {{< /md >}}
+
   </div>
 </div>
 
@@ -64,6 +67,7 @@ Use the SVG sprite to insert any icon through the `<use>` element. Use the icon'
 
 **Heads up!** There's an issue with Chrome where [`<use>` doesn't work across domains](https://bugs.chromium.org/p/chromium/issues/detail?id=470601).
 {{< /md >}}
+
   </div>
   <div class="col-md-8">
 {{< example >}}
@@ -100,6 +104,7 @@ Icon fonts with classes for every icon are also included for Bootstrap Icons. In
 
 Use `font-size` and `color` to change the icon appearance.
 {{< /md >}}
+
   </div>
   <div class="col-md-8">
     {{< example >}}<i class="bi-alarm"></i>{{< /example >}}
@@ -115,6 +120,7 @@ You can also use the SVG within your CSS (**be sure to escape any characters**, 
 
 The `viewBox` attribute is required if you wish to resize icons with `background-size`. Note that the `xmlns` attribute is required.
 {{< /md >}}
+
   </div>
   <div class="col-md-8">
 {{< highlight css >}}
@@ -128,6 +134,7 @@ The `viewBox` attribute is required if you wish to resize icons with `background
 }
 
 {{< /highlight >}}
+
   </div>
 </div>
 
@@ -219,5 +226,6 @@ Known issues include:
 
 Found another issue with SVGs we should note? Please open [an issue]({{< param repo >}}/issues) to share details.
 {{< /md >}}
+
   </div>
 </div>

@@ -3,7 +3,7 @@ title: Git
 categories:
   - Brand
 tags:
-  - "version control"
+  - 'version control'
   - vcs
   - github
   - version

@@ -1,6 +1,6 @@
-import dynamic from "next/dynamic";
-import { Component } from "react";
-const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+import dynamic from 'next/dynamic';
+import { Component } from 'react';
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 const defaultContent = `
   <h4><b class="ql-size-large">Quill Snow</b> is a free, open source <a href="https://github.com/quilljs/quill/" target="_blank">Quill Editor</a> built for the modern web. With its <a href="https://quilljs.com/docs/modules/" target="_blank">modular architecture</a> and expressive API, it is completely customizable to fit any need.</h4>
@@ -31,30 +31,44 @@ interface EditorState {
 class Editor extends Component<EditorProps, EditorState> {
   static modules = {
     toolbar: [
-      [{ "header": "1" }, { "header": "2" }, { "font": [] }],
+      [{ header: '1' }, { header: '2' }, { font: [] }],
       [{ size: [] }],
-      ["bold", "italic", "underline", "strike", "blockquote"],
-      [{ "list": "ordered" }, { "list": "bullet" },
-      { "indent": "-1" }, { "indent": "+1" }],
-      ["link", "image", "video"],
-      ["clean"]
+      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+      [
+        { list: 'ordered' },
+        { list: 'bullet' },
+        { indent: '-1' },
+        { indent: '+1' },
+      ],
+      ['link', 'image', 'video'],
+      ['clean'],
     ],
     clipboard: {
       // toggle to add extra line breaks when pasting HTML:
       matchVisual: false,
-    }
+    },
   };
 
   static formats = [
-    "header", "font", "size",
-    "bold", "italic", "underline", "strike", "blockquote",
-    "list", "bullet", "indent",
-    "link", "image", "video"
+    'header',
+    'font',
+    'size',
+    'bold',
+    'italic',
+    'underline',
+    'strike',
+    'blockquote',
+    'list',
+    'bullet',
+    'indent',
+    'link',
+    'image',
+    'video',
   ];
 
   constructor(props: EditorProps) {
     super(props);
-    this.state = { editorHtml: defaultContent, theme: "snow" };
+    this.state = { editorHtml: defaultContent, theme: 'snow' };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -75,7 +89,7 @@ class Editor extends Component<EditorProps, EditorState> {
           value={this.state.editorHtml}
           modules={Editor.modules}
           formats={Editor.formats}
-          bounds={".app"}
+          bounds={'.app'}
           placeholder={this.props.placeholder || ''}
         />
       </div>

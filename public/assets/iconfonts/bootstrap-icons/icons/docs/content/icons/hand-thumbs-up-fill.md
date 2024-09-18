@@ -6,5 +6,5 @@ tags:
   - hand
   - pointer
   - thumbs-up
-  - "+1"
+  - '+1'
 ---

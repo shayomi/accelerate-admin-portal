@@ -1,5 +1,5 @@
-import { Startup } from "@/types";
-import React from "react";
+import { Startup } from '@/types';
+import React from 'react';
 
 type Props = {
   startup: Startup;
@@ -11,7 +11,7 @@ const StartupHighlight: React.FC<Props> = ({ startup }) => {
       <div className="flex flex-col gap-4">
         <div className="flex flex-col items-center justify-center mx-auto gap-4">
           <img
-            src={startup.companyLogo || "https://via.placeholder.com/250"}
+            src={startup.companyLogo || 'https://via.placeholder.com/250'}
             alt="Startup logo"
             className="w-full max-w-[250px] h-auto object-contain rounded-md"
           />

@@ -14,23 +14,23 @@ import {
   UpcomingMeetings,
   UsersByCategory,
   Visitorsbychannel,
-} from "@/shared/data/dashboards/analyticsdata";
+} from '@/shared/data/dashboards/analyticsdata';
 import {
   Customers,
   Deals,
   Ratio,
   Revenue,
   Revenueanalytics,
-} from "@/shared/data/dashboards/crmdata";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import React, { Fragment } from "react";
+} from '@/shared/data/dashboards/crmdata';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import React, { Fragment } from 'react';
 
 const applications = Array.from({ length: 10 }, (_, i) => ({
   id: i,
   name: `User ${i + 1}`,
-  composition: i % 2 === 0 ? "Founder" : "Advisor",
+  composition: i % 2 === 0 ? 'Founder' : 'Advisor',
   position: `Position ${i + 1}`,
   dateApplied: `${i + 1} days ago`,
 }));
@@ -38,7 +38,7 @@ const applications = Array.from({ length: 10 }, (_, i) => ({
 const Analytics = () => {
   return (
     <Fragment>
-      <Seo title={"Analytics"} />
+      <Seo title={'Analytics'} />
       <Pageheader
         currentpage="Analytics"
         activepage="Dashboards"
@@ -240,9 +240,9 @@ const Analytics = () => {
                           </p>
                           <span
                             className={`badge ${
-                              app.composition === "Founder"
-                                ? "bg-primary/10 !text-primary"
-                                : "bg-secondary/10 !text-secondary"
+                              app.composition === 'Founder'
+                                ? 'bg-primary/10 !text-primary'
+                                : 'bg-secondary/10 !text-secondary'
                             }`}
                           >
                             {app.composition}
@@ -466,6 +466,6 @@ const Analytics = () => {
     </Fragment>
   );
 };
-Analytics.layout = "Contentlayout";
+Analytics.layout = 'Contentlayout';
 
 export default Analytics;

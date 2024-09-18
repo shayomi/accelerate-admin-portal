@@ -1,33 +1,33 @@
-import React, { Fragment } from "react";
-import Link from "next/link";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment } from 'react';
+import Link from 'next/link';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
 
 // Industry data with 5 entries
 export const IndustriesList = [
   {
     id: 1,
-    name: "Technology",
+    name: 'Technology',
     startupIds: [1, 2],
   },
   {
     id: 2,
-    name: "Healthcare",
+    name: 'Healthcare',
     startupIds: [1, 2],
   },
   {
     id: 3,
-    name: "Finance",
+    name: 'Finance',
     startupIds: [1, 2],
   },
   {
     id: 4,
-    name: "Real Estate",
+    name: 'Real Estate',
     startupIds: [1, 2],
   },
   {
     id: 5,
-    name: "Education",
+    name: 'Education',
     startupIds: [1, 2],
   },
 ];
@@ -35,7 +35,7 @@ export const IndustriesList = [
 const Industry = () => {
   return (
     <Fragment>
-      <Seo title={"Startup Management"} />
+      <Seo title={'Startup Management'} />
       <Pageheader
         currentpage="Industry"
         activepage="Dashboards"
@@ -130,6 +130,6 @@ const Industry = () => {
   );
 };
 
-Industry.layout = "Contentlayout";
+Industry.layout = 'Contentlayout';
 
 export default Industry;

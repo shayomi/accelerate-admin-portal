@@ -131,14 +131,14 @@ select.tabulator-page-size {
 }
 .tabulator
   .tabulator-header
-  .tabulator-col.tabulator-sortable[aria-sort="ascending"]
+  .tabulator-col.tabulator-sortable[aria-sort='ascending']
   .tabulator-col-content
   .tabulator-col-sorter {
   @apply text-defaulttextcolor dark:text-defaulttextcolor/70;
 }
 .tabulator
   .tabulator-header
-  .tabulator-col.tabulator-sortable[aria-sort="ascending"]
+  .tabulator-col.tabulator-sortable[aria-sort='ascending']
   .tabulator-col-content
   .tabulator-col-sorter
   .tabulator-arrow {
@@ -146,7 +146,7 @@ select.tabulator-page-size {
 }
 .tabulator
   .tabulator-header
-  .tabulator-col.tabulator-sortable[aria-sort="descending"]
+  .tabulator-col.tabulator-sortable[aria-sort='descending']
   .tabulator-col-content
   .tabulator-col-sorter
   .tabulator-arrow {
@@ -155,9 +155,10 @@ select.tabulator-page-size {
 .tabulator .tabulator-footer .tabulator-page-size {
   @apply block mb-2 w-full sm:inline-block sm:mb-0 sm:w-auto #{!important};
 }
-.sortable-data{
- .choices__list--dropdown .choices__item--selectable,.choices__list[aria-expanded] .choices__item--selectable {
-  @apply px-3 #{!important};
- }
+.sortable-data {
+  .choices__list--dropdown .choices__item--selectable,
+  .choices__list[aria-expanded] .choices__item--selectable {
+    @apply px-3 #{!important};
+  }
 }
 /* End Datatable  Styles */

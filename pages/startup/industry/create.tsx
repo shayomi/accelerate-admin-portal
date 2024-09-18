@@ -4,18 +4,15 @@ import React from 'react';
 
 const CreateIndustryPage = () => {
   // Extract startup names for the multi-select dropdown
-  const startupOptions = StartupsList.map(startup => startup.companyName);
+  const startupOptions = StartupsList.map((startup) => startup.companyName);
 
   return (
     <div>
-      <ManageIndustry
-        startupOptions={startupOptions}
-
-      />
+      <ManageIndustry startupOptions={startupOptions} />
     </div>
   );
 };
 
-CreateIndustryPage.layout = "Contentlayout";
+CreateIndustryPage.layout = 'Contentlayout';
 
 export default CreateIndustryPage;

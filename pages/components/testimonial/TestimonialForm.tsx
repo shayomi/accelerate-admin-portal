@@ -1,7 +1,7 @@
-import React, { useState, useEffect, Fragment } from "react";
-import { useRouter } from "next/router";
-import Seo from "@/shared/layout-components/seo/seo";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import React, { useState, useEffect, Fragment } from 'react';
+import { useRouter } from 'next/router';
+import Seo from '@/shared/layout-components/seo/seo';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
 
 interface TestimonialFormProps {
   testimonialData?: {
@@ -10,13 +10,25 @@ interface TestimonialFormProps {
     testimonial: string;
     embeddedLink: string;
   };
-  onSubmit: (testimonial: { id: number; name: string; testimonial: string; embeddedLink: string }) => void;
+  onSubmit: (testimonial: {
+    id: number;
+    name: string;
+    testimonial: string;
+    embeddedLink: string;
+  }) => void;
 }
 
-const TestimonialForm = ({ testimonialData, onSubmit }: TestimonialFormProps) => {
-  const [name, setName] = useState(testimonialData?.name || "");
-  const [testimonial, setTestimonial] = useState(testimonialData?.testimonial || "");
-  const [embeddedLink, setEmbeddedLink] = useState(testimonialData?.embeddedLink || "");
+const TestimonialForm = ({
+  testimonialData,
+  onSubmit,
+}: TestimonialFormProps) => {
+  const [name, setName] = useState(testimonialData?.name || '');
+  const [testimonial, setTestimonial] = useState(
+    testimonialData?.testimonial || '',
+  );
+  const [embeddedLink, setEmbeddedLink] = useState(
+    testimonialData?.embeddedLink || '',
+  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,9 +45,13 @@ const TestimonialForm = ({ testimonialData, onSubmit }: TestimonialFormProps) =>
 
   return (
     <Fragment>
-      <Seo title={testimonialData ? "Edit Testimonial" : "Create Testimonial"} />
+      <Seo
+        title={testimonialData ? 'Edit Testimonial' : 'Create Testimonial'}
+      />
       <Pageheader
-        currentpage={testimonialData ? "Edit Testimonial" : "Create Testimonial"}
+        currentpage={
+          testimonialData ? 'Edit Testimonial' : 'Create Testimonial'
+        }
         activepage="Testimonials Management"
         mainpage="Testimonials"
       />
@@ -44,7 +60,10 @@ const TestimonialForm = ({ testimonialData, onSubmit }: TestimonialFormProps) =>
         <div className="box-body">
           <form onSubmit={handleSubmit} className="">
             <div className="mb-4">
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Name
               </label>
               <input
@@ -58,7 +77,10 @@ const TestimonialForm = ({ testimonialData, onSubmit }: TestimonialFormProps) =>
             </div>
 
             <div className="mb-4">
-              <label htmlFor="testimonial" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="testimonial"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Testimonial
               </label>
               <textarea
@@ -71,7 +93,10 @@ const TestimonialForm = ({ testimonialData, onSubmit }: TestimonialFormProps) =>
             </div>
 
             <div className="mb-4">
-              <label htmlFor="embeddedLink" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="embeddedLink"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Embedded Link
               </label>
               <input
@@ -89,7 +114,7 @@ const TestimonialForm = ({ testimonialData, onSubmit }: TestimonialFormProps) =>
                 type="submit"
                 className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
               >
-                {testimonialData ? "Update Testimonial" : "Create Testimonial"}
+                {testimonialData ? 'Update Testimonial' : 'Create Testimonial'}
               </button>
             </div>
           </form>
@@ -99,5 +124,5 @@ const TestimonialForm = ({ testimonialData, onSubmit }: TestimonialFormProps) =>
   );
 };
 
-TestimonialForm.layout = "Contentlayout";
+TestimonialForm.layout = 'Contentlayout';
 export default TestimonialForm;

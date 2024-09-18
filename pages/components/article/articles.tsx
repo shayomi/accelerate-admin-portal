@@ -1,11 +1,11 @@
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import React, { Fragment, useState } from "react";
-import { articlesData } from "./articledata";
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import React, { Fragment, useState } from 'react';
+import { articlesData } from './articledata';
 
 const Articles = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
   const [filteredArticles, setFilteredArticles] = useState(articlesData);
 
   // Search and Filter Logic
@@ -18,15 +18,15 @@ const Articles = () => {
           article.title.toLowerCase().includes(query) ||
           article.category.toLowerCase().includes(query) ||
           article.authors.some((author) =>
-            author.name.toLowerCase().includes(query)
-          )
-      )
+            author.name.toLowerCase().includes(query),
+          ),
+      ),
     );
   };
 
   return (
     <Fragment>
-      <Seo title={"Article Management"} />
+      <Seo title={'Article Management'} />
       <Pageheader
         currentpage="Articles"
         activepage="Dashboards"
@@ -116,18 +116,18 @@ const Articles = () => {
                     <td className="px-4 py-2 text-sm">{article.title}</td>
                     <td className="px-4 py-2 text-sm">{article.category}</td>
                     <td className="px-4 py-2 text-sm">
-                      {article.authors.map((author) => author.name).join(", ")}
+                      {article.authors.map((author) => author.name).join(', ')}
                     </td>
                     <td className="px-4 py-2 text-sm">
                       {article.publicationDate}
                     </td>
                     <td
                       className={
-                        article.status === "Published"
-                          ? "text-green"
-                          : article.status === "Draft"
-                          ? "text-yellow"
-                          : "text-red"
+                        article.status === 'Published'
+                          ? 'text-green'
+                          : article.status === 'Draft'
+                            ? 'text-yellow'
+                            : 'text-red'
                       }
                     >
                       {article.status}
@@ -191,5 +191,5 @@ const Articles = () => {
   );
 };
 
-Articles.layout = "Contentlayout";
+Articles.layout = 'Contentlayout';
 export default Articles;

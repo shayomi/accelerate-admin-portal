@@ -5,5 +5,5 @@ categories:
 tags:
   - display
   - resolution
-  - "high definition"
+  - 'high definition'
 ---

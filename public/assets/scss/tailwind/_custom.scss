@@ -19,7 +19,7 @@ html {
   @apply font-inter scroll-smooth text-start;
 }
 html {
-  &[dir="rtl"] {
+  &[dir='rtl'] {
     @apply dir-rtl #{!important};
   }
 }
@@ -82,7 +82,7 @@ code {
   @apply w-[10px] #{!important};
 }
 
-[data-toggled="icon-overlay-close"] {
+[data-toggled='icon-overlay-close'] {
   .content {
     @apply lg:ms-24;
   }
@@ -113,12 +113,12 @@ select {
   }
 }
 h5 {
-  font-size: 1.25rem ;
+  font-size: 1.25rem;
 }
-.ti-img-thumbnail{
+.ti-img-thumbnail {
   @apply p-1 rounded-md border border-defaultborder dark:border-defaultborder/10 max-w-full h-auto dark:bg-bodybg2 mx-auto;
 }
-.ti-img-thumbnail-rounded{
+.ti-img-thumbnail-rounded {
   @apply p-1 rounded-full border border-defaultborder dark:border-defaultborder/10 max-w-full h-auto dark:bg-bodybg2 mx-auto;
 }
 
@@ -182,15 +182,15 @@ h5 {
     @apply max-w-[1320px] mx-auto;
   }
 }
-[class^="ri-"],
-[class*=" ri-"] {
+[class^='ri-'],
+[class*=' ri-'] {
   @apply inline-flex;
   // @apply ml-2;
 }
 :is(.dark .input-group-text) {
   border-color: rgb(var(--default-border) / 0.1);
 }
-[type='time']{
+[type='time'] {
   @apply dark:bg-bodybg  #{!important};
   @apply border-defaultborder dark:border-defaultborder/20 #{!important};
 }
@@ -238,26 +238,26 @@ h5 {
 h4 {
   font-size: 1.5rem;
 }
-#chart-months{
-  text{
+#chart-months {
+  text {
     @apply dark:fill-defaulttextcolor/70;
   }
 }
-#chart-years{
-  svg{
+#chart-years {
+  svg {
     @apply dark:bg-bodybg #{!important};
   }
 }
-.worldmap__figure-container{
+.worldmap__figure-container {
   @apply dark:bg-bodybg #{!important};
   // svg{
   //   @apply  w-[100%] #{!important};
   // }
 }
-.tab-content .tab-pane{
+.tab-content .tab-pane {
   @apply border-defaultborder/20 #{!important};
 }
- .dropdown-content{
+.dropdown-content {
   @apply dark:bg-bodybg #{!important};
   @apply border-defaultborder/20 #{!important};
 }
@@ -281,10 +281,10 @@ h4 {
   width: 500px;
   inset-inline: 0 !important;
 }
-[dir="rtl"] {
-.gridjs-pagination .gridjs-summary{
-  float: right;
-}
+[dir='rtl'] {
+  .gridjs-pagination .gridjs-summary {
+    float: right;
+  }
 }
 .MuiRating-icon.MuiRating-iconEmpty {
   @apply dark:text-defaulttextcolor/50;

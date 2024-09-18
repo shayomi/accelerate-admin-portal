@@ -1,20 +1,19 @@
-import React, { Fragment } from "react";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import Investors from "../components/applications/investors";
-import Partners from "../components/applications/partners";
+import React, { Fragment } from 'react';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import Investors from '../components/applications/investors';
+import Partners from '../components/applications/partners';
 
 const index = () => {
   return (
     <Fragment>
-      <Seo title={"Application Management"} />
+      <Seo title={'Application Management'} />
       <Pageheader
         currentpage="Application Management"
         activepage="Dashboard"
         mainpage="Applications"
       />
-     
 
       <div className="px-4 py-4 w-full mb-12">
         <div className="w-full">
@@ -40,16 +39,15 @@ const index = () => {
                 <i className="ri-bill-line me-1 align-middle inline-block"></i>
                 Partners
               </Link>
-             
             </nav>
             <div className="flex justify-end mb-4">
-            <button className="bg-green text-white py-2 px-4 rounded-md mr-3">
+              <button className="bg-green text-white py-2 px-4 rounded-md mr-3">
                 Add Investors
-            </button>
-             <button className="bg-purple text-white py-2 px-4 rounded-md">
-               Add Partners
-             </button>
-      </div>
+              </button>
+              <button className="bg-purple text-white py-2 px-4 rounded-md">
+                Add Partners
+              </button>
+            </div>
           </div>
 
           <div className="!p-4">
@@ -60,7 +58,7 @@ const index = () => {
                 role="tabpanel"
                 aria-labelledby="activity-tab"
               >
-                <Investors/>
+                <Investors />
               </div>
               <div
                 className="tab-pane fade !p-0 !border-0 hidden !rounded-md"
@@ -78,5 +76,5 @@ const index = () => {
   );
 };
 
-index.layout = "Contentlayout";
+index.layout = 'Contentlayout';
 export default index;

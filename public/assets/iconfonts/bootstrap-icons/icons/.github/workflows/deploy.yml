@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "${{ env.NODE }}"
+          node-version: '${{ env.NODE }}'
           cache: npm
 
       - name: Install npm dependencies
@@ -49,8 +49,8 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: "${{ env.NODE }}"
-          registry-url: "https://registry.npmjs.org"
+          node-version: '${{ env.NODE }}'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Publish on npm
         run: npm publish

@@ -113,71 +113,70 @@ Background Image
 @tailwind utilities;
 /* End Tailwind Styles */
 
-@import "./variables";
-@import "./icons";
+@import './variables';
+@import './icons';
 
-@import "./custom/header";
-@import "./custom/dashboard_styles";
-@import "./custom/landing";
-@import "./custom/job_landing.scss";
-@import "./custom/authentication";
-@import "./custom/error";
+@import './custom/header';
+@import './custom/dashboard_styles';
+@import './custom/landing';
+@import './custom/job_landing.scss';
+@import './custom/authentication';
+@import './custom/error';
 
-@import "./pages/pages_styles";
-@import "./pages/chat";
-@import "./pages/task";
+@import './pages/pages_styles';
+@import './pages/chat';
+@import './pages/task';
 
-@import "./layout/vertical";
-@import "./layout/closed_menu";
-@import "./layout/double_menu";
-@import "./layout/horizontal";
-@import "./layout/icon_click";
-@import "./layout/icon_hover";
-@import "./layout/menu_click";
-@import "./layout/menu_hover";
+@import './layout/vertical';
+@import './layout/closed_menu';
+@import './layout/double_menu';
+@import './layout/horizontal';
+@import './layout/icon_click';
+@import './layout/icon_hover';
+@import './layout/menu_click';
+@import './layout/menu_hover';
 
-@import "./switcher/bg-img-styles";
-@import "./switcher/boxed";
-@import "./switcher/classic-page-style";
-@import "./switcher/closed_menu";
-@import "./switcher/detached_menu";
-@import "./switcher/double_menu";
-@import "./switcher/header-scrollable";
-@import "./switcher/header-styles";
-@import "./switcher/icon-overlay";
-@import "./switcher/icontext";
-@import "./switcher/menu-scrollable";
-@import "./switcher/menu-styles";
-@import "./switcher/loader";
+@import './switcher/bg-img-styles';
+@import './switcher/boxed';
+@import './switcher/classic-page-style';
+@import './switcher/closed_menu';
+@import './switcher/detached_menu';
+@import './switcher/double_menu';
+@import './switcher/header-scrollable';
+@import './switcher/header-styles';
+@import './switcher/icon-overlay';
+@import './switcher/icontext';
+@import './switcher/menu-scrollable';
+@import './switcher/menu-styles';
+@import './switcher/loader';
 
-@import "./plugins/datatable";
-@import "./plugins/calendar";
-@import "./plugins/plugins.scss";
+@import './plugins/datatable';
+@import './plugins/calendar';
+@import './plugins/plugins.scss';
 
-@import "./tailwind/buttons";
-@import "./tailwind/forms";
-@import "./tailwind/components";
-@import "./tailwind/custom";
-@import "./tailwind/dropdown";
-@import "./tailwind/progress";
-@import "./tailwind/modal";
-@import "./tailwind/toast.scss";
-@import "./tailwind/alerts";
-@import "./tailwind/breadcrumb";
-@import "./tailwind/avatars.scss";
-@import "./tailwind/accordion";
-@import "./tailwind/carousels.scss";
-@import "./tailwind/cards";
-@import "./tailwind/offcanvas";
-@import "./tailwind/pagination";
-@import "./tailwind/tables";
-@import "./tailwind/tooltip";
-@import "./tailwind/progress";
-
+@import './tailwind/buttons';
+@import './tailwind/forms';
+@import './tailwind/components';
+@import './tailwind/custom';
+@import './tailwind/dropdown';
+@import './tailwind/progress';
+@import './tailwind/modal';
+@import './tailwind/toast.scss';
+@import './tailwind/alerts';
+@import './tailwind/breadcrumb';
+@import './tailwind/avatars.scss';
+@import './tailwind/accordion';
+@import './tailwind/carousels.scss';
+@import './tailwind/cards';
+@import './tailwind/offcanvas';
+@import './tailwind/pagination';
+@import './tailwind/tables';
+@import './tailwind/tooltip';
+@import './tailwind/progress';
 
 //    {***** Global******}
 
-@import "./global/select2";
-@import "./global/date-picker";
-@import "./global/custom-styles";
-@import "./global/react-datepicker";
+@import './global/select2';
+@import './global/date-picker';
+@import './global/custom-styles';
+@import './global/react-datepicker';

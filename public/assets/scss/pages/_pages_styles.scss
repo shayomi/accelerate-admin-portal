@@ -90,8 +90,8 @@
   }
 
   &:hover {
-    @apply text-primary bg-light ;
-  } 
+    @apply text-primary bg-light;
+  }
 }
 
 .page-item.active .page-link {
@@ -197,7 +197,7 @@ label {
   @apply cursor-default text-[0.875rem] font-normal leading-[1.5];
 }
 #blog-content {
- @apply h-auto ;
+  @apply h-auto;
 }
 
 /* End:: blog-create */
@@ -507,7 +507,7 @@ label {
   before:absolute before:content-[\f64d] before:end-2 before:top-[0.313rem] before:font-bold after:absolute after:content-[\F2EA] after:end-2 after:top-[0.313rem] after:font-bold after:hidden;
 }
 
-.ecommerce-more-link[aria-expanded="true"] {
+.ecommerce-more-link[aria-expanded='true'] {
   @apply after:block before:hidden;
 }
 .products-navigation-card {
@@ -980,7 +980,7 @@ label {
     @apply absolute w-[5.438rem] h-[3.75rem] bg-primary text-white text-[0.75rem] rotate-[45deg] flex items-end justify-center -end-[2.063rem] -top-[1.25rem] p-[0.313rem];
   }
 }
-[dir="rtl"] {
+[dir='rtl'] {
   .pricing-offer-details {
     @apply rotate-[315deg];
   }
@@ -1073,7 +1073,8 @@ label {
     .team-member-stats {
       div {
         @apply border-x border-dashed border-defaultborder dark:border-defaultborder/10;
-        &:last-child,&:first-child {
+        &:last-child,
+        &:first-child {
           @apply border-0 #{!important};
         }
       }
@@ -1271,17 +1272,16 @@ label {
   .companies-search-input {
     @apply block;
     .form-control {
-      @apply w-full rounded-md mb-2 mt-2 #{!important}
+      @apply w-full rounded-md mb-2 mt-2 #{!important};
     }
     .choices {
-      @apply rounded-md mb-2 #{!important}
+      @apply rounded-md mb-2 #{!important};
     }
     .ti-btn {
-      @apply w-full rounded-md mt-2  #{!important}
+      @apply w-full rounded-md mt-2  #{!important};
     }
-    .rmsc .dropdown-container{
-      @apply w-full rounded-md #{!important}
-
+    .rmsc .dropdown-container {
+      @apply w-full rounded-md #{!important};
     }
   }
 }
@@ -1289,6 +1289,6 @@ label {
 
 /* Start:: Ratings */
 .star-rating {
-@apply touch-none;
+  @apply touch-none;
 }
 /* End:: Ratings */

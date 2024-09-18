@@ -7,5 +7,5 @@ tags:
   - diagram
   - sitemap
   - children
-  - "org chart"
+  - 'org chart'
 ---

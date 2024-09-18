@@ -381,7 +381,7 @@
   .single-fileupload {
     @apply mx-0 #{!important};
   }
-  .filepond--root[data-style-panel-layout~="circle"] {
+  .filepond--root[data-style-panel-layout~='circle'] {
     @apply rounded-md w-full;
   }
   .filepond--drop-label.filepond--drop-label label {
@@ -393,19 +393,19 @@
   .filepond--panel-root {
     @apply border-[0.125rem] border-dashed border-inputborder #{!important};
   }
-  .filepond--root[data-style-panel-layout~="circle"]
+  .filepond--root[data-style-panel-layout~='circle']
     .filepond--image-preview-wrapper {
     @apply rounded-[0.3rem];
   }
 }
 .create-nft-item {
-  .filepond--root[data-style-panel-layout~="circle"] {
+  .filepond--root[data-style-panel-layout~='circle'] {
     @apply sm:h-[15.75rem] h-[14.5rem] w-[14.5rem] sm:w-[15.75rem] #{!important};
   }
   .filepond--drop-label label {
     @apply text-[0.75rem];
   }
-  .filepond--root[data-style-panel-layout~="circle"]
+  .filepond--root[data-style-panel-layout~='circle']
     .filepond--image-preview-wrapper,
   .filepond--file {
     @apply h-[15.75rem] w-[15.75rem] #{!important};
@@ -482,7 +482,7 @@
   &.active {
     @apply text-success #{!important};
     .nft-tag-icon {
-      @apply bg-success/10 ;
+      @apply bg-success/10;
     }
   }
   .nft-tag-icon {
@@ -739,7 +739,7 @@
     }
   }
 }
-[dir="rtl"] {
+[dir='rtl'] {
   .avatar-list-stacked {
     .ri-arrow-right-s-line {
       @apply rotate-180;
@@ -863,7 +863,7 @@
   .apexcharts-graphical {
     clipPath {
       rect {
-        @apply scale-[0.98]
+        @apply scale-[0.98];
       }
     }
   }
@@ -1160,7 +1160,8 @@
 }
 // Dashboard-10//
 // Dashboard-11//
-#waterTrack ,#sleepTrack{
+#waterTrack,
+#sleepTrack {
   .apexcharts-grid {
     @apply hidden;
   }

@@ -3,8 +3,8 @@ title: Hdd network fill
 categories:
   - Devices
 tags:
-  - "hard drive"
-  - "hard disk"
+  - 'hard drive'
+  - 'hard disk'
   - ssd
   - drive
   - server

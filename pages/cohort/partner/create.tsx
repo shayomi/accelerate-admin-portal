@@ -1,6 +1,5 @@
-import PartnerForm from "@/pages/components/cohort/partnerform";
-import React from "react";
-
+import PartnerForm from '@/pages/components/cohort/partnerform';
+import React from 'react';
 
 const Create = () => {
   return (
@@ -10,6 +9,6 @@ const Create = () => {
   );
 };
 
-Create.layout = "Contentlayout";
+Create.layout = 'Contentlayout';
 
 export default Create;

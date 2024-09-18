@@ -1,11 +1,13 @@
-import ProgramPartner from '@/pages/components/cohort/programpartner'
-import React from 'react'
+import ProgramPartner from '@/pages/components/cohort/programpartner';
+import React from 'react';
 
 const index = () => {
   return (
-    <div><ProgramPartner /></div>
-  )
-}
+    <div>
+      <ProgramPartner />
+    </div>
+  );
+};
 
-index.layout = "Contentlayout"
-export default index
+index.layout = 'Contentlayout';
+export default index;

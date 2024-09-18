@@ -1,5 +1,5 @@
 /* Start Menu-Scrollable Styles */
-[data-menu-position="scrollable"] {
+[data-menu-position='scrollable'] {
   .app-sidebar {
     @apply absolute;
     .main-sidebar-header {
@@ -10,7 +10,7 @@
       @apply pb-0;
     }
   }
-  &:not([data-nav-layout="horizontal"]) {
+  &:not([data-nav-layout='horizontal']) {
     .content {
       @apply min-h-[1300px];
     }

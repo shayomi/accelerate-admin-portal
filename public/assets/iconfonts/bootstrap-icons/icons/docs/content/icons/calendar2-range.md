@@ -6,5 +6,4 @@ tags:
   - dates
   - timeline
   - duration
-
 ---

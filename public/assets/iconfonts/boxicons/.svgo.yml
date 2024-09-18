@@ -1,4 +1,3 @@
 plugins:
-    - removeViewBox: false
-    - convertPathData: false
-
+  - removeViewBox: false
+  - convertPathData: false

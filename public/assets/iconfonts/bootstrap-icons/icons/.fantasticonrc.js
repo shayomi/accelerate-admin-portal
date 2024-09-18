@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-const codepoints = require('./font/bootstrap-icons.json')
+const codepoints = require('./font/bootstrap-icons.json');
 
 module.exports = {
   inputDir: './icons', // (required)
@@ -14,14 +14,14 @@ module.exports = {
   fontsUrl: './fonts',
   formatOptions: {
     json: {
-      indent: 2
-    }
+      indent: 2,
+    },
   },
   // Use a custom Handlebars template
   templates: {
     css: './build/font/css.hbs',
     scss: './build/font/scss.hbs',
-    html: './build/font/html.hbs'
+    html: './build/font/html.hbs',
   },
   pathOptions: {
     json: './font/bootstrap-icons.json',
@@ -31,6 +31,6 @@ module.exports = {
     ttf: './font/fonts/bootstrap-icons.ttf',
     woff: './font/fonts/bootstrap-icons.woff',
     woff2: './font/fonts/bootstrap-icons.woff2',
-    eot: './font/fonts/bootstrap-icons.eot'
-  }
-}
+    eot: './font/fonts/bootstrap-icons.eot',
+  },
+};

@@ -4,9 +4,9 @@
   after:absolute after:w-[12.5rem] after:h-[12.5rem] after:bg-transparent after:border-primary/50 after:opacity-[0.3] after:start-[5.1rem] after:bottom-[4.4rem];
 }
 
-[data-nav-layout="horizontal"] {
+[data-nav-layout='horizontal'] {
   @media (min-width: 992px) {
-    &[class="dark"] {
+    &[class='dark'] {
       .landing-body {
         .app-sidebar .slide.has-sub.open .slide-menu.child1::before {
           @apply bg-bodybg #{!important};
@@ -31,7 +31,7 @@
         }
       }
     }
-    &[class="light"] {
+    &[class='light'] {
       .landing-body {
         .app-sidebar.sticky.sticky-pin {
           @apply shadow-[0_0.25rem_1rem_rgba(0,0,0,0.1)] #{!important};

@@ -1,15 +1,15 @@
-import { Component } from "react";
-const ReactApexChart = dynamic(() => import("react-apexcharts"), {
+import { Component } from 'react';
+const ReactApexChart = dynamic(() => import('react-apexcharts'), {
   ssr: false,
 });
-import dynamic from "next/dynamic";
-import { ApexOptions } from "apexcharts";
+import dynamic from 'next/dynamic';
+import { ApexOptions } from 'apexcharts';
 
 interface spark3 {
   options?: ApexOptions;
   width?: number;
   height?: string | number;
-  series?: ApexOptions["series"];
+  series?: ApexOptions['series'];
   [key: string]: any;
   label?: XAxisAnnotations;
   color?: string | string[] | (string & string[]) | undefined;
@@ -28,17 +28,17 @@ export class Basicpiechart extends Component<{}, spark3> {
       options: {
         chart: {
           height: 300,
-          type: "pie",
+          type: 'pie',
           events: {
             mounted: (chart) => {
               chart.windowResizeHandler();
             },
           },
         },
-        colors: ["#845adf", "#23b7e5", "#f5b849", "#49b6f5", "#e6533c"],
-        labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+        colors: ['#845adf', '#23b7e5', '#f5b849', '#49b6f5', '#e6533c'],
+        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
         legend: {
-          position: "bottom",
+          position: 'bottom',
         },
         dataLabels: {
           dropShadow: {
@@ -71,7 +71,7 @@ export class Simpledonut extends Component<{}, spark3> {
       series: [44, 55, 41, 17, 15],
       options: {
         chart: {
-          type: "donut",
+          type: 'donut',
           height: 290,
           events: {
             mounted: (chart) => {
@@ -80,9 +80,9 @@ export class Simpledonut extends Component<{}, spark3> {
           },
         },
         legend: {
-          position: "bottom",
+          position: 'bottom',
         },
-        colors: ["#845adf", "#23b7e5", "#f5b849", "#49b6f5", "#e6533c"],
+        colors: ['#845adf', '#23b7e5', '#f5b849', '#49b6f5', '#e6533c'],
         dataLabels: {
           dropShadow: {
             enabled: false,
@@ -112,11 +112,11 @@ export class Updatingdonut extends Component<{}, spark3> {
 
     this.state = {
       series: [44, 55, 13, 33],
-      colors: ["#845adf", "#23b7e5", "#f5b849", "#e6533c", "#49b6f5"],
+      colors: ['#845adf', '#23b7e5', '#f5b849', '#e6533c', '#49b6f5'],
       options: {
         chart: {
           height: 280,
-          type: "donut",
+          type: 'donut',
           events: {
             mounted: (chart) => {
               chart.windowResizeHandler();
@@ -126,9 +126,9 @@ export class Updatingdonut extends Component<{}, spark3> {
         dataLabels: {
           enabled: false,
         },
-        colors: ["#845adf", "#23b7e5", "#f5b849", "#e6533c", "#49b6f5"],
+        colors: ['#845adf', '#23b7e5', '#f5b849', '#e6533c', '#49b6f5'],
         legend: {
-          position: "bottom",
+          position: 'bottom',
         },
       },
     };
@@ -158,7 +158,7 @@ export class Updatingdonut extends Component<{}, spark3> {
     this.setState((prevState) => ({
       series: prevState.series
         ? prevState.series.map(
-            () => Math.floor(Math.random() * (100 - 1 + 1)) + 1
+            () => Math.floor(Math.random() * (100 - 1 + 1)) + 1,
           )
         : [],
     }));
@@ -214,8 +214,8 @@ export class Monochrome extends Component<{}, spark3> {
       series: [25, 15, 44, 55, 41, 17],
       options: {
         chart: {
-          height: "280",
-          type: "pie",
+          height: '280',
+          type: 'pie',
           events: {
             mounted: (chart) => {
               chart.windowResizeHandler();
@@ -223,17 +223,17 @@ export class Monochrome extends Component<{}, spark3> {
           },
         },
         labels: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+          'Saturday',
         ],
         theme: {
           monochrome: {
             enabled: true,
-            color: "#845adf",
+            color: '#845adf',
           },
         },
         plotOptions: {
@@ -244,12 +244,12 @@ export class Monochrome extends Component<{}, spark3> {
           },
         },
         title: {
-          text: "Monochrome Pie",
-          align: "left",
+          text: 'Monochrome Pie',
+          align: 'left',
           style: {
-            fontSize: "13px",
-            fontWeight: "bold",
-            color: "#8c9097",
+            fontSize: '13px',
+            fontWeight: 'bold',
+            color: '#8c9097',
           },
         },
         dataLabels: {
@@ -293,7 +293,7 @@ export class Gradientpie extends Component<{}, spark3> {
       options: {
         chart: {
           height: 300,
-          type: "donut",
+          type: 'donut',
           events: {
             mounted: (chart) => {
               chart.windowResizeHandler();
@@ -310,22 +310,22 @@ export class Gradientpie extends Component<{}, spark3> {
           enabled: false,
         },
         fill: {
-          type: "gradient",
+          type: 'gradient',
         },
         legend: {
           formatter: function (val, opts) {
-            return val + " - " + opts.w.globals.series[opts.seriesIndex];
+            return val + ' - ' + opts.w.globals.series[opts.seriesIndex];
           },
-          position: "bottom",
+          position: 'bottom',
         },
-        colors: ["#845adf", "#23b7e5", "#f5b849", "#49b6f5", "#e6533c"],
+        colors: ['#845adf', '#23b7e5', '#f5b849', '#49b6f5', '#e6533c'],
         title: {
-          text: "Gradient Donut with custom Start-angle",
-          align: "left",
+          text: 'Gradient Donut with custom Start-angle',
+          align: 'left',
           style: {
-            fontSize: "13px",
-            fontWeight: "bold",
-            color: "#8c9097",
+            fontSize: '13px',
+            fontWeight: 'bold',
+            color: '#8c9097',
           },
         },
         // legend: {
@@ -360,10 +360,10 @@ export class Donutwithpattern extends Component<{}, spark3> {
       options: {
         chart: {
           height: 250,
-          type: "donut",
+          type: 'donut',
           dropShadow: {
             enabled: true,
-            color: "#111",
+            color: '#111',
             top: -1,
             left: 3,
             blur: 3,
@@ -391,30 +391,30 @@ export class Donutwithpattern extends Component<{}, spark3> {
             },
           },
         },
-        colors: ["#845adf", "#23b7e5", "#f5b849", "#49b6f5", "#e6533c"],
-        labels: ["Comedy", "Action", "SciFi", "Drama", "Horror"],
+        colors: ['#845adf', '#23b7e5', '#f5b849', '#49b6f5', '#e6533c'],
+        labels: ['Comedy', 'Action', 'SciFi', 'Drama', 'Horror'],
         dataLabels: {
           enabled: true,
           style: {
-            colors: ["#111"],
+            colors: ['#111'],
           },
           background: {
             enabled: true,
-            foreColor: "#fff",
+            foreColor: '#fff',
             borderWidth: 0,
           },
         },
         fill: {
-          type: "pattern",
+          type: 'pattern',
           opacity: 1,
           pattern: {
             // enabled: true,
             style: [
-              "verticalLines",
-              "squares",
-              "horizontalLines",
-              "circles",
-              "slantedLines",
+              'verticalLines',
+              'squares',
+              'horizontalLines',
+              'circles',
+              'slantedLines',
             ],
           },
         },
@@ -424,15 +424,15 @@ export class Donutwithpattern extends Component<{}, spark3> {
           },
         },
         theme: {
-          palette: "palette2",
+          palette: 'palette2',
         },
         title: {
-          text: "Favourite Movie Type",
-          align: "left",
+          text: 'Favourite Movie Type',
+          align: 'left',
           style: {
-            fontSize: "13px",
-            fontWeight: "bold",
-            color: "#8c9097",
+            fontSize: '13px',
+            fontWeight: 'bold',
+            color: '#8c9097',
           },
         },
         responsive: [
@@ -443,7 +443,7 @@ export class Donutwithpattern extends Component<{}, spark3> {
                 width: 200,
               },
               legend: {
-                position: "bottom",
+                position: 'bottom',
               },
             },
           },
@@ -477,23 +477,23 @@ export class Imagefilledpie extends Component<{}, spark3> {
       options: {
         chart: {
           height: 300,
-          type: "pie",
+          type: 'pie',
           events: {
             mounted: (chart) => {
               chart.windowResizeHandler();
             },
           },
         },
-        colors: ["#93C3EE", "#E5C6A0", "#669DB5", "#94A74A"],
+        colors: ['#93C3EE', '#E5C6A0', '#669DB5', '#94A74A'],
         fill: {
-          type: "image",
+          type: 'image',
           opacity: 0.85,
           image: {
             src: [
-              "../../../../assets/images/media/media-21.jpg",
-              "../../../../assets/images/media/media-21.jpg",
-              "../../../../assets/images/media/media-21.jpg",
-              "../../../../assets/images/media/media-21.jpg",
+              '../../../../assets/images/media/media-21.jpg',
+              '../../../../assets/images/media/media-21.jpg',
+              '../../../../assets/images/media/media-21.jpg',
+              '../../../../assets/images/media/media-21.jpg',
             ],
             width: 25,
           },
@@ -504,16 +504,16 @@ export class Imagefilledpie extends Component<{}, spark3> {
         dataLabels: {
           enabled: true,
           style: {
-            colors: ["#111"],
+            colors: ['#111'],
           },
           background: {
             enabled: true,
-            foreColor: "#fff",
+            foreColor: '#fff',
             borderWidth: 0,
           },
         },
         legend: {
-          position: "bottom",
+          position: 'bottom',
         },
       },
     };

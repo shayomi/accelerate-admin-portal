@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React, { Fragment, useState, useEffect } from "react";
-import { Event, Speaker } from "@/types";
-import Seo from "@/shared/layout-components/seo/seo";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import { speakersData } from "./speakerdata";
+import React, { Fragment, useState, useEffect } from 'react';
+import { Event, Speaker } from '@/types';
+import Seo from '@/shared/layout-components/seo/seo';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import { speakersData } from './speakerdata';
 
 interface EventFormProps {
   eventData?: Event;
@@ -12,28 +12,38 @@ interface EventFormProps {
 }
 
 const EventForm = ({ eventData, onSubmit }: EventFormProps) => {
-  const [eventName, setEventName] = useState(eventData?.name || "");
-  const [slug, setSlug] = useState(eventData?.slug || "");
-  const [dateTime, setDateTime] = useState(eventData?.dateTime || "");
-  const [location, setLocation] = useState(eventData?.location || "");
-  const [eventType, setEventType] = useState(eventData?.eventType || "");
-  const [description, setDescription] = useState(eventData?.description || "");
-  const [bannerImage, setBannerImage] = useState(eventData?.bannerImage || "");
-  const [maxAttendees, setMaxAttendees] = useState(eventData?.maxAttendees || "");
-  const [registrationDeadline, setRegistrationDeadline] = useState(eventData?.registrationDeadline || "");
+  const [eventName, setEventName] = useState(eventData?.name || '');
+  const [slug, setSlug] = useState(eventData?.slug || '');
+  const [dateTime, setDateTime] = useState(eventData?.dateTime || '');
+  const [location, setLocation] = useState(eventData?.location || '');
+  const [eventType, setEventType] = useState(eventData?.eventType || '');
+  const [description, setDescription] = useState(eventData?.description || '');
+  const [bannerImage, setBannerImage] = useState(eventData?.bannerImage || '');
+  const [maxAttendees, setMaxAttendees] = useState(
+    eventData?.maxAttendees || '',
+  );
+  const [registrationDeadline, setRegistrationDeadline] = useState(
+    eventData?.registrationDeadline || '',
+  );
   const [agenda, setAgenda] = useState(eventData?.agenda || []);
-  const [selectedSpeakers, setSelectedSpeakers] = useState<Speaker[]>(eventData?.speakers || []);
-  
+  const [selectedSpeakers, setSelectedSpeakers] = useState<Speaker[]>(
+    eventData?.speakers || [],
+  );
+
   const [speakerOptions] = useState<Speaker[]>(speakersData);
 
   const handleSpeakerChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedIds = Array.from(event.target.selectedOptions, option => parseInt(option.value));
-    const newSelectedSpeakers = speakerOptions.filter(speaker => selectedIds.includes(speaker.id));
+    const selectedIds = Array.from(event.target.selectedOptions, (option) =>
+      parseInt(option.value),
+    );
+    const newSelectedSpeakers = speakerOptions.filter((speaker) =>
+      selectedIds.includes(speaker.id),
+    );
     setSelectedSpeakers(newSelectedSpeakers);
   };
 
   const removeSpeaker = (speaker: Speaker) => {
-    setSelectedSpeakers(selectedSpeakers.filter(s => s.id !== speaker.id));
+    setSelectedSpeakers(selectedSpeakers.filter((s) => s.id !== speaker.id));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -51,18 +61,21 @@ const EventForm = ({ eventData, onSubmit }: EventFormProps) => {
       maxAttendees,
       registrationDeadline,
       agenda,
-      status: "draft",
+      status: 'draft',
       speakers: selectedSpeakers,
       registrationFields: [],
       sponsors: [],
-      relatedCohort: "",
+      relatedCohort: '',
     };
 
     onSubmit(newEvent);
   };
 
   const generateSlug = (name: string) => {
-    return name.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, "");
+    return name
+      .toLowerCase()
+      .replace(/ /g, '-')
+      .replace(/[^\w-]+/g, '');
   };
 
   useEffect(() => {
@@ -73,9 +86,9 @@ const EventForm = ({ eventData, onSubmit }: EventFormProps) => {
 
   return (
     <Fragment>
-      <Seo title={eventData ? "Edit Event" : "Create Event"} />
+      <Seo title={eventData ? 'Edit Event' : 'Create Event'} />
       <Pageheader
-        currentpage={eventData ? "Edit Event" : "Create Event"}
+        currentpage={eventData ? 'Edit Event' : 'Create Event'}
         activepage="Events Management"
         mainpage="Events"
       />
@@ -200,9 +213,11 @@ const EventForm = ({ eventData, onSubmit }: EventFormProps) => {
                 multiple
                 className="form-control"
                 onChange={handleSpeakerChange}
-                value={selectedSpeakers.map(speaker => speaker.id.toString())}
+                value={selectedSpeakers.map((speaker) => speaker.id.toString())}
               >
-                <option value="" disabled>Select speakers</option>
+                <option value="" disabled>
+                  Select speakers
+                </option>
                 {speakerOptions.map((speaker) => (
                   <option key={speaker.id} value={speaker.id}>
                     {speaker.name}
@@ -211,7 +226,10 @@ const EventForm = ({ eventData, onSubmit }: EventFormProps) => {
               </select>
               <ul className="mt-2">
                 {selectedSpeakers.map((speaker) => (
-                  <li key={speaker.id} className="flex justify-between items-center">
+                  <li
+                    key={speaker.id}
+                    className="flex justify-between items-center"
+                  >
                     {speaker.name}
                     <button
                       type="button"
@@ -229,7 +247,6 @@ const EventForm = ({ eventData, onSubmit }: EventFormProps) => {
               <button
                 type="button"
                 className="ti-btn bg-none text-red rounded-sm !mb-0"
-               
               >
                 Save as Draft
               </button>
@@ -237,7 +254,7 @@ const EventForm = ({ eventData, onSubmit }: EventFormProps) => {
                 type="submit"
                 className="ti-btn bg-green rounded-sm !mb-0"
               >
-                {eventData ? "Update Event" : "Create Event"}
+                {eventData ? 'Update Event' : 'Create Event'}
               </button>
             </div>
           </div>
@@ -247,5 +264,5 @@ const EventForm = ({ eventData, onSubmit }: EventFormProps) => {
   );
 };
 
-EventForm.layout = "Contentlayout";
+EventForm.layout = 'Contentlayout';
 export default EventForm;

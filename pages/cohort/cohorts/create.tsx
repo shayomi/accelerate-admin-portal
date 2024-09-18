@@ -1,8 +1,8 @@
 // pages/create.tsx
-import React from "react";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import CreateCohort from "@/pages/components/cohort/createCohort";
+import React from 'react';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import CreateCohort from '@/pages/components/cohort/createCohort';
 
 const CreatePage = () => {
   return (
@@ -14,5 +14,5 @@ const CreatePage = () => {
   );
 };
 
-CreatePage.layout = "Contentlayout"
+CreatePage.layout = 'Contentlayout';
 export default CreatePage;

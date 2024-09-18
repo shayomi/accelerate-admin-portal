@@ -1,6 +1,6 @@
 /* Start::app-header */
 .app-header {
-  @apply w-full max-w-full h-[3.75rem] z-[49] fixed top-0 start-0 border-b border-b-headerbordercolor dark:border-white/10 transition-all ease-linear duration-[0.1s] ;
+  @apply w-full max-w-full h-[3.75rem] z-[49] fixed top-0 start-0 border-b border-b-headerbordercolor dark:border-white/10 transition-all ease-linear duration-[0.1s];
 
   #mainHeaderProfile {
     @apply text-headerprimecolor;
@@ -135,7 +135,7 @@
   }
 }
 
-[dir="rtl"] {
+[dir='rtl'] {
   .sidemenu-toggle {
     .open-toggle {
       @apply rotate-180;
@@ -275,7 +275,7 @@
 /* End::header badge pulse */
 
 /* Start::Header theme-mode icon style */
-[class="light"] {
+[class='light'] {
   .layout-setting .dark-layout {
     @apply hidden;
   }
@@ -360,15 +360,15 @@
 .animated-arrow span:after {
   @apply cursor-pointer h-0.5 w-[1.0625rem] bg-headerprimecolor dark:bg-white/60 absolute block content-[""];
 }
-[data-toggled="icon-overlay-close"],
-[data-toggled="close-menu-close"],
-[data-toggled="icon-text-close"],
-[data-toggled="detached-close"],
-[data-toggled="menu-click-closed"],
-[data-toggled="menu-hover-closed"],
-[data-toggled="icon-click-closed"],
-[data-toggled="icon-hover-closed"],
-[data-toggled="double-menu-close"] {
+[data-toggled='icon-overlay-close'],
+[data-toggled='close-menu-close'],
+[data-toggled='icon-text-close'],
+[data-toggled='detached-close'],
+[data-toggled='menu-click-closed'],
+[data-toggled='menu-hover-closed'],
+[data-toggled='icon-click-closed'],
+[data-toggled='icon-hover-closed'],
+[data-toggled='double-menu-close'] {
   .animated-arrow span {
     @apply bg-transparent bg-none !important;
   }

@@ -1,24 +1,24 @@
-import React, { Fragment, useState } from "react";
-import dynamic from "next/dynamic";
-import "react-quill/dist/quill.snow.css";
-import Seo from "@/shared/layout-components/seo/seo";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import React, { Fragment, useState } from 'react';
+import dynamic from 'next/dynamic';
+import 'react-quill/dist/quill.snow.css';
+import Seo from '@/shared/layout-components/seo/seo';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
 
 // Load React Quill dynamically
-const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
-const speakersList = ["Speaker 1", "Speaker 2", "Speaker 3"];
-const sponsorsList = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
-const cohortsList = ["Cohort 1", "Cohort 2", "Cohort 3"];
+const speakersList = ['Speaker 1', 'Speaker 2', 'Speaker 3'];
+const sponsorsList = ['Sponsor 1', 'Sponsor 2', 'Sponsor 3'];
+const cohortsList = ['Cohort 1', 'Cohort 2', 'Cohort 3'];
 
 const EditEvent = () => {
   const [selectedSpeakers, setSelectedSpeakers] = useState<string[]>([]);
   const [selectedSponsors, setSelectedSponsors] = useState<string[]>([]);
   const [selectedCohort, setSelectedCohort] = useState<string | null>(null); // Single cohort
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [company, setCompany] = useState('');
 
   // Add and remove speaker from selection
   const handleSpeakerChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -55,7 +55,7 @@ const EditEvent = () => {
 
   return (
     <Fragment>
-      <Seo title={"Event Management"} />
+      <Seo title={'Event Management'} />
       <Pageheader
         currentpage="Create Event"
         activepage="Dashboards"
@@ -306,5 +306,5 @@ const EditEvent = () => {
   );
 };
 
-EditEvent.layout = "Contentlayout";
+EditEvent.layout = 'Contentlayout';
 export default EditEvent;

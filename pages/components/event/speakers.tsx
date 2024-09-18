@@ -1,23 +1,23 @@
-"use client";
+'use client';
 
-import React, { Fragment, useState } from "react";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment, useState } from 'react';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
 
 const speakersData = [
-  { name: "Alice Johnson", company: "TechCorp", events: 5 },
-  { name: "Michael Brown", company: "InnovateX", events: 3 },
-  { name: "Sophia Davis", company: "DevHub", events: 4 },
-  { name: "James Lee", company: "StartupSphere", events: 2 },
+  { name: 'Alice Johnson', company: 'TechCorp', events: 5 },
+  { name: 'Michael Brown', company: 'InnovateX', events: 3 },
+  { name: 'Sophia Davis', company: 'DevHub', events: 4 },
+  { name: 'James Lee', company: 'StartupSphere', events: 2 },
 ];
 
 const Speaker = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filterCompany, setFilterCompany] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filterCompany, setFilterCompany] = useState('');
 
   // Get unique companies for the dropdown
   const uniqueCompanies = Array.from(
-    new Set(speakersData.map((speaker) => speaker.company))
+    new Set(speakersData.map((speaker) => speaker.company)),
   );
 
   const filteredSpeakers = speakersData.filter((speaker) => {
@@ -114,7 +114,7 @@ const Speaker = () => {
       <div className="box-footer">
         <div className="sm:flex items-center">
           <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-            Showing 5 Entries{" "}
+            Showing 5 Entries{' '}
             <i className="bi bi-arrow-right ms-2 font-semibold"></i>
           </div>
           <div className="ms-auto">
@@ -141,6 +141,6 @@ const Speaker = () => {
   );
 };
 
-Speaker.layout = "Contentlayout";
+Speaker.layout = 'Contentlayout';
 
 export default Speaker;

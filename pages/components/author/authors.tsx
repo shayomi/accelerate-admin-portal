@@ -1,14 +1,13 @@
-import Link from "next/link";
-import React, { Fragment } from "react";
-import Seo from "@/shared/layout-components/seo/seo";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import { authorsList } from "./authordata";
-
+import Link from 'next/link';
+import React, { Fragment } from 'react';
+import Seo from '@/shared/layout-components/seo/seo';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import { authorsList } from './authordata';
 
 const Authors = () => {
   return (
     <Fragment>
-      <Seo title={"Authors Management"} />
+      <Seo title={'Authors Management'} />
       <Pageheader
         currentpage="Authors List"
         activepage="Dashboards"
@@ -71,7 +70,7 @@ const Authors = () => {
       <div className="box-footer">
         <div className="sm:flex items-center">
           <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-            Showing 5 Entries{" "}
+            Showing 5 Entries{' '}
             <i className="bi bi-arrow-right ms-2 font-semibold"></i>
           </div>
           <div className="ms-auto">
@@ -106,5 +105,5 @@ const Authors = () => {
   );
 };
 
-Authors.layout = "Contentlayout";
+Authors.layout = 'Contentlayout';
 export default Authors;

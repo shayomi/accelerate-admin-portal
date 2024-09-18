@@ -4,12 +4,12 @@ import {
   Registersbycountry,
   Subscriptions,
   TopCompanies,
-} from "@/shared/data/dashboards/jobsdata";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import React, { Fragment, useState } from "react";
-import PerfectScrollbar from "react-perfect-scrollbar";
+} from '@/shared/data/dashboards/jobsdata';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import React, { Fragment, useState } from 'react';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 
 const Jobs = () => {
   // for User search function
@@ -20,7 +20,7 @@ const Jobs = () => {
   const myfunction = (idx: string) => {
     let Data;
     for (Data of Recentemployers) {
-      if (Data.name[0] == " ") {
+      if (Data.name[0] == ' ') {
         Data.name = Data.name.trim();
       }
       if (Data.name.toLowerCase().includes(idx.toLowerCase())) {
@@ -34,7 +34,7 @@ const Jobs = () => {
 
   return (
     <Fragment>
-      <Seo title={"Jobs"} />
+      <Seo title={'Jobs'} />
       <Pageheader currentpage="Jobs" activepage="Dashboards" mainpage="Jobs" />
       <div className="grid grid-cols-12 gap-x-6">
         <div className="xxxl:col-span-6 col-span-12">
@@ -623,10 +623,10 @@ const Jobs = () => {
                           Male Candidates
                         </div>
                         <div className="flex justify-center items-center">
-                          {" "}
+                          {' '}
                           <span className="me-3 text-[1.625rem] font-semibold">
                             1,234
-                          </span>{" "}
+                          </span>{' '}
                           <span className="text-success font-semibold">
                             <i className="ri-arrow-up-s-fill align-middle me-1"></i>
                             0.23%
@@ -640,14 +640,14 @@ const Jobs = () => {
                           Female Candidates
                         </div>
                         <div className="flex justify-center items-center">
-                          {" "}
+                          {' '}
                           <span className="me-3 text-[1.625rem] font-semibold">
                             1,754
-                          </span>{" "}
+                          </span>{' '}
                           <span className="text-danger font-semibold">
                             <i className="ri-arrow-down-s-fill align-middle me-1"></i>
                             0.11%
-                          </span>{" "}
+                          </span>{' '}
                         </div>
                       </div>
                     </div>
@@ -1216,7 +1216,7 @@ const Jobs = () => {
                           <input
                             className="form-check-input"
                             type="checkbox"
-                            defaultChecked={idx.checked === "defaultChecked"}
+                            defaultChecked={idx.checked === 'defaultChecked'}
                             value=""
                             aria-label="..."
                           />
@@ -1272,7 +1272,7 @@ const Jobs = () => {
             <div className="box-footer">
               <div className="sm:flex items-center">
                 <div className="dark:text-defaulttextcolor/70">
-                  Showing 5 Entries{" "}
+                  Showing 5 Entries{' '}
                   <i className="bi bi-arrow-right ms-2 font-semibold"></i>
                 </div>
                 <div className="ms-auto">
@@ -1312,6 +1312,6 @@ const Jobs = () => {
     </Fragment>
   );
 };
-Jobs.layout = "Contentlayout";
+Jobs.layout = 'Contentlayout';
 
 export default Jobs;

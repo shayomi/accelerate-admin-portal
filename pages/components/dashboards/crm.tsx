@@ -8,15 +8,15 @@ import {
   Revenueanalytics,
   Sourcedata,
   Target,
-} from "@/shared/data/dashboards/crmdata";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import React, { Fragment } from "react";
+} from '@/shared/data/dashboards/crmdata';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import React, { Fragment } from 'react';
 
 const Crm = () => {
   return (
     <Fragment>
-      <Seo title={"Crm"} />
+      <Seo title={'Crm'} />
       <div className="md:flex block items-center justify-between my-[1.5rem] page-header-breadcrumb">
         <div>
           <p className="font-semibold text-[1.125rem] text-defaulttextcolor dark:text-defaulttextcolor/70 !mb-0 ">
@@ -59,7 +59,7 @@ const Crm = () => {
                           </span>
                           <span className="font-semibold text-warning">
                             48%
-                          </span>{" "}
+                          </span>{' '}
                           <span className="opacity-[0.7]">
                             of the given target, you can also check your status
                           </span>
@@ -652,7 +652,7 @@ const Crm = () => {
                                 className="form-check-input"
                                 type="checkbox"
                                 defaultChecked={
-                                  idx.checked === "defaultChecked"
+                                  idx.checked === 'defaultChecked'
                                 }
                                 value=""
                                 aria-label="..."
@@ -707,7 +707,7 @@ const Crm = () => {
                 <div className="box-footer">
                   <div className="sm:flex items-center">
                     <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-                      Showing 5 Entries{" "}
+                      Showing 5 Entries{' '}
                       <i className="bi bi-arrow-right ms-2 font-semibold"></i>
                     </div>
                     <div className="ms-auto">
@@ -1053,10 +1053,10 @@ const Crm = () => {
                           </div>
                           <div className="crm-timeline-content">
                             <span>
-                              New theme for{" "}
+                              New theme for{' '}
                               <span className="font-semibold">
                                 Spruko Website
-                              </span>{" "}
+                              </span>{' '}
                               completed
                             </span>
                             <span className="block text-[0.75rem] text-[#8c9097] dark:text-white/50">
@@ -1079,11 +1079,11 @@ const Crm = () => {
                           </div>
                           <div className="crm-timeline-content">
                             <span>
-                              Created a{" "}
+                              Created a{' '}
                               <span className="text-success font-semibold">
                                 New Task
-                              </span>{" "}
-                              today{" "}
+                              </span>{' '}
+                              today{' '}
                               <span className="w-[1.25rem] h-[1.25rem] leading-[1.25rem] text-[0.65rem] inline-flex items-center justify-center font-medium bg-purple/10 rounded-full ms-1">
                                 <i className="ri-add-fill text-purple text-[0.75rem]"></i>
                               </span>
@@ -1105,10 +1105,10 @@ const Crm = () => {
                           </div>
                           <div className="crm-timeline-content">
                             <span>
-                              New member{" "}
+                              New member{' '}
                               <span className="py-[0.2rem] px-[0.45rem] font-semibold rounded-sm text-pink text-[0.75em] bg-pink/10">
                                 @andreas gurrero
-                              </span>{" "}
+                              </span>{' '}
                               added today to AI Summit.
                             </span>
                           </div>
@@ -1145,10 +1145,10 @@ const Crm = () => {
                           </div>
                           <div className="crm-timeline-content">
                             <span>
-                              Neon Tarly added{" "}
+                              Neon Tarly added{' '}
                               <span className="text-info font-semibold">
                                 Robert Bright
-                              </span>{" "}
+                              </span>{' '}
                               to AI summit project.
                             </span>
                           </div>
@@ -1168,7 +1168,7 @@ const Crm = () => {
                           </div>
                           <div className="crm-timeline-content">
                             <span>
-                              Replied to new support request{" "}
+                              Replied to new support request{' '}
                               <i className="ri-checkbox-circle-line text-success text-[1rem] align-middle"></i>
                             </span>
                           </div>
@@ -1188,7 +1188,7 @@ const Crm = () => {
                           </div>
                           <div className="crm-timeline-content">
                             <span>
-                              Completed documentation of{" "}
+                              Completed documentation of{' '}
                               <Link
                                 href="#!"
                                 className="text-purple underline font-semibold"
@@ -1216,5 +1216,5 @@ const Crm = () => {
   );
 };
 
-Crm.layout = "Contentlayout";
+Crm.layout = 'Contentlayout';
 export default Crm;

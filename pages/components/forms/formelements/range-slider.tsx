@@ -1,16 +1,22 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader'
-import Seo from '@/shared/layout-components/seo/seo'
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
 import React, { Fragment } from 'react';
 import Slider, { SliderThumb } from '@mui/material/Slider';
 import Box from '@mui/material/Box';
-import LabeledTwoThumbs, { Marks } from '@/shared/data/forms/form-elements/rangesliderdata';
+import LabeledTwoThumbs, {
+  Marks,
+} from '@/shared/data/forms/form-elements/rangesliderdata';
 import { connect } from 'react-redux';
 import Showcode from '@/shared/layout-components/showcode/showcode';
-import { range1, range2, range3, range4 } from '@/shared/data/prism/forms-prism';
+import {
+  range1,
+  range2,
+  range3,
+  range4,
+} from '@/shared/data/prism/forms-prism';
 import { styled } from '@mui/material/styles';
 
-const Rangeslider = ({ local_varaiable }:any) => {
-
+const Rangeslider = ({ local_varaiable }: any) => {
   function valuetext(value: any) {
     return `${value}°C`;
   }
@@ -45,8 +51,7 @@ const Rangeslider = ({ local_varaiable }:any) => {
     },
   }));
 
-
-  function AirbnbThumbComponent(props:any) {
+  function AirbnbThumbComponent(props: any) {
     const { children, ...other } = props;
     return (
       <SliderThumb {...other}>
@@ -60,8 +65,12 @@ const Rangeslider = ({ local_varaiable }:any) => {
 
   return (
     <Fragment>
-      <Seo title={"Range Slider"} />
-      <Pageheader currentpage="Range Slider" activepage="Form Elements" mainpage="Range Slider" />
+      <Seo title={'Range Slider'} />
+      <Pageheader
+        currentpage="Range Slider"
+        activepage="Form Elements"
+        mainpage="Range Slider"
+      />
       <div className="grid grid-cols-12 gap-6">
         <div className="xl:col-span-3 col-span-12">
           <Showcode title="Default Range" code={range1}>
@@ -70,17 +79,35 @@ const Rangeslider = ({ local_varaiable }:any) => {
         </div>
         <div className="xl:col-span-3 col-span-12">
           <Showcode title="Disabled Range" code={range2}>
-            <input type="range" className="form-range" id="disabledRange" disabled />
+            <input
+              type="range"
+              className="form-range"
+              id="disabledRange"
+              disabled
+            />
           </Showcode>
         </div>
         <div className="xl:col-span-3 col-span-12">
           <Showcode title="Range With Min And Max Values" code={range3}>
-            <input type="range" className="form-range" min="0" max="5" id="customRange2" />
+            <input
+              type="range"
+              className="form-range"
+              min="0"
+              max="5"
+              id="customRange2"
+            />
           </Showcode>
         </div>
         <div className="xl:col-span-3 col-span-12">
           <Showcode title="Range With Steps" code={range4}>
-            <input type="range" className="form-range" min="0" max="5" step="0.5" id="customRange3" />
+            <input
+              type="range"
+              className="form-range"
+              min="0"
+              max="5"
+              step="0.5"
+              id="customRange3"
+            />
           </Showcode>
         </div>
       </div>
@@ -89,16 +116,16 @@ const Rangeslider = ({ local_varaiable }:any) => {
         <div className="xl:col-span-3 col-span-12">
           <div className="box">
             <div className="box-header">
-              <div className="box-title">
-                Default-Styling
-              </div>
+              <div className="box-title">Default-Styling</div>
             </div>
             <div className="box-body">
               <div id="slider">
                 <Box sx={{ m: 3 }} />
                 <AirbnbSlider
                   slots={{ thumb: AirbnbThumbComponent }}
-                  getAriaLabel={(index) => (index === 0 ? 'Minimum price' : 'Maximum price')}
+                  getAriaLabel={(index) =>
+                    index === 0 ? 'Minimum price' : 'Maximum price'
+                  }
                   defaultValue={[10, 90]}
                 />
               </div>
@@ -108,15 +135,15 @@ const Rangeslider = ({ local_varaiable }:any) => {
         <div className="xl:col-span-3 col-span-12">
           <div className="box">
             <div className="box-header">
-              <div className="box-title">
-                Fit Handles
-              </div>
+              <div className="box-title">Fit Handles</div>
             </div>
             <div className="box-body">
               <div id="slider-fit">
                 <AirbnbSlider
                   slots={{ thumb: AirbnbThumbComponent }}
-                  getAriaLabel={(index) => (index === 0 ? 'Minimum price' : 'Maximum price')}
+                  getAriaLabel={(index) =>
+                    index === 0 ? 'Minimum price' : 'Maximum price'
+                  }
                   defaultValue={[10, 90]}
                 />
               </div>
@@ -126,19 +153,17 @@ const Rangeslider = ({ local_varaiable }:any) => {
         <div className="xl:col-span-3 col-span-12">
           <div className="box">
             <div className="box-header">
-              <div className="box-title">
-                Rounded Styling
-              </div>
+              <div className="box-title">Rounded Styling</div>
             </div>
             <div className="box-body">
               <div id="slider-round" className="mb-5">
                 <div id="slider-round">
-                <Slider
-  component="span"
-  aria-label="Temperature"
-  defaultValue={30}
-  color="primary"
-/>
+                  <Slider
+                    component="span"
+                    aria-label="Temperature"
+                    defaultValue={30}
+                    color="primary"
+                  />
                 </div>
               </div>
             </div>
@@ -147,19 +172,17 @@ const Rangeslider = ({ local_varaiable }:any) => {
         <div className="xl:col-span-3 col-span-12">
           <div className="box">
             <div className="box-header">
-              <div className="box-title">
-                Square Styling
-              </div>
+              <div className="box-title">Square Styling</div>
             </div>
             <div className="box-body">
               <div id="slider-square" className="mb-5">
-              <Slider
-  className="square-thumb"
-  aria-label="Temperature"
-  defaultValue={30}
-  color="primary"
-  style={{ margin: 'auto', width: '50%' }}
-/>
+                <Slider
+                  className="square-thumb"
+                  aria-label="Temperature"
+                  defaultValue={30}
+                  color="primary"
+                  style={{ margin: 'auto', width: '50%' }}
+                />
               </div>
             </div>
           </div>
@@ -196,9 +219,7 @@ const Rangeslider = ({ local_varaiable }:any) => {
         <div className="xl:col-span-4 col-span-12">
           <div className="box">
             <div className="box-header">
-              <div className="box-title">
-                Primary
-              </div>
+              <div className="box-title">Primary</div>
             </div>
             <div className="box-body">
               <div id="primary-colored-slider">
@@ -215,9 +236,7 @@ const Rangeslider = ({ local_varaiable }:any) => {
         <div className="xl:col-span-4 col-span-12">
           <div className="box">
             <div className="box-header">
-              <div className="box-title">
-                Secondary
-              </div>
+              <div className="box-title">Secondary</div>
             </div>
             <div className="box-body">
               <div id="secondary-colored-slider">
@@ -234,9 +253,7 @@ const Rangeslider = ({ local_varaiable }:any) => {
         <div className="xl:col-span-4 col-span-12">
           <div className="box">
             <div className="box-header">
-              <div className="box-title">
-                Warning
-              </div>
+              <div className="box-title">Warning</div>
             </div>
             <div className="box-body">
               <div id="warning-colored-slider">
@@ -244,7 +261,7 @@ const Rangeslider = ({ local_varaiable }:any) => {
                   aria-label="Temperature"
                   defaultValue={30}
                   getAriaValueText={valuetext}
-                // color="warning"
+                  // color="warning"
                 />
               </div>
             </div>
@@ -253,9 +270,7 @@ const Rangeslider = ({ local_varaiable }:any) => {
         <div className="xl:col-span-4 col-span-12">
           <div className="box">
             <div className="box-header">
-              <div className="box-title">
-                Info
-              </div>
+              <div className="box-title">Info</div>
             </div>
             <div className="box-body">
               <div id="info-colored-slider">
@@ -263,7 +278,7 @@ const Rangeslider = ({ local_varaiable }:any) => {
                   aria-label="Temperature"
                   defaultValue={30}
                   getAriaValueText={valuetext}
-                // color="info"
+                  // color="info"
                 />
               </div>
             </div>
@@ -272,9 +287,7 @@ const Rangeslider = ({ local_varaiable }:any) => {
         <div className="xl:col-span-4 col-span-12">
           <div className="box">
             <div className="box-header">
-              <div className="box-title">
-                Success
-              </div>
+              <div className="box-title">Success</div>
             </div>
             <div className="box-body">
               <div id="success-colored-slider">
@@ -282,7 +295,7 @@ const Rangeslider = ({ local_varaiable }:any) => {
                   aria-label="Temperature"
                   defaultValue={30}
                   getAriaValueText={valuetext}
-                // color="success"
+                  // color="success"
                 />
               </div>
             </div>
@@ -291,9 +304,7 @@ const Rangeslider = ({ local_varaiable }:any) => {
         <div className="xl:col-span-4 col-span-12">
           <div className="box">
             <div className="box-header">
-              <div className="box-title">
-                Danger
-              </div>
+              <div className="box-title">Danger</div>
             </div>
             <div className="box-body">
               <div id="danger-colored-slider">
@@ -301,7 +312,7 @@ const Rangeslider = ({ local_varaiable }:any) => {
                   aria-label="Temperature"
                   defaultValue={30}
                   getAriaValueText={valuetext}
-                // color="danger"
+                  // color="danger"
                 />
               </div>
             </div>
@@ -309,12 +320,12 @@ const Rangeslider = ({ local_varaiable }:any) => {
         </div>
       </div>
     </Fragment>
-  )
-}
-Rangeslider.layout = "Contentlayout"
+  );
+};
+Rangeslider.layout = 'Contentlayout';
 
 const mapStateToProps = (state: any) => ({
-  local_varaiable: state
+  local_varaiable: state,
 });
 
 export default connect(mapStateToProps, {})(Rangeslider);

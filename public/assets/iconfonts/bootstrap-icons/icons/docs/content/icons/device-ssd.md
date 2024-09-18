@@ -3,6 +3,6 @@ title: Device SSD
 categories:
   - Devices
 tags:
-  - "solid state"
+  - 'solid state'
   - drive
 ---

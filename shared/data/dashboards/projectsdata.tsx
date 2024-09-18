@@ -1,7 +1,7 @@
-import { ApexOptions } from "apexcharts";
-import dynamic from "next/dynamic";
-import { Component } from "react";
-const ReactApexChart = dynamic(() => import("react-apexcharts"), {
+import { ApexOptions } from 'apexcharts';
+import dynamic from 'next/dynamic';
+import { Component } from 'react';
+const ReactApexChart = dynamic(() => import('react-apexcharts'), {
   ssr: false,
 });
 
@@ -9,7 +9,7 @@ interface spark3 {
   options?: ApexOptions;
   width?: number;
   height?: string | number;
-  series?: ApexOptions["series"];
+  series?: ApexOptions['series'];
   label?: XAxisAnnotations;
   color?: string | string[] | (string & string[]) | undefined;
   endingShape?: string;
@@ -25,7 +25,7 @@ export class Team1 extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Value",
+          name: 'Value',
           data: [54, 38, 56, 24, 65],
         },
       ],
@@ -36,7 +36,7 @@ export class Team1 extends Component<{}, spark3> {
               chart.windowResizeHandler();
             },
           },
-          type: "line",
+          type: 'line',
           height: 20,
           width: 80,
           sparkline: {
@@ -48,7 +48,7 @@ export class Team1 extends Component<{}, spark3> {
             top: 0,
             left: 0,
             blur: 3,
-            color: "#000",
+            color: '#000',
             opacity: 0.1,
           },
         },
@@ -67,8 +67,8 @@ export class Team1 extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "butt",
+          curve: 'smooth',
+          lineCap: 'butt',
           colors: undefined,
           width: 1.5,
           dashArray: 0,
@@ -76,7 +76,7 @@ export class Team1 extends Component<{}, spark3> {
         fill: {},
         series: [
           {
-            name: "Value",
+            name: 'Value',
             data: [54, 38, 56, 24, 65],
           },
         ],
@@ -95,7 +95,7 @@ export class Team1 extends Component<{}, spark3> {
             show: false,
           },
         },
-        colors: ["#09ad95"],
+        colors: ['#09ad95'],
       },
     };
   }
@@ -121,7 +121,7 @@ export class Team2 extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Value",
+          name: 'Value',
           data: [24, 54, 15, 42, 16],
         },
       ],
@@ -132,7 +132,7 @@ export class Team2 extends Component<{}, spark3> {
               chart.windowResizeHandler();
             },
           },
-          type: "line",
+          type: 'line',
           height: 20,
           width: 80,
           sparkline: {
@@ -144,7 +144,7 @@ export class Team2 extends Component<{}, spark3> {
             top: 0,
             left: 0,
             blur: 3,
-            color: "#000",
+            color: '#000',
             opacity: 0.1,
           },
         },
@@ -163,8 +163,8 @@ export class Team2 extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "butt",
+          curve: 'smooth',
+          lineCap: 'butt',
           colors: undefined,
           width: 1.5,
           dashArray: 0,
@@ -186,7 +186,7 @@ export class Team2 extends Component<{}, spark3> {
           },
         },
 
-        colors: ["#fb6b27"],
+        colors: ['#fb6b27'],
       },
     };
   }
@@ -212,7 +212,7 @@ export class Team3 extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Value",
+          name: 'Value',
           data: [15, 42, 16, 44, 24],
         },
       ],
@@ -223,7 +223,7 @@ export class Team3 extends Component<{}, spark3> {
               chart.windowResizeHandler();
             },
           },
-          type: "line",
+          type: 'line',
           height: 20,
           width: 80,
           sparkline: {
@@ -235,7 +235,7 @@ export class Team3 extends Component<{}, spark3> {
             top: 0,
             left: 0,
             blur: 3,
-            color: "#000",
+            color: '#000',
             opacity: 0.1,
           },
         },
@@ -254,8 +254,8 @@ export class Team3 extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "butt",
+          curve: 'smooth',
+          lineCap: 'butt',
           colors: undefined,
           width: 1.5,
           dashArray: 0,
@@ -275,7 +275,7 @@ export class Team3 extends Component<{}, spark3> {
             show: false,
           },
         },
-        colors: ["#1170e4"],
+        colors: ['#1170e4'],
       },
     };
   }
@@ -301,7 +301,7 @@ export class Team4 extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Value",
+          name: 'Value',
           data: [54, 38, 56, 24, 65],
         },
       ],
@@ -312,7 +312,7 @@ export class Team4 extends Component<{}, spark3> {
               chart.windowResizeHandler();
             },
           },
-          type: "line",
+          type: 'line',
           height: 20,
           width: 80,
           sparkline: {
@@ -324,7 +324,7 @@ export class Team4 extends Component<{}, spark3> {
             top: 0,
             left: 0,
             blur: 3,
-            color: "#000",
+            color: '#000',
             opacity: 0.1,
           },
         },
@@ -343,8 +343,8 @@ export class Team4 extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "butt",
+          curve: 'smooth',
+          lineCap: 'butt',
           colors: undefined,
           width: 1.5,
           dashArray: 0,
@@ -365,7 +365,7 @@ export class Team4 extends Component<{}, spark3> {
             show: false,
           },
         },
-        colors: ["#e82646"],
+        colors: ['#e82646'],
       },
     };
   }
@@ -391,7 +391,7 @@ export class Team5 extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Value",
+          name: 'Value',
           data: [15, 42, 16, 44, 24],
         },
       ],
@@ -402,7 +402,7 @@ export class Team5 extends Component<{}, spark3> {
               chart.windowResizeHandler();
             },
           },
-          type: "line",
+          type: 'line',
           height: 20,
           width: 80,
           sparkline: {
@@ -414,7 +414,7 @@ export class Team5 extends Component<{}, spark3> {
             top: 0,
             left: 0,
             blur: 3,
-            color: "#000",
+            color: '#000',
             opacity: 0.1,
           },
         },
@@ -433,8 +433,8 @@ export class Team5 extends Component<{}, spark3> {
         },
         stroke: {
           show: true,
-          curve: "smooth",
-          lineCap: "butt",
+          curve: 'smooth',
+          lineCap: 'butt',
           colors: undefined,
           width: 1.5,
           dashArray: 0,
@@ -455,7 +455,7 @@ export class Team5 extends Component<{}, spark3> {
             show: false,
           },
         },
-        colors: ["#f7b731"],
+        colors: ['#f7b731'],
       },
     };
   }
@@ -484,18 +484,18 @@ export class ProjectAnalysis extends Component<{}, spark3> {
     this.state = {
       series: [
         {
-          name: "Projects",
-          type: "column",
+          name: 'Projects',
+          type: 'column',
           data: [1.8, 2.5, 2.5, 1.5, 2.5, 2.8, 3.8],
         },
         {
-          name: "Tasks",
-          type: "column",
+          name: 'Tasks',
+          type: 'column',
           data: [1.1, 2.2, 3.1, 4, 4.1, 4.9, 6.5],
         },
         {
-          name: "Revenue",
-          type: "line",
+          name: 'Revenue',
+          type: 'line',
           data: [20, 29, 37, 35, 44, 43, 50],
         },
       ],
@@ -510,12 +510,12 @@ export class ProjectAnalysis extends Component<{}, spark3> {
             show: false,
           },
           height: 315,
-          type: "line",
+          type: 'line',
           stacked: false,
-          fontFamily: "Poppins, Arial, sans-serif",
+          fontFamily: 'Poppins, Arial, sans-serif',
         },
         grid: {
-          borderColor: "#f5f4f4",
+          borderColor: '#f5f4f4',
           strokeDashArray: 3,
         },
         dataLabels: {
@@ -525,7 +525,7 @@ export class ProjectAnalysis extends Component<{}, spark3> {
           text: undefined,
         },
         xaxis: {
-          categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+          categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
         },
         yaxis: [
           {
@@ -535,11 +535,11 @@ export class ProjectAnalysis extends Component<{}, spark3> {
             },
             axisBorder: {
               show: false,
-              color: "#4eb6d0",
+              color: '#4eb6d0',
             },
             labels: {
               style: {
-                colors: "#4eb6d0",
+                colors: '#4eb6d0',
               },
             },
             title: {
@@ -550,7 +550,7 @@ export class ProjectAnalysis extends Component<{}, spark3> {
             },
           },
           {
-            seriesName: "Projects",
+            seriesName: 'Projects',
             opposite: true,
             axisTicks: {
               show: true,
@@ -560,7 +560,7 @@ export class ProjectAnalysis extends Component<{}, spark3> {
             },
             labels: {
               style: {
-                colors: "#00E396",
+                colors: '#00E396',
               },
             },
             title: {
@@ -568,7 +568,7 @@ export class ProjectAnalysis extends Component<{}, spark3> {
             },
           },
           {
-            seriesName: "Revenue",
+            seriesName: 'Revenue',
             opposite: true,
             axisTicks: {
               show: true,
@@ -589,27 +589,27 @@ export class ProjectAnalysis extends Component<{}, spark3> {
         },
         legend: {
           show: true,
-          position: "top",
+          position: 'top',
           offsetX: 40,
-          fontSize: "13px",
-          fontWeight: "normal",
+          fontSize: '13px',
+          fontWeight: 'normal',
           labels: {
-            colors: "#acb1b1",
+            colors: '#acb1b1',
           },
           markers: {},
         },
         stroke: {
           width: [0, 0, 1.5],
-          curve: "straight",
+          curve: 'straight',
           dashArray: [0, 0, 0],
         },
         plotOptions: {
           bar: {
-            columnWidth: "35%",
+            columnWidth: '35%',
             borderRadius: 3,
           },
         },
-        colors: ["rgb(132, 90, 223)", "#ededed", "#23b7e5"],
+        colors: ['rgb(132, 90, 223)', '#ededed', '#23b7e5'],
       },
     };
   }

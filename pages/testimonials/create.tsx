@@ -1,7 +1,6 @@
-import React from "react";
-import { TestimonialList } from "../components/testimonial/testimonaildata";
-import TestimonialForm from "../components/testimonial/TestimonialForm";
-
+import React from 'react';
+import { TestimonialList } from '../components/testimonial/testimonaildata';
+import TestimonialForm from '../components/testimonial/TestimonialForm';
 
 const CreateTestimonialPage = () => {
   const handleCreateTestimonial = (newTestimonial: {
@@ -15,10 +14,8 @@ const CreateTestimonialPage = () => {
     // Navigate to the testimonials list page or show a success message
   };
 
-  return (
-    <TestimonialForm onSubmit={handleCreateTestimonial} />
-  );
+  return <TestimonialForm onSubmit={handleCreateTestimonial} />;
 };
 
-TestimonialForm.layout = "Contentlayout"
+TestimonialForm.layout = 'Contentlayout';
 export default CreateTestimonialPage;

@@ -14,8 +14,9 @@
   .swiper-button-next,
   .swiper-button-prev {
     @apply w-[1.563rem] h-[1.563rem] text-white bg-black/30 rounded-md #{!important};
-    &:after,&:before {
-        @apply text-white #{!important};
+    &:after,
+    &:before {
+      @apply text-white #{!important};
     }
   }
 

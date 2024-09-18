@@ -98,18 +98,18 @@
     }
   }
 }
-[type="radio"] {
+[type='radio'] {
   @apply dark:bg-bodybg dark:border-defaultborder/10 ring-primary;
 }
 .form-check-input {
   @apply align-top appearance-none;
 }
 
-.form-check-input[type="checkbox"] {
+.form-check-input[type='checkbox'] {
   @apply rounded-[0.25rem];
 }
 
-.form-check-input[type="radio"] {
+.form-check-input[type='radio'] {
   @apply rounded-[50%] ring-primary;
 }
 
@@ -151,7 +151,7 @@
   @apply dark:bg-bodybg;
   @apply placeholder:opacity-40 placeholder:font-medium placeholder:text-[0.8rem];
 }
-.form-checked-outline:checked[type="checkbox"] {
+.form-checked-outline:checked[type='checkbox'] {
   @apply bg-none relative bg-transparent hover:bg-transparent before:absolute  before:text-primary before:w-[0.625rem] before:h-[0.625rem] before:-top-4 before:start-0 before:text-[0.688rem];
   &.form-checked-success {
     @apply before:text-success;
@@ -172,28 +172,28 @@
 .form-check-reverse .form-check-input {
   @apply ltr:float-right rtl:float-left -me-[1.5em] ms-0;
 }
-[type="text"]:focus,
+[type='text']:focus,
 input:where(:not([type])):focus,
-[type="email"]:focus,
-[type="url"]:focus,
-[type="password"]:focus,
-[type="number"]:focus,
-[type="date"]:focus,
-[type="datetime-local"]:focus,
-[type="month"]:focus,
-[type="search"]:focus,
-[type="tel"]:focus,
-[type="time"]:focus,
-[type="week"]:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
 [multiple]:focus,
 textarea:focus,
 select:focus {
   @apply border-defaultborder dark:border-defaultborder/10 ring-0 #{!important};
 }
-[type="checkbox"]:checked:hover,
-[type="checkbox"]:checked:focus,
-[type="radio"]:checked:hover,
-[type="radio"]:checked:focus {
+[type='checkbox']:checked:hover,
+[type='checkbox']:checked:focus,
+[type='radio']:checked:hover,
+[type='radio']:checked:focus {
   @apply bg-primary ring-primary;
 }
 /* Start:: toggle switches-1 */
@@ -295,7 +295,7 @@ select:focus {
   }
 }
 /* Start:: toggle switches-2 */
-.custom-toggle-switch > input[type="checkbox"] {
+.custom-toggle-switch > input[type='checkbox'] {
   @apply hidden;
 }
 
@@ -335,7 +335,7 @@ select:focus {
   @apply bg-black text-white;
 }
 
-.custom-toggle-switch > input[type="checkbox"]:checked + label::before {
+.custom-toggle-switch > input[type='checkbox']:checked + label::before {
   @apply bg-inherit opacity-[0.5];
 }
 
@@ -344,7 +344,7 @@ select:focus {
   after:bg-white after:rounded-[1rem] after:h-[1.5rem]  after:shadow-[0_0_0.313rem_rgba(228,229,237,0.8)] after:-start-1 after:-mt-2 after:absolute after:-top-1 after:transition-all after:duration-[0.3s] after:ease-in-out after:w-[1.5rem];
 }
 
-.custom-toggle-switch > input[type="checkbox"]:checked + label::after {
+.custom-toggle-switch > input[type='checkbox']:checked + label::after {
   @apply bg-inherit start-[50%];
 }
 
@@ -352,7 +352,7 @@ select:focus {
   @apply h-[10px] w-[27px] rounded-[10px];
 }
 
-.custom-toggle-switch.toggle-sm input[type="checkbox"]:checked + label::after {
+.custom-toggle-switch.toggle-sm input[type='checkbox']:checked + label::after {
   @apply start-[13px];
 }
 
@@ -364,7 +364,7 @@ select:focus {
   @apply h-[27px] w-[55px] rounded-[20px];
 }
 
-.custom-toggle-switch.toggle-lg input[type="checkbox"]:checked + label::after {
+.custom-toggle-switch.toggle-lg input[type='checkbox']:checked + label::after {
   @apply start-[77%];
 }
 
@@ -461,22 +461,22 @@ select:focus {
 }
 
 input {
-  &[type="week"],
-  &[type="month"],
-  &[type="date"],
-  &[type="datetime-local"],
-  &[type="time"] {
+  &[type='week'],
+  &[type='month'],
+  &[type='date'],
+  &[type='datetime-local'],
+  &[type='time'] {
     &::-webkit-calendar-picker-indicator {
       @apply dark:invert #{!important};
     }
   }
 }
 input {
-  &[type="week"],
-  &[type="month"],
-  &[type="date"],
-  &[type="datetime-local"],
-  &[type="time"] {
+  &[type='week'],
+  &[type='month'],
+  &[type='date'],
+  &[type='datetime-local'],
+  &[type='time'] {
     @apply rtl:text-end rtl:dir-rtl #{!important};
 
     &::-webkit-calendar-picker-indicator {

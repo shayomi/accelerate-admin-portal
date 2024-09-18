@@ -19,5 +19,5 @@ const PartnerDetailPage = () => {
   );
 };
 
-PartnerDetailPage.layout = "Contentlayout"
+PartnerDetailPage.layout = 'Contentlayout';
 export default PartnerDetailPage;

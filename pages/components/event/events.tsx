@@ -1,17 +1,17 @@
-import React, { Fragment, useState } from "react";
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
-import { eventsData } from "./eventdata";
+import React, { Fragment, useState } from 'react';
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Seo from '@/shared/layout-components/seo/seo';
+import Link from 'next/link';
+import { eventsData } from './eventdata';
 
 interface EventDetailProps {
   event: Event;
 }
 
 const Events = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filterStatus, setFilterStatus] = useState("");
-  const [filterLocation, setFilterLocation] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filterStatus, setFilterStatus] = useState('');
+  const [filterLocation, setFilterLocation] = useState('');
 
   const filteredEvents = eventsData.filter((event) => {
     const matchesStatus = filterStatus ? event.status === filterStatus : true;
@@ -93,11 +93,11 @@ const Events = () => {
                     <td className="p-2">
                       <span
                         className={`px-2 py-1 rounded-full text-sm ${
-                          event.status === "Upcoming"
-                            ? "text-green"
-                            : event.status === "Ongoing"
-                            ? "text-yellow"
-                            : "text-primary"
+                          event.status === 'Upcoming'
+                            ? 'text-green'
+                            : event.status === 'Ongoing'
+                              ? 'text-yellow'
+                              : 'text-primary'
                         }`}
                       >
                         {event.status}
@@ -122,7 +122,7 @@ const Events = () => {
       <div className="box-footer">
         <div className="sm:flex items-center">
           <div className="text-white">
-            Showing 5 Entries{" "}
+            Showing 5 Entries{' '}
             <i className="bi bi-arrow-right ms-2 font-semibold"></i>
           </div>
           <div className="ms-auto">
@@ -157,6 +157,6 @@ const Events = () => {
   );
 };
 
-Events.layout = "Contentlayout";
+Events.layout = 'Contentlayout';
 
 export default Events;

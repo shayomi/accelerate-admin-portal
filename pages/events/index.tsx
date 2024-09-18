@@ -1,11 +1,13 @@
-import React from 'react'
-import Events from '../components/event/events'
+import React from 'react';
+import Events from '../components/event/events';
 
 const index = () => {
   return (
-    <div><Events /></div>
-  )
-}
+    <div>
+      <Events />
+    </div>
+  );
+};
 
-index.layout = "Contentlayout"
-export default index
+index.layout = 'Contentlayout';
+export default index;

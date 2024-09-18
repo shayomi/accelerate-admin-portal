@@ -1,15 +1,15 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
 const speakersData = [
-  { name: "John Doe", topic: "Future of AI" },
-  { name: "Jane Smith", topic: "Blockchain Revolution" },
-  { name: "Robert Lee", topic: "Cybersecurity Trends" },
-  { name: "Robert Lee", topic: "Cybersecurity Trends" },
-  { name: "Robert Lee", topic: "Cybersecurity Trends" },
-  { name: "Robert Lee", topic: "Cybersecurity Trends" },
-  { name: "Robert Lee", topic: "Cybersecurity Trends" },
-  { name: "Robert Lee", topic: "Cybersecurity Trends" },
+  { name: 'John Doe', topic: 'Future of AI' },
+  { name: 'Jane Smith', topic: 'Blockchain Revolution' },
+  { name: 'Robert Lee', topic: 'Cybersecurity Trends' },
+  { name: 'Robert Lee', topic: 'Cybersecurity Trends' },
+  { name: 'Robert Lee', topic: 'Cybersecurity Trends' },
+  { name: 'Robert Lee', topic: 'Cybersecurity Trends' },
+  { name: 'Robert Lee', topic: 'Cybersecurity Trends' },
+  { name: 'Robert Lee', topic: 'Cybersecurity Trends' },
 ];
 
 const SpeakersTab = () => {
@@ -46,7 +46,7 @@ const SpeakersTab = () => {
       <div className="box-footer">
         <div className="sm:flex items-center">
           <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-            Showing {speakersData.length} Entries{" "}
+            Showing {speakersData.length} Entries{' '}
             <i className="bi bi-arrow-right ms-2 font-semibold"></i>
           </div>
           <div className="ms-auto">

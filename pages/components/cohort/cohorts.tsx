@@ -1,7 +1,7 @@
-import Pageheader from "@/shared/layout-components/page-header/pageheader";
-import Link from "next/link";
-import React, { Fragment } from "react";
-import { cohortsList } from "./cohortsdata";
+import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import Link from 'next/link';
+import React, { Fragment } from 'react';
+import { cohortsList } from './cohortsdata';
 
 const Cohorts = () => {
   return (
@@ -68,7 +68,7 @@ const Cohorts = () => {
         <div className="box-footer">
           <div className="sm:flex items-center">
             <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-              Showing 5 Entries{" "}
+              Showing 5 Entries{' '}
               <i className="bi bi-arrow-right ms-2 font-semibold"></i>
             </div>
             <div className="ms-auto">
@@ -104,6 +104,6 @@ const Cohorts = () => {
   );
 };
 
-Cohorts.layout = "Contentlayout";
+Cohorts.layout = 'Contentlayout';
 
 export default Cohorts;

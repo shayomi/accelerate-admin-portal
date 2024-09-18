@@ -1,8 +1,6 @@
 {
   "name": "boxicons",
-  "authors": [
-    "atisawd <atisawd@gmail.com>"
-  ],
+  "authors": ["atisawd <atisawd@gmail.com>"],
   "description": "High Quality Web Icons",
   "main": "./dist/boxicons.js",
   "license": "MIT",
@@ -13,6 +11,6 @@
     "bower_components",
     "test",
     "tests",
-     "*.md"
+    "*.md"
   ]
 }
