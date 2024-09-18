@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build 2>&1 | grep -v \"API routes and middleware\"",
-    "build:vercel": "ESLINT_NO_DEV_ERRORS=true next build",
     "start": "next start",
     "lint": "next lint",
     "postcss": "sass ./public/assets/scss/style.scss ./public/assets/css/style.css && postcss ./public/assets/css/style.css -o ./public/assets/css/style.css",
