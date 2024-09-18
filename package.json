@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build 2>&1 | grep -v \"API routes and middleware\"",
     "start": "next start",
+    "lint": "next lint",
     "postcss": "sass ./public/assets/scss/style.scss ./public/assets/css/style.css && postcss ./public/assets/css/style.css -o ./public/assets/css/style.css",
     "sass": "sass ./public/assets/scss/:./public/assets/css/",
     "sass-min": "sass ./public/assets/scss/:./public/assets/css/ --style compressed"
@@ -88,10 +89,15 @@
     "@types/react-color": "^3.0.11",
     "@types/react-table": "^7.7.19",
     "autoprefixer": "^10.4.16",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "node-sass": "^9.0.0",
     "postcss": "^8.4.33",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.6.0"
   }
 }
