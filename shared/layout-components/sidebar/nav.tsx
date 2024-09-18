@@ -126,78 +126,64 @@ export const MenuItems: any = [
 
   {
     icon: AdvisorIcon,
-
     title: "Advisor",
-    type: "sub",
+    path: "/advisor",
+    type: "link",
     active: false,
-    children: [
-      {
-        path: "/components/advisor/advisors",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Advisor",
-      },
-      {
-        path: "/components/advisor/advisordetails",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Advisor Details",
-      },
-      {
-        path: "/components/advisor/create",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Create an Advisor",
-      },
-      {
-        path: "/components/advisor/edit",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Edit Advisor",
-      },
-      {
-        path: "/components/advisor/AdvisorAssignment",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Advisor Assignment",
-      },
-    ],
+    selected:false
   },
+
+  // {
+  //   icon: AdvisorIcon,
+  //   title: "Advisor",
+  //   type: "sub",
+  //   active: false,
+  //   children: [
+  //     {
+  //       path: "/components/advisor/advisors",
+  //       type: "link",
+  //       active: false,
+  //       selected: false,
+  //       title: "Advisor",
+  //     },
+  //     {
+  //       path: "/components/advisor/advisordetails",
+  //       type: "link",
+  //       active: false,
+  //       selected: false,
+  //       title: "Advisor Details",
+  //     },
+  //     {
+  //       path: "/components/advisor/create",
+  //       type: "link",
+  //       active: false,
+  //       selected: false,
+  //       title: "Create an Advisor",
+  //     },
+  //     {
+  //       path: "/components/advisor/edit",
+  //       type: "link",
+  //       active: false,
+  //       selected: false,
+  //       title: "Edit Advisor",
+  //     },
+  //     {
+  //       path: "/components/advisor/AdvisorAssignment",
+  //       type: "link",
+  //       active: false,
+  //       selected: false,
+  //       title: "Advisor Assignment",
+  //     },
+  //   ],
+  // },
 
   {
     icon: MeetingsIcon,
-
     title: "Meetings",
-    type: "sub",
+    path: "/meeting",
+    type: "link",
     active: false,
-    children: [
-      {
-        path: "/components/meetings/meeting",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Meeting",
-      },
-      {
-        path: "/components/meetings/details",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Meeting Details",
-      },
-      {
-        path: "/components/meetings/meetingnotereview",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Meeting Notes Review",
-      },
-    ],
+    selected:false
   },
 
   {
@@ -208,90 +194,87 @@ export const MenuItems: any = [
     active: false,
     children: [
       {
-        path: "/components/cohort/cohorts",
+        path: "/cohort/cohorts",
         type: "link",
         active: false,
         selected: false,
         title: "Cohort",
       },
       {
-        path: "/components/cohort/cohortdetails",
+        path: "/cohort/partner",
         type: "link",
         active: false,
         selected: false,
-        title: "Cohort Details",
-      },
-      {
-        path: "/components/cohort/programpartner",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Program Partners",
-      },
-      {
-        path: "/components/cohort/partnerdetails",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Program Partners Details",
+        title: "Program Partner",
       },
     ],
   },
 
+  // {
+  //   icon: CohortIcon,
+
+  //   title: "Cohort",
+  //   type: "sub",
+  //   active: false,
+  //   children: [
+  //     {
+  //       path: "/components/cohort/cohorts",
+  //       type: "link",
+  //       active: false,
+  //       selected: false,
+  //       title: "Cohort",
+  //     },
+  //     {
+  //       path: "/components/cohort/cohortdetails",
+  //       type: "link",
+  //       active: false,
+  //       selected: false,
+  //       title: "Cohort Details",
+  //     },
+  //     {
+  //       path: "/components/cohort/programpartner",
+  //       type: "link",
+  //       active: false,
+  //       selected: false,
+  //       title: "Program Partners",
+  //     },
+  //     {
+  //       path: "/components/cohort/partnerdetails",
+  //       type: "link",
+  //       active: false,
+  //       selected: false,
+  //       title: "Program Partners Details",
+  //     },
+  //   ],
+  // },
+
   {
     icon: ArticlesIcon,
-
     title: "Articles",
-    type: "sub",
+    path: "/articles",
+    type: "link",
     active: false,
-    children: [
-      {
-        path: "/components/article/articles",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Articles",
-      },
-      {
-        path: "/components/article/createarticle",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Create Article",
-      },
-      {
-        path: "/components/article/editarticle",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Edit Article",
-      },
-    ],
+    selected:false
   },
 
   {
     icon: AuthorsIcon,
-
     title: "Authors",
-    type: "sub",
+    path: "/authors",
+    type: "link",
     active: false,
-    children: [
-      {
-        path: "/components/author/authors",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Author",
-      },
-      {
-        path: "/components/author/createauthor",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Create Author",
-      },
-    ],
+    selected:false
   },
+
+  {
+    icon: TestimonialsIcon,
+    title: "Testimonials",
+    path: "/testimonials",
+    type: "link",
+    active: false,
+    selected:false
+  },
+
 
   {
     icon: TestimonialsIcon,

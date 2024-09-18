@@ -64,7 +64,7 @@ const Advisors = () => {
                 type="button"
                 className="bg-green text-white px-3 py-1.5 rounded-md"
               >
-                Add new advisor
+                <Link href="/advisor/create">Add new advisor</Link>
               </button>
             </div>
           </div>
@@ -121,7 +121,7 @@ const Advisors = () => {
                         {advisor.name}
                       </td>
                       <td className="text-black/70 hs-dark-mode-active:text-white">
-                        {advisor.focusArea}
+                        {advisor.focusAreas}
                       </td>
                       <td className="text-black/70 hs-dark-mode-active:text-white">
                         {advisor.companyName}
@@ -131,16 +131,15 @@ const Advisors = () => {
                       </td>
 
                       <td>
-                        <div className="flex flex-row gap-2">
-                          <Link
-                            href={`components/advisor-management/advisor/${idx}`}
-                          >
+                        <div className="flex flex-row gap-4 items-center">
+                          <Link href={`/advisor/${advisor.name}`}>
                             <button className="border-[1px] text-primary bg-white px-3 py-1.5 rounded-md">
                               View
                             </button>
                           </Link>
-
-                          <button className="text-primary">Edit</button>
+                          <Link href={`/advisor/edit/${advisor.name}`}>
+                            <button className="text-primary">Edit</button>
+                          </Link>
                         </div>
                       </td>
                     </tr>

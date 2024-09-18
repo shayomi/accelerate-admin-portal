@@ -1,100 +1,163 @@
-import React, { Fragment, useState } from "react";
+import React, { useState, useEffect, Fragment } from "react";
+import { useRouter } from "next/router";
+import { Authors } from "@/types";
+import { articlesData } from "../article/articledata";
 import Seo from "@/shared/layout-components/seo/seo";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 
-const CreateAuthor = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [profilePicture, setProfilePicture] = useState<File | null>(null);
+interface AuthorFormProps {
+  authorData?: Authors;
+  onSubmit: (author: Authors) => void;
+}
 
-  // Handle file upload
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      setProfilePicture(e.target.files[0]);
+const AuthorForm = ({ authorData, onSubmit }: AuthorFormProps) => {
+  const [firstName, setFirstName] = useState(authorData?.firstName || "");
+  const [lastName, setLastName] = useState(authorData?.lastName || "");
+  const [profilePic, setProfilePic] = useState(authorData?.profilePic || "");
+  const [selectedArticles, setSelectedArticles] = useState<number[]>(
+    authorData?.articles.map((article) => article.id) || []
+  );
+
+  const handleArticleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = parseInt(e.target.value, 10);
+    if (!selectedArticles.includes(value)) {
+      setSelectedArticles((prev) => [...prev, value]);
     }
+  };
+
+  const removeArticle = (id: number) => {
+    setSelectedArticles((prev) => prev.filter((articleId) => articleId !== id));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle the form submission (e.g., send to API)
-    console.log({
+
+    const newAuthor: Authors = {
+      id: authorData ? authorData.id : Date.now(), // Generate unique ID for new authors
       firstName,
       lastName,
-      profilePicture,
-    });
+      profilePic,
+      articles: selectedArticles.map((id) => {
+        const article = articlesData.find((article) => article.id === id);
+        return { id, title: article?.title || "Unknown" };
+      }),
+    };
+
+    onSubmit(newAuthor);
   };
 
   return (
     <Fragment>
-      <Seo title={"Create New Author"} />
+      <Seo title={authorData ? "Edit Author" : "Create Author"} />
       <Pageheader
-        currentpage="Create Author"
-        activepage="Dashboards"
-        mainpage="Author Management"
+        currentpage={authorData ? "Edit Author" : "Create Author"}
+        activepage="Authors Management"
+        mainpage="Authors"
       />
+
       <div className="box custom-card">
-        <div className="">
-          <div className=" box-header flex justify-between items-center mb-6">
-            <h1 className="text-3xl font-bold text-blue-700">
-              Create New Author
-            </h1>
-            <button className="bg-primary text-white px-4 py-2 rounded-md">
-              Save
-            </button>
-          </div>
+        <div className="box-body">
+          <form onSubmit={handleSubmit} className="">
+            <div className="mb-4">
+              <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+                First Name
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                className="form-control mt-2"
+                required
+              />
+            </div>
 
-          {/* Form Layout */}
-          <div className="box-body">
-            <form
-              onSubmit={handleSubmit}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            >
-              {/* First Name Field */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                  placeholder="Enter first name"
-                  className="form-control mt-1"
-                />
-              </div>
+            <div className="mb-4">
+              <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                className="form-control mt-2"
+                required
+              />
+            </div>
 
-              {/* Last Name Field */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                  placeholder="Enter last name"
-                  className="form-control mt-1"
-                />
-              </div>
+            <div className="mb-4">
+              <label htmlFor="profilePic" className="block text-sm font-medium text-gray-700">
+                Profile Picture URL
+              </label>
+              <input
+                type="file"
+                className="form-control flex justify-center"
+                id="profilePic"
+                value={profilePic}
+                onChange={(e) => setProfilePic(e.target.value)}
+                required
+              />
+            </div>
 
-              {/* Profile Picture Upload */}
-              <div className="col-span-1 mb-6">
-                <label className="block text-sm font-medium text-gray-700">
-                  Profile Picture
-                </label>
-                <input
-                  type="file"
-                  onChange={handleFileUpload}
-                  className="form-control mt-1"
-                />
+            <div className="mb-4">
+              <label htmlFor="articles" className="block text-sm font-medium text-gray-700">
+                Select Articles
+              </label>
+              <select
+                id="articles"
+                onChange={handleArticleChange}
+                className="form-control mt-2"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Choose an article
+                </option>
+                {articlesData.map((article) => (
+                  <option key={article.id} value={article.id}>
+                    {article.title}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700">
+                Selected Articles
+              </label>
+              <div className="mt-2">
+                {selectedArticles.map((articleId) => {
+                  const article = articlesData.find((a) => a.id === articleId);
+                  return (
+                    <div key={articleId} className="flex items-center justify-between p-2 border border-gray-300 rounded-md mb-2">
+                      <span className="text-sm text-gray-700">{article?.title || "Unknown Article"}</span>
+                      <button
+                        type="button"
+                        className="text-red-500 text-sm"
+                        onClick={() => removeArticle(articleId)}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  );
+                })}
               </div>
-            </form>
-          </div>
+            </div>
+
+            <div className="mt-6">
+              <button
+                type="submit"
+                className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+              >
+                {authorData ? "Update Author" : "Create Author"}
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </Fragment>
   );
 };
 
-CreateAuthor.layout = "Contentlayout";
-export default CreateAuthor;
+AuthorForm.layout = "Contentlayout";
+export default AuthorForm;

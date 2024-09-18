@@ -1,35 +1,7 @@
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Link from "next/link";
 import React, { Fragment } from "react";
-
-interface Cohort {
-  id: string;
-  name: string;
-  startDate: string;
-  endDate: string;
-}
-
-const cohortsList: Cohort[] = [
-  {
-    id: "1",
-    name: "May 2023 Cohort",
-    startDate: "2024-03-01",
-    endDate: "2024-06-30",
-  },
-  {
-    id: "2",
-    name: "May 2024 Cohort",
-    startDate: "2024-07-01",
-    endDate: "2024-09-30",
-  },
-  {
-    id: "3",
-    name: "October 2024 Cohort",
-    startDate: "2024-10-01",
-    endDate: "2024-12-31",
-  },
-  // More cohorts...
-];
+import { cohortsList } from "./cohortsdata";
 
 const Cohorts = () => {
   return (
@@ -43,7 +15,7 @@ const Cohorts = () => {
         <div className="box-header justify-between gap-8 border-b-2 border-white ">
           <h1 className="text-xl font-bold">Cohort List</h1>
           <button className="bg-green text-white px-4 py-2 rounded-md">
-            Create New Cohort
+            <Link href="/cohort/cohorts/create">Create New Cohort</Link>
           </button>
         </div>
 
@@ -81,7 +53,9 @@ const Cohorts = () => {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex gap-4">
                         <button className="text-primary hover:underline">
-                          View Details
+                          <Link href={`/cohort/cohorts/${cohort.id}`}>
+                            View Details
+                          </Link>
                         </button>
                       </div>
                     </td>

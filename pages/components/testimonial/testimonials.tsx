@@ -2,22 +2,9 @@ import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import Link from "next/link";
 import React, { Fragment } from "react";
+import { TestimonialList } from "./testimonaildata";
 
-// Dummy data for testimonials
-const TestimonialList = [
-  {
-    id: 1,
-    name: "John Doe",
-    testimonial: "This platform has transformed our business operations!",
-    embeddedLink: "https://example.com/testimonial/john-doe",
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    testimonial: "Amazing experience, highly recommend to everyone.",
-    embeddedLink: "https://example.com/testimonial/jane-smith",
-  },
-];
+
 
 const Testimonials = () => {
   return (
@@ -37,7 +24,8 @@ const Testimonials = () => {
               type="button"
               className="bg-green text-white px-3 py-1.5 rounded-md"
             >
-              Add New Testimonial
+              <Link href="/testimonials/create">  Add New Testimonial</Link>
+            
             </button>
           </div>
         </div>
@@ -78,7 +66,7 @@ const Testimonials = () => {
                       </Link>
                     </td>
                     <td>
-                      <div className="flex flex-row gap-2">
+                      <div className="flex flex-row gap-4 items-center">
                         <Link
                           href={`components/testimonial-management/testimonial/${testimonial.id}`}
                         >
@@ -86,7 +74,9 @@ const Testimonials = () => {
                             View
                           </button>
                         </Link>
+                        <Link href={`/testimonials/edit/${testimonial.id}`}>
                         <button className="text-primary">Edit</button>
+                        </Link>
                       </div>
                     </td>
                   </tr>

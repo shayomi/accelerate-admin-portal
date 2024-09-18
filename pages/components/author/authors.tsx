@@ -2,14 +2,8 @@ import Link from "next/link";
 import React, { Fragment } from "react";
 import Seo from "@/shared/layout-components/seo/seo";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import { authorsList } from "./authordata";
 
-// Dummy data for authors
-const authorsList = [
-  { id: 1, name: "John Doe" },
-  { id: 2, name: "Jane Smith" },
-  { id: 3, name: "Alex Johnson" },
-  { id: 4, name: "Emily Brown" },
-];
 
 const Authors = () => {
   return (
@@ -26,7 +20,7 @@ const Authors = () => {
         <div className="box-header justify-between gap-8 border-b-2 border-white ">
           <h1 className="text-xl font-bold">Cohort List</h1>
           <button className="bg-green px-3 py-2 rounded-md">
-            Create New Author
+            <Link href="/authors/create"> Create New Author</Link>
           </button>
         </div>
 
@@ -37,7 +31,10 @@ const Authors = () => {
               <thead>
                 <tr className="border border-inherit border-solid dark:border-defaultborder/10">
                   <th className="!text-start !text-[0.85rem] min-w-[200px]">
-                    Name
+                    First Name
+                  </th>
+                  <th className="!text-start !text-[0.85rem] min-w-[200px]">
+                    Last Name
                   </th>
                   <th className="!text-start !text-[0.85rem]">Actions</th>
                 </tr>
@@ -48,7 +45,8 @@ const Authors = () => {
                     className="border border-inherit border-solid hover:bg-gray-100 dark:border-defaultborder/10 dark:hover:bg-light"
                     key={author.id}
                   >
-                    <td className="!text-start">{author.name}</td>
+                    <td className="!text-start">{author.firstName}</td>
+                    <td className="!text-start">{author.lastName}</td>
                     <td>
                       <div className="flex gap-2 items-center">
                         <Link href={`authors/view/${author.id}`}>

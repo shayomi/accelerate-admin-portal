@@ -1,6 +1,9 @@
 import React, { Fragment, useState } from "react";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
+import { meetings } from "./meetingsdata";
+import Link from "next/link";
+
 
 const Meeting = () => {
   const [filter, setFilter] = useState({
@@ -8,41 +11,6 @@ const Meeting = () => {
     meetingType: "",
     status: "",
   });
-
-  const meetings = [
-    {
-      id: "1",
-      date: "2024-09-01",
-      time: "10:00 AM",
-      participants: "Alice, Bob",
-      type: "Internal",
-      status: "Scheduled",
-    },
-    {
-      id: "2",
-      date: "2024-09-05",
-      time: "2:00 PM",
-      participants: "Charlie, Dave",
-      type: "Client",
-      status: "Completed",
-    },
-    {
-      id: "3",
-      date: "2024-09-10",
-      time: "11:00 AM",
-      participants: "Eve, Frank",
-      type: "Internal",
-      status: "Cancelled",
-    },
-    {
-      id: "4",
-      date: "2024-09-15",
-      time: "4:00 PM",
-      participants: "Grace, Heidi",
-      type: "Client",
-      status: "Scheduled",
-    },
-  ];
 
   // Separate handler for input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -161,7 +129,7 @@ const Meeting = () => {
                       </td>
                       <td>
                         <button className="text-primary hover:underline">
-                          View Details
+                          <Link href={`/meeting/${meeting.id}`}> View Details</Link>
                         </button>
                       </td>
                     </tr>

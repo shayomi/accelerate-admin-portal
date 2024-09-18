@@ -2,41 +2,7 @@ import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import Link from "next/link";
 import React, { Fragment, useState } from "react";
-
-const articlesData = [
-  {
-    id: 1,
-    title: "Understanding AI and Machine Learning",
-    category: "Technology",
-    author: "John Doe",
-    publicationDate: "2024-08-15",
-    status: "Published",
-  },
-  {
-    id: 2,
-    title: "The Future of Renewable Energy",
-    category: "Science",
-    author: "Jane Smith",
-    publicationDate: "2024-09-01",
-    status: "Draft",
-  },
-  {
-    id: 3,
-    title: "Global Market Trends in 2024",
-    category: "Business",
-    author: "Alan Brown",
-    publicationDate: "2024-07-23",
-    status: "Published",
-  },
-  {
-    id: 4,
-    title: "How to Improve Work-Life Balance",
-    category: "Lifestyle",
-    author: "Emily Davis",
-    publicationDate: "2024-06-12",
-    status: "Under Review",
-  },
-];
+import { articlesData } from "./articledata";
 
 const Articles = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -51,7 +17,9 @@ const Articles = () => {
         (article) =>
           article.title.toLowerCase().includes(query) ||
           article.category.toLowerCase().includes(query) ||
-          article.author.toLowerCase().includes(query)
+          article.authors.some((author) =>
+            author.name.toLowerCase().includes(query)
+          )
       )
     );
   };
@@ -66,7 +34,7 @@ const Articles = () => {
       />
       <div className="box custom-card">
         <div className="box-header justify-between gap-8">
-          <div className="box-title">Article List </div>
+          <div className="box-title">Article List</div>
           <div className="flex flex-wrap gap-2">
             <div>
               <input
@@ -74,6 +42,8 @@ const Articles = () => {
                 type="text"
                 placeholder="Search Here"
                 aria-label=".form-control-sm example"
+                value={searchQuery}
+                onChange={handleSearch}
               />
             </div>
             <div className="hs-dropdown ti-dropdown">
@@ -121,7 +91,7 @@ const Articles = () => {
               type="button"
               className="bg-green text-white px-3 py-1.5 rounded-md"
             >
-              Create new article
+              <Link href="/articles/create">Create new article</Link>
             </button>
           </div>
         </div>
@@ -134,7 +104,7 @@ const Articles = () => {
                 <tr className="text-left text-sm font-semibold ">
                   <th className="px-4 py-2">Title</th>
                   <th className="px-4 py-2">Category</th>
-                  <th className="px-4 py-2">Author</th>
+                  <th className="px-4 py-2">Authors</th>
                   <th className="px-4 py-2">Publication Date</th>
                   <th className="px-4 py-2">Status</th>
                   <th className="px-4 py-2">Actions</th>
@@ -142,10 +112,12 @@ const Articles = () => {
               </thead>
               <tbody>
                 {filteredArticles.map((article) => (
-                  <tr key={article.id} className="hover:bg-gray-50">
+                  <tr key={article.id} className="">
                     <td className="px-4 py-2 text-sm">{article.title}</td>
                     <td className="px-4 py-2 text-sm">{article.category}</td>
-                    <td className="px-4 py-2 text-sm">{article.author}</td>
+                    <td className="px-4 py-2 text-sm">
+                      {article.authors.map((author) => author.name).join(", ")}
+                    </td>
                     <td className="px-4 py-2 text-sm">
                       {article.publicationDate}
                     </td>
@@ -160,13 +132,19 @@ const Articles = () => {
                     >
                       {article.status}
                     </td>
-                    <td className="px-4 py-2 border-b flex flex-row gap-4">
-                      <button className="bg-transparent border-[1px] border-primary hs-dark-mode-active:bg-white hs-dark-mode-active:border-none  text-primary  px-3 py-1.5 rounded-md">
+                    <td className="px-4 py-2 border-b flex flex-row gap-4 items-center">
+                      <Link
+                        href={`/articles/${article.id}`}
+                        className="bg-transparent border-[1px] border-primary text-primary px-3 py-1.5 rounded-md"
+                      >
                         View
-                      </button>
-                      <button className="text-primary hover:underline ">
+                      </Link>
+                      <Link
+                        href={`/articles/edit/${article.id}`}
+                        className="text-primary hover:underline"
+                      >
                         Edit
-                      </button>
+                      </Link>
                     </td>
                   </tr>
                 ))}
@@ -177,7 +155,7 @@ const Articles = () => {
         <div className="box-footer">
           <div className="sm:flex items-center">
             <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-              Showing 5 Entries{" "}
+              Showing {filteredArticles.length} Entries
               <i className="bi bi-arrow-right ms-2 font-semibold"></i>
             </div>
             <div className="ms-auto">
@@ -200,7 +178,7 @@ const Articles = () => {
                   </li>
                   <li className="page-item">
                     <Link className="page-link !text-primary" href="#!">
-                      next
+                      Next
                     </Link>
                   </li>
                 </ul>

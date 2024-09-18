@@ -1,34 +1,7 @@
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Link from "next/link";
 import React, { Fragment } from "react";
-
-interface Partner {
-  id: string;
-  name: string;
-  type: string;
-  status: string;
-}
-
-const partners: Partner[] = [
-  {
-    id: "1",
-    name: "TechCorp",
-    type: "Corporate",
-    status: "Active",
-  },
-  {
-    id: "2",
-    name: "VentureX",
-    type: "Sponsor",
-    status: "Inactive",
-  },
-  {
-    id: "3",
-    name: "StartUpSupport",
-    type: "Service Provider",
-    status: "Active",
-  },
-];
+import { partners } from "./partnerdata";
 
 const ProgramPartner = () => {
   return (
@@ -43,7 +16,7 @@ const ProgramPartner = () => {
           <div className="box-header justify-between gap-8">
             <div className="box-title">Program Partner</div>
             <button className="bg-primary text-white px-3 py-2 rounded-md">
-              Add New Partner
+              <Link href="/cohort/partner/create">Add New Partner</Link>
             </button>
           </div>
 
@@ -86,10 +59,10 @@ const ProgramPartner = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-black/50">
                       <div className="flex gap-4">
                         <button className="bg-transparent border-[1px] border-primary hs-dark-mode-active:bg-white hs-dark-mode-active:border-none  text-primary  px-3 py-1.5 rounded-md">
-                          View
+                        <Link href={`/cohort/partner/${partner.id}`}>View</Link>
                         </button>
                         <button className="text-primary hover:underline">
-                          Edit
+                        <Link href={`/cohort/partner/edit/${partner.id}`}>Edit</Link>
                         </button>
                       </div>
                     </td>
