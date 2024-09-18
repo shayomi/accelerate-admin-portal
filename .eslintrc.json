@@ -10,9 +10,8 @@
       "sourceType": "module"
     },
     "plugins": ["react"],
-    "@stylistic/js": "stylisticJs",
     "rules": {
-      "@stylistic/js/indent": ["error", "tab"],
+      "indent": ["error", "tab"],
       "linebreak-style": ["error", "unix"],
       "quotes": ["error", "double"],
       "semi": ["error", "always"],
@@ -34,6 +33,6 @@
       "no-unused-vars": "off",
       "eslint no-lone-blocks": "off",
       "react/no-unescaped-entities": "off",
-      "eslint @stylistic/js/no-mixed-spaces-and-tabs": "smart-tabs"
+      "eslint no-mixed-spaces-and-tabs": "smart-tabs"
     }
   }

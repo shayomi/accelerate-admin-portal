@@ -56,7 +56,7 @@ const Events = () => {
         <div className="box-header flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold text-blue-700">Events</h1>
           <button className="bg-green text-white py-2 px-4 rounded-md">
-            Create New Event
+            <Link href="/events/create-event">Create New Event</Link>
           </button>
         </div>
 

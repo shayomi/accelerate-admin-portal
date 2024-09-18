@@ -275,30 +275,15 @@ export const MenuItems: any = [
     selected:false
   },
 
-
   {
-    icon: TestimonialsIcon,
-
-    title: "Testimonials",
-    type: "sub",
+    icon: EventsIcon,
+    title: "Events",
+    path: "/events",
+    type: "link",
     active: false,
-    children: [
-      {
-        path: "/components/testimonial/testimonials",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Testimonials",
-      },
-      {
-        path: "/components/testimonial/createtestimonial",
-        type: "link",
-        active: false,
-        selected: false,
-        title: "Create Testimonial",
-      },
-    ],
+    selected:false
   },
+
 
   {
     icon: EventsIcon,

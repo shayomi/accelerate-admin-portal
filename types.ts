@@ -115,3 +115,31 @@ export interface Authors {
   profilePic: string;
   articles: { id: number; title: string }[]; // Array of article objects with IDs and titles
 }
+
+// types.ts
+
+export interface Speaker {
+  id: number;
+  name: string;
+  bio?: string; 
+  profilePic?: string; 
+}
+
+export interface Event {
+  id: number;
+  name?: string;
+  slug?: string;
+  dateTime?: string;
+  location?: string;
+  eventType?: string;
+  description?: string;
+  bannerImage: string;
+  maxAttendees?: string;
+  registrationDeadline?: string;
+  agenda?: Array<{ time: string; activity: string }>; 
+  speakers: Speaker[]; 
+  sponsors?: string[]; 
+  relatedCohort?: string; 
+  registrationFields?: string[]; 
+  status: 'draft' | 'published'; 
+}
