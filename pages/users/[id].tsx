@@ -14,14 +14,14 @@ const UserDetailPage = () => {
 	// Provide default values for associatedEntities
 	const userWithDefaults = user
 		? {
-			...user,
-			associatedEntities: {
-				investors: user.associatedEntities.investors || [],
-				advisors: user.associatedEntities.advisors || [],
-				partners: user.associatedEntities.partners || [],
-				founders: user.associatedEntities.founders || [],
-			},
-		}
+				...user,
+				associatedEntities: {
+					investors: user.associatedEntities.investors || [],
+					advisors: user.associatedEntities.advisors || [],
+					partners: user.associatedEntities.partners || [],
+					founders: user.associatedEntities.founders || [],
+				},
+			}
 		: null;
 
 	if (!userWithDefaults) {
