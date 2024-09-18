@@ -27,7 +27,7 @@
   "rules": {
 	"indent": ["off", "tab"],
 	"linebreak-style": ["error", "unix"],
-	"quotes": ["error", "double"],
+	"quotes": ["off", "double"],
 	"semi": ["error", "always"],
 	"no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
 	"no-console": "off",
