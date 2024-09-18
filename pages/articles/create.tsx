@@ -1,9 +1,9 @@
-import React from 'react';
-import CreateArticle from '../components/article/createarticle';
+import React from "react";
+import CreateArticle from "../components/article/createarticle";
 
 const CreatePage = () => {
-  return <CreateArticle />;
+	return <CreateArticle />;
 };
 
-CreatePage.layout = 'Contentlayout';
+CreatePage.layout = "Contentlayout";
 export default CreatePage;

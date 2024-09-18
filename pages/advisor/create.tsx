@@ -1,9 +1,9 @@
-import React from 'react';
-import CreateAdvisor from '../components/advisor/create';
+import React from "react";
+import CreateAdvisor from "../components/advisor/create";
 
 const create = () => {
-  return <CreateAdvisor />;
+	return <CreateAdvisor />;
 };
 
-create.layout = 'Contentlayout';
+create.layout = "Contentlayout";
 export default create;
