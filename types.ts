@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export type Founder = {
   name: string;
@@ -52,7 +52,7 @@ export type Advisor = {
 };
 
 // types.ts
-export interface Meeting {
+export type Meeting = {
   id: string;
   date: string;
   time: string;
@@ -61,9 +61,9 @@ export interface Meeting {
   status: string;
   summary?: string;
   notes?: string;
-}
+};
 
-export interface Cohort {
+export type Cohort = {
   id: string;
   name: string;
   shortName: string;
@@ -72,9 +72,9 @@ export interface Cohort {
   description: string;
   startups: Startup[];
   schedule: string;
-}
+};
 
-export interface Partner {
+export type Partner = {
   id: string;
   name: string;
   type: string;
@@ -86,7 +86,7 @@ export interface Partner {
     phone: string;
     address: string;
   };
-}
+};
 
 // types.ts
 export type Author = {
@@ -108,24 +108,24 @@ export type Article = {
   status: string;
 };
 
-export interface Authors {
+export type Authors = {
   id: number;
   firstName: string;
   lastName: string;
   profilePic: string;
   articles: { id: number; title: string }[]; // Array of article objects with IDs and titles
-}
+};
 
 // types.ts
 
-export interface Speaker {
+export type Speaker = {
   id: number;
   name: string;
   bio?: string;
   profilePic?: string;
-}
+};
 
-export interface Event {
+export type Event = {
   id: number;
   name?: string;
   slug?: string;
@@ -141,5 +141,5 @@ export interface Event {
   sponsors?: string[];
   relatedCohort?: string;
   registrationFields?: string[];
-  status: 'draft' | 'published';
-}
+  status: "draft" | "published";
+};
