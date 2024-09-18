@@ -1,10 +1,5 @@
 {
   "env": {
-    "production": {
-      "rules": {
-        "no-mixed-spaces-and-tabs": 0
-      }
-    },
     "browser": true,
     "es2021": true
   },
