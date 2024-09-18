@@ -1,5 +1,5 @@
-import { Industry } from '@/types';
-import React, { useState, useEffect, Fragment } from 'react';
+import { Industry } from "@/types";
+import React, { useState, useEffect, Fragment } from "react";
 
 interface ManageIndustryProps {
   industryData?: Industry; // Optional prop to receive industry data for editing
@@ -10,15 +10,15 @@ const ManageIndustry = ({
   industryData,
   startupOptions,
 }: ManageIndustryProps) => {
-  const [name, setName] = useState(industryData?.name || '');
-  const [slug, setSlug] = useState(industryData?.slug || '');
+  const [name, setName] = useState(industryData?.name || "");
+  const [slug, setSlug] = useState(industryData?.slug || "");
   const [selectedStartups, setSelectedStartups] = useState<string[]>(
-    industryData?.startupIds.map((id) => id.toString()) || [],
+    industryData?.startupIds.map((id) => id.toString()) || []
   );
 
   useEffect(() => {
     if (name) {
-      setSlug(name.toLowerCase().replace(/\s+/g, '-'));
+      setSlug(name.toLowerCase().replace(/\s+/g, "-"));
     }
   }, [name]);
 
@@ -61,7 +61,7 @@ const ManageIndustry = ({
               <button
                 type="button"
                 className="ti-btn ti-btn-light"
-                onClick={() => setSlug(name.toLowerCase().replace(/\s+/g, '-'))}
+                onClick={() => setSlug(name.toLowerCase().replace(/\s+/g, "-"))}
               >
                 Refresh
               </button>
@@ -112,5 +112,5 @@ const ManageIndustry = ({
   );
 };
 
-ManageIndustry.layout = 'Contentlayout';
+ManageIndustry.layout = "Contentlayout";
 export default ManageIndustry;

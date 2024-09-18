@@ -1,11 +1,11 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-import DatePicker from 'react-datepicker';
-import { MultiSelect } from 'react-multi-select-component';
-const Select = dynamic(() => import('react-select'), { ssr: false });
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+import DatePicker from "react-datepicker";
+import { MultiSelect } from "react-multi-select-component";
+const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const Todolist = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -20,23 +20,23 @@ const Todolist = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const Option1 = [
-    { value: 'Angelina May', label: 'Angelina May' },
-    { value: 'Kiara advain', label: 'Kiara advain' },
-    { value: 'Hercules Jhon', label: 'Hercules Jhon' },
-    { value: 'Mayor Kim', label: 'Mayor Kim' },
+    { value: "Angelina May", label: "Angelina May" },
+    { value: "Kiara advain", label: "Kiara advain" },
+    { value: "Hercules Jhon", label: "Hercules Jhon" },
+    { value: "Mayor Kim", label: "Mayor Kim" },
   ];
   const [selected1, setSelected1] = useState([]);
   const Option2 = [
-    { value: 'Select', label: 'Select' },
-    { value: 'Critical', label: 'Critical' },
-    { value: 'High', label: 'High' },
-    { value: 'Medium', label: 'Medium' },
-    { value: 'Low', label: 'Low' },
+    { value: "Select", label: "Select" },
+    { value: "Critical", label: "Critical" },
+    { value: "High", label: "High" },
+    { value: "Medium", label: "Medium" },
+    { value: "Low", label: "Low" },
   ];
 
   return (
     <Fragment>
-      <Seo title={'Todo List'} />
+      <Seo title={"Todo List"} />
       <Pageheader
         currentpage="Todo List"
         activepage="Pages"
@@ -108,8 +108,8 @@ const Todolist = () => {
                             </label>
                             <div className="inline-flex w-full">
                               <div className="input-group-text text-[#8c9097] dark:text-white/50 !rounded-e-none border border-defaultborder">
-                                {' '}
-                                <i className="ri-calendar-line"></i>{' '}
+                                {" "}
+                                <i className="ri-calendar-line"></i>{" "}
                               </div>
                               <DatePicker
                                 selected={startDate}
@@ -125,8 +125,8 @@ const Todolist = () => {
                             <label className="ti-form-label">Target Date</label>
                             <div className="inline-flex w-full">
                               <div className="input-group-text text-[#8c9097] dark:text-white/50 !rounded-e-none border border-defaultborder">
-                                {' '}
-                                <i className="ri-calendar-line"></i>{' '}
+                                {" "}
+                                <i className="ri-calendar-line"></i>{" "}
                               </div>
                               <DatePicker
                                 className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -419,13 +419,13 @@ const Todolist = () => {
                                 New Project Blueprint
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   13,Nov 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   20,Nov 2022
                                 </span>
@@ -495,13 +495,13 @@ const Todolist = () => {
                                 Designing New Authentication Pages
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   26,Nov 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   12,Dec 2022
                                 </span>
@@ -559,13 +559,13 @@ const Todolist = () => {
                                 Developing New Events in Plugin
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   5,Dec 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   10,Dec 2022
                                 </span>
@@ -628,16 +628,16 @@ const Todolist = () => {
                                 <Link aria-label="anchor" href="#!">
                                   <i className="ri-star-s-fill text-[1rem] me-1 text-warning"></i>
                                 </Link>
-                                Design New Landing Pages{' '}
+                                Design New Landing Pages{" "}
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   21,Nov 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   28,Nov 2022
                                 </span>
@@ -701,13 +701,13 @@ const Todolist = () => {
                                 New Plugin Development
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   28,Oct 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   28,Nov 2022
                                 </span>
@@ -771,13 +771,13 @@ const Todolist = () => {
                                 Documentation For New Template
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   25,Nov 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   10,Dec 2022
                                 </span>
@@ -843,13 +843,13 @@ const Todolist = () => {
                                 Updating Old Ui
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   30,Nov 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   05,Dec 2022
                                 </span>
@@ -919,13 +919,13 @@ const Todolist = () => {
                                 Designing Of New Ecommerce Pages
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   1,Dec 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   15,Dec 2022
                                 </span>
@@ -989,13 +989,13 @@ const Todolist = () => {
                                 Improving Ui Of Updated Templates
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   4,Dec 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   20,Dec 2022
                                 </span>
@@ -1064,13 +1064,13 @@ const Todolist = () => {
                                 New Project Blueprint
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   13,Nov 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   20,Nov 2022
                                 </span>
@@ -1142,13 +1142,13 @@ const Todolist = () => {
                                 Updating Old Ui
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   30,Nov 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   05,Dec 2022
                                 </span>
@@ -1225,16 +1225,16 @@ const Todolist = () => {
                                 <Link aria-label="anchor" href="#!">
                                   <i className="ri-star-s-fill text-[1rem] me-1 text-warning"></i>
                                 </Link>
-                                Design New Landing Pages{' '}
+                                Design New Landing Pages{" "}
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   21,Nov 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   28,Nov 2022
                                 </span>
@@ -1300,13 +1300,13 @@ const Todolist = () => {
                                 Designing New Authentication Pages
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   26,Nov 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   12,Dec 2022
                                 </span>
@@ -1366,13 +1366,13 @@ const Todolist = () => {
                                 Improving Ui Of Updated Templates
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   4,Dec 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   20,Dec 2022
                                 </span>
@@ -1441,13 +1441,13 @@ const Todolist = () => {
                                 New Plugin Development
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   28,Oct 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   28,Nov 2022
                                 </span>
@@ -1513,13 +1513,13 @@ const Todolist = () => {
                                 Documentation For New Template
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   25,Nov 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   10,Dec 2022
                                 </span>
@@ -1585,13 +1585,13 @@ const Todolist = () => {
                                 Developing New Events in Plugin
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   5,Dec 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   10,Dec 2022
                                 </span>
@@ -1657,13 +1657,13 @@ const Todolist = () => {
                                 Designing Of New Ecommerce Pages
                               </p>
                               <p className="mb-4">
-                                Assigned On :{' '}
+                                Assigned On :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   1,Dec 2022
                                 </span>
                               </p>
                               <p className="mb-4">
-                                Target Date :{' '}
+                                Target Date :{" "}
                                 <span className="text-[0.75rem] mb-1 text-[#8c9097] dark:text-white/50">
                                   15,Dec 2022
                                 </span>
@@ -1751,6 +1751,6 @@ const Todolist = () => {
     </Fragment>
   );
 };
-Todolist.layout = 'Contentlayout';
+Todolist.layout = "Contentlayout";
 
 export default Todolist;

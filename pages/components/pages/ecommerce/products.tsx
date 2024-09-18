@@ -1,10 +1,10 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { Fragment, useState } from 'react';
-import { AddToCart } from '@/shared/redux/action';
-import { connect } from 'react-redux';
-import { Itemsdata1 } from '@/shared/data/pages/ecommerces/ecommercedata';
-import Link from 'next/link';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment, useState } from "react";
+import { AddToCart } from "@/shared/redux/action";
+import { connect } from "react-redux";
+import { Itemsdata1 } from "@/shared/data/pages/ecommerces/ecommercedata";
+import Link from "next/link";
 
 const Products = ({ local_varaiable }: any) => {
   const [allData, setAllData] = useState(Itemsdata1);
@@ -13,7 +13,7 @@ const Products = ({ local_varaiable }: any) => {
   const myfunction = (idx: string) => {
     let Data;
     for (Data of local_varaiable.ecommercedata) {
-      if (Data.title[0] == ' ') {
+      if (Data.title[0] == " ") {
         Data.title = Data.title.trim();
       }
       if (Data.title.toLowerCase().includes(idx.toLowerCase())) {
@@ -27,7 +27,7 @@ const Products = ({ local_varaiable }: any) => {
 
   return (
     <Fragment>
-      <Seo title={'Products'} />
+      <Seo title={"Products"} />
       <Pageheader
         currentpage="Products"
         activepage="Ecommerce"
@@ -1023,7 +1023,7 @@ const Products = ({ local_varaiable }: any) => {
     </Fragment>
   );
 };
-Products.layout = 'Contentlayout';
+Products.layout = "Contentlayout";
 
 const mapStateToProps = (state: any) => ({
   local_varaiable: state,

@@ -7,16 +7,16 @@ import Editor2, {
   ProductsData,
   PublishedData,
   SizeData,
-} from '@/shared/data/pages/ecommerces/editproductsdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { Fragment, useState } from 'react';
-const Select = dynamic(() => import('react-select'), { ssr: false });
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+} from "@/shared/data/pages/ecommerces/editproductsdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment, useState } from "react";
+const Select = dynamic(() => import("react-select"), { ssr: false });
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
-import { FilePond } from 'react-filepond';
-import dynamic from 'next/dynamic';
-import DatePicker from 'react-datepicker';
+import { FilePond } from "react-filepond";
+import dynamic from "next/dynamic";
+import DatePicker from "react-datepicker";
 
 const Editproducts = () => {
   const [files, setFiles] = useState<any>([]);
@@ -25,7 +25,7 @@ const Editproducts = () => {
 
   return (
     <Fragment>
-      <Seo title={'Edit Products'} />
+      <Seo title={"Edit Products"} />
       <Pageheader
         currentpage="Edit Products"
         activepage="Ecommerce"
@@ -263,7 +263,7 @@ const Editproducts = () => {
                         images should be uniformly maintained with width and
                         height to the image container,image size should not
                         exceed 2MB,once uploaded to change the image you need to
-                        wait minimum of 24hrs.{' '}
+                        wait minimum of 24hrs.{" "}
                       </label>
                       <div className="xl:col-span-12 col-span-12 product-documents-container">
                         <p className="font-semibold mb-2 text-[.875rem]">
@@ -359,6 +359,6 @@ const Editproducts = () => {
     </Fragment>
   );
 };
-Editproducts.layout = 'Contentlayout';
+Editproducts.layout = "Contentlayout";
 
 export default Editproducts;

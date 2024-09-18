@@ -1,9 +1,9 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { Cohort } from '@/types';
-import cohorts from '@/pages/components/cohort/cohorts';
-import CohortDetail from '@/pages/components/cohort/cohortdetails';
-import { cohortsList } from '@/pages/components/cohort/cohortsdata';
+import React from "react";
+import { useRouter } from "next/router";
+import { Cohort } from "@/types";
+import cohorts from "@/pages/components/cohort/cohorts";
+import CohortDetail from "@/pages/components/cohort/cohortdetails";
+import { cohortsList } from "@/pages/components/cohort/cohortsdata";
 
 const CohortDetailPage = () => {
   const router = useRouter();
@@ -18,6 +18,6 @@ const CohortDetailPage = () => {
   return <CohortDetail cohort={cohort} />;
 };
 
-CohortDetailPage.layout = 'Contentlayout';
+CohortDetailPage.layout = "Contentlayout";
 
 export default CohortDetailPage;

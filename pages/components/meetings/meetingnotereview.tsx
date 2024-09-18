@@ -1,10 +1,10 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import dynamic from 'next/dynamic'; // Dynamically import the Quill editor
-import 'react-quill/dist/quill.snow.css'; // Import styles for the rich text editor
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import React, { useState, useEffect, Fragment } from "react";
+import dynamic from "next/dynamic"; // Dynamically import the Quill editor
+import "react-quill/dist/quill.snow.css"; // Import styles for the rich text editor
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
 
 // Dynamically import ReactQuill with no SSR (Server-Side Rendering)
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 interface Meeting {
   id: string;
@@ -18,30 +18,30 @@ interface Meeting {
 
 const meetings: Meeting[] = [
   {
-    id: '1',
-    date: '2024-09-10',
-    participants: ['John Doe', 'Jane Smith'],
-    type: 'Team Meeting',
-    status: 'Reviewed',
-    noteStatus: 'Reviewed',
-    notes: 'These are the detailed notes of the meeting...',
+    id: "1",
+    date: "2024-09-10",
+    participants: ["John Doe", "Jane Smith"],
+    type: "Team Meeting",
+    status: "Reviewed",
+    noteStatus: "Reviewed",
+    notes: "These are the detailed notes of the meeting...",
   },
   {
-    id: '2',
-    date: '2024-09-11',
-    participants: ['Alice Johnson', 'Bob Davis'],
-    type: 'Client Meeting',
-    status: 'Submitted',
-    noteStatus: 'Draft',
-    notes: 'This is the draft for the client meeting...',
+    id: "2",
+    date: "2024-09-11",
+    participants: ["Alice Johnson", "Bob Davis"],
+    type: "Client Meeting",
+    status: "Submitted",
+    noteStatus: "Draft",
+    notes: "This is the draft for the client meeting...",
   },
 ];
 
 const MeetingNoteReview = () => {
   const [expandedMeetingId, setExpandedMeetingId] = useState<string | null>(
-    null,
+    null
   );
-  const [currentNotes, setCurrentNotes] = useState<string>('');
+  const [currentNotes, setCurrentNotes] = useState<string>("");
 
   const toggleMeetingNotes = (meeting: Meeting) => {
     if (expandedMeetingId === meeting.id) {
@@ -72,15 +72,15 @@ const MeetingNoteReview = () => {
                 <p className="font-semibold">
                   <span className="font-bold text-blue hs-dark-mode-active:text-white">
                     Date:
-                  </span>{' '}
+                  </span>{" "}
                   {meeting.date}
                 </p>
                 <p>
-                  <span className="font-bold text-yellow">Participants:</span>{' '}
-                  {meeting.participants.join(', ')}
+                  <span className="font-bold text-yellow">Participants:</span>{" "}
+                  {meeting.participants.join(", ")}
                 </p>
                 <p>
-                  <span className="font-bold text-green">Status:</span>{' '}
+                  <span className="font-bold text-green">Status:</span>{" "}
                   {meeting.status}, Note Status: {meeting.noteStatus}
                 </p>
               </div>
@@ -125,6 +125,6 @@ const MeetingNoteReview = () => {
   );
 };
 
-MeetingNoteReview.layout = 'Contentlayout';
+MeetingNoteReview.layout = "Contentlayout";
 
 export default MeetingNoteReview;

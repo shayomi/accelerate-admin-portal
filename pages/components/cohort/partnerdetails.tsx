@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
-import { Partner } from '@/types';
-import Seo from '@/shared/layout-components/seo/seo';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import React, { Fragment } from "react";
+import { Partner } from "@/types";
+import Seo from "@/shared/layout-components/seo/seo";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
 
 interface PartnerDetailsProps {
   partner: Partner;
@@ -73,7 +73,7 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
                 className="form-control"
                 placeholder="Associated Entities"
                 aria-label="Associated Entities"
-                value={partner.associatedEntities.join(', ')}
+                value={partner.associatedEntities.join(", ")}
                 readOnly
               />
             </div>

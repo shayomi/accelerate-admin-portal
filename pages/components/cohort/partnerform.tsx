@@ -1,34 +1,34 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import { Partner } from '@/types';
-import { useRouter } from 'next/router';
-import Seo from '@/shared/layout-components/seo/seo';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import React, { useState, useEffect, Fragment } from "react";
+import { Partner } from "@/types";
+import { useRouter } from "next/router";
+import Seo from "@/shared/layout-components/seo/seo";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
 
 interface AddNewPartnerProps {
   partner?: Partner;
 }
 
 const PartnerForm = ({ partner }: AddNewPartnerProps) => {
-  const [name, setName] = useState('');
-  const [type, setType] = useState('');
-  const [status, setStatus] = useState('');
-  const [contributionDetails, setContributionDetails] = useState('');
+  const [name, setName] = useState("");
+  const [type, setType] = useState("");
+  const [status, setStatus] = useState("");
+  const [contributionDetails, setContributionDetails] = useState("");
   const [associatedEntities, setAssociatedEntities] = useState<string[]>([]);
   const [contactInfo, setContactInfo] = useState({
-    email: '',
-    phone: '',
-    address: '',
+    email: "",
+    phone: "",
+    address: "",
   });
 
   useEffect(() => {
     if (partner) {
-      setName(partner.name || '');
-      setType(partner.type || '');
-      setStatus(partner.status || '');
-      setContributionDetails(partner.contributionDetails || '');
+      setName(partner.name || "");
+      setType(partner.type || "");
+      setStatus(partner.status || "");
+      setContributionDetails(partner.contributionDetails || "");
       setAssociatedEntities(partner.associatedEntities || []);
       setContactInfo(
-        partner.contactInfo || { email: '', phone: '', address: '' },
+        partner.contactInfo || { email: "", phone: "", address: "" }
       );
     }
   }, [partner]);
@@ -103,10 +103,10 @@ const PartnerForm = ({ partner }: AddNewPartnerProps) => {
           <input
             type="text"
             className="form-control"
-            value={associatedEntities.join(', ')}
+            value={associatedEntities.join(", ")}
             onChange={(e) =>
               setAssociatedEntities(
-                e.target.value.split(', ').map((item) => item.trim()),
+                e.target.value.split(", ").map((item) => item.trim())
               )
             }
             placeholder="Associated Entities (comma separated)"
@@ -160,7 +160,7 @@ const PartnerForm = ({ partner }: AddNewPartnerProps) => {
             Cancel
           </button>
           <button type="submit" className="ti-btn bg-green rounded-sm">
-            {partner ? 'Update Partner' : 'Add Partner'}
+            {partner ? "Update Partner" : "Add Partner"}
           </button>
         </div>
       </form>

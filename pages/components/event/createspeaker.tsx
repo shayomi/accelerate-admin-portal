@@ -1,19 +1,19 @@
-import React, { Fragment, useState } from 'react';
-import dynamic from 'next/dynamic';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import 'react-quill/dist/quill.snow.css';
+import React, { Fragment, useState } from "react";
+import dynamic from "next/dynamic";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import "react-quill/dist/quill.snow.css";
 
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const events = [
-  { id: 1, name: 'Tech Conference' },
-  { id: 2, name: 'Startup Summit' },
-  { id: 3, name: 'Developer Meetup' },
+  { id: 1, name: "Tech Conference" },
+  { id: 2, name: "Startup Summit" },
+  { id: 3, name: "Developer Meetup" },
 ];
 
 const CreateSpeaker = () => {
-  const [bio, setBio] = useState('');
+  const [bio, setBio] = useState("");
   const [selectedEventsList, setSelectedEventsList] = useState<string[]>([]);
 
   const handleBioChange = (value: string) => {
@@ -159,6 +159,6 @@ const CreateSpeaker = () => {
 };
 
 // Layout configuration
-CreateSpeaker.layout = 'Contentlayout';
+CreateSpeaker.layout = "Contentlayout";
 
 export default CreateSpeaker;

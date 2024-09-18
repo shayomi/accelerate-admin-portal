@@ -3,13 +3,13 @@ import {
   Data1,
   Data2,
   Laedsdata,
-} from '@/shared/data/apps/crm/leadsdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-const Select = dynamic(() => import('react-select'), { ssr: false });
+} from "@/shared/data/apps/crm/leadsdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const Leads = () => {
   const [images, setImages] = useState<any>([]);
@@ -28,20 +28,20 @@ const Leads = () => {
 
   const handleUpload = () => {
     // Implement your logic to upload and compare images here
-    console.log('Uploading and comparing images:', selectedImage);
+    console.log("Uploading and comparing images:", selectedImage);
   };
   //Delete function
   const [manageCompanydata, setManageCompanydata] = useState([...Laedsdata]);
   const handleDelete = (idToRemove: string) => {
     const updatedInvoiceData = manageCompanydata.filter(
-      (item) => item.id !== idToRemove,
+      (item) => item.id !== idToRemove
     );
     setManageCompanydata(updatedInvoiceData);
   };
 
   return (
     <Fragment>
-      <Seo title={'Leads'} />
+      <Seo title={"Leads"} />
       <Pageheader currentpage="Leads" activepage="CRM" mainpage="Leads" />
 
       <div className="grid grid-cols-12 gap-6">
@@ -246,7 +246,7 @@ const Leads = () => {
             <div className="box-footer border-topacity-0">
               <div className="flex items-center">
                 <div>
-                  Showing 10 Entries{' '}
+                  Showing 10 Entries{" "}
                   <i className="bi bi-arrow-right ms-2 font-semibold"></i>
                 </div>
                 <div className="ms-auto">
@@ -311,14 +311,14 @@ const Leads = () => {
                         <img
                           src={
                             selectedImage ||
-                            '../../../../assets/images/faces/9.jpg'
+                            "../../../../assets/images/faces/9.jpg"
                           }
                           alt=""
                           id="profile-img"
                           style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
                           }}
                         />
                         <span className="badge rounded-pill bg-primary avatar-badge">
@@ -444,5 +444,5 @@ const Leads = () => {
     </Fragment>
   );
 };
-Leads.layout = 'Contentlayout';
+Leads.layout = "Contentlayout";
 export default Leads;

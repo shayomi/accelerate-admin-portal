@@ -1,26 +1,26 @@
 import {
   InvoiceStats,
   Manageinvoicedata,
-} from '@/shared/data/pages/invoice/invoicelistdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-const CountUp = dynamic(() => import('react-countup'), { ssr: false });
+} from "@/shared/data/pages/invoice/invoicelistdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+const CountUp = dynamic(() => import("react-countup"), { ssr: false });
 const Invoicelist = () => {
   const [manageInvoiceData, setManageInvoiceData] = useState([
     ...Manageinvoicedata,
   ]);
   const handleDelete = (idToRemove: number) => {
     const updatedInvoiceData = manageInvoiceData.filter(
-      (item) => item.id !== idToRemove,
+      (item) => item.id !== idToRemove
     );
     setManageInvoiceData(updatedInvoiceData);
   };
   return (
     <Fragment>
-      <Seo title={'Invoice List'} />
+      <Seo title={"Invoice List"} />
       <Pageheader
         currentpage="Invoice List"
         activepage="Invoice"
@@ -36,7 +36,7 @@ const Invoicelist = () => {
                   type="button"
                   className="ti-btn !py-1 !px-2 !text-[0.75rem] !text-white !font-medium bg-primary"
                 >
-                  <i className="ri-add-line font-semibold align-middle me-1"></i>{' '}
+                  <i className="ri-add-line font-semibold align-middle me-1"></i>{" "}
                   Create Invoice
                 </button>
                 <div className="hs-dropdown ti-dropdown ms-2">
@@ -361,7 +361,7 @@ const Invoicelist = () => {
               </div>
               <div className="p-6">
                 <p className="text-[.9375rem] font-semibold">
-                  Invoice Stats{' '}
+                  Invoice Stats{" "}
                   <span className="text-[#8c9097] dark:text-white/50 font-normal">
                     (Last 6 months) :
                   </span>
@@ -377,6 +377,6 @@ const Invoicelist = () => {
     </Fragment>
   );
 };
-Invoicelist.layout = 'Contentlayout';
+Invoicelist.layout = "Contentlayout";
 
 export default Invoicelist;

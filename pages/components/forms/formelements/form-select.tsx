@@ -6,16 +6,16 @@ import {
   defaultselect,
   multiDropdownSelect,
   singleselect,
-} from '@/shared/data/forms/form-elements/formselectdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import React, { Fragment, useState } from 'react';
-const Select = dynamic(() => import('react-select'), { ssr: false });
-const Creatable = dynamic(() => import('react-select/creatable'), {
+} from "@/shared/data/forms/form-elements/formselectdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import React, { Fragment, useState } from "react";
+const Select = dynamic(() => import("react-select"), { ssr: false });
+const Creatable = dynamic(() => import("react-select/creatable"), {
   ssr: false,
 });
-const CreatableSelect = dynamic(() => import('react-select/creatable'), {
+const CreatableSelect = dynamic(() => import("react-select/creatable"), {
   ssr: false,
 });
 
@@ -29,53 +29,53 @@ const Formselect = () => {
     value: label,
   });
 
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const [value, setValue] = useState([
-    createOption('one'),
-    createOption('two'),
-    createOption('three'),
+    createOption("one"),
+    createOption("two"),
+    createOption("three"),
   ]);
-  const [inputValue1, setInputValue1] = useState('');
+  const [inputValue1, setInputValue1] = useState("");
   const [value1, setValue1] = useState([
-    createOption('child-1'),
-    createOption('child-2'),
+    createOption("child-1"),
+    createOption("child-2"),
   ]);
-  const [inputValue2, setInputValue2] = useState('');
-  const [value2, setValue2] = useState([createOption('abc@hotmail.com')]);
+  const [inputValue2, setInputValue2] = useState("");
+  const [value2, setValue2] = useState([createOption("abc@hotmail.com")]);
 
   const handleKeyDown1 = (event: any) => {
     if (!inputValue1) return;
     switch (event.key) {
-      case 'Enter':
-      case 'Tab':
+      case "Enter":
+      case "Tab":
         setValue1((prev) => [...prev, createOption(inputValue1)]);
-        setInputValue1('');
+        setInputValue1("");
         event.preventDefault();
     }
   };
   const handleKeyDown = (event: any) => {
     if (!inputValue) return;
     switch (event.key) {
-      case 'Enter':
-      case 'Tab':
+      case "Enter":
+      case "Tab":
         setValue((prev) => [...prev, createOption(inputValue)]);
-        setInputValue('');
+        setInputValue("");
         event.preventDefault();
     }
   };
   const handleKeyDown2 = (event: any) => {
     if (!inputValue2) return;
     switch (event.key) {
-      case 'Enter':
-      case 'Tab':
+      case "Enter":
+      case "Tab":
         setValue2((prev) => [...prev, createOption(inputValue2)]);
-        setInputValue2('');
+        setInputValue2("");
         event.preventDefault();
     }
   };
   return (
     <Fragment>
-      <Seo title={'Form Select'} />
+      <Seo title={"Form Select"} />
       <Pageheader
         currentpage="Form Select"
         activepage="Form Elements"
@@ -487,7 +487,7 @@ const Formselect = () => {
           <div className="box">
             <div className="box-header">
               <h5 className="box-title">
-                {' '}
+                {" "}
                 Options added via config with no search
               </h5>
             </div>
@@ -535,6 +535,6 @@ const Formselect = () => {
     </Fragment>
   );
 };
-Formselect.layout = 'Contentlayout';
+Formselect.layout = "Contentlayout";
 
 export default Formselect;

@@ -1,12 +1,12 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { useState } from 'react';
-const Select = dynamic(() => import('react-select'), { ssr: false });
-import { MultiSelect } from 'react-multi-select-component';
-import DatePicker from 'react-datepicker';
-import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { TransactionsStatistics } from '@/shared/data/apps/crypto/transactiondata';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { useState } from "react";
+const Select = dynamic(() => import("react-select"), { ssr: false });
+import { MultiSelect } from "react-multi-select-component";
+import DatePicker from "react-datepicker";
+import Link from "next/link";
+import dynamic from "next/dynamic";
+import { TransactionsStatistics } from "@/shared/data/apps/crypto/transactiondata";
 
 const Listview = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -18,25 +18,25 @@ const Listview = () => {
   };
   const [selected1, setSelected1] = useState([]);
   const Selectdata = [
-    { value: 'Angelina May', label: 'Angelina May' },
-    { value: 'Kiara advain', label: 'Kiara advain' },
-    { value: 'Hercules Jhon', label: 'Hercules Jhon' },
-    { value: 'Mayor Kim', label: 'Mayor Kim' },
+    { value: "Angelina May", label: "Angelina May" },
+    { value: "Kiara advain", label: "Kiara advain" },
+    { value: "Hercules Jhon", label: "Hercules Jhon" },
+    { value: "Mayor Kim", label: "Mayor Kim" },
   ];
   const Option1 = [
-    { value: 'New', label: 'New' },
-    { value: 'Completed', label: 'Completed' },
-    { value: 'Inprogress', label: 'Inprogress' },
-    { value: 'Pending', label: 'Pending' },
+    { value: "New", label: "New" },
+    { value: "Completed", label: "Completed" },
+    { value: "Inprogress", label: "Inprogress" },
+    { value: "Pending", label: "Pending" },
   ];
   const Option2 = [
-    { value: 'High', label: 'High' },
-    { value: 'Low', label: 'Low' },
-    { value: 'Medium', label: 'Medium' },
+    { value: "High", label: "High" },
+    { value: "Low", label: "Low" },
+    { value: "Medium", label: "Medium" },
   ];
   return (
     <div>
-      <Seo title={'List View'} />
+      <Seo title={"List View"} />
       <Pageheader
         currentpage="List View"
         activepage="Tasks"
@@ -53,7 +53,7 @@ const Listview = () => {
                   className="hs-dropdown-toggle ti-btn ti-btn-primary-full !py-1 !px-2 !text-[0.75rem]"
                   data-hs-overlay="#create-task"
                 >
-                  <i className="ri-add-line font-semibold align-middle"></i>{' '}
+                  <i className="ri-add-line font-semibold align-middle"></i>{" "}
                   Create Task
                 </button>
                 <div id="create-task" className="hs-overlay hidden ti-modal">
@@ -113,8 +113,8 @@ const Listview = () => {
                             <div className="form-group">
                               <div className="input-group !flex-nowrap">
                                 <div className="input-group-text text-muted">
-                                  {' '}
-                                  <i className="ri-calendar-line"></i>{' '}
+                                  {" "}
+                                  <i className="ri-calendar-line"></i>{" "}
                                 </div>
                                 <DatePicker
                                   selected={startDate}
@@ -132,8 +132,8 @@ const Listview = () => {
                             <div className="form-group">
                               <div className="input-group !flex-nowrap">
                                 <div className="input-group-text text-muted">
-                                  {' '}
-                                  <i className="ri-calendar-line"></i>{' '}
+                                  {" "}
+                                  <i className="ri-calendar-line"></i>{" "}
                                 </div>
                                 <DatePicker
                                   selected={startDate}
@@ -1324,7 +1324,7 @@ const Listview = () => {
               </div>
               <div className="p-6 pb-2">
                 <p className="text-[.9375rem] font-semibold">
-                  Tasks Statistics{' '}
+                  Tasks Statistics{" "}
                   <span className="text-muted font-normal">
                     (Last 6 months) :
                   </span>
@@ -1340,6 +1340,6 @@ const Listview = () => {
     </div>
   );
 };
-Listview.layout = 'Contentlayout';
+Listview.layout = "Contentlayout";
 
 export default Listview;

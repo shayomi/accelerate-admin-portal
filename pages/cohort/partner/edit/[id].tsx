@@ -1,8 +1,8 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { Partner } from '@/types';
-import { partners } from '@/pages/components/cohort/partnerdata';
-import PartnerForm from '@/pages/components/cohort/partnerform';
+import React from "react";
+import { useRouter } from "next/router";
+import { Partner } from "@/types";
+import { partners } from "@/pages/components/cohort/partnerdata";
+import PartnerForm from "@/pages/components/cohort/partnerform";
 
 const Edit = () => {
   const router = useRouter();
@@ -22,6 +22,6 @@ const Edit = () => {
   );
 };
 
-Edit.layout = 'Contentlayout';
+Edit.layout = "Contentlayout";
 
 export default Edit;

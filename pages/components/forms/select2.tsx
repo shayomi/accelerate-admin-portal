@@ -5,12 +5,12 @@ import {
   Selectoption3,
   Selectoption4,
   Selectoption5,
-} from '@/shared/data/forms/select2data';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import React, { Fragment, useState } from 'react';
-const Select = dynamic(() => import('react-select'), { ssr: false });
+} from "@/shared/data/forms/select2data";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import React, { Fragment, useState } from "react";
+const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const Select2 = () => {
   const [selectedOptions, setSelectedOptions] = useState(null);
@@ -29,11 +29,11 @@ const Select2 = () => {
   const [isSelectDisabled, setSelectDisabled] = useState(false);
 
   const options = [
-    { value: 's-1', label: 'Selection-1' },
-    { value: 's-2', label: 'Selection-2' },
-    { value: 's-3', label: 'Selection-3' },
-    { value: 's-4', label: 'Selection-4' },
-    { value: 's-5', label: 'Selection-5' },
+    { value: "s-1", label: "Selection-1" },
+    { value: "s-2", label: "Selection-2" },
+    { value: "s-3", label: "Selection-3" },
+    { value: "s-4", label: "Selection-4" },
+    { value: "s-5", label: "Selection-5" },
   ];
 
   const handleSingleSelectChange = (selectedOption: any) => {
@@ -41,7 +41,7 @@ const Select2 = () => {
   };
 
   const handleMultiSelectChange = (
-    selectedOptions: React.SetStateAction<never[]>,
+    selectedOptions: React.SetStateAction<never[]>
   ) => {
     setMultiSelectValue(selectedOptions);
   };
@@ -56,7 +56,7 @@ const Select2 = () => {
 
   return (
     <Fragment>
-      <Seo title={'Select2'} />
+      <Seo title={"Select2"} />
       <Pageheader currentpage="Select2" activepage="Forms" mainpage="Select2" />
       <div className="grid grid-cols-12 gap-x-6">
         <div className="xl:col-span-4 col-span-12">
@@ -235,6 +235,6 @@ const Select2 = () => {
     </Fragment>
   );
 };
-Select2.layout = 'Contentlayout';
+Select2.layout = "Contentlayout";
 
 export default Select2;

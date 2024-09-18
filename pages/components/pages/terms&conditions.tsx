@@ -1,8 +1,8 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React, { Fragment, useEffect, useState } from 'react';
-import SimpleBar from 'simplebar-react';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React, { Fragment, useEffect, useState } from "react";
+import SimpleBar from "simplebar-react";
 
 const Termsconditions = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -14,12 +14,12 @@ const Termsconditions = () => {
       }
     };
 
-    document.querySelector('body')?.addEventListener('click', handleBodyClick);
+    document.querySelector("body")?.addEventListener("click", handleBodyClick);
 
     return () => {
       document
-        .querySelector('body')
-        ?.removeEventListener('click', handleBodyClick);
+        .querySelector("body")
+        ?.removeEventListener("click", handleBodyClick);
     };
   }, [isFullscreen]);
 
@@ -34,7 +34,7 @@ const Termsconditions = () => {
 
   return (
     <Fragment>
-      <Seo title={'Terms & Conditions'} />
+      <Seo title={"Terms & Conditions"} />
       <Pageheader
         currentpage="Terms & Conditions"
         activepage="Pages"
@@ -44,7 +44,7 @@ const Termsconditions = () => {
         <div className="grid grid-cols-12 !mx-auto text-defaultsize">
           <div className="xl:col-span-2 col-span-12"></div>
           <div className="xl:col-span-8 col-span-12">
-            <div className={`box ${isFullscreen ? 'box-fullscreen' : ''}`}>
+            <div className={`box ${isFullscreen ? "box-fullscreen" : ""}`}>
               <div className="box-body !p-0">
                 <div className="p-4 terms-heading-cover sm:flex items-center text-white bg-primary h5  rounded-t-md font-semibold mb-0">
                   <span className="avatar avatar-md me-4">
@@ -71,38 +71,38 @@ const Termsconditions = () => {
                     <div className="mb-[3rem]">
                       <p className="mb-4 opacity-[0.7]">
                         <span className="font-bold text-default opacity-[0.8]">
-                          If you stay in the USA{' '}
+                          If you stay in the USA{" "}
                         </span>
-                        the ynex{' '}
+                        the ynex{" "}
                         <Link className="text-primary" href="#!">
                           <u>Terms and Conditions</u>
-                        </Link>{' '}
-                        consists of below rules and{' '}
+                        </Link>{" "}
+                        consists of below rules and{" "}
                         <Link className="text-primary" href="#!">
                           <u>User Agreements</u>
-                        </Link>{' '}
-                        consists of below policies{' '}
+                        </Link>{" "}
+                        consists of below policies{" "}
                         <Link className="text-primary" href="#!">
                           <u>Ynex Rules &amp; Privacy Policies</u>
-                        </Link>{' '}
+                        </Link>{" "}
                         incorporated with the below conditions.
                       </p>
                       <p className="mb-0 opacity-[0.7]">
                         <span className="font-bold text-default opacity-[0.8]">
-                          If you stay any where in the world other than USA{' '}
+                          If you stay any where in the world other than USA{" "}
                         </span>
-                        the ynex{' '}
+                        the ynex{" "}
                         <Link className="text-primary" href="#!">
                           <u>Terms and Conditions</u>
-                        </Link>{' '}
-                        consists of below rules and{' '}
+                        </Link>{" "}
+                        consists of below rules and{" "}
                         <Link className="text-primary" href="#!">
                           <u>User Agreements</u>
-                        </Link>{' '}
-                        consists of below policies{' '}
+                        </Link>{" "}
+                        consists of below policies{" "}
                         <Link className="text-primary" href="#!">
                           <u>Ynex Rules &amp; Privacy Policies</u>
-                        </Link>{' '}
+                        </Link>{" "}
                         incorporated with the below conditions.
                       </p>
                     </div>
@@ -211,7 +211,7 @@ const Termsconditions = () => {
                       className="ps-3 form-check-label text-defaulttextcolor/70 inline-block"
                       htmlFor="privacy-policy"
                     >
-                      I agree with the{' '}
+                      I agree with the{" "}
                       <Link
                         href="#!"
                         className="font-semibold text-defaulttextcolor/70"
@@ -231,7 +231,7 @@ const Termsconditions = () => {
                       className="ps-3 form-check-label text-defaulttextcolor/70 inline-block"
                       htmlFor="terms_conditions"
                     >
-                      I agree with the{' '}
+                      I agree with the{" "}
                       <Link
                         href="#!"
                         className="font-semibold text-defaulttextcolor/70"
@@ -261,6 +261,6 @@ const Termsconditions = () => {
     </Fragment>
   );
 };
-Termsconditions.layout = 'Contentlayout';
+Termsconditions.layout = "Contentlayout";
 
 export default Termsconditions;

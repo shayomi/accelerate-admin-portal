@@ -1,7 +1,7 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { Fragment, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
 import {
   Autoplay,
@@ -16,19 +16,19 @@ import {
   EffectCoverflow,
   Thumbs,
   FreeMode,
-} from 'swiper/modules';
+} from "swiper/modules";
 
 const Swiperjs = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      return '<span className="' + className + '">' + (index + 1) + '</span>';
+      return '<span className="' + className + '">' + (index + 1) + "</span>";
     },
   };
 
   return (
     <Fragment>
-      <Seo title={'swiper'} />
+      <Seo title={"swiper"} />
       <Pageheader
         currentpage="swiper"
         activepage=" Advanced Ui"
@@ -199,7 +199,7 @@ const Swiperjs = () => {
             </div>
             <div className="box-body">
               <Swiper
-                pagination={{ type: 'progressbar' }}
+                pagination={{ type: "progressbar" }}
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
                 navigation={true}
                 modules={[Pagination, Navigation, Autoplay]}
@@ -237,7 +237,7 @@ const Swiperjs = () => {
             </div>
             <div className="box-body">
               <Swiper
-                pagination={{ type: 'fraction' }}
+                pagination={{ type: "fraction" }}
                 navigation={true}
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
                 modules={[Pagination, Navigation, Autoplay]}
@@ -348,7 +348,7 @@ const Swiperjs = () => {
             </div>
             <div className="box-body">
               <Swiper
-                direction={'vertical'}
+                direction={"vertical"}
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
                 modules={[Pagination, Autoplay]}
@@ -386,7 +386,7 @@ const Swiperjs = () => {
             </div>
             <div className="box-body">
               <Swiper
-                direction={'vertical'}
+                direction={"vertical"}
                 slidesPerView={1}
                 spaceBetween={30}
                 mousewheel={true}
@@ -468,7 +468,7 @@ const Swiperjs = () => {
             </div>
             <div className="box-body">
               <Swiper
-                effect={'cube'}
+                effect={"cube"}
                 grabCursor={true}
                 cubeEffect={{
                   shadow: true,
@@ -511,7 +511,7 @@ const Swiperjs = () => {
             <div className="box-body">
               <Swiper
                 spaceBetween={30}
-                effect={'fade'}
+                effect={"fade"}
                 navigation={true}
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
@@ -547,7 +547,7 @@ const Swiperjs = () => {
             </div>
             <div className="box-body">
               <Swiper
-                effect={'flip'}
+                effect={"flip"}
                 grabCursor={true}
                 pagination={{ clickable: true }}
                 navigation={true}
@@ -586,7 +586,7 @@ const Swiperjs = () => {
             </div>
             <div className="box-body">
               <Swiper
-                effect={'coverflow'}
+                effect={"coverflow"}
                 grabCursor={true}
                 slidesPerView={5}
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
@@ -665,5 +665,5 @@ const Swiperjs = () => {
     </Fragment>
   );
 };
-Swiperjs.layout = 'Contentlayout';
+Swiperjs.layout = "Contentlayout";
 export default Swiperjs;

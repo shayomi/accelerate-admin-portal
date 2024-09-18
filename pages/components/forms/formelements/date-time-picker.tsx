@@ -1,9 +1,9 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { Fragment, useState } from 'react';
-import DatePicker from 'react-datepicker';
-import { setHours, setMinutes } from 'date-fns';
-import Calendar from 'react-calendar';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment, useState } from "react";
+import DatePicker from "react-datepicker";
+import { setHours, setMinutes } from "date-fns";
+import Calendar from "react-calendar";
 
 const Datetimepicker = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -17,7 +17,7 @@ const Datetimepicker = () => {
   // Date picker With Time
 
   const [startTime, setStartTime] = useState(
-    setHours(setMinutes(new Date(), 30), 17),
+    setHours(setMinutes(new Date(), 30), 17)
   );
 
   //range data picker
@@ -31,7 +31,7 @@ const Datetimepicker = () => {
   const onChange = (
     selectedDates: Date[] | Date | null,
     _dateStr: string,
-    instance: any,
+    instance: any
   ): void => {
     // Handle the change and update your state accordingly
     if (selectedDates instanceof Date) {
@@ -52,7 +52,7 @@ const Datetimepicker = () => {
   const [show, setShow] = useState(false);
   return (
     <Fragment>
-      <Seo title={'Date Time Picker'} />
+      <Seo title={"Date Time Picker"} />
       <Pageheader
         currentpage="Date Time Picker"
         activepage="Form Elements"
@@ -68,8 +68,8 @@ const Datetimepicker = () => {
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-text text-[#8c9097] dark:text-white/50">
-                    {' '}
-                    <i className="ri-calendar-line"></i>{' '}
+                    {" "}
+                    <i className="ri-calendar-line"></i>{" "}
                   </div>
                   <DatePicker
                     className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -91,8 +91,8 @@ const Datetimepicker = () => {
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-text text-[#8c9097] dark:text-white/50">
-                    {' '}
-                    <i className="ri-calendar-line"></i>{' '}
+                    {" "}
+                    <i className="ri-calendar-line"></i>{" "}
                   </div>
                   <DatePicker
                     className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -117,8 +117,8 @@ const Datetimepicker = () => {
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-text text-[#8c9097] dark:text-white/50">
-                    {' '}
-                    <i className="ri-calendar-line"></i>{' '}
+                    {" "}
+                    <i className="ri-calendar-line"></i>{" "}
                   </div>
                   <DatePicker
                     className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -143,8 +143,8 @@ const Datetimepicker = () => {
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-text text-[#8c9097] dark:text-white/50">
-                    {' '}
-                    <i className="ri-calendar-line"></i>{' '}
+                    {" "}
+                    <i className="ri-calendar-line"></i>{" "}
                   </div>
                   <DatePicker
                     className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -171,8 +171,8 @@ const Datetimepicker = () => {
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-text text-[#8c9097] dark:text-white/50">
-                    {' '}
-                    <i className="ri-time-line"></i>{' '}
+                    {" "}
+                    <i className="ri-time-line"></i>{" "}
                   </div>
                   <DatePicker
                     className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -198,8 +198,8 @@ const Datetimepicker = () => {
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-text text-[#8c9097] dark:text-white/50">
-                    {' '}
-                    <i className="ri-time-line"></i>{' '}
+                    {" "}
+                    <i className="ri-time-line"></i>{" "}
                   </div>
                   <DatePicker
                     className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -225,8 +225,8 @@ const Datetimepicker = () => {
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-text text-[#8c9097] dark:text-white/50">
-                    {' '}
-                    <i className="ri-time-line"></i>{' '}
+                    {" "}
+                    <i className="ri-time-line"></i>{" "}
                   </div>
                   <DatePicker
                     className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -254,8 +254,8 @@ const Datetimepicker = () => {
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-text text-[#8c9097] dark:text-white/50">
-                    {' '}
-                    <i className="ri-time-line"></i>{' '}
+                    {" "}
+                    <i className="ri-time-line"></i>{" "}
                   </div>
                   <DatePicker
                     className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -280,8 +280,8 @@ const Datetimepicker = () => {
               <div className="form-group mb-0">
                 <div className="input-group">
                   <div className="input-group-text text-[#8c9097] dark:text-white/50">
-                    {' '}
-                    <i className="ri-calendar-line"></i>{' '}
+                    {" "}
+                    <i className="ri-calendar-line"></i>{" "}
                   </div>
                   <DatePicker
                     className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -349,6 +349,6 @@ const Datetimepicker = () => {
     </Fragment>
   );
 };
-Datetimepicker.layout = 'Contentlayout';
+Datetimepicker.layout = "Contentlayout";
 
 export default Datetimepicker;

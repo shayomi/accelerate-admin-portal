@@ -1,14 +1,14 @@
-import { Earningsreport } from '@/shared/data/dashboards/coursedata';
+import { Earningsreport } from "@/shared/data/dashboards/coursedata";
 import {
   Countries,
   Earning,
   ProductsOverview,
   Recentorders,
-} from '@/shared/data/dashboards/ecommercedata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
+} from "@/shared/data/dashboards/ecommercedata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
 
 const Ecommerce = () => {
   // for User search function
@@ -19,7 +19,7 @@ const Ecommerce = () => {
   const myfunction = (idx: string) => {
     let Data;
     for (Data of ProductsOverview) {
-      if (Data.name[0] == ' ') {
+      if (Data.name[0] == " ") {
         Data.name = Data.name.trim();
       }
       if (Data.name.toLowerCase().includes(idx.toLowerCase())) {
@@ -33,7 +33,7 @@ const Ecommerce = () => {
 
   return (
     <Fragment>
-      <Seo title={'Ecommerce'} />
+      <Seo title={"Ecommerce"} />
       <Pageheader
         currentpage="Ecommerce"
         activepage="Dashboards"
@@ -73,10 +73,10 @@ const Ecommerce = () => {
                       </div>
                       <div>
                         <span className="text-[0.75rem] mb-0">
-                          Increase by{' '}
+                          Increase by{" "}
                           <span className="badge bg-success/10 text-success mx-1">
                             +4.2%
-                          </span>{' '}
+                          </span>{" "}
                           this month
                         </span>
                       </div>
@@ -120,10 +120,10 @@ const Ecommerce = () => {
                       </div>
                       <div>
                         <span className="text-[0.75rem] mb-0">
-                          Increase by{' '}
+                          Increase by{" "}
                           <span className="badge bg-success/10 text-success mx-1">
                             +12.0%
-                          </span>{' '}
+                          </span>{" "}
                           this month
                         </span>
                       </div>
@@ -160,10 +160,10 @@ const Ecommerce = () => {
                       </div>
                       <div>
                         <span className="text-[0.75rem] mb-0">
-                          Decreased by{' '}
+                          Decreased by{" "}
                           <span className="badge bg-danger/10 text-danger mx-1">
                             -7.6%
-                          </span>{' '}
+                          </span>{" "}
                           this month
                         </span>
                       </div>
@@ -200,10 +200,10 @@ const Ecommerce = () => {
                       </div>
                       <div>
                         <span className="text-[0.75rem] mb-0">
-                          Increased by{' '}
+                          Increased by{" "}
                           <span className="badge bg-success/10 text-success mx-1">
                             +2.5%
-                          </span>{' '}
+                          </span>{" "}
                           this month
                         </span>
                       </div>
@@ -229,7 +229,7 @@ const Ecommerce = () => {
                     </p>
                     <p className="ecommerce-bankoffer-details mb-4">
                       Bank Offer 10% off on Aches Bank Credit Cards, up to $10.
-                      On orders of $500 and above{' '}
+                      On orders of $500 and above{" "}
                       <Link href="#!" className="underline text-white">
                         T&amp;C
                       </Link>
@@ -1773,7 +1773,7 @@ const Ecommerce = () => {
             <div className="box-footer">
               <div className="sm:flex items-center">
                 <div>
-                  Showing 5 Entries{' '}
+                  Showing 5 Entries{" "}
                   <i className="bi bi-arrow-right ms-2 font-semibold"></i>
                 </div>
                 <div className="ms-auto">
@@ -1813,6 +1813,6 @@ const Ecommerce = () => {
     </Fragment>
   );
 };
-Ecommerce.layout = 'Contentlayout';
+Ecommerce.layout = "Contentlayout";
 
 export default Ecommerce;

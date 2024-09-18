@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import { Cohort } from '@/types';
+import React, { Fragment } from "react";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import { Cohort } from "@/types";
 
 interface CohortDetailProps {
   cohort: Cohort;

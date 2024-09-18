@@ -1,11 +1,11 @@
 import {
   Backgroundcards,
   Gridcards,
-} from '@/shared/data/ui-elements/cardsdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+} from "@/shared/data/ui-elements/cardsdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 const Cards = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -17,12 +17,12 @@ const Cards = () => {
       }
     };
 
-    document.querySelector('body')?.addEventListener('click', handleBodyClick);
+    document.querySelector("body")?.addEventListener("click", handleBodyClick);
 
     return () => {
       document
-        .querySelector('body')
-        ?.removeEventListener('click', handleBodyClick);
+        .querySelector("body")
+        ?.removeEventListener("click", handleBodyClick);
     };
   }, [isFullscreen]);
 
@@ -37,7 +37,7 @@ const Cards = () => {
 
   return (
     <div>
-      <Seo title={'Cards'} />
+      <Seo title={"Cards"} />
       <Pageheader
         currentpage="Cards"
         activepage="Ui Elements"
@@ -184,7 +184,7 @@ const Cards = () => {
                       but in rising every time we fall.
                     </h6>
                     <footer className="text-[#6c757d] mt-2 text-[.875rem]">
-                      Someone famous in{' '}
+                      Someone famous in{" "}
                       <cite title="Source Title">Source Title</cite>
                     </footer>
                   </blockquote>
@@ -759,7 +759,7 @@ const Cards = () => {
               <p className="text-[.875rem] font-semibold mb-1">About:</p>
               <p className="mb-0 card-text">
                 Finibus Bonorum et Malorum" by Cicero are also reproduced in
-                their exact original form, accompanied by English versions{' '}
+                their exact original form, accompanied by English versions{" "}
               </p>
             </div>
           </div>
@@ -855,7 +855,7 @@ const Cards = () => {
           </div>
         </div>
         <div className="xl:col-span-4 col-span-12">
-          <div className={`box ${isFullscreen ? 'box-fullscreen' : ''}`}>
+          <div className={`box ${isFullscreen ? "box-fullscreen" : ""}`}>
             <div className="box-header justify-between">
               <div className="box-title">Card With Fullscreen Button</div>
               <Link
@@ -1653,7 +1653,7 @@ const Cards = () => {
                       seen or even touched — they must be felt with the heart..
                     </h6>
                     <footer className="blockquote-footer mt-3 text-[.875rem] text-white opacity-[0.7]">
-                      Someone famous as{' '}
+                      Someone famous as{" "}
                       <cite title="Source Title">-Helen Keller</cite>
                     </footer>
                   </blockquote>
@@ -1774,7 +1774,7 @@ const Cards = () => {
                 Most tropical areas are suitable
               </h6>
               <p className="card-text">
-                {' '}
+                {" "}
                 If you are going to use a passage of Lorem Ipsum, you need to be
                 sure there isn't anything embarrassing hidden in the middle of
                 text.
@@ -1794,7 +1794,7 @@ const Cards = () => {
                   {idx.text1}
                 </h6>
                 <p className="card-text">
-                  {' '}
+                  {" "}
                   If you are going to use a passage of Lorem Ipsum, you need to
                   be sure there isn't anything embarrassing hidden in the middle
                   of text.
@@ -1807,6 +1807,6 @@ const Cards = () => {
     </div>
   );
 };
-Cards.layout = 'Contentlayout';
+Cards.layout = "Contentlayout";
 
 export default Cards;

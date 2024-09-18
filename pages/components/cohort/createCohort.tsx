@@ -1,31 +1,31 @@
-'use client';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { Fragment, useState, useEffect } from 'react';
+"use client";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment, useState, useEffect } from "react";
 
 const CreateCohort = ({ cohort }: any) => {
-  const [name, setName] = useState('');
-  const [shortName, setShortName] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
-  const [description, setDescription] = useState('');
+  const [name, setName] = useState("");
+  const [shortName, setShortName] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [description, setDescription] = useState("");
   const [schedule, setSchedule] = useState<string[]>([]);
   const [selectedStartups, setSelectedStartups] = useState<string[]>([]);
 
   useEffect(() => {
     if (cohort) {
-      setName(cohort.name || '');
-      setShortName(cohort.shortName || '');
-      setStartDate(cohort.startDate || '');
-      setEndDate(cohort.endDate || '');
-      setDescription(cohort.description || '');
+      setName(cohort.name || "");
+      setShortName(cohort.shortName || "");
+      setStartDate(cohort.startDate || "");
+      setEndDate(cohort.endDate || "");
+      setDescription(cohort.description || "");
       setSchedule(cohort.schedule || []);
       setSelectedStartups(cohort.startups || []);
     }
   }, [cohort]);
 
   const handleScheduleChange = (
-    e: React.ChangeEvent<HTMLSelectElement>,
+    e: React.ChangeEvent<HTMLSelectElement>
   ): void => {
     const selectedValue = e.target.value;
     if (selectedValue && !schedule.includes(selectedValue)) {
@@ -38,7 +38,7 @@ const CreateCohort = ({ cohort }: any) => {
   };
 
   const handleStartupChange = (
-    e: React.ChangeEvent<HTMLSelectElement>,
+    e: React.ChangeEvent<HTMLSelectElement>
   ): void => {
     const selectedValue = e.target.value;
     if (selectedValue && !selectedStartups.includes(selectedValue)) {
@@ -52,9 +52,9 @@ const CreateCohort = ({ cohort }: any) => {
 
   return (
     <Fragment>
-      <Seo title={'Cohort Management'} />
+      <Seo title={"Cohort Management"} />
       <Pageheader
-        currentpage={cohort ? 'Edit Cohort' : 'Create New Cohort'}
+        currentpage={cohort ? "Edit Cohort" : "Create New Cohort"}
         activepage="Dashboards"
         mainpage="Cohorts"
       />
@@ -188,7 +188,7 @@ const CreateCohort = ({ cohort }: any) => {
                 type="submit"
                 className="ti-btn bg-green rounded-sm !mb-0"
               >
-                {cohort ? 'Update Cohort' : 'Create Cohort'}
+                {cohort ? "Update Cohort" : "Create Cohort"}
               </button>
             </div>
           </div>
@@ -198,5 +198,5 @@ const CreateCohort = ({ cohort }: any) => {
   );
 };
 
-CreateCohort.layout = 'Contentlayout';
+CreateCohort.layout = "Contentlayout";
 export default CreateCohort;

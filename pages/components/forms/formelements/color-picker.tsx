@@ -1,23 +1,23 @@
-import { SketchExample } from '@/shared/data/forms/form-elements/colopickerdata';
-import { color1 } from '@/shared/data/prism/forms-prism';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Showcode from '@/shared/layout-components/showcode/showcode';
-import React, { Fragment, useState } from 'react';
-import { ChromePicker } from 'react-color';
+import { SketchExample } from "@/shared/data/forms/form-elements/colopickerdata";
+import { color1 } from "@/shared/data/prism/forms-prism";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Showcode from "@/shared/layout-components/showcode/showcode";
+import React, { Fragment, useState } from "react";
+import { ChromePicker } from "react-color";
 
 const Colorpicker = () => {
   //color picker
-  const [color, setColor] = useState('#6c5ffc');
+  const [color, setColor] = useState("#6c5ffc");
   const [showColorPicker, setShowColorPicker] = useState(false);
   const handleChangeComplete = (color: any) => {
     console.log(color);
   };
-  const [hex, setHex] = useState('#fff');
+  const [hex, setHex] = useState("#fff");
 
   return (
     <Fragment>
-      <Seo title={'Color Pickers'} />
+      <Seo title={"Color Pickers"} />
       <Pageheader
         currentpage="Color Pickers"
         activepage="Form Elements"
@@ -49,7 +49,7 @@ const Colorpicker = () => {
                       setShowColorPicker((showColorPicker) => !showColorPicker)
                     }
                   >
-                    {showColorPicker ? 'Close Picker' : 'Pick Color'}
+                    {showColorPicker ? "Close Picker" : "Pick Color"}
                   </button>
                   {showColorPicker && (
                     <ChromePicker
@@ -72,6 +72,6 @@ const Colorpicker = () => {
     </Fragment>
   );
 };
-Colorpicker.layout = 'Contentlayout';
+Colorpicker.layout = "Contentlayout";
 
 export default Colorpicker;

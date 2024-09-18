@@ -1,8 +1,8 @@
 // components/Userdetails.tsx
-import React, { Fragment } from 'react';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
+import React, { Fragment } from "react";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
 
 interface ActivityLog {
   date: string;
@@ -40,7 +40,7 @@ const Userdetails: React.FC<UserDetailsProps> = ({ user }) => {
 
   return (
     <Fragment>
-      <Seo title={'User Management'} />
+      <Seo title={"User Management"} />
       <Pageheader
         currentpage="User Details"
         activepage="Dashboards"
@@ -61,7 +61,7 @@ const Userdetails: React.FC<UserDetailsProps> = ({ user }) => {
               <div className="flex items-center space-x-2">
                 <span
                   className={`w-3 h-3 rounded-full ${
-                    user.status === 'Active' ? 'bg-green-500' : 'bg-red-500'
+                    user.status === "Active" ? "bg-green-500" : "bg-red-500"
                   }`}
                 ></span>
                 <p className="text-sm text-gray-600">
@@ -99,26 +99,26 @@ const Userdetails: React.FC<UserDetailsProps> = ({ user }) => {
             </h2>
             <div className="mb-2">
               <p className="text-sm text-gray-600">
-                <strong>Investors:</strong>{' '}
-                {user.associatedEntities.investors?.join(', ') || 'None'}
+                <strong>Investors:</strong>{" "}
+                {user.associatedEntities.investors?.join(", ") || "None"}
               </p>
             </div>
             <div className="mb-2">
               <p className="text-sm text-gray-600">
-                <strong>Advisors:</strong>{' '}
-                {user.associatedEntities.advisors?.join(', ') || 'None'}
+                <strong>Advisors:</strong>{" "}
+                {user.associatedEntities.advisors?.join(", ") || "None"}
               </p>
             </div>
             <div className="mb-2">
               <p className="text-sm text-gray-600">
-                <strong>Partners:</strong>{' '}
-                {user.associatedEntities.partners?.join(', ') || 'None'}
+                <strong>Partners:</strong>{" "}
+                {user.associatedEntities.partners?.join(", ") || "None"}
               </p>
             </div>
             <div className="mb-2">
               <p className="text-sm text-gray-600">
-                <strong>Founders:</strong>{' '}
-                {user.associatedEntities.founders?.join(', ') || 'None'}
+                <strong>Founders:</strong>{" "}
+                {user.associatedEntities.founders?.join(", ") || "None"}
               </p>
             </div>
           </div>

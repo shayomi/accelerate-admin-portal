@@ -1,22 +1,22 @@
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { Fragment, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import Link from 'next/link';
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Link from "next/link";
 
 const Twocover = () => {
   const [inputValues, setInputValues] = useState({
-    one: '',
-    two: '',
-    three: '',
-    four: '',
+    one: "",
+    two: "",
+    three: "",
+    four: "",
   });
 
   const handleChange = (currentId: string, nextId: any, value: string) => {
@@ -33,7 +33,7 @@ const Twocover = () => {
 
   return (
     <Fragment>
-      <Seo title={'Twostepverification-cover'} />
+      <Seo title={"Twostepverification-cover"} />
       <div className="grid grid-cols-12 authentication mx-0 text-defaulttextcolor text-defaultsize">
         <div className="xxl:col-span-7 xl:col-span-7 lg:col-span-12 col-span-12">
           <div className="grid grid-cols-12  items-center h-full">
@@ -72,7 +72,7 @@ const Twocover = () => {
                           maxLength={1}
                           value={inputValues.one}
                           onChange={(e) =>
-                            handleChange('one', 'two', e.target.value)
+                            handleChange("one", "two", e.target.value)
                           }
                         />
                       </div>
@@ -85,7 +85,7 @@ const Twocover = () => {
                           maxLength={1}
                           value={inputValues.two}
                           onChange={(e) =>
-                            handleChange('two', 'three', e.target.value)
+                            handleChange("two", "three", e.target.value)
                           }
                         />
                       </div>
@@ -98,7 +98,7 @@ const Twocover = () => {
                           maxLength={1}
                           value={inputValues.three}
                           onChange={(e) =>
-                            handleChange('three', 'four', e.target.value)
+                            handleChange("three", "four", e.target.value)
                           }
                         />
                       </div>
@@ -111,7 +111,7 @@ const Twocover = () => {
                           maxLength={1}
                           value={inputValues.four}
                           onChange={(e) =>
-                            handleChange('four', null, e.target.value)
+                            handleChange("four", null, e.target.value)
                           }
                         />
                       </div>
@@ -186,7 +186,7 @@ const Twocover = () => {
                           Verify Your Account
                         </h6>
                         <p className="font-normal text-[.875rem] opacity-[0.7]">
-                          {' '}
+                          {" "}
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Ipsa eligendi expedita aliquam quaerat nulla
                           voluptas facilis. Porro rem voluptates possimus, ad,
@@ -210,7 +210,7 @@ const Twocover = () => {
                           Verify Your Account
                         </h6>
                         <p className="font-normal text-[.875rem] opacity-[0.7]">
-                          {' '}
+                          {" "}
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Ipsa eligendi expedita aliquam quaerat nulla
                           voluptas facilis. Porro rem voluptates possimus, ad,
@@ -234,7 +234,7 @@ const Twocover = () => {
                           Verify Your Account
                         </h6>
                         <p className="font-normal text-[.875rem] opacity-[0.7]">
-                          {' '}
+                          {" "}
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Ipsa eligendi expedita aliquam quaerat nulla
                           voluptas facilis. Porro rem voluptates possimus, ad,
@@ -254,6 +254,6 @@ const Twocover = () => {
   );
 };
 
-Twocover.layout = 'Authenticationlayout';
+Twocover.layout = "Authenticationlayout";
 
 export default Twocover;

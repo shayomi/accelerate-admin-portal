@@ -1,13 +1,13 @@
-import { StartupsList } from '@/shared/data/dashboards/startupsdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React, { Fragment } from 'react';
+import { StartupsList } from "@/shared/data/dashboards/startupsdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React, { Fragment } from "react";
 
 const Startups = () => {
   return (
     <Fragment>
-      <Seo title={'Startup Management'} />
+      <Seo title={"Startup Management"} />
       <Pageheader
         currentpage="Startups List"
         activepage="Dashboards"
@@ -117,13 +117,13 @@ const Startups = () => {
                       <td>
                         {startup.founders
                           .map((founder: { name: any }) => founder.name)
-                          .join(', ')}
+                          .join(", ")}
                       </td>
                       <td
                         className={
-                          startup.status === 'Active'
-                            ? 'text-green'
-                            : 'text-yellow'
+                          startup.status === "Active"
+                            ? "text-green"
+                            : "text-yellow"
                         }
                       >
                         {startup.status}
@@ -133,7 +133,7 @@ const Startups = () => {
                         <div className="flex flex-row gap-2">
                           <button className="text-primary hover:underline">
                             <Link href={`/startup/startups/${startup.id}`}>
-                              {' '}
+                              {" "}
                               View
                             </Link>
                           </button>
@@ -148,7 +148,7 @@ const Startups = () => {
           <div className="box-footer">
             <div className="sm:flex items-center">
               <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-                Showing 5 Entries{' '}
+                Showing 5 Entries{" "}
                 <i className="bi bi-arrow-right ms-2 font-semibold"></i>
               </div>
               <div className="ms-auto">
@@ -187,6 +187,6 @@ const Startups = () => {
     </Fragment>
   );
 };
-Startups.layout = 'Contentlayout';
+Startups.layout = "Contentlayout";
 
 export default Startups;

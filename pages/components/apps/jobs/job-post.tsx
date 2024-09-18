@@ -11,15 +11,15 @@ import {
   jobpost7,
   jobpost8,
   jobpost9,
-} from '@/shared/data/apps/jobs/jobpostdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { Fragment, useState } from 'react';
-import { MultiSelect } from 'react-multi-select-component';
-const Select = dynamic(() => import('react-select'), { ssr: false });
-import DatePicker from 'react-datepicker';
-import Link from 'next/link';
-import dynamic from 'next/dynamic';
+} from "@/shared/data/apps/jobs/jobpostdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment, useState } from "react";
+import { MultiSelect } from "react-multi-select-component";
+const Select = dynamic(() => import("react-select"), { ssr: false });
+import DatePicker from "react-datepicker";
+import Link from "next/link";
+import dynamic from "next/dynamic";
 
 const Jobpost = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -39,7 +39,7 @@ const Jobpost = () => {
 
   return (
     <Fragment>
-      <Seo title={'Job Post'} />
+      <Seo title={"Job Post"} />
       <Pageheader
         currentpage="Job Post"
         activepage="Jobs"
@@ -280,6 +280,6 @@ const Jobpost = () => {
     </Fragment>
   );
 };
-Jobpost.layout = 'Contentlayout';
+Jobpost.layout = "Contentlayout";
 
 export default Jobpost;

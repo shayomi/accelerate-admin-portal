@@ -1,11 +1,11 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { Fragment, useEffect, useState } from 'react';
-import { connect } from 'react-redux';
-import { AddToCart } from '../../../../shared/redux/action';
-import { ItemData1 } from '@/shared/data/pages/ecommerces/ecommercedata';
-import Link from 'next/link';
-import Swal from 'sweetalert2';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment, useEffect, useState } from "react";
+import { connect } from "react-redux";
+import { AddToCart } from "../../../../shared/redux/action";
+import { ItemData1 } from "@/shared/data/pages/ecommerces/ecommercedata";
+import Link from "next/link";
+import Swal from "sweetalert2";
 
 const Cart = ({ local_varaiable }: any) => {
   const [cart, setCart] = useState(ItemData1);
@@ -33,18 +33,18 @@ const Cart = ({ local_varaiable }: any) => {
 
   const handleClick = (id: string) => {
     Swal.fire({
-      title: 'Are you sure?',
+      title: "Are you sure?",
       text: "You won't be able to revert this!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
         handleDelete(id);
       } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire('Cancelled', 'Your file is safe :)', 'error');
+        Swal.fire("Cancelled", "Your file is safe :)", "error");
       }
     });
   };
@@ -53,11 +53,11 @@ const Cart = ({ local_varaiable }: any) => {
     const updatedData = cart.filter((idx) => idx.id !== id);
     setCart(updatedData);
 
-    Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+    Swal.fire("Deleted!", "Your file has been deleted.", "success");
   };
 
   const incrementQuantity = (id: string) => {
-    console.log('Working incrementQuantity');
+    console.log("Working incrementQuantity");
 
     const updatedCart = cart.map((item) => {
       if (item.id === id) {
@@ -69,7 +69,7 @@ const Cart = ({ local_varaiable }: any) => {
   };
 
   const decrementQuantity = (id: string) => {
-    console.log('Working decrementQuantity');
+    console.log("Working decrementQuantity");
 
     const updatedCart = cart.map((item) => {
       if (item.id === id && innerWidth && item.quantity > 0) {
@@ -82,7 +82,7 @@ const Cart = ({ local_varaiable }: any) => {
   };
   return (
     <Fragment>
-      <Seo title={'Cart'} />
+      <Seo title={"Cart"} />
       <Pageheader currentpage="Cart" activepage="Ecommerce" mainpage="Cart" />
       <div className="grid grid-cols-12 sm:gap-x-6 gap-0">
         <div className="xxl:col-span-9 col-span-12">
@@ -258,7 +258,7 @@ const Cart = ({ local_varaiable }: any) => {
           <div className="box">
             <div className="p-4 border-b dark:border-defaultborder/10 block">
               <div className="alert alert-primary text-center" role="alert">
-                <span className="text-defaulttextcolor">Sale Ends in</span>{' '}
+                <span className="text-defaulttextcolor">Sale Ends in</span>{" "}
                 <span className="font-semibold text-[0.875rem] text-primary ms-1">
                   8hours:32minutes
                 </span>
@@ -357,7 +357,7 @@ const Cart = ({ local_varaiable }: any) => {
                     Total :
                   </div>
                   <div className="font-semibold text-[0.875rem] text-primary">
-                    {' '}
+                    {" "}
                     $1,387
                   </div>
                 </div>
@@ -383,7 +383,7 @@ const Cart = ({ local_varaiable }: any) => {
     </Fragment>
   );
 };
-Cart.layout = 'Contentlayout';
+Cart.layout = "Contentlayout";
 
 const mapStateToProps = (state: any) => ({
   local_varaiable: state,

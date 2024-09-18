@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { ChangeEvent, Fragment, useState } from 'react';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { ChangeEvent, Fragment, useState } from "react";
 
 type OptionType = string;
 
 const EditAdvisor = () => {
   const [selectedFocusAreas, setSelectedFocusAreas] = useState<OptionType[]>(
-    [],
+    []
   );
   const [advisorImage, setAdvisorImage] = useState<File | null>(null);
 
   const focusAreaOptions: OptionType[] = [
-    'Corporate Strategy',
-    'Marketing',
-    'Finance',
-    'Technology',
-    'Leadership',
+    "Corporate Strategy",
+    "Marketing",
+    "Finance",
+    "Technology",
+    "Leadership",
   ];
 
   const handleFocusAreaChange = (e: ChangeEvent<HTMLSelectElement>): void => {
@@ -39,7 +39,7 @@ const EditAdvisor = () => {
 
   return (
     <Fragment>
-      <Seo title={'Advisor Management'} />
+      <Seo title={"Advisor Management"} />
       <Pageheader
         currentpage="Edit Advisor"
         activepage="Dashboard"
@@ -191,6 +191,6 @@ const EditAdvisor = () => {
   );
 };
 
-EditAdvisor.layout = 'Contentlayout';
+EditAdvisor.layout = "Contentlayout";
 
 export default EditAdvisor;

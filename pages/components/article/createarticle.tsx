@@ -1,11 +1,11 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
-import 'react-quill/dist/quill.snow.css';
-import Seo from '@/shared/layout-components/seo/seo';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import { Article } from '@/types';
+import React, { Fragment, useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+import "react-quill/dist/quill.snow.css";
+import Seo from "@/shared/layout-components/seo/seo";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import { Article } from "@/types";
 
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 type Author = {
   id: number;
@@ -13,9 +13,9 @@ type Author = {
 };
 
 const authorsList: Author[] = [
-  { id: 1, name: 'John Doe' },
-  { id: 2, name: 'Jane Smith' },
-  { id: 3, name: 'Alex Johnson' },
+  { id: 1, name: "John Doe" },
+  { id: 2, name: "Jane Smith" },
+  { id: 3, name: "Alex Johnson" },
 ];
 
 type CreateArticleProps = {
@@ -23,24 +23,24 @@ type CreateArticleProps = {
 };
 
 const CreateArticle = ({ article }: CreateArticleProps) => {
-  const [title, setTitle] = useState(article?.title || '');
-  const [slug, setSlug] = useState(article?.slug || '');
-  const [category, setCategory] = useState(article?.category || '');
-  const [content, setContent] = useState(article?.content || '');
+  const [title, setTitle] = useState(article?.title || "");
+  const [slug, setSlug] = useState(article?.slug || "");
+  const [category, setCategory] = useState(article?.category || "");
+  const [content, setContent] = useState(article?.content || "");
   const [publicationDate, setPublicationDate] = useState(
-    article?.publicationDate || '',
+    article?.publicationDate || ""
   );
-  const [externalLink, setExternalLink] = useState(article?.externalLink || '');
-  const [excerpt, setExcerpt] = useState(article?.excerpt || '');
+  const [externalLink, setExternalLink] = useState(article?.externalLink || "");
+  const [excerpt, setExcerpt] = useState(article?.excerpt || "");
   const [featured, setFeatured] = useState(article?.featured || false);
   const [selectedAuthors, setSelectedAuthors] = useState<Author[]>(
-    article?.authors || [],
+    article?.authors || []
   );
-  const [status, setStatus] = useState(article?.status || 'Draft');
+  const [status, setStatus] = useState(article?.status || "Draft");
 
   // Slug generation logic
   const handleSlugGeneration = () => {
-    setSlug(title.toLowerCase().replace(/\s+/g, '-'));
+    setSlug(title.toLowerCase().replace(/\s+/g, "-"));
   };
 
   // Handle selecting an author
@@ -58,21 +58,21 @@ const CreateArticle = ({ article }: CreateArticleProps) => {
   // Handle removing an author
   const removeAuthor = (authorId: number) => {
     setSelectedAuthors(
-      selectedAuthors.filter((author) => author.id !== authorId),
+      selectedAuthors.filter((author) => author.id !== authorId)
     );
   };
 
   return (
     <Fragment>
-      <Seo title={article ? 'Edit Article' : 'Create Article'} />
+      <Seo title={article ? "Edit Article" : "Create Article"} />
       <Pageheader
-        currentpage={article ? 'Edit Article' : 'Create Article'}
+        currentpage={article ? "Edit Article" : "Create Article"}
         activepage="Articles"
         mainpage="Article Management"
       />
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-blue-700">
-          {article ? 'Edit Article' : 'Create New Article'}
+          {article ? "Edit Article" : "Create New Article"}
         </h1>
         <div className="flex space-x-4">
           <button
@@ -85,7 +85,7 @@ const CreateArticle = ({ article }: CreateArticleProps) => {
             type="button"
             className="bg-primary/20 text-primary py-2 px-4 rounded-md"
           >
-            {article ? 'Update' : 'Publish'}
+            {article ? "Update" : "Publish"}
           </button>
         </div>
       </div>
@@ -287,6 +287,6 @@ const CreateArticle = ({ article }: CreateArticleProps) => {
   );
 };
 
-CreateArticle.layout = 'Contentlayout';
+CreateArticle.layout = "Contentlayout";
 
 export default CreateArticle;

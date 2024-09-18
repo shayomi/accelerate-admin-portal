@@ -1,8 +1,8 @@
-import { Productlistdata } from '@/shared/data/pages/ecommerces/productlistdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
+import { Productlistdata } from "@/shared/data/pages/ecommerces/productlistdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
 
 const Productlist = () => {
   const [ListData, setListData] = useState([...Productlistdata]);
@@ -44,7 +44,7 @@ const Productlist = () => {
 
   return (
     <Fragment>
-      <Seo title={'Products List'} />
+      <Seo title={"Products List"} />
       <Pageheader
         currentpage="Products List"
         activepage="Ecommerce"
@@ -215,6 +215,6 @@ const Productlist = () => {
     </Fragment>
   );
 };
-Productlist.layout = 'Contentlayout';
+Productlist.layout = "Contentlayout";
 
 export default Productlist;

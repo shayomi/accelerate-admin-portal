@@ -1,8 +1,8 @@
 // components/advisors/AdvisorDetails.tsx
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import { Advisor } from '@/types';
-import React, { Fragment } from 'react';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import { Advisor } from "@/types";
+import React, { Fragment } from "react";
 
 interface AdvisorDetailsProps {
   advisor: Advisor;

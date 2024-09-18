@@ -1,7 +1,7 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { ChangeEvent, Fragment, useState, useEffect } from 'react';
-import { Startup, Founder } from '@/types'; // Adjust import path as needed
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { ChangeEvent, Fragment, useState, useEffect } from "react";
+import { Startup, Founder } from "@/types"; // Adjust import path as needed
 
 interface CreateStartupProps {
   startupData?: Startup; // Optional prop to receive startup data for editing
@@ -9,59 +9,59 @@ interface CreateStartupProps {
 
 const CreateStartup = ({ startupData }: CreateStartupProps) => {
   const [companyName, setCompanyName] = useState(
-    startupData?.companyName || '',
+    startupData?.companyName || ""
   );
-  const [slug, setSlug] = useState(''); // Will be auto-generated
+  const [slug, setSlug] = useState(""); // Will be auto-generated
   const [companyEmail, setCompanyEmail] = useState(
-    startupData?.companyEmail || '',
+    startupData?.companyEmail || ""
   );
-  const [city, setCity] = useState(startupData?.location?.city || '');
-  const [country, setCountry] = useState(startupData?.location?.country || '');
-  const [website, setWebsite] = useState(startupData?.website || '');
+  const [city, setCity] = useState(startupData?.location?.city || "");
+  const [country, setCountry] = useState(startupData?.location?.country || "");
+  const [website, setWebsite] = useState(startupData?.website || "");
   const [companySize, setCompanySize] = useState<number | undefined>(
-    startupData?.companySize,
+    startupData?.companySize
   );
   const [companyDescription, setCompanyDescription] = useState(
-    startupData?.description || '',
+    startupData?.description || ""
   );
   const [fundraisingAmount, setFundraisingAmount] = useState<
     number | undefined
   >(startupData?.fundraisingAmount);
   const [valuation, setValuation] = useState<number | undefined>(
-    startupData?.valuation,
+    startupData?.valuation
   );
   const [yearFounded, setYearFounded] = useState<number | undefined>(
-    startupData?.founded,
+    startupData?.founded
   );
   const [pitchVideoLink, setPitchVideoLink] = useState(
-    startupData?.pitchVideoLink || '',
+    startupData?.pitchVideoLink || ""
   );
   const [pitchDeckLink, setPitchDeckLink] = useState(
-    startupData?.pitchDeckLink || '',
+    startupData?.pitchDeckLink || ""
   );
   const [calendlyLink, setCalendlyLink] = useState(
-    startupData?.calendlyLink || '',
+    startupData?.calendlyLink || ""
   );
-  const [cohort, setCohort] = useState(startupData?.cohort || '');
+  const [cohort, setCohort] = useState(startupData?.cohort || "");
 
   const [selectedIndustries, setSelectedIndustries] = useState<string[]>(
-    startupData?.industries || [],
+    startupData?.industries || []
   );
   const [selectedFounders, setSelectedFounders] = useState<Founder[]>(
-    startupData?.founders || [],
+    startupData?.founders || []
   );
 
   const industryOptions: string[] = [
-    'Tech',
-    'Finance',
-    'Healthcare',
-    'Education',
+    "Tech",
+    "Finance",
+    "Healthcare",
+    "Education",
   ];
   const founderOptions: string[] = [
-    'Alice Johnson',
-    'Bob Smith',
-    'Claire Adams',
-    'David Lee',
+    "Alice Johnson",
+    "Bob Smith",
+    "Claire Adams",
+    "David Lee",
   ]; // These could be fetched from an API
 
   // Handle Industry Change
@@ -78,9 +78,9 @@ const CreateStartup = ({ startupData }: CreateStartupProps) => {
     const founderData: Founder = {
       // Placeholder for actual founder data
       name: selectedValue,
-      role: 'Unknown',
-      linkedin: '',
-      image: 'https://via.placeholder.com/50',
+      role: "Unknown",
+      linkedin: "",
+      image: "https://via.placeholder.com/50",
     };
     if (
       selectedValue &&
@@ -93,28 +93,28 @@ const CreateStartup = ({ startupData }: CreateStartupProps) => {
   // Remove a selected industry
   const removeIndustry = (industry: string): void => {
     setSelectedIndustries(
-      selectedIndustries.filter((item) => item !== industry),
+      selectedIndustries.filter((item) => item !== industry)
     );
   };
 
   // Remove a selected founder
   const removeFounder = (founder: Founder): void => {
     setSelectedFounders(
-      selectedFounders.filter((item) => item.name !== founder.name),
+      selectedFounders.filter((item) => item.name !== founder.name)
     );
   };
 
   useEffect(() => {
     // Generate slug when company name changes
     if (companyName) {
-      const generatedSlug = companyName.toLowerCase().replace(/\s+/g, '-');
+      const generatedSlug = companyName.toLowerCase().replace(/\s+/g, "-");
       setSlug(generatedSlug);
     }
   }, [companyName]);
 
   return (
     <Fragment>
-      <Seo title={'Startup Management'} />
+      <Seo title={"Startup Management"} />
       <Pageheader
         currentpage="Create Startup"
         activepage="Dashboards"
@@ -179,7 +179,7 @@ const CreateStartup = ({ startupData }: CreateStartupProps) => {
                   type="button"
                   className="ti-btn ti-btn-light"
                   onClick={() =>
-                    setSlug(companyName.toLowerCase().replace(/\s+/g, '-'))
+                    setSlug(companyName.toLowerCase().replace(/\s+/g, "-"))
                   }
                 >
                   Refresh

@@ -1,7 +1,7 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 
 const Draggablecards = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -13,17 +13,17 @@ const Draggablecards = () => {
       }
     };
 
-    document.querySelector('body')?.addEventListener('click', handleBodyClick);
+    document.querySelector("body")?.addEventListener("click", handleBodyClick);
 
     return () => {
       document
-        .querySelector('body')
-        ?.removeEventListener('click', handleBodyClick);
+        .querySelector("body")
+        ?.removeEventListener("click", handleBodyClick);
     };
   }, [isFullscreen]);
 
   const handleFullscreenClick = () => {
-    document.querySelector('.box-data')?.classList.toggle('box-fullscreen');
+    document.querySelector(".box-data")?.classList.toggle("box-fullscreen");
   };
   const handleBoxClick = (e: { stopPropagation: () => void }) => {
     e.stopPropagation();
@@ -33,9 +33,9 @@ const Draggablecards = () => {
   const rightContainerRef = useRef(null);
   useEffect(() => {
     // Check if window is defined (to prevent issues during server-side rendering)
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // Import the dragula library here (make sure it's installed first)
-      const dragula = require('dragula');
+      const dragula = require("dragula");
       const windowElement = window;
 
       if (leftContainerRef.current && rightContainerRef.current) {
@@ -50,10 +50,10 @@ const Draggablecards = () => {
         // Your other dragula-related logic here...
 
         if (
-          document.querySelector('.firstdrag')?.classList.contains('task-Null')
+          document.querySelector(".firstdrag")?.classList.contains("task-Null")
         ) {
-          console.log('aaa');
-          document.querySelector('.view-more-button')?.classList.add('d-none');
+          console.log("aaa");
+          document.querySelector(".view-more-button")?.classList.add("d-none");
         }
       }
 
@@ -67,22 +67,22 @@ const Draggablecards = () => {
     elementsToModify.forEach((elementId) => {
       const element: any = elementId.current;
       if (element?.children.length <= 0) {
-        element?.classList.add('task-Null');
+        element?.classList.add("task-Null");
         element?.parentNode.parentElement.parentElement
-          .querySelector('.view-more-button')
-          ?.classList.add('d-none');
+          .querySelector(".view-more-button")
+          ?.classList.add("d-none");
       } else {
-        element?.classList.remove('task-Null');
+        element?.classList.remove("task-Null");
         element?.parentNode.parentElement.parentElement
-          .querySelector('.view-more-button')
-          ?.classList.remove('d-none');
+          .querySelector(".view-more-button")
+          ?.classList.remove("d-none");
       }
     });
   };
 
   return (
     <Fragment>
-      <Seo title={'Draggable Cards'} />
+      <Seo title={"Draggable Cards"} />
       <Pageheader
         currentpage="Draggable Cards"
         activepage=" Advanced Ui"
@@ -105,7 +105,7 @@ const Draggablecards = () => {
                   or even touched — they must be felt with the heart..
                 </h6>
                 <footer className="blockquote-footer mt-4 text-[.875rem] text-white opacity-[0.7]">
-                  Someone famous as{' '}
+                  Someone famous as{" "}
                   <cite title="Source Title">-Helen Keller</cite>
                 </footer>
               </blockquote>
@@ -155,7 +155,7 @@ const Draggablecards = () => {
                 <div className="box-text mb-2 !text-white">
                   There are many variations of passages of Lorem Ipsum
                   available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which {`don't`}{' '}
+                  form, by injected humour, or randomised words which {`don't`}{" "}
                   look even.
                 </div>
                 <div className="box-text ">Last updated 3 mins ago</div>
@@ -226,7 +226,7 @@ const Draggablecards = () => {
                 <div className="box-text mb-2 !text-white">
                   There are many variations of passages of Lorem Ipsum
                   available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which {`don't`}{' '}
+                  form, by injected humour, or randomised words which {`don't`}{" "}
                   look even.
                 </div>
               </div>
@@ -351,6 +351,6 @@ const Draggablecards = () => {
     </Fragment>
   );
 };
-Draggablecards.layout = 'Contentlayout';
+Draggablecards.layout = "Contentlayout";
 
 export default Draggablecards;

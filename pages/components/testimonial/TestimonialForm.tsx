@@ -1,7 +1,7 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import { useRouter } from 'next/router';
-import Seo from '@/shared/layout-components/seo/seo';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import React, { useState, useEffect, Fragment } from "react";
+import { useRouter } from "next/router";
+import Seo from "@/shared/layout-components/seo/seo";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
 
 interface TestimonialFormProps {
   testimonialData?: {
@@ -22,12 +22,12 @@ const TestimonialForm = ({
   testimonialData,
   onSubmit,
 }: TestimonialFormProps) => {
-  const [name, setName] = useState(testimonialData?.name || '');
+  const [name, setName] = useState(testimonialData?.name || "");
   const [testimonial, setTestimonial] = useState(
-    testimonialData?.testimonial || '',
+    testimonialData?.testimonial || ""
   );
   const [embeddedLink, setEmbeddedLink] = useState(
-    testimonialData?.embeddedLink || '',
+    testimonialData?.embeddedLink || ""
   );
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -46,11 +46,11 @@ const TestimonialForm = ({
   return (
     <Fragment>
       <Seo
-        title={testimonialData ? 'Edit Testimonial' : 'Create Testimonial'}
+        title={testimonialData ? "Edit Testimonial" : "Create Testimonial"}
       />
       <Pageheader
         currentpage={
-          testimonialData ? 'Edit Testimonial' : 'Create Testimonial'
+          testimonialData ? "Edit Testimonial" : "Create Testimonial"
         }
         activepage="Testimonials Management"
         mainpage="Testimonials"
@@ -114,7 +114,7 @@ const TestimonialForm = ({
                 type="submit"
                 className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
               >
-                {testimonialData ? 'Update Testimonial' : 'Create Testimonial'}
+                {testimonialData ? "Update Testimonial" : "Create Testimonial"}
               </button>
             </div>
           </form>
@@ -124,5 +124,5 @@ const TestimonialForm = ({
   );
 };
 
-TestimonialForm.layout = 'Contentlayout';
+TestimonialForm.layout = "Contentlayout";
 export default TestimonialForm;

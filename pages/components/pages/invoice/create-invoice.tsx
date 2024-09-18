@@ -1,10 +1,10 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-import DatePicker from 'react-datepicker';
-const Select = dynamic(() => import('react-select'), { ssr: false });
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+import DatePicker from "react-datepicker";
+const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const Createinvoice = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -22,32 +22,32 @@ const Createinvoice = () => {
     }
   };
   function dec(el: any) {
-    const unit = el.currentTarget.parentElement.querySelector('input').value;
+    const unit = el.currentTarget.parentElement.querySelector("input").value;
 
     if (Number(unit) === 0) {
       return false;
     } else {
-      el.currentTarget.parentElement.querySelector('input').value--;
+      el.currentTarget.parentElement.querySelector("input").value--;
     }
   }
   function inc(el: any) {
-    el.currentTarget.parentElement.querySelector('input').value++;
+    el.currentTarget.parentElement.querySelector("input").value++;
   }
 
   const Currencyoptions = [
-    { value: 'Select Currency', label: 'Select Currency' },
+    { value: "Select Currency", label: "Select Currency" },
     {
-      value: 'USD - (United States Dollar)',
-      label: 'USD - (United States Dollar)',
+      value: "USD - (United States Dollar)",
+      label: "USD - (United States Dollar)",
     },
-    { value: 'BHD - (Bahraini Dinar)', label: 'BHD - (Bahraini Dinar)' },
-    { value: 'KWD - (Kuwaiti Dinar)', label: 'KWD - (Kuwaiti Dinar)' },
-    { value: 'CHF - (Swiss Franc)', label: 'CHF - (Swiss Franc)' },
+    { value: "BHD - (Bahraini Dinar)", label: "BHD - (Bahraini Dinar)" },
+    { value: "KWD - (Kuwaiti Dinar)", label: "KWD - (Kuwaiti Dinar)" },
+    { value: "CHF - (Swiss Franc)", label: "CHF - (Swiss Franc)" },
   ];
 
   return (
     <Fragment>
-      <Seo title={'Create Invoice'} />
+      <Seo title={"Create Invoice"} />
       <Pageheader
         currentpage="Create Invoice"
         activepage="Invoice"
@@ -464,10 +464,10 @@ const Createinvoice = () => {
                                 <tr>
                                   <th scope="row">
                                     <div className="font-semibold">
-                                      Coupon Discount{' '}
+                                      Coupon Discount{" "}
                                       <span className="text-success">
                                         (10%)
-                                      </span>{' '}
+                                      </span>{" "}
                                       :
                                     </div>
                                   </th>
@@ -483,8 +483,8 @@ const Createinvoice = () => {
                                 <tr>
                                   <th scope="row">
                                     <div className="font-semibold">
-                                      Vat{' '}
-                                      <span className="text-danger">(20%)</span>{' '}
+                                      Vat{" "}
+                                      <span className="text-danger">(20%)</span>{" "}
                                       :
                                     </div>
                                   </th>
@@ -562,7 +562,7 @@ const Createinvoice = () => {
                 type="button"
                 className="ti-btn bg-primary text-white !mb-0"
               >
-                Send Invoice{' '}
+                Send Invoice{" "}
                 <i className="ri-send-plane-2-line ms-1 align-middle inline-block"></i>
               </button>
             </div>
@@ -655,6 +655,6 @@ const Createinvoice = () => {
     </Fragment>
   );
 };
-Createinvoice.layout = 'Contentlayout';
+Createinvoice.layout = "Contentlayout";
 
 export default Createinvoice;

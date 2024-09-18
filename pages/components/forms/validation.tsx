@@ -1,8 +1,8 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-import DatePicker from 'react-datepicker';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+import DatePicker from "react-datepicker";
 
 const Validation = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -10,7 +10,7 @@ const Validation = () => {
 
   return (
     <Fragment>
-      <Seo title={'Form Validation'} />
+      <Seo title={"Form Validation"} />
       <Pageheader
         currentpage="Form Validation"
         activepage="Forms"
@@ -230,7 +230,7 @@ const Validation = () => {
                     htmlFor="hs-checkbox-group-1"
                     className="!inline text-sm text-gray-500 ms-3 dark:text-[#8c9097] dark:text-white/50"
                   >
-                    I agree with the{' '}
+                    I agree with the{" "}
                     <Link
                       href="/components/pages/terms&conditions/"
                       className="text-primary hover:underline ms-1"
@@ -496,7 +496,7 @@ const Validation = () => {
                     htmlFor="hs-checkbox-group-12"
                     className="!inline text-sm text-gray-500 ms-3 dark:text-[#8c9097] dark:text-white/50"
                   >
-                    I agree with the{' '}
+                    I agree with the{" "}
                     <Link
                       href="/components/pages/terms&conditions/"
                       className="text-primary hover:underline"
@@ -520,6 +520,6 @@ const Validation = () => {
     </Fragment>
   );
 };
-Validation.layout = 'Contentlayout';
+Validation.layout = "Contentlayout";
 
 export default Validation;

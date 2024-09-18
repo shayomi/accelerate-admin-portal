@@ -1,60 +1,60 @@
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React from 'react';
-import PerfectScrollbar from 'react-perfect-scrollbar';
-import SimpleBar from 'simplebar-react';
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React from "react";
+import PerfectScrollbar from "react-perfect-scrollbar";
+import SimpleBar from "simplebar-react";
 
 const Chat = () => {
   const Photosmediadata = [
-    { id: 1, src: '../../../assets/images/media/media-56.jpg' },
-    { id: 2, src: '../../../assets/images/media/media-52.jpg' },
-    { id: 3, src: '../../../assets/images/media/media-53.jpg' },
-    { id: 4, src: '../../../assets/images/media/media-62.jpg' },
-    { id: 5, src: '../../../assets/images/media/media-63.jpg' },
-    { id: 6, src: '../../../assets/images/media/media-64.jpg' },
-    { id: 7, src: '../../../assets/images/media/media-13.jpg' },
-    { id: 8, src: '../../../assets/images/media/media-19.jpg' },
-    { id: 9, src: '../../../assets/images/media/media-20.jpg' },
+    { id: 1, src: "../../../assets/images/media/media-56.jpg" },
+    { id: 2, src: "../../../assets/images/media/media-52.jpg" },
+    { id: 3, src: "../../../assets/images/media/media-53.jpg" },
+    { id: 4, src: "../../../assets/images/media/media-62.jpg" },
+    { id: 5, src: "../../../assets/images/media/media-63.jpg" },
+    { id: 6, src: "../../../assets/images/media/media-64.jpg" },
+    { id: 7, src: "../../../assets/images/media/media-13.jpg" },
+    { id: 8, src: "../../../assets/images/media/media-19.jpg" },
+    { id: 9, src: "../../../assets/images/media/media-20.jpg" },
   ];
 
   const changeTheInfo = ({ name, img, status }: any) => {
     // Simulating the event target, you might want to update this based on your actual structure
     const element: any = { closest: () => {} };
-    const closestListItem: any = element.closest('li');
+    const closestListItem: any = element.closest("li");
 
     if (closestListItem) {
-      closestListItem.classList.add('active');
+      closestListItem.classList.add("active");
     }
 
-    document.querySelectorAll('.chatnameperson').forEach((ele: any) => {
+    document.querySelectorAll(".chatnameperson").forEach((ele: any) => {
       ele.innerText = name;
     });
 
     let image = `../../../../assets/images/faces/${img}.jpg`;
-    document.querySelectorAll('.chatimageperson').forEach((ele: any) => {
+    document.querySelectorAll(".chatimageperson").forEach((ele: any) => {
       ele.src = image;
     });
 
-    document.querySelectorAll('.chatstatusperson').forEach((ele) => {
-      ele.classList.remove('online');
-      ele.classList.remove('offline');
+    document.querySelectorAll(".chatstatusperson").forEach((ele) => {
+      ele.classList.remove("online");
+      ele.classList.remove("offline");
       ele.classList.add(status);
     });
 
-    const chatPersonStatus: any = document.querySelector('.chatpersonstatus');
+    const chatPersonStatus: any = document.querySelector(".chatpersonstatus");
     if (chatPersonStatus) {
       chatPersonStatus.innerText = status;
     }
 
-    const mainChartWrapper = document.querySelector('.main-chart-wrapper');
+    const mainChartWrapper = document.querySelector(".main-chart-wrapper");
     if (mainChartWrapper) {
-      mainChartWrapper.classList.add('responsive-chat-open');
+      mainChartWrapper.classList.add("responsive-chat-open");
     }
   };
 
   return (
     <div>
-      <Seo title={'Chat'} />
+      <Seo title={"Chat"} />
       <div className="main-chart-wrapper p-2 gap-2 lg:flex">
         <div className="chat-info border dark:border-defaultborder/10">
           <Link
@@ -181,9 +181,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Sujika',
-                        img: '5',
-                        status: 'online',
+                        name: "Sujika",
+                        img: "5",
+                        status: "online",
                       })
                     }
                   >
@@ -198,7 +198,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Sujika{' '}
+                          Sujika{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             1:32PM
                           </span>
@@ -220,9 +220,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Emiley Jackson',
-                        img: '2',
-                        status: 'online',
+                        name: "Emiley Jackson",
+                        img: "2",
+                        status: "online",
                       })
                     }
                   >
@@ -237,7 +237,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Emiley Jackson{' '}
+                          Emiley Jackson{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             12:24PM
                           </span>
@@ -262,9 +262,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'McGreggor',
-                        img: '10',
-                        status: 'online',
+                        name: "McGreggor",
+                        img: "10",
+                        status: "online",
                       })
                     }
                   >
@@ -279,7 +279,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          McGreggor{' '}
+                          McGreggor{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             1:16PM
                           </span>
@@ -301,9 +301,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Alissa',
-                        img: '8',
-                        status: 'online',
+                        name: "Alissa",
+                        img: "8",
+                        status: "online",
                       })
                     }
                   >
@@ -318,7 +318,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Alissa{' '}
+                          Alissa{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             12:45PM
                           </span>
@@ -345,9 +345,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Andreas',
-                        img: '11',
-                        status: 'offline',
+                        name: "Andreas",
+                        img: "11",
+                        status: "offline",
                       })
                     }
                   >
@@ -362,7 +362,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Andreas{' '}
+                          Andreas{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             11:54AM
                           </span>
@@ -384,9 +384,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Melissa Sean',
-                        img: '3',
-                        status: 'offline',
+                        name: "Melissa Sean",
+                        img: "3",
+                        status: "offline",
                       })
                     }
                   >
@@ -401,7 +401,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Melissa Sean{' '}
+                          Melissa Sean{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             9:45AM
                           </span>
@@ -423,9 +423,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Samantha Paul',
-                        img: '6',
-                        status: 'offline',
+                        name: "Samantha Paul",
+                        img: "6",
+                        status: "offline",
                       })
                     }
                   >
@@ -440,7 +440,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Samantha Paul{' '}
+                          Samantha Paul{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             8:31AM
                           </span>
@@ -462,9 +462,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Megan Fox',
-                        img: '4',
-                        status: 'offline',
+                        name: "Megan Fox",
+                        img: "4",
+                        status: "offline",
                       })
                     }
                   >
@@ -479,7 +479,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Megan Fox{' '}
+                          Megan Fox{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             7:23AM
                           </span>
@@ -502,9 +502,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Nicholas Sams',
-                        img: '13',
-                        status: 'offline',
+                        name: "Nicholas Sams",
+                        img: "13",
+                        status: "offline",
                       })
                     }
                   >
@@ -519,7 +519,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Nicholas Sams{' '}
+                          Nicholas Sams{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             10:22AM
                           </span>
@@ -541,9 +541,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Pope Johnson',
-                        img: '15',
-                        status: 'offline',
+                        name: "Pope Johnson",
+                        img: "15",
+                        status: "offline",
                       })
                     }
                   >
@@ -558,7 +558,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Pope Johnson{' '}
+                          Pope Johnson{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             9:10AM
                           </span>
@@ -815,9 +815,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Family Together 😍',
-                        img: '17',
-                        status: 'online',
+                        name: "Family Together 😍",
+                        img: "17",
+                        status: "online",
                       })
                     }
                   >
@@ -832,7 +832,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Family Together 😍{' '}
+                          Family Together 😍{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             12:24PM
                           </span>
@@ -857,9 +857,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Work Buddies',
-                        img: '18',
-                        status: 'online',
+                        name: "Work Buddies",
+                        img: "18",
+                        status: "online",
                       })
                     }
                   >
@@ -874,7 +874,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Work Buddies{' '}
+                          Work Buddies{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             1:16PM
                           </span>
@@ -897,9 +897,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Friends Forever 😎',
-                        img: '19',
-                        status: 'offline',
+                        name: "Friends Forever 😎",
+                        img: "19",
+                        status: "offline",
                       })
                     }
                   >
@@ -914,7 +914,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Friends Forever 😎{' '}
+                          Friends Forever 😎{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             3 days ago
                           </span>
@@ -936,9 +936,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Social Media Deals',
-                        img: '20',
-                        status: 'offline',
+                        name: "Social Media Deals",
+                        img: "20",
+                        status: "offline",
                       })
                     }
                   >
@@ -953,7 +953,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Social Media Deals{' '}
+                          Social Media Deals{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             5 days ago
                           </span>
@@ -975,9 +975,9 @@ const Chat = () => {
                     href="#!"
                     onClick={(_e) =>
                       changeTheInfo({
-                        name: 'Apartment Group',
-                        img: '21',
-                        status: 'offline',
+                        name: "Apartment Group",
+                        img: "21",
+                        status: "offline",
                       })
                     }
                   >
@@ -992,7 +992,7 @@ const Chat = () => {
                       </div>
                       <div className="flex-grow">
                         <p className="mb-0 font-semibold">
-                          Apartment Group{' '}
+                          Apartment Group{" "}
                           <span className="ltr:float-right rtl:float-left text-[#8c9097] dark:text-white/50 font-normal text-[0.6875rem]">
                             12 days ago
                           </span>
@@ -1505,7 +1505,7 @@ const Chat = () => {
               </button>
             </div>
           </div>
-          <PerfectScrollbar style={{ height: '750px' }}>
+          <PerfectScrollbar style={{ height: "750px" }}>
             <div className="chat-content" id="main-chat-content">
               <ul className="list-none">
                 <li className="chat-day-label">
@@ -1524,7 +1524,7 @@ const Chat = () => {
                     </div>
                     <div className="ms-4">
                       <span className="chatting-user-info">
-                        <span className="chatnameperson">Emiley Jackson</span>{' '}
+                        <span className="chatnameperson">Emiley Jackson</span>{" "}
                         <span className="msg-sent-time">11:48PM</span>
                       </span>
                       <div className="main-chat-msg">
@@ -1544,7 +1544,7 @@ const Chat = () => {
                             <i className="ri-check-double-line"></i>
                           </span>
                           11:50PM
-                        </span>{' '}
+                        </span>{" "}
                         You
                       </span>
                       <div className="main-chat-msg">
@@ -1580,7 +1580,7 @@ const Chat = () => {
                     </div>
                     <div className="ms-3">
                       <span className="chatting-user-info">
-                        <span className="chatnameperson">Emiley Jackson</span>{' '}
+                        <span className="chatnameperson">Emiley Jackson</span>{" "}
                         <span className="msg-sent-time">11:51PM</span>
                       </span>
                       <div className="main-chat-msg">
@@ -1605,7 +1605,7 @@ const Chat = () => {
                             <i className="ri-check-double-line"></i>
                           </span>
                           11:52PM
-                        </span>{' '}
+                        </span>{" "}
                         You
                       </span>
                       <div className="main-chat-msg">
@@ -1639,7 +1639,7 @@ const Chat = () => {
                     </div>
                     <div className="ms-3">
                       <span className="chatting-user-info">
-                        <span className="chatnameperson">Emiley Jackson</span>{' '}
+                        <span className="chatnameperson">Emiley Jackson</span>{" "}
                         <span className="msg-sent-time">11:55PM</span>
                       </span>
                       <div className="main-chat-msg">
@@ -1698,7 +1698,7 @@ const Chat = () => {
                             <i className="ri-check-double-line"></i>
                           </span>
                           11:52PM
-                        </span>{' '}
+                        </span>{" "}
                         You
                       </span>
                       <div className="main-chat-msg">
@@ -1915,7 +1915,7 @@ const Chat = () => {
                     </div>
                     <div className="ms-3">
                       <span className="chatting-user-info chatnameperson">
-                        Emiley Jackson{' '}
+                        Emiley Jackson{" "}
                         <span className="msg-sent-time">11:45PM</span>
                       </span>
                       <div className="main-chat-msg">
@@ -1962,8 +1962,8 @@ const Chat = () => {
             type="button"
             className="ti-btn ti-btn-icon ti-btn-outline-light my-1 ms-2 responsive-chat-close2 xxl:hidden"
           >
-            {' '}
-            <i className="ri-close-line"></i>{' '}
+            {" "}
+            <i className="ri-close-line"></i>{" "}
           </button>
           <div className="text-center mb-[3rem]">
             <span className="avatar avatar-rounded online avatar-xxl me-2 mb-4 chatstatusperson">
@@ -2141,6 +2141,6 @@ const Chat = () => {
     </div>
   );
 };
-Chat.layout = 'Contentlayout';
+Chat.layout = "Contentlayout";
 
 export default Chat;

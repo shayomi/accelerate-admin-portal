@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
+import React, { useState } from "react";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
 
 interface PartnerDetailsProps {
   partner?: {
@@ -17,7 +17,7 @@ interface PartnerDetailsProps {
 }
 
 const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
-  const [rejectionReason, setRejectionReason] = useState('');
+  const [rejectionReason, setRejectionReason] = useState("");
   const [showRejectReason, setShowRejectReason] = useState(false);
 
   // Handle the case when partner is undefined
@@ -26,7 +26,7 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
   }
 
   const handleApprove = () => {
-    alert('Partner Approved');
+    alert("Partner Approved");
   };
 
   const handleReject = () => {

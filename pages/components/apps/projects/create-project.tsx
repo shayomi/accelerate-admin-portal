@@ -2,15 +2,15 @@ import Editordata, {
   Data,
   Data1,
   multiselectdata,
-} from '@/shared/data/apps/projects/createprojectdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import React, { Fragment, useState } from 'react';
-const DatePicker = dynamic(() => import('react-datepicker'), { ssr: false });
-const Select = dynamic(() => import('react-select'), { ssr: false });
-import { FilePond } from 'react-filepond';
-import CreatableSelect from 'react-select/creatable';
+} from "@/shared/data/apps/projects/createprojectdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import React, { Fragment, useState } from "react";
+const DatePicker = dynamic(() => import("react-datepicker"), { ssr: false });
+const Select = dynamic(() => import("react-select"), { ssr: false });
+import { FilePond } from "react-filepond";
+import CreatableSelect from "react-select/creatable";
 
 const Createproject = () => {
   const components = {
@@ -22,21 +22,21 @@ const Createproject = () => {
     value: label,
   });
 
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const [value, setValue] = useState([
-    createOption('Marketing'),
-    createOption('Sales'),
-    createOption('Development'),
-    createOption('Design'),
-    createOption('Research'),
+    createOption("Marketing"),
+    createOption("Sales"),
+    createOption("Development"),
+    createOption("Design"),
+    createOption("Research"),
   ]);
   const handleKeyDown = (event: any) => {
     if (!inputValue) return;
     switch (event.key) {
-      case 'Enter':
-      case 'Tab':
+      case "Enter":
+      case "Tab":
         setValue((prev) => [...prev, createOption(inputValue)]);
-        setInputValue('');
+        setInputValue("");
         event.preventDefault();
     }
   };
@@ -58,7 +58,7 @@ const Createproject = () => {
 
   return (
     <Fragment>
-      <Seo title={'Create Project'} />
+      <Seo title={"Create Project"} />
       <Pageheader
         currentpage="Create Project"
         activepage="Projects"
@@ -118,8 +118,8 @@ const Createproject = () => {
                   <div className="form-group">
                     <div className="input-group">
                       <div className="input-group-text text-muted">
-                        {' '}
-                        <i className="ri-calendar-line"></i>{' '}
+                        {" "}
+                        <i className="ri-calendar-line"></i>{" "}
                       </div>
                       <DatePicker
                         className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -134,8 +134,8 @@ const Createproject = () => {
                   <div className="form-group">
                     <div className="input-group">
                       <div className="input-group-text text-muted">
-                        {' '}
-                        <i className="ri-calendar-line"></i>{' '}
+                        {" "}
+                        <i className="ri-calendar-line"></i>{" "}
                       </div>
                       <DatePicker
                         className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -240,6 +240,6 @@ const Createproject = () => {
     </Fragment>
   );
 };
-Createproject.layout = 'Contentlayout';
+Createproject.layout = "Contentlayout";
 
 export default Createproject;

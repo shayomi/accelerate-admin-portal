@@ -1,42 +1,42 @@
-import Link from 'next/link';
-import React, { Fragment, useEffect } from 'react';
-import { ThemeChanger } from '../../../shared/redux/action';
-import { connect } from 'react-redux';
-import store from '@/shared/redux/store';
-import { Autoplay, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Seo from '../../../shared/layout-components/seo/seo';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import Link from "next/link";
+import React, { Fragment, useEffect } from "react";
+import { ThemeChanger } from "../../../shared/redux/action";
+import { connect } from "react-redux";
+import store from "@/shared/redux/store";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Seo from "../../../shared/layout-components/seo/seo";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Landing = ({ local_varaiable, ThemeChanger }: any) => {
   useEffect(() => {
     ThemeChanger({
       ...local_varaiable,
-      dataNavLayout: 'vertical',
-      dataMenuStyles: 'dark',
+      dataNavLayout: "vertical",
+      dataMenuStyles: "dark",
     });
     function handleResize() {
       if (window.innerWidth <= 992) {
         const theme = store.getState();
         ThemeChanger({
           ...theme,
-          dataToggled: 'close',
-          dataNavLayout: 'horizontal',
+          dataToggled: "close",
+          dataNavLayout: "horizontal",
         });
       } else {
         const theme = store.getState();
         ThemeChanger({
           ...theme,
-          dataToggled: 'open',
-          dataNavLayout: 'horizontal',
+          dataToggled: "open",
+          dataNavLayout: "horizontal",
         });
       }
     }
 
     handleResize(); // Initial check
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   function toggleNavigation() {
@@ -44,8 +44,8 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
       const theme = store.getState();
       ThemeChanger({
         ...theme,
-        dataToggled: 'open',
-        dataNavLayout: 'horizontal',
+        dataToggled: "open",
+        dataNavLayout: "horizontal",
       });
     }
   }
@@ -53,46 +53,46 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
     const theme = store.getState();
     ThemeChanger({
       ...theme,
-      dataToggled: 'close',
-      dataNavLayout: 'horizontal',
+      dataToggled: "close",
+      dataNavLayout: "horizontal",
     });
   }
 
   useEffect(() => {
     const landingpages = () => {
-      if (window.scrollY > 30 && document.querySelector('.app-sidebar')) {
-        let Scolls = document?.querySelectorAll('.sticky');
+      if (window.scrollY > 30 && document.querySelector(".app-sidebar")) {
+        let Scolls = document?.querySelectorAll(".sticky");
         Scolls.forEach((e) => {
-          e.classList.add('sticky-pin');
+          e.classList.add("sticky-pin");
         });
       } else {
-        let Scolls = document?.querySelectorAll('.sticky');
+        let Scolls = document?.querySelectorAll(".sticky");
         Scolls.forEach((e) => {
-          e.classList.remove('sticky-pin');
+          e.classList.remove("sticky-pin");
         });
       }
     };
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', landingpages);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", landingpages);
     }
   });
 
   //
   //// Template Highlights collapse
   const onScroll = () => {
-    const sections = document.querySelectorAll('.side-menu__item');
+    const sections = document.querySelectorAll(".side-menu__item");
     const scrollPos =
       window.scrollY ||
       document.documentElement.scrollTop ||
-      document.querySelector('body')?.scrollTop ||
+      document.querySelector("body")?.scrollTop ||
       0;
 
     sections.forEach((elem) => {
-      const value = elem.getAttribute('href') ?? '';
-      const fragmentIndex = value.indexOf('#');
+      const value = elem.getAttribute("href") ?? "";
+      const fragmentIndex = value.indexOf("#");
       const fragment =
-        fragmentIndex !== -1 ? value.substring(fragmentIndex + 1) : '';
+        fragmentIndex !== -1 ? value.substring(fragmentIndex + 1) : "";
 
       if (fragment) {
         const refElement = document.getElementById(fragment);
@@ -103,9 +103,9 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
             refElement.offsetTop <= scrollTopMinus &&
             refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
           ) {
-            elem.classList.add('active');
+            elem.classList.add("active");
           } else {
-            elem.classList.remove('active');
+            elem.classList.remove("active");
           }
         }
       }
@@ -113,10 +113,10 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
 
     return () => {
-      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
@@ -154,7 +154,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
         <Helmet>
           <body className="landing-body"></body>
         </Helmet>
-        <Seo title={'Landing'} />
+        <Seo title={"Landing"} />
         <header className="app-header">
           <div className="main-header-container container-fluid">
             <div className="header-content-left">
@@ -175,7 +175,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                       className="toggle-dark"
                     />
                   </Link>
-                </div>{' '}
+                </div>{" "}
               </div>
               <div className="header-element">
                 <Link
@@ -187,9 +187,9 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                     className="open-toggle"
                     onClick={() => toggleNavigation()}
                   >
-                    {' '}
-                    <i className="ri-menu-3-line text-xl"></i>{' '}
-                  </span>{' '}
+                    {" "}
+                    <i className="ri-menu-3-line text-xl"></i>{" "}
+                  </span>{" "}
                 </Link>
               </div>
             </div>
@@ -200,8 +200,8 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                     href="/components/authentication/sign-up/signup-basic/"
                     className="ti-btn ti-btn-primary !m-0 !me-2"
                   >
-                    {' '}
-                    Sign Up{' '}
+                    {" "}
+                    Sign Up{" "}
                   </Link>
                   <Link
                     aria-label="anchor"
@@ -255,8 +255,8 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                     height="24"
                     viewBox="0 0 24 24"
                   >
-                    {' '}
-                    <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>{' '}
+                    {" "}
+                    <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>{" "}
                   </svg>
                 </div>
                 <ul className="main-menu">
@@ -303,8 +303,8 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                     height="24"
                     viewBox="0 0 24 24"
                   >
-                    {' '}
-                    <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>{' '}
+                    {" "}
+                    <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>{" "}
                   </svg>
                 </div>
                 <div className="lg:flex hidden space-x-2 rtl:space-x-reverse">
@@ -343,7 +343,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                         </h5>
                       </div>
                       <p className="landing-banner-heading mb-4 opacity-[0.9]">
-                        Your sure stop place for best theme ends here with{' '}
+                        Your sure stop place for best theme ends here with{" "}
                         <span className="text-secondary">YNEX !</span>
                       </p>
                       <div className="text-[1rem] mb-[3rem] text-white opacity-[0.9]">
@@ -502,7 +502,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                           <p className=" text-[#8c9097] dark:text-white/50">
                             lorem ipsum, dolor sit var ameto condesetrat aiatel
                             varen or damsenlel verman code Lorem ipsum, dolor
-                            sit amet consectetur{' '}
+                            sit amet consectetur{" "}
                           </p>
                         </div>
                       </div>
@@ -519,7 +519,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                           <p className=" text-[#8c9097] dark:text-white/50">
                             lorem ipsum, dolor sit var ameto condesetrat aiatel
                             varen or damsenlel verman code Lorem ipsum, dolor
-                            sit amet consectetur{' '}
+                            sit amet consectetur{" "}
                           </p>
                         </div>
                       </div>
@@ -536,7 +536,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                           <p className=" text-[#8c9097] dark:text-white/50">
                             lorem ipsum, dolor sit var ameto condesetrat aiatel
                             varen or damsenlel verman code Lorem ipsum, dolor
-                            sit amet consectetur{' '}
+                            sit amet consectetur{" "}
                           </p>
                         </div>
                       </div>
@@ -898,7 +898,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -946,7 +946,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -994,7 +994,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1042,7 +1042,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1090,7 +1090,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1138,7 +1138,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1186,7 +1186,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1234,7 +1234,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1282,7 +1282,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1338,7 +1338,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                         Director
                       </span>
                       <p className="text-[#8c9097] dark:text-white/50 mt-2 text-[0.8125rem] mb-4">
-                        {' '}
+                        {" "}
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit.
                       </p>
@@ -1367,7 +1367,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                         Manager
                       </span>
                       <p className="text-[#8c9097] dark:text-white/50 mt-2 text-[0.8125rem] mb-4">
-                        {' '}
+                        {" "}
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit.
                       </p>
@@ -1396,7 +1396,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                         Web Designer
                       </span>
                       <p className="text-[#8c9097] dark:text-white/50 mt-2 text-[0.8125rem] mb-4">
-                        {' '}
+                        {" "}
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit.
                       </p>
@@ -1425,7 +1425,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                         HR
                       </span>
                       <p className="text-[#8c9097] dark:text-white/50 mt-2 text-[0.8125rem] mb-4">
-                        {' '}
+                        {" "}
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit.
                       </p>
@@ -1743,7 +1743,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                         <div className="xxl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
                           <div className="p-6 pricing-offer overflow-hidden">
                             <span className="pricing-offer-details shadow">
-                              <span className="font-semibold">10%</span>{' '}
+                              <span className="font-semibold">10%</span>{" "}
                               <span className="text-[0.625rem] op-8 ms-1">
                                 Off
                               </span>
@@ -2108,7 +2108,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                         <div className="xxl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-12 col-span-12">
                           <div className="p-6 pricing-offer overflow-hidden">
                             <span className="pricing-offer-details shadow">
-                              <span className="font-semibold">10%</span>{' '}
+                              <span className="font-semibold">10%</span>{" "}
                               <span className="text-[0.625rem] op-8 ms-1">
                                 Off
                               </span>
@@ -2316,7 +2316,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -2388,7 +2388,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -2460,7 +2460,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -2531,7 +2531,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -2603,7 +2603,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -2675,7 +2675,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -2756,7 +2756,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -2828,7 +2828,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -2900,7 +2900,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -2972,7 +2972,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -3044,7 +3044,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -3116,7 +3116,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                                 <p className="text-defaulttextcolor dark:text-defaulttextcolor/70 ">
                                   <strong>
                                     This is the first item's accordion body.
-                                  </strong>{' '}
+                                  </strong>{" "}
                                   It is shown by default, until the collapse
                                   plugin adds the appropriate classes that we
                                   use to style each element. These classes
@@ -3388,25 +3388,25 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
                     <ul className="list-unstyled font-normal landing-footer-list">
                       <li>
                         <Link href="#!" className="text-white opacity-[0.6]">
-                          <i className="ri-home-4-line me-1 align-middle"></i>{' '}
+                          <i className="ri-home-4-line me-1 align-middle"></i>{" "}
                           New York, NY 10012, US
                         </Link>
                       </li>
                       <li>
                         <Link href="#!" className="text-white opacity-[0.6]">
-                          <i className="ri-mail-line me-1 align-middle"></i>{' '}
+                          <i className="ri-mail-line me-1 align-middle"></i>{" "}
                           info@fmail.com
                         </Link>
                       </li>
                       <li>
                         <Link href="#!" className="text-white opacity-[0.6]">
-                          <i className="ri-phone-line me-1 align-middle"></i>{' '}
+                          <i className="ri-phone-line me-1 align-middle"></i>{" "}
                           +(555)-1920 1831
                         </Link>
                       </li>
                       <li>
                         <Link href="#!" className="text-white opacity-[0.6]">
-                          <i className="ri-printer-line me-1 align-middle"></i>{' '}
+                          <i className="ri-printer-line me-1 align-middle"></i>{" "}
                           +(123) 1293 123
                         </Link>
                       </li>
@@ -3462,16 +3462,16 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
           </section>
           <div className="text-center landing-main-footer py-4 opacity-[0.87]">
             <span className="text-[#8c9097] dark:text-white/50 text-[0.9375rem]">
-              {' '}
-              Copyright © 2024<span id="year"></span>{' '}
+              {" "}
+              Copyright © 2024<span id="year"></span>{" "}
               <Link href="#!" className="!text-primary font-semibold">
                 <u>ynex</u>
               </Link>
-              . Designed with <span className="fa fa-heart text-danger"></span>{' '}
-              by{' '}
+              . Designed with <span className="fa fa-heart text-danger"></span>{" "}
+              by{" "}
               <Link href="#!" className="!text-primary font-semibold">
                 <u>Spruko</u>
-              </Link>{' '}
+              </Link>{" "}
               All rights reserved
             </span>
           </div>
@@ -3481,7 +3481,7 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
   );
 };
 
-Landing.layout = 'Landinglayout';
+Landing.layout = "Landinglayout";
 
 const mapStateToProps = (state: any) => ({
   local_varaiable: state,

@@ -1,32 +1,32 @@
-import React, { ChangeEvent, Fragment, useState, useEffect } from 'react';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import { Advisor } from '@/types';
+import React, { ChangeEvent, Fragment, useState, useEffect } from "react";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import { Advisor } from "@/types";
 
 interface CreateAdvisorProps {
   advisorData?: Advisor;
 }
 
 const CreateAdvisor = ({ advisorData }: CreateAdvisorProps) => {
-  const [name, setName] = useState(advisorData?.name || '');
+  const [name, setName] = useState(advisorData?.name || "");
   const [selectedFocusAreas, setSelectedFocusAreas] = useState<string[]>(
-    advisorData?.focusAreas || [],
+    advisorData?.focusAreas || []
   );
   const [companyName, setCompanyName] = useState(
-    advisorData?.companyName || '',
+    advisorData?.companyName || ""
   );
-  const [location, setLocation] = useState(advisorData?.location || '');
-  const [bio, setBio] = useState(advisorData?.bio || '');
-  const [linkedin, setLinkedin] = useState(advisorData?.linkedin || '');
-  const [twitter, setTwitter] = useState(advisorData?.twitter || '');
+  const [location, setLocation] = useState(advisorData?.location || "");
+  const [bio, setBio] = useState(advisorData?.bio || "");
+  const [linkedin, setLinkedin] = useState(advisorData?.linkedin || "");
+  const [twitter, setTwitter] = useState(advisorData?.twitter || "");
   const [advisorImage, setAdvisorImage] = useState<File | null>(null);
 
   const focusAreaOptions: string[] = [
-    'Corporate Strategy',
-    'Marketing',
-    'Finance',
-    'Technology',
-    'Leadership',
+    "Corporate Strategy",
+    "Marketing",
+    "Finance",
+    "Technology",
+    "Leadership",
   ];
 
   const handleFocusAreaChange = (e: ChangeEvent<HTMLSelectElement>): void => {
@@ -160,6 +160,6 @@ const CreateAdvisor = ({ advisorData }: CreateAdvisorProps) => {
   );
 };
 
-CreateAdvisor.layout = 'Contentlayout';
+CreateAdvisor.layout = "Contentlayout";
 
 export default CreateAdvisor;

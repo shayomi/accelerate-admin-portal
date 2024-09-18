@@ -1,5 +1,5 @@
-import { Founder } from '@/types';
-import React from 'react';
+import { Founder } from "@/types";
+import React from "react";
 
 type Props = {
   founders: Founder[];

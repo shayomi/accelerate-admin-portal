@@ -1,13 +1,13 @@
-import { Loopingdata } from '@/shared/data/apps/crm/contactsdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-import { Data, Data1 } from '../../../../shared/data/apps/crm/contactsdata';
-import DatePicker from 'react-datepicker';
-import dynamic from 'next/dynamic';
-const Select = dynamic(() => import('react-select'), { ssr: false });
-import Swal from 'sweetalert2';
+import { Loopingdata } from "@/shared/data/apps/crm/contactsdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+import { Data, Data1 } from "../../../../shared/data/apps/crm/contactsdata";
+import DatePicker from "react-datepicker";
+import dynamic from "next/dynamic";
+const Select = dynamic(() => import("react-select"), { ssr: false });
+import Swal from "sweetalert2";
 
 const Contacts = () => {
   const [images, setImages] = useState<any>([]);
@@ -26,7 +26,7 @@ const Contacts = () => {
 
   const handleUpload = () => {
     // Implement your logic to upload and compare images here
-    console.log('Uploading and comparing images:', selectedImage);
+    console.log("Uploading and comparing images:", selectedImage);
   };
 
   const [startDate, setStartDate] = useState(new Date());
@@ -35,18 +35,18 @@ const Contacts = () => {
 
   const handleClick = (id: number) => {
     Swal.fire({
-      title: 'Are you sure?',
+      title: "Are you sure?",
       text: "You won't be able to revert this!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
         handleDelete(id);
       } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire('Cancelled', 'Your file is safe :)', 'error');
+        Swal.fire("Cancelled", "Your file is safe :)", "error");
       }
     });
   };
@@ -55,7 +55,7 @@ const Contacts = () => {
     const updatedData = hopingData.filter((idx) => idx.id !== id);
     sethopingData(updatedData);
 
-    Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+    Swal.fire("Deleted!", "Your file has been deleted.", "success");
   };
 
   //Datepicker function
@@ -68,7 +68,7 @@ const Contacts = () => {
 
   return (
     <Fragment>
-      <Seo title={'Contacts'} />
+      <Seo title={"Contacts"} />
       <Pageheader currentpage="Contacts" activepage="CRM" mainpage="Contacts" />
       <div className="grid grid-cols-12 gap-6">
         <div className="xl:col-span-12 col-span-12">
@@ -285,7 +285,7 @@ const Contacts = () => {
             <div className="box-footer border-t-0">
               <div className="flex items-center">
                 <div>
-                  Showing 10 Entries{' '}
+                  Showing 10 Entries{" "}
                   <i className="bi bi-arrow-right ms-2 font-semibold"></i>
                 </div>
                 <div className="ms-auto">
@@ -537,14 +537,14 @@ const Contacts = () => {
                       <img
                         src={
                           selectedImage ||
-                          '../../../../assets/images/faces/9.jpg'
+                          "../../../../assets/images/faces/9.jpg"
                         }
                         alt=""
                         id="profile-img"
                         style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
                         }}
                       />
                       <span className="badge rounded-pill bg-primary avatar-badge">
@@ -639,8 +639,8 @@ const Contacts = () => {
                   <div className="form-group">
                     <div className="input-group !flex-nowrap">
                       <div className="input-group-text text-[#8c9097] dark:text-white/50">
-                        {' '}
-                        <i className="ri-calendar-line"></i>{' '}
+                        {" "}
+                        <i className="ri-calendar-line"></i>{" "}
                       </div>
                       <DatePicker
                         //  placeholder={"Choose date"}
@@ -687,6 +687,6 @@ const Contacts = () => {
     </Fragment>
   );
 };
-Contacts.layout = 'Contentlayout';
+Contacts.layout = "Contentlayout";
 
 export default Contacts;

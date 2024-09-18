@@ -3,16 +3,16 @@ import {
   option,
   option1,
   option2,
-} from '@/shared/data/pages/blogs/createblogdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-const Select = dynamic(() => import('react-select'), { ssr: false });
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
-import { FilePond } from 'react-filepond';
-import DatePicker from 'react-datepicker';
+} from "@/shared/data/pages/blogs/createblogdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+const Select = dynamic(() => import("react-select"), { ssr: false });
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+import { FilePond } from "react-filepond";
+import DatePicker from "react-datepicker";
 
 const Createblog = () => {
   //Filepond
@@ -20,7 +20,7 @@ const Createblog = () => {
   const [startDate, setStartDate] = useState(new Date()); //React date picker
   return (
     <Fragment>
-      <Seo title={'Create Blog'} />
+      <Seo title={"Create Blog"} />
       <Pageheader
         currentpage="Create Blog"
         activepage="Blog"
@@ -241,5 +241,5 @@ const Createblog = () => {
     </Fragment>
   );
 };
-Createblog.layout = 'Contentlayout';
+Createblog.layout = "Contentlayout";
 export default Createblog;

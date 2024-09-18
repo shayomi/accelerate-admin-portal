@@ -1,34 +1,34 @@
-import LabeledTwoThumbs1 from '@/shared/data/apps/jobs/searchcandidatedata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import React, { Fragment } from 'react';
-import { connect } from 'react-redux';
-const Select = dynamic(() => import('react-select'), { ssr: false });
+import LabeledTwoThumbs1 from "@/shared/data/apps/jobs/searchcandidatedata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import React, { Fragment } from "react";
+import { connect } from "react-redux";
+const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const Searchcandidate = ({ local_varaiable }: any) => {
   const Data = [
-    { value: 'All Categories', label: 'All Categories' },
-    { value: 'Software Dveloper', label: 'Software Dveloper' },
-    { value: 'Web Developer', label: 'Web Developer' },
-    { value: 'Software Architect', label: 'Software Architect' },
-    { value: 'IT Hardware', label: 'IT Hardware' },
-    { value: 'Network Engineer', label: 'Network Engineer' },
-    { value: 'React Developer', label: 'React Developer' },
+    { value: "All Categories", label: "All Categories" },
+    { value: "Software Dveloper", label: "Software Dveloper" },
+    { value: "Web Developer", label: "Web Developer" },
+    { value: "Software Architect", label: "Software Architect" },
+    { value: "IT Hardware", label: "IT Hardware" },
+    { value: "Network Engineer", label: "Network Engineer" },
+    { value: "React Developer", label: "React Developer" },
   ];
   const Data2 = [
-    { value: 'Fresher', label: 'Fresher' },
-    { value: '1 Year Exp', label: '1 Year Exp' },
-    { value: '2 Year Exp', label: '2 Year Exp' },
-    { value: '3 Year Exp', label: '3 Year Exp' },
-    { value: '4 Year Exp', label: '4 Year Exp' },
-    { value: '5+ Year Exp', label: '5+ Year Exp' },
+    { value: "Fresher", label: "Fresher" },
+    { value: "1 Year Exp", label: "1 Year Exp" },
+    { value: "2 Year Exp", label: "2 Year Exp" },
+    { value: "3 Year Exp", label: "3 Year Exp" },
+    { value: "4 Year Exp", label: "4 Year Exp" },
+    { value: "5+ Year Exp", label: "5+ Year Exp" },
   ];
 
   return (
     <Fragment>
-      <Seo title={'Search Candidate'} />
+      <Seo title={"Search Candidate"} />
       <Pageheader
         currentpage="Search Candidate"
         activepage="Jobs"
@@ -401,15 +401,15 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                 <div className="p-4 border-b dark:border-defaultborder/10">
                   <h6 className="font-semibold mb-0">Salary Range</h6>
                   <div className="px-2 py-3 pb-0">
-                    <LabeledTwoThumbs1 rtl={local_varaiable.dir == 'rtl'} />
+                    <LabeledTwoThumbs1 rtl={local_varaiable.dir == "rtl"} />
                     <div className="flex mt-4">
                       <div className="font-semibold h6 mb-0">
                         $<span id="lower-value">8000.00</span>
-                      </div>{' '}
-                      &nbsp; -- &nbsp;{' '}
+                      </div>{" "}
+                      &nbsp; -- &nbsp;{" "}
                       <div className="font-semibold h6 mb-0">
                         $<span id="upper-value">40000.00</span>
-                      </div>{' '}
+                      </div>{" "}
                     </div>
                   </div>
                 </div>
@@ -743,10 +743,10 @@ const Searchcandidate = ({ local_varaiable }: any) => {
               <div className="box-body">
                 <div className="sm:flex items-center">
                   <h5 className="font-semibold mb-0 flex-grow">
-                    1287{' '}
+                    1287{" "}
                     <span className="font-normal text-[1.125rem]">
                       Candidates match your job search
-                    </span>{' '}
+                    </span>{" "}
                   </h5>
                   <div className="btn-group hs-dropdown ti-dropdown">
                     <button
@@ -866,8 +866,8 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                   <div className="ms-2">
                     <h5 className="font-semibold mb-0 flex items-center">
                       <Link href="/components/apps/jobs/candidate-details/">
-                        {' '}
-                        Brenda Simpson{' '}
+                        {" "}
+                        Brenda Simpson{" "}
                         <i
                           className="bi bi-check-circle-fill text-success text-base"
                           title="Verified candidate"
@@ -877,7 +877,7 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     <div className="sm:flex gap-2">
                       <Link href="#!">Software Developer</Link>
                       <p className="mb-0 text-xs text-[#8c9097] dark:text-white/50">
-                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{' '}
+                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{" "}
                         Kondapur, Hyderabad
                       </p>
                     </div>
@@ -915,28 +915,28 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-default"
                   >
-                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Graduate
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-default"
                   >
-                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     flexible-shift
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-default"
                   >
-                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Immediate Joinee
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-default"
                   >
-                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Good at English
                   </Link>
                 </div>
@@ -944,24 +944,24 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                   <p className="mb-0 flex-grow">
                     <span className="text-[#8c9097] dark:text-white/50">
                       Package (Yearly) :
-                    </span>{' '}
+                    </span>{" "}
                     <span className="font-semibold" title="Current">
-                      {' '}
+                      {" "}
                       $2,300
-                    </span>{' '}
-                    -{' '}
+                    </span>{" "}
+                    -{" "}
                     <span className="font-semibold" title="Expected">
-                      {' '}
+                      {" "}
                       $3,678
-                    </span>{' '}
+                    </span>{" "}
                   </p>
                   <p className="mb-0">
                     <span className="text-[#8c9097] dark:text-white/50">
-                      {' '}
+                      {" "}
                       Languages :
-                    </span>{' '}
+                    </span>{" "}
                     <span className="font-semibold">
-                      {' '}
+                      {" "}
                       English, Hindi, Telugu
                     </span>
                   </p>
@@ -1085,8 +1085,8 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                   <div className="ms-2">
                     <h5 className="font-semibold mb-0 flex items-center">
                       <Link href="/components/apps/jobs/candidate-details/">
-                        {' '}
-                        Dwayne Stort{' '}
+                        {" "}
+                        Dwayne Stort{" "}
                         <i
                           className="bi bi-check-circle-fill text-success text-base"
                           title="Verified candidate"
@@ -1096,7 +1096,7 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     <div className="sm:flex gap-2">
                       <Link href="#!">Web Developer</Link>
                       <p className="mb-0 text-xs text-[#8c9097] dark:text-white/50">
-                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{' '}
+                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{" "}
                         Gachibowli, Hyderabad
                       </p>
                     </div>
@@ -1134,28 +1134,28 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Post Graduate
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     flexible-shift
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Within 10 Days
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Good at English
                   </Link>
                 </div>
@@ -1163,22 +1163,22 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                   <p className="mb-0 flex-grow">
                     <span className="text-[#8c9097] dark:text-white/50">
                       Package (Yearly) :
-                    </span>{' '}
+                    </span>{" "}
                     <span className="font-semibold" title="Current">
-                      {' '}
+                      {" "}
                       $3,600
-                    </span>{' '}
-                    -{' '}
+                    </span>{" "}
+                    -{" "}
                     <span className="font-semibold" title="Expected">
-                      {' '}
+                      {" "}
                       $4,700
-                    </span>{' '}
+                    </span>{" "}
                   </p>
                   <p className="mb-0">
                     <span className="text-[#8c9097] dark:text-white/50">
-                      {' '}
+                      {" "}
                       Languages :
-                    </span>{' '}
+                    </span>{" "}
                     <span className="font-semibold"> English, Telugu</span>
                   </p>
                 </div>
@@ -1295,8 +1295,8 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                   <div className="ms-2">
                     <h5 className="font-semibold mb-0 flex items-center">
                       <Link href="/components/apps/jobs/candidate-details/">
-                        {' '}
-                        Jasmine Kova{' '}
+                        {" "}
+                        Jasmine Kova{" "}
                         <i
                           className="bi bi-check-circle-fill text-success text-base"
                           title="Verified candidate"
@@ -1306,7 +1306,7 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     <div className="flex gap-2">
                       <Link href="#!">Python Developer</Link>
                       <p className="mb-0 text-xs text-[#8c9097] dark:text-white/50">
-                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{' '}
+                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{" "}
                         Gachibowli, Chennai
                       </p>
                     </div>
@@ -1344,28 +1344,28 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     MBA
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Day-shift
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Within 30 Days
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Avg at English
                   </Link>
                 </div>
@@ -1373,22 +1373,22 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                   <p className="mb-0 flex-grow">
                     <span className="text-[#8c9097] dark:text-white/50">
                       Package (Yearly) :
-                    </span>{' '}
+                    </span>{" "}
                     <span className="font-semibold" title="Current">
-                      {' '}
+                      {" "}
                       $4,300
-                    </span>{' '}
-                    -{' '}
+                    </span>{" "}
+                    -{" "}
                     <span className="font-semibold" title="Expected">
-                      {' '}
+                      {" "}
                       $5,000
-                    </span>{' '}
+                    </span>{" "}
                   </p>
                   <p className="mb-0">
                     <span className="text-[#8c9097] dark:text-white/50">
-                      {' '}
+                      {" "}
                       Languages :
-                    </span>{' '}
+                    </span>{" "}
                     <span className="font-semibold"> English, Hindi</span>
                   </p>
                 </div>
@@ -1496,8 +1496,8 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                   <div className="ms-2">
                     <h5 className="font-semibold mb-0 flex items-center">
                       <Link href="/components/apps/jobs/candidate-details/">
-                        {' '}
-                        Kiara Advain{' '}
+                        {" "}
+                        Kiara Advain{" "}
                         <i
                           className="bi bi-check-circle-fill text-success text-base"
                           title="Verified candidate"
@@ -1507,7 +1507,7 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     <div className="flex gap-2">
                       <Link href="#!">Java Developer</Link>
                       <p className="mb-0 text-xs text-[#8c9097] dark:text-white/50">
-                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{' '}
+                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{" "}
                         Gachibowli, Banglore
                       </p>
                     </div>
@@ -1545,28 +1545,28 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     MBA
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Day-shift
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Within 30 Days
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Good at English
                   </Link>
                 </div>
@@ -1576,17 +1576,17 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                       Package (Yearly) :
                     </span>
                     <span className="font-semibold" title="Expected">
-                      {' '}
+                      {" "}
                       $3,678
-                    </span>{' '}
+                    </span>{" "}
                   </p>
                   <p className="mb-0">
                     <span className="text-[#8c9097] dark:text-white/50">
-                      {' '}
+                      {" "}
                       Languages :
-                    </span>{' '}
+                    </span>{" "}
                     <span className="font-semibold">
-                      {' '}
+                      {" "}
                       English, Hindi, Telugu
                     </span>
                   </p>
@@ -1704,8 +1704,8 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                   <div className="ms-2">
                     <h5 className="font-semibold mb-0 flex items-center">
                       <Link href="/components/apps/jobs/candidate-details/">
-                        {' '}
-                        Json Taylor{' '}
+                        {" "}
+                        Json Taylor{" "}
                         <i
                           className="bi bi-check-circle-fill text-success text-base"
                           title="Verified candidate"
@@ -1715,7 +1715,7 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     <div className="sm:flex gap-2">
                       <Link href="#!">Angular Developer</Link>
                       <p className="mb-0 text-xs text-[#8c9097] dark:text-white/50">
-                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{' '}
+                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{" "}
                         Gachibowli, Nellore
                       </p>
                     </div>
@@ -1753,28 +1753,28 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     MCA
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     flexible-shift
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Within 15 Days
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Fluent at English
                   </Link>
                 </div>
@@ -1782,22 +1782,22 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                   <p className="mb-0 flex-grow">
                     <span className="text-[#8c9097] dark:text-white/50">
                       Package (Yearly) :
-                    </span>{' '}
+                    </span>{" "}
                     <span className="font-semibold" title="Current">
-                      {' '}
+                      {" "}
                       $3,600
-                    </span>{' '}
-                    -{' '}
+                    </span>{" "}
+                    -{" "}
                     <span className="font-semibold" title="Expected">
-                      {' '}
+                      {" "}
                       $4,700
-                    </span>{' '}
+                    </span>{" "}
                   </p>
                   <p className="mb-0">
                     <span className="text-[#8c9097] dark:text-white/50">
-                      {' '}
+                      {" "}
                       Languages :
-                    </span>{' '}
+                    </span>{" "}
                     <span className="font-semibold"> English, Telugu</span>
                   </p>
                 </div>
@@ -1914,8 +1914,8 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                   <div className="ms-2">
                     <h5 className="font-semibold mb-0 flex items-center">
                       <Link href="/components/apps/jobs/candidate-details/">
-                        {' '}
-                        Diego Sanch{' '}
+                        {" "}
+                        Diego Sanch{" "}
                         <i
                           className="bi bi-check-circle-fill text-success text-base"
                           title="Verified candidate"
@@ -1925,7 +1925,7 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     <div className="sm:flex gap-2">
                       <Link href="#!">AWS Developer</Link>
                       <p className="mb-0 text-xs text-[#8c9097] dark:text-white/50">
-                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{' '}
+                        <i className="bi bi-geo-alt text-[.6875rem]"></i>{" "}
                         Kukatpally, Hyderabad
                       </p>
                     </div>
@@ -1963,28 +1963,28 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     MBA
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Day-shift
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Within 30 Days
                   </Link>
                   <Link
                     href="#!"
                     className="badge !rounded-full bg-light me-1 text-defaulttextcolor"
                   >
-                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                    <i className="bi bi-broadcast text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                     Good at English
                   </Link>
                 </div>
@@ -1994,17 +1994,17 @@ const Searchcandidate = ({ local_varaiable }: any) => {
                       Package (Yearly) :
                     </span>
                     <span className="font-semibold" title="Expected">
-                      {' '}
+                      {" "}
                       $8,900
-                    </span>{' '}
+                    </span>{" "}
                   </p>
                   <p className="mb-0">
                     <span className="text-[#8c9097] dark:text-white/50">
-                      {' '}
+                      {" "}
                       Languages :
-                    </span>{' '}
+                    </span>{" "}
                     <span className="font-semibold">
-                      {' '}
+                      {" "}
                       English, Hindi, Telugu
                     </span>
                   </p>
@@ -2086,7 +2086,7 @@ const Searchcandidate = ({ local_varaiable }: any) => {
     </Fragment>
   );
 };
-Searchcandidate.layout = 'Contentlayout';
+Searchcandidate.layout = "Contentlayout";
 
 const mapStateToProps = (state: any) => ({
   local_varaiable: state,

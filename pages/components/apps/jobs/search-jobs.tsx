@@ -1,14 +1,14 @@
-import LabeledTwoThumbs1 from '@/shared/data/apps/jobs/searchjobsdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React, { Fragment } from 'react';
-import { connect } from 'react-redux';
+import LabeledTwoThumbs1 from "@/shared/data/apps/jobs/searchjobsdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React, { Fragment } from "react";
+import { connect } from "react-redux";
 
 const Searchjobs = ({ local_varaiable }: any) => {
   return (
     <Fragment>
-      <Seo title={'Search Jobs'} />
+      <Seo title={"Search Jobs"} />
       <Pageheader
         currentpage="Search Jobs"
         activepage="Jobs"
@@ -301,7 +301,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                 <div className="p-4 border-b dark:border-defaultborder/10">
                   <h6 className="font-semibold mb-0">Salary Range</h6>
                   <div className="px-2 py-3 pb-0">
-                    <LabeledTwoThumbs1 rtl={local_varaiable.dir == 'rtl'} />
+                    <LabeledTwoThumbs1 rtl={local_varaiable.dir == "rtl"} />
                     <div className="flex mt-4">
                       <div className="font-semibold h6 mb-0">
                         $<span id="lower-value">8000.00</span>
@@ -618,7 +618,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     </button>
                   </div>
                   <label className="form-check-label">
-                    By Subscribing you accept to{' '}
+                    By Subscribing you accept to{" "}
                     <Link href="#!" className="text-success">
                       <u>privacy policy</u>
                     </Link>
@@ -702,7 +702,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-muted me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-muted me-1"></i>{" "}
                     Graduate
                   </Link>
                   <Link
@@ -715,7 +715,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-muted me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-muted me-1"></i>{" "}
                     flexible-shift
                   </Link>
                 </div>
@@ -804,7 +804,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-muted me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-muted me-1"></i>{" "}
                     Graduate
                   </Link>
                   <Link
@@ -817,7 +817,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-muted me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-muted me-1"></i>{" "}
                     flexible-shift
                   </Link>
                 </div>
@@ -906,7 +906,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-muted me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-muted me-1"></i>{" "}
                     Graduate
                   </Link>
                   <Link
@@ -919,7 +919,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-muted me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-muted me-1"></i>{" "}
                     flexible-shift
                   </Link>
                 </div>
@@ -1008,7 +1008,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-muted me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-muted me-1"></i>{" "}
                     Graduate
                   </Link>
                   <Link
@@ -1021,7 +1021,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-muted me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-muted me-1"></i>{" "}
                     flexible-shift
                   </Link>
                 </div>
@@ -1110,7 +1110,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-muted me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-muted me-1"></i>{" "}
                     Graduate
                   </Link>
                   <Link
@@ -1123,7 +1123,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-muted me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-muted me-1"></i>{" "}
                     flexible-shift
                   </Link>
                 </div>
@@ -1212,7 +1212,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-muted me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-muted me-1"></i>{" "}
                     Graduate
                   </Link>
                   <Link
@@ -1225,7 +1225,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-muted me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-muted me-1"></i>{" "}
                     flexible-shift
                   </Link>
                 </div>
@@ -1314,7 +1314,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-mortarboard text-muted me-1"></i>{' '}
+                    <i className="bi bi-mortarboard text-muted me-1"></i>{" "}
                     Graduate
                   </Link>
                   <Link
@@ -1327,7 +1327,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
                     href="#!"
                     className="badge  me-2 !rounded-full bg-light !text-defaulttextcolor"
                   >
-                    <i className="bi bi-moon-stars text-muted me-1"></i>{' '}
+                    <i className="bi bi-moon-stars text-muted me-1"></i>{" "}
                     flexible-shift
                   </Link>
                 </div>
@@ -1380,7 +1380,7 @@ const Searchjobs = ({ local_varaiable }: any) => {
     </Fragment>
   );
 };
-Searchjobs.layout = 'Contentlayout';
+Searchjobs.layout = "Contentlayout";
 
 const mapStateToProps = (state: any) => ({
   local_varaiable: state,

@@ -3,11 +3,11 @@ import {
   ResponsiveDataTable,
   columns,
   data,
-} from '@/shared/data/tables/datatabledata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { useState } from 'react';
-import { ReactTabulator } from 'react-tabulator';
+} from "@/shared/data/tables/datatabledata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { useState } from "react";
+import { ReactTabulator } from "react-tabulator";
 
 const Datatable = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,7 +20,7 @@ const Datatable = () => {
 
   return (
     <div>
-      <Seo title={'Data Tables'} />
+      <Seo title={"Data Tables"} />
       <Pageheader
         currentpage="Data Tables"
         activepage="Tables"
@@ -62,7 +62,7 @@ const Datatable = () => {
                     data={data}
                     columns={columns}
                     options={{
-                      pagination: 'local',
+                      pagination: "local",
                       paginationSize: pageSize,
                       paginationSizeSelector: [10, 20, 50, 100], // Define available page sizes
                       paginationInitialPage: currentPage,
@@ -102,6 +102,6 @@ const Datatable = () => {
     </div>
   );
 };
-Datatable.layout = 'Contentlayout';
+Datatable.layout = "Contentlayout";
 
 export default Datatable;

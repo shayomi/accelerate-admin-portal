@@ -6,26 +6,26 @@ import {
   MaxLimitoptions,
   Maximumoptions,
   ProfileService,
-} from '@/shared/data/pages/mail/mailsettingdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import React, { Fragment, useEffect, useState } from 'react';
-const Select = dynamic(() => import('react-select'), { ssr: false });
-import { useRouter } from 'next/router';
+} from "@/shared/data/pages/mail/mailsettingdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import React, { Fragment, useEffect, useState } from "react";
+const Select = dynamic(() => import("react-select"), { ssr: false });
+import { useRouter } from "next/router";
 
 const Mailsettings = () => {
   //URl image
   const [UrlImage, setUrlImage] = useState(
-    '../../../../assets/images/faces/9.jpg',
+    "../../../../assets/images/faces/9.jpg"
   );
   //Disabling input feild
   const [UrlDisabled, setUrlDisabled] = useState(true);
 
   const [fileDisabled, setfileDisabled] = useState(false);
   //Default image
-  const [Image, setImage] = useState('../../../../assets/images/faces/9.jpg');
+  const [Image, setImage] = useState("../../../../assets/images/faces/9.jpg");
 
   let location = useRouter();
 
@@ -40,11 +40,11 @@ const Mailsettings = () => {
 
   //toggle button for image
   const toggleImage = (type: string) => {
-    if (type == 'fileDisabled') {
+    if (type == "fileDisabled") {
       setfileDisabled(false);
       setUrlDisabled(true);
     }
-    if (type == 'UrlDisabled') {
+    if (type == "UrlDisabled") {
       setUrlDisabled(false);
       setfileDisabled(true);
     }
@@ -55,17 +55,17 @@ const Mailsettings = () => {
     if (ProfileService.returnImage() != undefined) {
       setImage(ProfileService.returnImage());
     }
-    let contactItem = document.querySelectorAll('.main-contact-item');
+    let contactItem = document.querySelectorAll(".main-contact-item");
     contactItem.forEach((ele) => {
-      ele.addEventListener('click', () => {
-        setClassName('main-content-body-show');
+      ele.addEventListener("click", () => {
+        setClassName("main-content-body-show");
       });
     });
   }, [location]);
 
   return (
     <Fragment>
-      <Seo title={'Mail Settings'} />
+      <Seo title={"Mail Settings"} />
       <Pageheader
         currentpage="Mail Settings"
         activepage="Emails"
@@ -175,7 +175,7 @@ const Mailsettings = () => {
                                 <div className="ti-modal-body">
                                   <div
                                     onClick={() => {
-                                      toggleImage('fileDisabled');
+                                      toggleImage("fileDisabled");
                                     }}
                                   >
                                     <label
@@ -197,7 +197,7 @@ const Mailsettings = () => {
                                   </div>
                                   <div
                                     onClick={() => {
-                                      toggleImage('UrlDisabled');
+                                      toggleImage("UrlDisabled");
                                     }}
                                   >
                                     <input
@@ -503,18 +503,18 @@ const Mailsettings = () => {
                                   Reset Password
                                 </p>
                                 <p className="text-[0.75rem] text-[#8c9097] dark:text-white/50">
-                                  Password should be min of{' '}
+                                  Password should be min of{" "}
                                   <b className="text-success">
                                     8 digits<sup>*</sup>
                                   </b>
-                                  ,atleast{' '}
+                                  ,atleast{" "}
                                   <b className="text-success">
                                     One Capital letter<sup>*</sup>
-                                  </b>{' '}
-                                  and{' '}
+                                  </b>{" "}
+                                  and{" "}
                                   <b className="text-success">
                                     One Special Character<sup>*</sup>
-                                  </b>{' '}
+                                  </b>{" "}
                                   included.
                                 </p>
                                 <div className="mb-2">
@@ -2020,7 +2020,7 @@ const Mailsettings = () => {
                                 </p>
                                 <p className="text-[0.75rem] mb-0 text-[#8c9097] dark:text-white/50">
                                   You can change the time for the account freeze
-                                  when attempts for{' '}
+                                  when attempts for{" "}
                                 </p>
                               </div>
                               <div>
@@ -2229,6 +2229,6 @@ const Mailsettings = () => {
     </Fragment>
   );
 };
-Mailsettings.layout = 'Contentlayout';
+Mailsettings.layout = "Contentlayout";
 
 export default Mailsettings;

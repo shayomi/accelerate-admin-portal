@@ -1,13 +1,13 @@
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
 
 const Twobasic = () => {
   const [inputValues, setInputValues] = useState({
-    one: '',
-    two: '',
-    three: '',
-    four: '',
+    one: "",
+    two: "",
+    three: "",
+    four: "",
   });
 
   const handleChange = (currentId: string, nextId: any, value: string) => {
@@ -25,7 +25,7 @@ const Twobasic = () => {
 
   return (
     <Fragment>
-      <Seo title={'Twostepverification-basic'} />
+      <Seo title={"Twostepverification-basic"} />
       <div className="container">
         <div className="flex justify-center authentication authentication-basic items-center h-full text-defaultsize text-defaulttextcolor">
           <div className="grid grid-cols-12">
@@ -64,7 +64,7 @@ const Twobasic = () => {
                             id="one"
                             value={inputValues.one}
                             onChange={(e) =>
-                              handleChange('one', 'two', e.target.value)
+                              handleChange("one", "two", e.target.value)
                             }
                           />
                         </div>
@@ -76,7 +76,7 @@ const Twobasic = () => {
                             id="two"
                             value={inputValues.two}
                             onChange={(e) =>
-                              handleChange('two', 'three', e.target.value)
+                              handleChange("two", "three", e.target.value)
                             }
                           />
                         </div>
@@ -88,7 +88,7 @@ const Twobasic = () => {
                             id="three"
                             value={inputValues.three}
                             onChange={(e) =>
-                              handleChange('three', 'four', e.target.value)
+                              handleChange("three", "four", e.target.value)
                             }
                           />
                         </div>
@@ -100,7 +100,7 @@ const Twobasic = () => {
                             id="four"
                             value={inputValues.four}
                             onChange={(e) =>
-                              handleChange('four', null, e.target.value)
+                              handleChange("four", null, e.target.value)
                             }
                           />
                         </div>
@@ -154,6 +154,6 @@ const Twobasic = () => {
   );
 };
 
-Twobasic.layout = 'Authenticationlayout';
+Twobasic.layout = "Authenticationlayout";
 
 export default Twobasic;

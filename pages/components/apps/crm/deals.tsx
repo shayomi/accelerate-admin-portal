@@ -1,10 +1,10 @@
-import { ProfileService } from '@/shared/data/pages/mail/mailsettingdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React, { Fragment, useEffect, useRef, useState } from 'react';
-import DatePicker from 'react-datepicker';
+import { ProfileService } from "@/shared/data/pages/mail/mailsettingdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { Fragment, useEffect, useRef, useState } from "react";
+import DatePicker from "react-datepicker";
 
 const Deals = () => {
   const [ClassName, setClassName] = useState<any>();
@@ -36,14 +36,14 @@ const Deals = () => {
 
   const handleUpload = () => {
     // Implement your logic to upload and compare images here
-    console.log('Uploading and comparing images:', selectedImage);
+    console.log("Uploading and comparing images:", selectedImage);
   };
 
   useEffect(() => {
-    let contactItem = document.querySelectorAll('.main-contact-item');
+    let contactItem = document.querySelectorAll(".main-contact-item");
     contactItem.forEach((ele) => {
-      ele.addEventListener('click', () => {
-        setClassName('main-content-body-show');
+      ele.addEventListener("click", () => {
+        setClassName("main-content-body-show");
       });
     });
   });
@@ -59,9 +59,9 @@ const Deals = () => {
 
   useEffect(() => {
     // Check if window is defined (to prevent issues during server-side rendering)
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // Import the dragula library here (make sure it's installed first)
-      const dragula = require('dragula');
+      const dragula = require("dragula");
       const windowElement = window;
 
       if (firstContainerRef.current && secondContainerRef.current) {
@@ -80,10 +80,10 @@ const Deals = () => {
         // Your other dragula-related logic here...
 
         if (
-          document.querySelector('.firstdrag')?.classList.contains('task-Null')
+          document.querySelector(".firstdrag")?.classList.contains("task-Null")
         ) {
-          console.log('aaa');
-          document.querySelector('.view-more-button')?.classList.add('d-none');
+          console.log("aaa");
+          document.querySelector(".view-more-button")?.classList.add("d-none");
         }
       }
     }
@@ -91,7 +91,7 @@ const Deals = () => {
 
   return (
     <Fragment>
-      <Seo title={'Deals'} />
+      <Seo title={"Deals"} />
       <Pageheader currentpage="Deals" activepage="CRM" mainpage="Deals" />
 
       <div className="grid grid-cols-12 gap-x-6">
@@ -823,14 +823,14 @@ const Deals = () => {
                       <img
                         src={
                           selectedImage ||
-                          '../../../../assets/images/faces/9.jpg'
+                          "../../../../assets/images/faces/9.jpg"
                         }
                         alt=""
                         id="profile-img"
                         style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
                         }}
                       />
                       <span className="badge rounded-full bg-primary avatar-badge">
@@ -888,8 +888,8 @@ const Deals = () => {
                   <div className="form-group">
                     <div className="input-group !flex !flex-nowrap">
                       <div className="input-group-text text-muted">
-                        {' '}
-                        <i className="ri-calendar-line"></i>{' '}
+                        {" "}
+                        <i className="ri-calendar-line"></i>{" "}
                       </div>
                       <DatePicker
                         placeholderText="Choose date and time"
@@ -925,5 +925,5 @@ const Deals = () => {
     </Fragment>
   );
 };
-Deals.layout = 'Contentlayout';
+Deals.layout = "Contentlayout";
 export default Deals;

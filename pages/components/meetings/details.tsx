@@ -1,17 +1,17 @@
 // components/meetings/MeetingDetail.tsx
-import React, { Fragment, useState } from 'react';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import { Meeting } from '@/types';
+import React, { Fragment, useState } from "react";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import { Meeting } from "@/types";
 
 interface MeetingDetailProps {
   meeting: Meeting;
 }
 
 const MeetingDetail = ({ meeting }: MeetingDetailProps) => {
-  const [feedback, setFeedback] = useState('');
+  const [feedback, setFeedback] = useState("");
   const [submittedFeedback, setSubmittedFeedback] = useState<string | null>(
-    null,
+    null
   );
 
   const handleFeedbackChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -21,7 +21,7 @@ const MeetingDetail = ({ meeting }: MeetingDetailProps) => {
   const handleFeedbackSubmit = () => {
     if (feedback.trim()) {
       setSubmittedFeedback(feedback);
-      setFeedback('');
+      setFeedback("");
     }
   };
 
@@ -51,7 +51,7 @@ const MeetingDetail = ({ meeting }: MeetingDetailProps) => {
               <span className="font-semibold">Time:</span> {meeting.time}
             </p>
             <p className="text-lg text-gray-700 mb-2">
-              <span className="font-semibold">Participants:</span>{' '}
+              <span className="font-semibold">Participants:</span>{" "}
               {meeting.participants}
             </p>
             <p className="text-lg text-gray-700 mb-4">
@@ -108,6 +108,6 @@ const MeetingDetail = ({ meeting }: MeetingDetailProps) => {
   );
 };
 
-MeetingDetail.layout = 'Contentlayout';
+MeetingDetail.layout = "Contentlayout";
 
 export default MeetingDetail;

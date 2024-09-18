@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import React, { Fragment, useEffect } from 'react';
-import { ThemeChanger } from '../../../shared/redux/action';
-import { Autoplay, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Seo from '../../../shared/layout-components/seo/seo';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import store from '@/shared/redux/store';
-import { connect } from 'react-redux';
+import Link from "next/link";
+import React, { Fragment, useEffect } from "react";
+import { ThemeChanger } from "../../../shared/redux/action";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Seo from "../../../shared/layout-components/seo/seo";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import store from "@/shared/redux/store";
+import { connect } from "react-redux";
 
 const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
   const breakpoints = {
@@ -29,39 +29,39 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
 
   useEffect(() => {
     const landingpages = () => {
-      if (window.scrollY > 30 && document.querySelector('.app-sidebar')) {
-        let Scolls = document?.querySelectorAll('.sticky');
+      if (window.scrollY > 30 && document.querySelector(".app-sidebar")) {
+        let Scolls = document?.querySelectorAll(".sticky");
         Scolls.forEach((e) => {
-          e.classList.add('sticky-pin');
+          e.classList.add("sticky-pin");
         });
       } else {
-        let Scolls = document?.querySelectorAll('.sticky');
+        let Scolls = document?.querySelectorAll(".sticky");
         Scolls.forEach((e) => {
-          e.classList.remove('sticky-pin');
+          e.classList.remove("sticky-pin");
         });
       }
     };
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', landingpages);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", landingpages);
     }
   });
 
   //
   //// Template Highlights collapse
   const onScroll = () => {
-    const sections = document.querySelectorAll('.side-menu__item');
+    const sections = document.querySelectorAll(".side-menu__item");
     const scrollPos =
       window.scrollY ||
       document.documentElement.scrollTop ||
-      document.querySelector('body')?.scrollTop ||
+      document.querySelector("body")?.scrollTop ||
       0;
 
     sections.forEach((elem) => {
-      const value = elem.getAttribute('href') ?? '';
-      const fragmentIndex = value.indexOf('#');
+      const value = elem.getAttribute("href") ?? "";
+      const fragmentIndex = value.indexOf("#");
       const fragment =
-        fragmentIndex !== -1 ? value.substring(fragmentIndex + 1) : '';
+        fragmentIndex !== -1 ? value.substring(fragmentIndex + 1) : "";
 
       if (fragment) {
         const refElement = document.getElementById(fragment);
@@ -72,9 +72,9 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
             refElement.offsetTop <= scrollTopMinus &&
             refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
           ) {
-            elem.classList.add('active');
+            elem.classList.add("active");
           } else {
-            elem.classList.remove('active');
+            elem.classList.remove("active");
           }
         }
       }
@@ -82,10 +82,10 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
 
     return () => {
-      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
@@ -94,8 +94,8 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
       const theme = store.getState();
       ThemeChanger({
         ...theme,
-        dataToggled: 'open',
-        dataNavLayout: 'horizontal',
+        dataToggled: "open",
+        dataNavLayout: "horizontal",
       });
     }
   }
@@ -104,8 +104,8 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
     const theme = store.getState();
     ThemeChanger({
       ...theme,
-      dataToggled: 'close',
-      dataNavLayout: 'horizontal',
+      dataToggled: "close",
+      dataNavLayout: "horizontal",
     });
   }
 
@@ -115,7 +115,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
         <Helmet>
           <body className="landing-body jobs-landing"></body>
         </Helmet>
-        <Seo title={'Job Landing'} />
+        <Seo title={"Job Landing"} />
         <header className="app-header">
           <div className="main-header-container container-fluid">
             <div className="header-content-left">
@@ -134,9 +134,9 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                       src="../../../assets/images/brand-logos/toggle-dark.png"
                       alt="logo"
                       className="toggle-dark"
-                    />{' '}
+                    />{" "}
                   </Link>
-                </div>{' '}
+                </div>{" "}
               </div>
 
               <div className="header-element">
@@ -149,8 +149,8 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                     className="open-toggle"
                     onClick={() => toggleNavigation()}
                   >
-                    {' '}
-                    <i className="ri-menu-3-line text-xl"></i>{' '}
+                    {" "}
+                    <i className="ri-menu-3-line text-xl"></i>{" "}
                   </span>
                 </Link>
               </div>
@@ -162,8 +162,8 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                     href="/components/authentication/sign-up/signup-basic/"
                     className="ti-btn ti-btn-primary me-2"
                   >
-                    {' '}
-                    Sign Up{' '}
+                    {" "}
+                    Sign Up{" "}
                   </Link>
                   <Link
                     aria-label="anchor"
@@ -174,7 +174,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                     <i className="ri-settings-3-line animate-spin-slow"></i>
                   </Link>
                 </div>
-              </div>{' '}
+              </div>{" "}
             </div>
           </div>
         </header>
@@ -216,8 +216,8 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                     height="24"
                     viewBox="0 0 24 24"
                   >
-                    {' '}
-                    <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>{' '}
+                    {" "}
+                    <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>{" "}
                   </svg>
                 </div>
                 <ul className="main-menu">
@@ -255,8 +255,8 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                     height="24"
                     viewBox="0 0 24 24"
                   >
-                    {' '}
-                    <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>{' '}
+                    {" "}
+                    <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>{" "}
                   </svg>
                 </div>
                 <div className="lg:flex hidden">
@@ -381,7 +381,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                           <p className="mb-4">
                             <span className="text-default font-semibold ">
                               120 Jobs
-                            </span>{' '}
+                            </span>{" "}
                             available
                           </p>
                           <Link
@@ -414,7 +414,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                           <p className="mb-4">
                             <span className="text-default font-semibold ">
                               370 Jobs
-                            </span>{' '}
+                            </span>{" "}
                             available
                           </p>
                           <Link
@@ -447,7 +447,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                           <p className="mb-4">
                             <span className="text-default font-semibold">
                               743 Jobs
-                            </span>{' '}
+                            </span>{" "}
                             available
                           </p>
                           <Link
@@ -480,7 +480,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                           <p className="mb-4">
                             <span className="text-default font-semibold">
                               156 Jobs
-                            </span>{' '}
+                            </span>{" "}
                             available
                           </p>
                           <Link
@@ -513,7 +513,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                           <p className="mb-4">
                             <span className="text-default font-semibold">
                               67 Jobs
-                            </span>{' '}
+                            </span>{" "}
                             available
                           </p>
                           <Link
@@ -546,7 +546,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                           <p className="mb-4">
                             <span className="text-default font-semibold">
                               140 Jobs
-                            </span>{' '}
+                            </span>{" "}
                             available
                           </p>
                           <Link
@@ -679,21 +679,21 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                 <div className="md:col-span-7 xl:col-span-8 col-span-12">
                   <div className="my-6">
                     <h2 className="font-semibold mb-4 text-[2rem]">
-                      Are You Looking For A Job? Just{' '}
+                      Are You Looking For A Job? Just{" "}
                       <Link
                         href="#!"
                         className="text-white text-decoration-line"
                       >
-                        {' '}
-                        <u>drop</u>{' '}
-                      </Link>{' '}
+                        {" "}
+                        <u>drop</u>{" "}
+                      </Link>{" "}
                       resume..
                     </h2>
                     <p className="mb-6 text-[0.9375rem] opacity-[0.8] font-normal">
                       Est amet sit vero sanctus labore no sed nonumy. Sit ipsum
                       sanctus ea magna est. Aliquyam sed amet. Kasd diam rebum
                       sit ipsum ipsum.Est amet sit vero sanctus labore no sed
-                      ipsum ipsum nonumy vero sanctus labore..{' '}
+                      ipsum ipsum nonumy vero sanctus labore..{" "}
                     </p>
                     <Link
                       href="#!"
@@ -774,35 +774,35 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-geo-alt text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-geo-alt text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Hyderabad
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-briefcase text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-briefcase text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           13 Openings
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Graduate
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Min - 2Years
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           flexible-shift
                         </Link>
                       </div>
@@ -868,35 +868,35 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-geo-alt text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-geo-alt text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Hyderabad
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-briefcase text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-briefcase text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           13 Openings
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Graduate
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Min - 2Years
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           flexible-shift
                         </Link>
                       </div>
@@ -962,35 +962,35 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-geo-alt text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-geo-alt text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Hyderabad
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-briefcase text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-briefcase text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           13 Openings
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Graduate
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Min - 2Years
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           flexible-shift
                         </Link>
                       </div>
@@ -1056,35 +1056,35 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-geo-alt text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-geo-alt text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Hyderabad
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-briefcase text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-briefcase text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           13 Openings
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-mortarboard text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Graduate
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-clock text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           Min - 2Years
                         </Link>
                         <Link
                           href="#!"
                           className="badge rounded-pill bg-light me-1 text-default"
                         >
-                          <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{' '}
+                          <i className="bi bi-moon-stars text-[#8c9097] dark:text-white/50 me-1"></i>{" "}
                           flexible-shift
                         </Link>
                       </div>
@@ -1278,21 +1278,21 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                 </div>
                 <div className="md:col-span-8 col-span-12 my-6">
                   <h2 className="font-semibold mb-4 text-[2rem] dark:text-defaulttextcolor/70">
-                    Are You Looking For A best Candidate? <br /> Just{' '}
+                    Are You Looking For A best Candidate? <br /> Just{" "}
                     <Link
                       href="#!"
                       className="text-primary text-decoration-line"
                     >
-                      {' '}
-                      <u>Publish</u>{' '}
-                    </Link>{' '}
+                      {" "}
+                      <u>Publish</u>{" "}
+                    </Link>{" "}
                     your job here..
                   </h2>
                   <span className="mb-6 text-[0.9375rem] font-normal text-[#8c9097] dark:text-white/50 block">
                     Est amet sit vero sanctus labore no sed nonumy. Sit ipsum
                     sanctus ea magna est. Aliquyam sed amet. Kasd diam rebum sit
                     ipsum ipsum.Est amet sit vero sanctus labore no sed ipsum
-                    ipsum nonumy vero sanctus labore..{' '}
+                    ipsum nonumy vero sanctus labore..{" "}
                   </span>
                   <Link
                     href="#!"
@@ -1308,7 +1308,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
             <div className="container">
               <div className=" mb-[3rem] justify-center text-center">
                 <p className="text-[0.75rem] font-semibold mb-1">
-                  <span className="landing-section-heading">Our Blog</span>{' '}
+                  <span className="landing-section-heading">Our Blog</span>{" "}
                 </p>
                 <h3 className="font-semibold mb-2 text-[1.75rem] dark:text-defaulttextcolor/70">
                   Latest News Updates &amp; Blogs
@@ -1437,7 +1437,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
             <div className="container text-center">
               <div className=" gap-6 mb-[3rem] justify-center text-center">
                 <p className="text-[0.75rem] font-semibold mb-1">
-                  <span className="landing-section-heading">FAQ'S</span>{' '}
+                  <span className="landing-section-heading">FAQ'S</span>{" "}
                 </p>
                 <h3 className="font-semibold mb-2">
                   Frequently Asked Questions?
@@ -1633,7 +1633,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
             <div className="container text-center">
               <div className=" mb-[3rem] justify-center text-center">
                 <p className="text-[0.75rem] font-semibold mb-1">
-                  <span className="landing-section-heading">TESTIMONIALS</span>{' '}
+                  <span className="landing-section-heading">TESTIMONIALS</span>{" "}
                 </p>
                 <h3 className="font-semibold mb-2">
                   We never failed to reach expectations
@@ -1683,7 +1683,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1731,7 +1731,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1779,7 +1779,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1827,7 +1827,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1875,7 +1875,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1923,7 +1923,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -1971,7 +1971,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -2019,7 +2019,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -2067,7 +2067,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
                           <span className="text-[#8c9097] dark:text-white/50">
-                            Rating :{' '}
+                            Rating :{" "}
                           </span>
                           <span className="text-warning block ms-1">
                             <i className="ri-star-fill"></i>
@@ -2126,8 +2126,8 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
               <div className="flex flex-wrap gap-2 items-center justify-between">
                 <div>
                   <span className="text-white opacity-[0.7] text-[0.875rem]">
-                    {' '}
-                    © Copyright 2024 <span id="year"></span>{' '}
+                    {" "}
+                    © Copyright 2024 <span id="year"></span>{" "}
                     <Link
                       href="#!"
                       className="text-primary text-[0.9375rem] font-semibold"
@@ -2175,7 +2175,7 @@ const Jobslanding = ({ local_varaiable, ThemeChanger }: any) => {
   );
 };
 
-Jobslanding.layout = 'Landinglayout';
+Jobslanding.layout = "Landinglayout";
 
 const mapStateToProps = (state: any) => ({
   local_varaiable: state,

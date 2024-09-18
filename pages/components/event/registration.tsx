@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import { FaFileCsv, FaEnvelope } from 'react-icons/fa';
+import React, { useState } from "react";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import { FaFileCsv, FaEnvelope } from "react-icons/fa";
 
 const registrantsData = [
   {
-    name: 'John Doe',
-    email: 'johndoe@example.com',
-    company: 'TechCorp',
-    status: 'Confirmed',
+    name: "John Doe",
+    email: "johndoe@example.com",
+    company: "TechCorp",
+    status: "Confirmed",
   },
   {
-    name: 'Jane Smith',
-    email: 'janesmith@example.com',
-    company: 'StartupX',
-    status: 'Waitlisted',
+    name: "Jane Smith",
+    email: "janesmith@example.com",
+    company: "StartupX",
+    status: "Waitlisted",
   },
   {
-    name: 'Bob Johnson',
-    email: 'bobjohnson@example.com',
-    company: 'DevHub',
-    status: 'Cancelled',
+    name: "Bob Johnson",
+    email: "bobjohnson@example.com",
+    company: "DevHub",
+    status: "Cancelled",
   },
 ];
 
 const Registration = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filterStatus, setFilterStatus] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterStatus, setFilterStatus] = useState("");
   const [selectedRegistrants, setSelectedRegistrants] = useState<string[]>([]);
 
   const filteredRegistrants = registrantsData.filter((registrant) => {
@@ -48,11 +48,11 @@ const Registration = () => {
   };
 
   const handleExportCSV = () => {
-    alert('Exporting to CSV...');
+    alert("Exporting to CSV...");
   };
 
   const handleBulkEmail = () => {
-    alert(`Sending bulk emails to: ${selectedRegistrants.join(', ')}`);
+    alert(`Sending bulk emails to: ${selectedRegistrants.join(", ")}`);
   };
 
   return (
@@ -121,7 +121,7 @@ const Registration = () => {
                       setSelectedRegistrants(
                         e.target.checked
                           ? filteredRegistrants.map((r) => r.email)
-                          : [],
+                          : []
                       )
                     }
                   />
@@ -153,11 +153,11 @@ const Registration = () => {
                   <td>{registrant.company}</td>
                   <td
                     className={
-                      registrant.status === 'Confirmed'
-                        ? 'text-green'
-                        : registrant.status === 'Waitlisted'
-                          ? 'text-yellow'
-                          : 'text-red'
+                      registrant.status === "Confirmed"
+                        ? "text-green"
+                        : registrant.status === "Waitlisted"
+                          ? "text-yellow"
+                          : "text-red"
                     }
                   >
                     {registrant.status}
@@ -180,7 +180,7 @@ const Registration = () => {
       <div className="box-footer">
         <div className="sm:flex items-center">
           <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-            Showing {filteredRegistrants.length} Entries{' '}
+            Showing {filteredRegistrants.length} Entries{" "}
             <i className="bi bi-arrow-right ms-2 font-semibold"></i>
           </div>
           <div className="ms-auto">
@@ -207,6 +207,6 @@ const Registration = () => {
   );
 };
 
-Registration.layout = 'Contentlayout';
+Registration.layout = "Contentlayout";
 
 export default Registration;

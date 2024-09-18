@@ -1,18 +1,18 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { Fragment, useCallback, useState } from 'react';
-import { FilePond, registerPlugin } from 'react-filepond';
-import { Uploader } from 'uploader';
-import { UploadButton } from 'react-uploader';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment, useCallback, useState } from "react";
+import { FilePond, registerPlugin } from "react-filepond";
+import { Uploader } from "uploader";
+import { UploadButton } from "react-uploader";
 
 const Fileuploads = () => {
   const uploader = Uploader({
     // Get production API keys from Upload.io
-    apiKey: 'free',
+    apiKey: "free",
   });
 
   const getUploadParams = ({ meta }: any) => {
-    return { url: 'https://httpbin.org/post' };
+    return { url: "https://httpbin.org/post" };
   };
 
   // called every time a file's `status` changes
@@ -33,7 +33,7 @@ const Fileuploads = () => {
 
   return (
     <Fragment>
-      <Seo title={'File Uploads'} />
+      <Seo title={"File Uploads"} />
       <Pageheader
         currentpage="File Uploads"
         activepage="Form Elements"
@@ -175,10 +175,10 @@ const Fileuploads = () => {
               <FilePond
                 className="basic-filepond"
                 accepted-file-types={[
-                  'application/pdf',
-                  'image/png',
-                  'image/jpeg',
-                  'image/gif',
+                  "application/pdf",
+                  "image/png",
+                  "image/jpeg",
+                  "image/gif",
                 ]}
                 server="/api"
                 allowReorder={true}
@@ -202,10 +202,10 @@ const Fileuploads = () => {
               <FilePond
                 className="multiple-filepond"
                 accepted-file-types={[
-                  'application/pdf',
-                  'image/png',
-                  'image/jpeg',
-                  'image/gif',
+                  "application/pdf",
+                  "image/png",
+                  "image/jpeg",
+                  "image/gif",
                 ]}
                 server="/api"
                 allowReorder={true}
@@ -243,6 +243,6 @@ const Fileuploads = () => {
     </Fragment>
   );
 };
-Fileuploads.layout = 'Contentlayout';
+Fileuploads.layout = "Contentlayout";
 
 export default Fileuploads;

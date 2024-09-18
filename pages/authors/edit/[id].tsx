@@ -1,10 +1,10 @@
 // pages/authors/edit/[id].tsx
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
-import { Authors } from '@/types';
-import { authorsList } from '@/pages/components/author/authordata';
-import AuthorForm from '@/pages/components/author/createauthor';
+import { Authors } from "@/types";
+import { authorsList } from "@/pages/components/author/authordata";
+import AuthorForm from "@/pages/components/author/createauthor";
 
 const EditAuthorPage = () => {
   const router = useRouter();
@@ -23,12 +23,12 @@ const EditAuthorPage = () => {
     const index = authorsList.findIndex((auth) => auth.id === updatedAuthor.id);
     if (index !== -1) {
       authorsList[index] = updatedAuthor;
-      console.log('Author updated:', updatedAuthor);
+      console.log("Author updated:", updatedAuthor);
     }
   };
 
   return <AuthorForm authorData={author} onSubmit={handleEditAuthor} />;
 };
 
-EditAuthorPage.layout = 'Contentlayout';
+EditAuthorPage.layout = "Contentlayout";
 export default EditAuthorPage;

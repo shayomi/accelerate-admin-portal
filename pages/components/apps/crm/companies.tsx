@@ -2,14 +2,14 @@ import {
   Companydata,
   Selectdata1,
   Selectdata2,
-} from '@/shared/data/apps/crm/companiesdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-import Swal from 'sweetalert2';
-import dynamic from 'next/dynamic';
-const Select = dynamic(() => import('react-select'), { ssr: false });
+} from "@/shared/data/apps/crm/companiesdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+import Swal from "sweetalert2";
+import dynamic from "next/dynamic";
+const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const Companies = () => {
   const [images, setImages] = useState<any>([]);
@@ -28,25 +28,25 @@ const Companies = () => {
 
   const handleUpload = () => {
     // Implement your logic to upload and compare images here
-    console.log('Uploading and comparing images:', selectedImage);
+    console.log("Uploading and comparing images:", selectedImage);
   };
 
   const [hopingData, sethopingData] = useState(Companydata); // Initialize with your data
 
   const handleClick = (id: string) => {
     Swal.fire({
-      title: 'Are you sure?',
+      title: "Are you sure?",
       text: "You won't be able to revert this!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
         handleDelete(id);
       } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire('Cancelled', 'Your file is safe :)', 'error');
+        Swal.fire("Cancelled", "Your file is safe :)", "error");
       }
     });
   };
@@ -55,12 +55,12 @@ const Companies = () => {
     const updatedData = hopingData.filter((idx) => idx.id !== id);
     sethopingData(updatedData);
 
-    Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+    Swal.fire("Deleted!", "Your file has been deleted.", "success");
   };
 
   return (
     <Fragment>
-      <Seo title={'Companies'} />
+      <Seo title={"Companies"} />
       <Pageheader
         currentpage="Companies"
         activepage=" CRM"
@@ -71,7 +71,7 @@ const Companies = () => {
           <div className="box custom-box">
             <div className="box-header justify-between">
               <div className="box-title">
-                Companies{' '}
+                Companies{" "}
                 <span className="badge bg-light text-defaulttextcolor rounded-full ms-1 text-[0.75rem] align-middle">
                   14
                 </span>
@@ -271,7 +271,7 @@ const Companies = () => {
             <div className="box-footer !border-t-0">
               <div className="flex items-center">
                 <div>
-                  Showing 10 Entries{' '}
+                  Showing 10 Entries{" "}
                   <i className="bi bi-arrow-right ms-2 font-semibold"></i>
                 </div>
                 <div className="ms-auto">
@@ -510,14 +510,14 @@ const Companies = () => {
                       <img
                         src={
                           selectedImage ||
-                          '../../../../assets/images/faces/9.jpg'
+                          "../../../../assets/images/faces/9.jpg"
                         }
                         alt=""
                         id="profile-img"
                         style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
                         }}
                       />
                       <span className="badge rounded-pill bg-primary avatar-badge">
@@ -641,5 +641,5 @@ const Companies = () => {
     </Fragment>
   );
 };
-Companies.layout = 'Contentlayout';
+Companies.layout = "Contentlayout";
 export default Companies;

@@ -1,16 +1,16 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react';
-import PerfectScrollbar from 'react-perfect-scrollbar';
-const Select = dynamic(() => import('react-select'), { ssr: false });
-import DatePicker from 'react-datepicker';
-import { addDays, setHours, setMinutes } from 'date-fns';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import React, { useEffect, useRef, useState } from "react";
+import PerfectScrollbar from "react-perfect-scrollbar";
+const Select = dynamic(() => import("react-select"), { ssr: false });
+import DatePicker from "react-datepicker";
+import { addDays, setHours, setMinutes } from "date-fns";
 //filepond
-import { FilePond, registerPlugin } from 'react-filepond';
-import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
-import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
+import { FilePond, registerPlugin } from "react-filepond";
+import FilePondPluginImageExifOrientation from "filepond-plugin-image-exif-orientation";
+import FilePondPluginImagePreview from "filepond-plugin-image-preview";
 registerPlugin(FilePondPluginImagePreview, FilePondPluginImageExifOrientation);
 
 const Kanbanboard = () => {
@@ -20,8 +20,8 @@ const Kanbanboard = () => {
   const bottomContainerRef = useRef(null);
   const lastContainerRef = useRef(null);
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const dragula = require('dragula');
+    if (typeof window !== "undefined") {
+      const dragula = require("dragula");
       const windowElement = window;
 
       if (leftContainerRef.current && rightContainerRef.current) {
@@ -37,10 +37,10 @@ const Kanbanboard = () => {
         // Your other dragula-related logic here...
 
         if (
-          document.querySelector('.firstdrag')?.classList.contains('task-Null')
+          document.querySelector(".firstdrag")?.classList.contains("task-Null")
         ) {
-          console.log('aaa');
-          document.querySelector('.view-more-button')?.classList.add('d-none');
+          console.log("aaa");
+          document.querySelector(".view-more-button")?.classList.add("d-none");
         }
       }
 
@@ -60,48 +60,48 @@ const Kanbanboard = () => {
     elementsToModify.forEach((elementId) => {
       const element: any = elementId.current;
       if (element?.children.length <= 0) {
-        element?.classList.add('task-Null');
+        element?.classList.add("task-Null");
         element?.parentNode.parentElement.parentElement
-          .querySelector('.view-more-button')
-          ?.classList.add('d-none');
+          .querySelector(".view-more-button")
+          ?.classList.add("d-none");
       } else {
-        element?.classList.remove('task-Null');
+        element?.classList.remove("task-Null");
         element?.parentNode.parentElement.parentElement
-          .querySelector('.view-more-button')
-          ?.classList.remove('d-none');
+          .querySelector(".view-more-button")
+          ?.classList.remove("d-none");
       }
     });
   };
 
   const Option1 = [
-    { value: 'Sort By', label: 'Sort By' },
-    { value: 'Newest', label: 'Newest' },
-    { value: 'Date Added', label: 'Date Added' },
-    { value: 'Type', label: 'Type' },
-    { value: 'A - Z', label: 'A - Z' },
+    { value: "Sort By", label: "Sort By" },
+    { value: "Newest", label: "Newest" },
+    { value: "Date Added", label: "Date Added" },
+    { value: "Type", label: "Type" },
+    { value: "A - Z", label: "A - Z" },
   ];
   const Option2 = [
-    { value: 'Angelina May', label: 'Angelina May' },
-    { value: 'Kiara advain', label: 'Kiara advain' },
-    { value: 'Hercules Jhon', label: 'Hercules Jhon' },
-    { value: 'Mayor Kim', label: 'Mayor Kim' },
+    { value: "Angelina May", label: "Angelina May" },
+    { value: "Kiara advain", label: "Kiara advain" },
+    { value: "Hercules Jhon", label: "Hercules Jhon" },
+    { value: "Mayor Kim", label: "Mayor Kim" },
   ];
   const Option3 = [
-    { value: 'Select Tag', label: 'Select Tag' },
-    { value: 'UI/UX', label: 'UI/UX' },
-    { value: 'Marketing', label: 'Marketing' },
-    { value: 'Finance', label: 'Finance' },
-    { value: 'Designing', label: 'Designing' },
-    { value: 'Admin', label: 'Admin' },
-    { value: 'Authentication', label: 'Authentication' },
-    { value: 'Product', label: 'Product' },
-    { value: 'Development', label: 'Development' },
+    { value: "Select Tag", label: "Select Tag" },
+    { value: "UI/UX", label: "UI/UX" },
+    { value: "Marketing", label: "Marketing" },
+    { value: "Finance", label: "Finance" },
+    { value: "Designing", label: "Designing" },
+    { value: "Admin", label: "Admin" },
+    { value: "Authentication", label: "Authentication" },
+    { value: "Product", label: "Product" },
+    { value: "Development", label: "Development" },
   ];
 
   //Specific time range
 
   const [startTime, setStartTime] = useState(
-    setHours(setMinutes(new Date(), 30), 17),
+    setHours(setMinutes(new Date(), 30), 17)
   );
 
   //filepond
@@ -115,7 +115,7 @@ const Kanbanboard = () => {
   };
   return (
     <div>
-      <Seo title={'Kanban Board'} />
+      <Seo title={"Kanban Board"} />
       <Pageheader
         currentpage="Kanban Board"
         activepage="Tasks"
@@ -207,7 +207,7 @@ const Kanbanboard = () => {
             </div>
           </div>
           <div className="kanban-tasks " id="new-tasks">
-            <PerfectScrollbar style={{ height: '560px' }}>
+            <PerfectScrollbar style={{ height: "560px" }}>
               <div
                 ref={leftContainerRef}
                 onMouseEnter={OnDivChange}
@@ -408,7 +408,7 @@ const Kanbanboard = () => {
                         </h6>
                         <div className="kanban-task-description">
                           Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nulla soluta{' '}
+                          elit. Nulla soluta{" "}
                         </div>
                       </div>
                     </div>
@@ -613,7 +613,7 @@ const Kanbanboard = () => {
             </div>
           </div>
           <div className="kanban-tasks" id="todo-tasks">
-            <PerfectScrollbar style={{ height: '560px' }}>
+            <PerfectScrollbar style={{ height: "560px" }}>
               <div
                 ref={rightContainerRef}
                 id="todo-tasks-draggable"
@@ -685,7 +685,7 @@ const Kanbanboard = () => {
                         </h6>
                         <div className="kanban-task-description">
                           Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nulla soluta{' '}
+                          elit. Nulla soluta{" "}
                         </div>
                       </div>
                     </div>
@@ -894,7 +894,7 @@ const Kanbanboard = () => {
             </div>
           </div>
           <div className="kanban-tasks" id="inprogress-tasks">
-            <PerfectScrollbar style={{ height: '560px' }}>
+            <PerfectScrollbar style={{ height: "560px" }}>
               <div
                 ref={topContainerRef}
                 onMouseEnter={OnDivChange}
@@ -968,7 +968,7 @@ const Kanbanboard = () => {
                         </h6>
                         <div className="kanban-task-description">
                           Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nulla soluta{' '}
+                          elit. Nulla soluta{" "}
                         </div>
                       </div>
                     </div>
@@ -1081,7 +1081,7 @@ const Kanbanboard = () => {
                         </h6>
                         <div className="kanban-task-description">
                           Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nulla soluta{' '}
+                          elit. Nulla soluta{" "}
                         </div>
                       </div>
                     </div>
@@ -1150,7 +1150,7 @@ const Kanbanboard = () => {
             </div>
           </div>
           <div className="kanban-tasks" id="inreview-tasks">
-            <PerfectScrollbar style={{ height: '560px' }}>
+            <PerfectScrollbar style={{ height: "560px" }}>
               <div
                 ref={bottomContainerRef}
                 onMouseEnter={OnDivChange}
@@ -1306,7 +1306,7 @@ const Kanbanboard = () => {
             </div>
           </div>
           <div className="kanban-tasks" id="completed-tasks">
-            <PerfectScrollbar style={{ height: '560px' }}>
+            <PerfectScrollbar style={{ height: "560px" }}>
               <div
                 ref={lastContainerRef}
                 onMouseEnter={OnDivChange}
@@ -1381,7 +1381,7 @@ const Kanbanboard = () => {
                         </h6>
                         <div className="kanban-task-description">
                           Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nulla soluta{' '}
+                          elit. Nulla soluta{" "}
                         </div>
                       </div>
                     </div>
@@ -1497,7 +1497,7 @@ const Kanbanboard = () => {
                         </h6>
                         <div className="kanban-task-description">
                           Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nulla soluta{' '}
+                          elit. Nulla soluta{" "}
                         </div>
                       </div>
                     </div>
@@ -1807,8 +1807,8 @@ const Kanbanboard = () => {
                   <div className="form-group">
                     <div className="input-group !flex-nowrap">
                       <div className="input-group-text text-muted !rounded-e-none">
-                        {' '}
-                        <i className="ri-calendar-line"></i>{' '}
+                        {" "}
+                        <i className="ri-calendar-line"></i>{" "}
                       </div>
                       <DatePicker
                         className="ti-form-input ltr:rounded-l-none rtl:rounded-r-none focus:z-10"
@@ -1856,6 +1856,6 @@ const Kanbanboard = () => {
     </div>
   );
 };
-Kanbanboard.layout = 'Contentlayout';
+Kanbanboard.layout = "Contentlayout";
 
 export default Kanbanboard;

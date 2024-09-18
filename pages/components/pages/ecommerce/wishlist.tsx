@@ -1,10 +1,10 @@
-import { Itemsdata1 } from '@/shared/data/pages/ecommerces/ecommercedata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import { AddToCart, ProductReduxData } from '@/shared/redux/action';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-import { connect } from 'react-redux';
+import { Itemsdata1 } from "@/shared/data/pages/ecommerces/ecommercedata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import { AddToCart, ProductReduxData } from "@/shared/redux/action";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+import { connect } from "react-redux";
 
 const Wishlist = ({ AddToCart }: any) => {
   const [allData, setAllData] = useState(Itemsdata1);
@@ -17,7 +17,7 @@ const Wishlist = ({ AddToCart }: any) => {
   const myfunction = (InputData: string) => {
     let allElement;
     for (allElement of allData) {
-      if (allElement.title[0] == ' ') {
+      if (allElement.title[0] == " ") {
         allElement.title = allElement.title.trim();
       }
       if (allElement.title.toLowerCase().includes(InputData.toLowerCase())) {
@@ -33,7 +33,7 @@ const Wishlist = ({ AddToCart }: any) => {
 
   return (
     <Fragment>
-      <Seo title={'Wishlist'} />
+      <Seo title={"Wishlist"} />
       <Pageheader
         currentpage="Wishlist"
         activepage="Ecommerce"
@@ -44,7 +44,7 @@ const Wishlist = ({ AddToCart }: any) => {
           <div className="box">
             <div className="box-body sm:flex items-center justify-between">
               <div className="text-[.9375rem] mb-0">
-                Total <span className="badge bg-success text-white">12</span>{' '}
+                Total <span className="badge bg-success text-white">12</span>{" "}
                 products are wishlisted
               </div>
               <div className="flex mt-2 sm:mt-0" role="search">
@@ -139,7 +139,7 @@ const Wishlist = ({ AddToCart }: any) => {
                 </div>
               </div>
             ))
-          : ''}
+          : ""}
       </div>
 
       <nav aria-label="Page navigation" className="">
@@ -177,11 +177,11 @@ const Wishlist = ({ AddToCart }: any) => {
     </Fragment>
   );
 };
-Wishlist.layout = 'Contentlayout';
+Wishlist.layout = "Contentlayout";
 
 const mapStateToProps = (state: any) => ({
   local_varaiable: state,
 });
 export default connect(mapStateToProps, { AddToCart, ProductReduxData })(
-  Wishlist,
+  Wishlist
 );

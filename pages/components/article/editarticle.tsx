@@ -1,11 +1,11 @@
-import React, { Fragment, useState } from 'react';
-import dynamic from 'next/dynamic';
-import 'react-quill/dist/quill.snow.css';
-import Seo from '@/shared/layout-components/seo/seo';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
+import React, { Fragment, useState } from "react";
+import dynamic from "next/dynamic";
+import "react-quill/dist/quill.snow.css";
+import Seo from "@/shared/layout-components/seo/seo";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
 
 // Load React Quill dynamically
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 type Author = {
   id: number;
@@ -13,25 +13,25 @@ type Author = {
 };
 
 const authorsList: Author[] = [
-  { id: 1, name: 'John Doe' },
-  { id: 2, name: 'Jane Smith' },
-  { id: 3, name: 'Alex Johnson' },
+  { id: 1, name: "John Doe" },
+  { id: 2, name: "Jane Smith" },
+  { id: 3, name: "Alex Johnson" },
 ];
 
 const EditArticle = () => {
-  const [title, setTitle] = useState('');
-  const [slug, setSlug] = useState('');
-  const [category, setCategory] = useState('');
-  const [content, setContent] = useState('');
-  const [publicationDate, setPublicationDate] = useState('');
-  const [externalLink, setExternalLink] = useState('');
+  const [title, setTitle] = useState("");
+  const [slug, setSlug] = useState("");
+  const [category, setCategory] = useState("");
+  const [content, setContent] = useState("");
+  const [publicationDate, setPublicationDate] = useState("");
+  const [externalLink, setExternalLink] = useState("");
   const [selectedAuthors, setSelectedAuthors] = useState<Author[]>([]); // Proper typing for authors
-  const [excerpt, setExcerpt] = useState('');
+  const [excerpt, setExcerpt] = useState("");
   const [featured, setFeatured] = useState(false);
 
   // Slug generation logic
   const handleSlugGeneration = () => {
-    setSlug(title.toLowerCase().replace(/\s+/g, '-'));
+    setSlug(title.toLowerCase().replace(/\s+/g, "-"));
   };
 
   // Handle selecting an author
@@ -46,13 +46,13 @@ const EditArticle = () => {
   // Handle removing an author
   const removeAuthor = (authorId: number) => {
     setSelectedAuthors(
-      selectedAuthors.filter((author) => author.id !== authorId),
+      selectedAuthors.filter((author) => author.id !== authorId)
     );
   };
 
   return (
     <Fragment>
-      <Seo title={'Article Management'} />
+      <Seo title={"Article Management"} />
       <Pageheader
         currentpage="Edit Article"
         activepage="Dashboards"
@@ -246,5 +246,5 @@ const EditArticle = () => {
   );
 };
 
-EditArticle.layout = 'Contentlayout';
+EditArticle.layout = "Contentlayout";
 export default EditArticle;

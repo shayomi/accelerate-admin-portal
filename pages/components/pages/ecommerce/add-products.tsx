@@ -7,17 +7,17 @@ import {
   Addproduct5,
   Addproduct6,
   Addproduct7,
-} from '@/shared/data/pages/ecommerce/addproductsdata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import React, { Fragment, useState } from 'react';
-const Select = dynamic(() => import('react-select'), { ssr: false });
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
-import { FilePond, registerPlugin } from 'react-filepond';
-import DatePicker from 'react-datepicker';
-import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
-import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
+} from "@/shared/data/pages/ecommerce/addproductsdata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import React, { Fragment, useState } from "react";
+const Select = dynamic(() => import("react-select"), { ssr: false });
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+import { FilePond, registerPlugin } from "react-filepond";
+import DatePicker from "react-datepicker";
+import FilePondPluginImageExifOrientation from "filepond-plugin-image-exif-orientation";
+import FilePondPluginImagePreview from "filepond-plugin-image-preview";
 registerPlugin(FilePondPluginImagePreview, FilePondPluginImageExifOrientation);
 
 const Addproducts = () => {
@@ -34,7 +34,7 @@ const Addproducts = () => {
 
   return (
     <Fragment>
-      <Seo title={'Add Products'} />
+      <Seo title={"Add Products"} />
       <Pageheader
         currentpage="Add Products"
         activepage="Ecommrece"
@@ -255,10 +255,10 @@ const Addproducts = () => {
                         <FilePond
                           className="basic-filepond"
                           accepted-file-types={[
-                            'application/pdf',
-                            'image/png',
-                            'image/jpeg',
-                            'image/gif',
+                            "application/pdf",
+                            "image/png",
+                            "image/jpeg",
+                            "image/gif",
                           ]}
                           server="/api"
                           allowReorder={true}
@@ -277,7 +277,7 @@ const Addproducts = () => {
                         images should be uniformly maintained with width and
                         height to the image container,image size should not
                         exceed 2MB,once uploaded to change the image you need to
-                        wait minimum of 24hrs.{' '}
+                        wait minimum of 24hrs.{" "}
                       </label>
                       <div className="xl:col-span-12 col-span-12 product-documents-container">
                         <p className="font-semibold mb-2 text-[0.875rem]">
@@ -381,6 +381,6 @@ const Addproducts = () => {
     </Fragment>
   );
 };
-Addproducts.layout = 'Contentlayout';
+Addproducts.layout = "Contentlayout";
 
 export default Addproducts;

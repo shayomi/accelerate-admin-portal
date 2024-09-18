@@ -1,13 +1,13 @@
 import {
   Tabledata,
   TransactionsStatistics,
-} from '@/shared/data/apps/crypto/transactiondata';
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-const CountUp = dynamic(() => import('react-countup'), { ssr: false });
+} from "@/shared/data/apps/crypto/transactiondata";
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+const CountUp = dynamic(() => import("react-countup"), { ssr: false });
 
 const Transactions = () => {
   const [allData, setAllData] = useState(Tabledata);
@@ -20,7 +20,7 @@ const Transactions = () => {
   const myfunction = (InputData: string) => {
     let allElement;
     for (allElement of allData) {
-      if (allElement.name[0] == ' ') {
+      if (allElement.name[0] == " ") {
         allElement.name = allElement.name.trim();
       }
       if (allElement.name.toLowerCase().includes(InputData.toLowerCase())) {
@@ -34,7 +34,7 @@ const Transactions = () => {
 
   return (
     <Fragment>
-      <Seo title={'Transactions'} />
+      <Seo title={"Transactions"} />
       <Pageheader
         currentpage="Transactions"
         activepage="Crypto"
@@ -286,7 +286,7 @@ const Transactions = () => {
                       <div>
                         <h4 className="text-[1.125rem] font-semibold mb-2">
                           <span className="count-up" data-count="42">
-                            {' '}
+                            {" "}
                             <CountUp end={42} start={0} duration={4.94} />
                           </span>
                           <span className="text-[#8c9097] dark:text-white/50 ltr:float-right rtl:float-left text-[.6875rem] font-normal">
@@ -324,7 +324,7 @@ const Transactions = () => {
                     <div>
                       <h4 className="text-[1.125rem] font-semibold mb-2">
                         <span className="count-up" data-count="319">
-                          {' '}
+                          {" "}
                           <CountUp end={320} start={0} duration={4.94} />
                         </span>
                         <span className="text-[#8c9097] dark:text-white/50 ltr:float-right rtl:float-left text-[.6875rem] font-normal">
@@ -362,7 +362,7 @@ const Transactions = () => {
                     <div>
                       <h4 className="text-[1.125rem] font-semibold mb-2">
                         <span className="count-up" data-count="81">
-                          {' '}
+                          {" "}
                           <CountUp end={82} start={0} duration={4.94} />
                         </span>
                         <span className="text-[#8c9097] dark:text-white/50 ltr:float-right rtl:float-left text-[.6875rem] font-normal">
@@ -400,7 +400,7 @@ const Transactions = () => {
                     <div>
                       <h4 className="text-[1.125rem] font-semibold mb-2">
                         <span className="count-up" data-count="32">
-                          {' '}
+                          {" "}
                           <CountUp end={33} start={0} duration={4.94} />
                         </span>
                         <span className="text-[#8c9097] dark:text-white/50 ltr:float-right rtl:float-left text-[.6875rem] font-normal">
@@ -419,7 +419,7 @@ const Transactions = () => {
                 </div>
                 <div className="p-6 pb-2">
                   <p className="text-[.9375rem] font-semibold">
-                    Transactions Statistics{' '}
+                    Transactions Statistics{" "}
                     <span className="text-[#8c9097] dark:text-white/50 font-normal">
                       (Last 6 months) :
                     </span>
@@ -436,6 +436,6 @@ const Transactions = () => {
     </Fragment>
   );
 };
-Transactions.layout = 'Contentlayout';
+Transactions.layout = "Contentlayout";
 
 export default Transactions;

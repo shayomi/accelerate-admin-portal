@@ -1,20 +1,20 @@
-import Pageheader from '@/shared/layout-components/page-header/pageheader';
-import Seo from '@/shared/layout-components/seo/seo';
-import React, { Fragment } from 'react';
-import Slider, { SliderThumb } from '@mui/material/Slider';
-import Box from '@mui/material/Box';
+import Pageheader from "@/shared/layout-components/page-header/pageheader";
+import Seo from "@/shared/layout-components/seo/seo";
+import React, { Fragment } from "react";
+import Slider, { SliderThumb } from "@mui/material/Slider";
+import Box from "@mui/material/Box";
 import LabeledTwoThumbs, {
   Marks,
-} from '@/shared/data/forms/form-elements/rangesliderdata';
-import { connect } from 'react-redux';
-import Showcode from '@/shared/layout-components/showcode/showcode';
+} from "@/shared/data/forms/form-elements/rangesliderdata";
+import { connect } from "react-redux";
+import Showcode from "@/shared/layout-components/showcode/showcode";
 import {
   range1,
   range2,
   range3,
   range4,
-} from '@/shared/data/prism/forms-prism';
-import { styled } from '@mui/material/styles';
+} from "@/shared/data/prism/forms-prism";
+import { styled } from "@mui/material/styles";
 
 const Rangeslider = ({ local_varaiable }: any) => {
   function valuetext(value: any) {
@@ -22,31 +22,31 @@ const Rangeslider = ({ local_varaiable }: any) => {
   }
 
   const AirbnbSlider = styled(Slider)(({ theme }) => ({
-    color: '#3a8589',
+    color: "#3a8589",
     height: 3,
-    padding: '13px 0',
-    '& .MuiSlider-thumb': {
+    padding: "13px 0",
+    "& .MuiSlider-thumb": {
       height: 27,
       width: 27,
-      backgroundColor: '#fff',
-      border: '1px solid currentColor',
-      '&:hover': {
-        boxShadow: '0 0 0 8px rgba(58, 133, 137, 0.16)',
+      backgroundColor: "#fff",
+      border: "1px solid currentColor",
+      "&:hover": {
+        boxShadow: "0 0 0 8px rgba(58, 133, 137, 0.16)",
       },
-      '& .airbnb-bar': {
+      "& .airbnb-bar": {
         height: 9,
         width: 1,
-        backgroundColor: 'currentColor',
+        backgroundColor: "currentColor",
         marginLeft: 1,
         marginRight: 1,
       },
     },
-    '& .MuiSlider-track': {
+    "& .MuiSlider-track": {
       height: 3,
     },
-    '& .MuiSlider-rail': {
-      color: theme.palette.mode === 'dark' ? '#bfbfbf' : '#d8d8d8',
-      opacity: theme.palette.mode === 'dark' ? undefined : 1,
+    "& .MuiSlider-rail": {
+      color: theme.palette.mode === "dark" ? "#bfbfbf" : "#d8d8d8",
+      opacity: theme.palette.mode === "dark" ? undefined : 1,
       height: 3,
     },
   }));
@@ -65,7 +65,7 @@ const Rangeslider = ({ local_varaiable }: any) => {
 
   return (
     <Fragment>
-      <Seo title={'Range Slider'} />
+      <Seo title={"Range Slider"} />
       <Pageheader
         currentpage="Range Slider"
         activepage="Form Elements"
@@ -124,7 +124,7 @@ const Rangeslider = ({ local_varaiable }: any) => {
                 <AirbnbSlider
                   slots={{ thumb: AirbnbThumbComponent }}
                   getAriaLabel={(index) =>
-                    index === 0 ? 'Minimum price' : 'Maximum price'
+                    index === 0 ? "Minimum price" : "Maximum price"
                   }
                   defaultValue={[10, 90]}
                 />
@@ -142,7 +142,7 @@ const Rangeslider = ({ local_varaiable }: any) => {
                 <AirbnbSlider
                   slots={{ thumb: AirbnbThumbComponent }}
                   getAriaLabel={(index) =>
-                    index === 0 ? 'Minimum price' : 'Maximum price'
+                    index === 0 ? "Minimum price" : "Maximum price"
                   }
                   defaultValue={[10, 90]}
                 />
@@ -181,7 +181,7 @@ const Rangeslider = ({ local_varaiable }: any) => {
                   aria-label="Temperature"
                   defaultValue={30}
                   color="primary"
-                  style={{ margin: 'auto', width: '50%' }}
+                  style={{ margin: "auto", width: "50%" }}
                 />
               </div>
             </div>
@@ -196,7 +196,7 @@ const Rangeslider = ({ local_varaiable }: any) => {
             </div>
             <div className="box-body !pb-[3rem]">
               <div id="slider-pips">
-                <LabeledTwoThumbs rtl={local_varaiable.dir == 'rtl'} />
+                <LabeledTwoThumbs rtl={local_varaiable.dir == "rtl"} />
               </div>
             </div>
           </div>
@@ -208,7 +208,7 @@ const Rangeslider = ({ local_varaiable }: any) => {
             </div>
             <div className="box-body !pb-[3rem]">
               <div id="soft">
-                <Marks rtl={local_varaiable.dir == 'rtl'} />
+                <Marks rtl={local_varaiable.dir == "rtl"} />
               </div>
             </div>
           </div>
@@ -322,7 +322,7 @@ const Rangeslider = ({ local_varaiable }: any) => {
     </Fragment>
   );
 };
-Rangeslider.layout = 'Contentlayout';
+Rangeslider.layout = "Contentlayout";
 
 const mapStateToProps = (state: any) => ({
   local_varaiable: state,
