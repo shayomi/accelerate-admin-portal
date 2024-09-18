@@ -45,6 +45,7 @@
     "no-dupe-class-members": "off",
     "react/no-unknown-property": "off",
     "no-unused-vars": "off",
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "no-mixed-spaces-and-tabs": "off" 
   }
 }
