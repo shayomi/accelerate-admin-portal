@@ -128,7 +128,7 @@ const ColorPicker = (
 };
 
 function hexToRgb(hex: string) {
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
         r: parseInt(result[1], 16),
@@ -141,7 +141,7 @@ function hexToRgb(hex: string) {
 const Themeprimarycolor = ({ theme, actionfunction }: any) => {
   const [state, updateState] = useState('#FFFFFF');
   const handleInput = (e: any) => {
-    let { r, g, b }: any = hexToRgb(e.target.value);
+    const { r, g, b }: any = hexToRgb(e.target.value);
     updateState(e.target.value);
     actionfunction({
       ...theme,

@@ -1,6 +1,6 @@
 import { Itemsdata1 } from '../data/pages/ecommerces/ecommercedata';
 
-let initialState = {
+const initialState = {
   lang: 'en',
   dir: 'ltr',
   class: 'light',
@@ -220,7 +220,7 @@ let initialState = {
 };
 
 export default function reducer(state = initialState, action: any) {
-  let { type, payload } = action;
+  const { type, payload } = action;
 
   switch (type) {
     case 'ThemeChanger':

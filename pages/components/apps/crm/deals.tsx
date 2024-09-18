@@ -40,7 +40,7 @@ const Deals = () => {
   };
 
   useEffect(() => {
-    let contactItem = document.querySelectorAll(".main-contact-item");
+    const contactItem = document.querySelectorAll(".main-contact-item");
     contactItem.forEach((ele) => {
       ele.addEventListener("click", () => {
         setClassName("main-content-body-show");

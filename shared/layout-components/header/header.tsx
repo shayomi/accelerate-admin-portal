@@ -161,7 +161,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
     setNotifications(updatedNotifications);
   };
 
-  let [storedata, SetStoreData] = useState(local_varaiable);
+  const [storedata, SetStoreData] = useState(local_varaiable);
 
   //full screen
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -248,10 +248,10 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
 
   const toggleSidebar = () => {
     const theme = store.getState();
-    let sidemenuType = theme.dataNavLayout;
+    const sidemenuType = theme.dataNavLayout;
     if (window.innerWidth >= 992) {
       if (sidemenuType === 'vertical') {
-        let verticalStyle = theme.dataVerticalStyle;
+        const verticalStyle = theme.dataVerticalStyle;
         const navStyle = theme.dataNavStyle;
         switch (verticalStyle) {
           // closed
@@ -294,7 +294,7 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
             if (theme.dataToggled === 'double-menu-open') {
               ThemeChanger({ ...theme, dataToggled: 'double-menu-close' });
             } else {
-              let sidemenu = document.querySelector('.side-menu__item.active');
+              const sidemenu = document.querySelector('.side-menu__item.active');
               if (sidemenu) {
                 ThemeChanger({ ...theme, dataToggled: 'double-menu-open' });
                 if (sidemenu.nextElementSibling) {

@@ -30,7 +30,7 @@ const Chat = () => {
       ele.innerText = name;
     });
 
-    let image = `../../../../assets/images/faces/${img}.jpg`;
+    const image = `../../../../assets/images/faces/${img}.jpg`;
     document.querySelectorAll(".chatimageperson").forEach((ele: any) => {
       ele.src = image;
     });

@@ -49,13 +49,13 @@ const Firebaselogin = () => {
 		}
 	};
 
-	let navigate = useRouter();
+	const navigate = useRouter();
 	const RouteChange = () => {
-		let path = "/dashboard";
+		const path = "/dashboard";
 		navigate.push(path);
 	};
 
-	let loader = (
+	const loader = (
 		<div role="status">
 			{" "}
 			<svg

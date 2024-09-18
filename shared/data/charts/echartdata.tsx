@@ -582,7 +582,7 @@ export function Waterfallechart() {
         type: 'shadow',
       },
       formatter: function (params: any[]) {
-        var tar = params[1];
+        const tar = params[1];
         return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;
       },
     },
@@ -734,8 +734,8 @@ export function Negativeechart() {
 
   return <ReactEcharts className="chartsh" option={option} />;
 }
-var app: any = {};
-var option;
+const app: any = {};
+let option;
 const posList = [
   'left',
   'right',
@@ -1520,11 +1520,11 @@ export function Basicradarechart() {
 // Heatmapechart Chart
 function getVirtulData(year: string) {
   year = year || '2017';
-  var date = +echarts.number.parseDate(year + '-01-01');
-  var end = +echarts.number.parseDate(+year + 1 + '-01-01');
-  var dayTime = 3600 * 24 * 1000;
-  var data = [];
-  for (var time = date; time < end; time += dayTime) {
+  const date = +echarts.number.parseDate(year + '-01-01');
+  const end = +echarts.number.parseDate(+year + 1 + '-01-01');
+  const dayTime = 3600 * 24 * 1000;
+  const data = [];
+  for (let time = date; time < end; time += dayTime) {
     data.push([
       echarts.format.formatTime('yyyy-MM-dd', time),
       Math.floor(Math.random() * 10000),

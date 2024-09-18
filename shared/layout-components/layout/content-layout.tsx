@@ -33,7 +33,7 @@ const ContentLayout = ({ children }: any) => {
       setMyClass('');
     }
     if (window.innerWidth > 992) {
-      let html = document.documentElement;
+      const html = document.documentElement;
       if (html.getAttribute('icon-overlay') === 'open') {
         html.setAttribute('icon-overlay', '');
       }

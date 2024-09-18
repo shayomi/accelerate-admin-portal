@@ -3,7 +3,7 @@ import Head from 'next/head';
 import favicon from '../../../public/assets/images/brand-logos/favicon.ico';
 
 const Seo = ({ title }: any) => {
-  let i = `Ynex - ${title}`;
+  const i = `Ynex - ${title}`;
 
   return (
     <Head>

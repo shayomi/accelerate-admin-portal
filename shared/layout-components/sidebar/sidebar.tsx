@@ -463,7 +463,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
     if (!pathname) return; // If pathname is null, exit early
 
     // Update the menu based on the current pathname
-    let currentPath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+    const currentPath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
     if (currentPath !== previousUrl) {
       setMenuUsingUrl(currentPath);
       setPreviousUrl(currentPath);
@@ -476,7 +476,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
     MenuItems = menuitems,
   ) {
     const theme = store.getState();
-    let element = event.target;
+    const element = event.target;
 
     // if ((window.screen.availWidth <= 992 || theme.dataNavStyle != "icon-hover") && (window.screen.availWidth <= 992 || theme.dataNavStyle != "menu-hover")) {
     if (
@@ -539,7 +539,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
           }
           if (siblingUL) {
             // You've found the sibling <ul> element
-            let siblingULRect = listItem.getBoundingClientRect();
+            const siblingULRect = listItem.getBoundingClientRect();
             if (theme.dir == 'rtl') {
               if (
                 siblingULRect.left - siblingULRect.width - outterUlWidth + 150 <
@@ -567,7 +567,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
             }
           }
           setTimeout(() => {
-            let computedValue = siblingUL.getBoundingClientRect();
+            const computedValue = siblingUL.getBoundingClientRect();
             if (computedValue.bottom > window.innerHeight) {
               siblingUL.style.height =
                 window.innerHeight - computedValue.top - 8 + 'px';
@@ -626,7 +626,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
 
   const Sideclick = () => {
     if (window.innerWidth > 992) {
-      let html = document.documentElement;
+      const html = document.documentElement;
       if (html.getAttribute('icon-overlay') != 'open') {
         html.setAttribute('icon-overlay', 'open');
       }

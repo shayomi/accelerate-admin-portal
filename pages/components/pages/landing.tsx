@@ -61,12 +61,12 @@ const Landing = ({ local_varaiable, ThemeChanger }: any) => {
   useEffect(() => {
     const landingpages = () => {
       if (window.scrollY > 30 && document.querySelector(".app-sidebar")) {
-        let Scolls = document?.querySelectorAll(".sticky");
+        const Scolls = document?.querySelectorAll(".sticky");
         Scolls.forEach((e) => {
           e.classList.add("sticky-pin");
         });
       } else {
-        let Scolls = document?.querySelectorAll(".sticky");
+        const Scolls = document?.querySelectorAll(".sticky");
         Scolls.forEach((e) => {
           e.classList.remove("sticky-pin");
         });

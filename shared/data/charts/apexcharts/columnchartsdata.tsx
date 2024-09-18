@@ -1279,9 +1279,9 @@ export class Loaded extends Component<{}, spark3> {
           type: 'bar',
           events: {
             dataPointSelection: function (_e, chart, opts: any) {
-              var quarterChartEl: any =
+              const quarterChartEl: any =
                 document.querySelector('#chart-quarter');
-              var yearChartEl: any = document.querySelector('#chart-year');
+              const yearChartEl: any = document.querySelector('#chart-year');
 
               if (opts.selectedDataPoints[0].length === 1) {
                 if (quarterChartEl.classList.contains('active')) {

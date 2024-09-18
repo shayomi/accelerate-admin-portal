@@ -276,13 +276,13 @@ export const Closedmenu = (actionfunction: any) => {
   localStorage.setItem('ynexverticalstyles', 'closed');
 };
 function icontextOpenFn() {
-  let html = document.documentElement;
+  const html = document.documentElement;
   if (html.getAttribute('data-toggled') === 'icon-text-close') {
     html.setAttribute('icon-text', 'open');
   }
 }
 function icontextCloseFn() {
-  let html = document.documentElement;
+  const html = document.documentElement;
   if (html.getAttribute('data-toggled') === 'icon-text-close') {
     html.removeAttribute('icon-text');
   }
@@ -319,7 +319,7 @@ export const iconOverayFn = (actionfunction: any) => {
   });
   localStorage.setItem('ynexverticalstyles', 'overlay');
 
-  var icon = document.getElementById(
+  const icon = document.getElementById(
     'switcher-icon-overlay',
   ) as HTMLInputElement;
   if (icon) {
@@ -337,7 +337,7 @@ export const iconOverayFn = (actionfunction: any) => {
 };
 function DetachedOpenFn() {
   if (window.innerWidth > 992) {
-    let html = document.documentElement;
+    const html = document.documentElement;
     if (
       html.getAttribute('data-toggled') === 'detached-close' ||
       html.getAttribute('data-toggled') === 'icon-overlay-close'
@@ -348,7 +348,7 @@ function DetachedOpenFn() {
 }
 function DetachedCloseFn() {
   if (window.innerWidth > 992) {
-    let html = document.documentElement;
+    const html = document.documentElement;
     if (
       html.getAttribute('data-toggled') === 'detached-close' ||
       html.getAttribute('data-toggled') === 'icon-overlay-close'
@@ -651,7 +651,7 @@ const ColorPicker = (
 };
 
 function hexToRgb(hex: string) {
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
         r: parseInt(result[1], 16),
@@ -665,7 +665,7 @@ const Themeprimarycolor = ({ actionfunction }: any) => {
   const theme = store.getState();
   const [state, updateState] = useState('#FFFFFF');
   const handleInput = (e: any) => {
-    let { r, g, b }: any = hexToRgb(e.target.value);
+    const { r, g, b }: any = hexToRgb(e.target.value);
     updateState(e.target.value);
     actionfunction({
       ...theme,
@@ -688,7 +688,7 @@ export const Themebackgroundcolor = ({ actionfunction }: any) => {
   const theme = store.getState();
   const [state, updateState] = useState('#FFFFFF');
   const handleInput = (e: any) => {
-    let { r, g, b }: any = hexToRgb(e.target.value);
+    const { r, g, b }: any = hexToRgb(e.target.value);
     updateState(e.target.value);
     actionfunction({
       ...theme,
@@ -997,11 +997,11 @@ export const LocalStorageBackup = (actionfunction: any) => {
   }
 
   if (localStorage.ynexverticalstyles) {
-    let verticalStyles = localStorage.getItem('ynexverticalstyles');
+    const verticalStyles = localStorage.getItem('ynexverticalstyles');
 
     switch (verticalStyles) {
       case 'default':
-        let defaultid = document.getElementById(
+        const defaultid = document.getElementById(
           'switcher-default-menu',
         ) as HTMLInputElement;
         defaultid.checked = true;
@@ -1009,7 +1009,7 @@ export const LocalStorageBackup = (actionfunction: any) => {
 
         break;
       case 'closed':
-        let closedid = document.getElementById(
+        const closedid = document.getElementById(
           'switcher-icontext-menu',
         ) as HTMLInputElement;
         closedid.checked = true;
@@ -1017,7 +1017,7 @@ export const LocalStorageBackup = (actionfunction: any) => {
 
         break;
       case 'icontext':
-        let icontextid = document.getElementById(
+        const icontextid = document.getElementById(
           'switcher-icontext-menu',
         ) as HTMLInputElement;
         icontextid.checked = true;
@@ -1025,7 +1025,7 @@ export const LocalStorageBackup = (actionfunction: any) => {
 
         break;
       case 'overlay':
-        let overlayid = document.getElementById(
+        const overlayid = document.getElementById(
           'switcher-detached',
         ) as HTMLInputElement;
         overlayid.checked = true;
@@ -1033,7 +1033,7 @@ export const LocalStorageBackup = (actionfunction: any) => {
 
         break;
       case 'detached':
-        let detachedid = document.getElementById(
+        const detachedid = document.getElementById(
           'switcher-detached',
         ) as HTMLInputElement;
         detachedid.checked = true;
@@ -1041,7 +1041,7 @@ export const LocalStorageBackup = (actionfunction: any) => {
 
         break;
       case 'doublemenu':
-        let doubleMenuid = document.getElementById(
+        const doubleMenuid = document.getElementById(
           'switcher-double-menu',
         ) as HTMLInputElement;
         doubleMenuid.checked = true;
@@ -1050,7 +1050,7 @@ export const LocalStorageBackup = (actionfunction: any) => {
         break;
 
       default:
-        let defaultbutton = document.getElementById(
+        const defaultbutton = document.getElementById(
           'switcher-default-menu',
         ) as HTMLInputElement;
         defaultbutton.checked = true;
@@ -1069,7 +1069,7 @@ export const LocalStorageBackup = (actionfunction: any) => {
   }
   //Theme BAckground:
   if (localStorage.bodyBgRGB) {
-    let updateddarkBg = `${Number(localStorage.bodyBgRGB.split(' ')[0]) + 14} ${Number(localStorage.bodyBgRGB.split(' ')[1]) + 14} ${Number(localStorage.bodyBgRGB.split(' ')[2]) + 14}`;
+    const updateddarkBg = `${Number(localStorage.bodyBgRGB.split(' ')[0]) + 14} ${Number(localStorage.bodyBgRGB.split(' ')[1]) + 14} ${Number(localStorage.bodyBgRGB.split(' ')[2]) + 14}`;
     const theme = store.getState();
     actionfunction({
       ...theme,

@@ -56,7 +56,7 @@ const Modalsearch = () => {
         });
       }
     });
-    for (let allElement of i) {
+    for (const allElement of i) {
       if (allElement.title.toLowerCase().includes(inputvalue.toLowerCase())) {
         if (
           allElement.title.toLowerCase().startsWith(inputvalue.toLowerCase())

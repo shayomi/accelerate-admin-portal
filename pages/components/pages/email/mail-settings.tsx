@@ -27,7 +27,7 @@ const Mailsettings = () => {
   //Default image
   const [Image, setImage] = useState("../../../../assets/images/faces/9.jpg");
 
-  let location = useRouter();
+  const location = useRouter();
 
   const putImage = () => {
     setImage(ProfileService.returnImage());
@@ -55,7 +55,7 @@ const Mailsettings = () => {
     if (ProfileService.returnImage() != undefined) {
       setImage(ProfileService.returnImage());
     }
-    let contactItem = document.querySelectorAll(".main-contact-item");
+    const contactItem = document.querySelectorAll(".main-contact-item");
     contactItem.forEach((ele) => {
       ele.addEventListener("click", () => {
         setClassName("main-content-body-show");
