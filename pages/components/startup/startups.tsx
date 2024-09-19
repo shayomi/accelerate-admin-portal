@@ -3,6 +3,7 @@ import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import Link from "next/link";
 import React, { Fragment } from "react";
+import { FaEye } from "react-icons/fa";
 
 const Startups = () => {
   return (
@@ -81,6 +82,15 @@ const Startups = () => {
               <table className="table min-w-full whitespace-nowrap table-hover border table-bordered">
                 <thead>
                   <tr className="border border-inherit border-solid dark:border-defaultborder/10">
+                    <th scope="row" className="!ps-4 !pe-5">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        id="checkboxNoLabel1"
+                        value=""
+                        aria-label="..."
+                      />
+                    </th>
                     <th
                       scope="col"
                       className="!text-start !text-[0.85rem] min-w-[200px]"
@@ -111,6 +121,15 @@ const Startups = () => {
                       className="border border-inherit border-solid hover:bg-gray-100 dark:border-defaultborder/10 dark:hover:bg-light"
                       key={startup.id}
                     >
+                      <th scope="row" className="!ps-4 !pe-5">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="checkboxNoLabel1"
+                          value=""
+                          aria-label="..."
+                        />
+                      </th>
                       <td>{startup.companyName}</td>
                       <td>{startup.industries}</td>
                       <td>{startup.cohort}</td>
@@ -123,7 +142,7 @@ const Startups = () => {
                         className={
                           startup.status === "Active"
                             ? "text-green"
-                            : "text-yellow"
+                            : "text-red"
                         }
                       >
                         {startup.status}
@@ -131,10 +150,9 @@ const Startups = () => {
 
                       <td>
                         <div className="flex flex-row gap-2">
-                          <button className="text-primary hover:underline">
+                          <button className=" hover:underline">
                             <Link href={`/startup/startups/${startup.id}`}>
-                              {" "}
-                              View
+                              <FaEye size={20} />
                             </Link>
                           </button>
                         </div>
@@ -145,42 +163,39 @@ const Startups = () => {
               </table>
             </div>
           </div>
-          <div className="box-footer">
-            <div className="sm:flex items-center">
-              <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-                Showing 5 Entries{" "}
-                <i className="bi bi-arrow-right ms-2 font-semibold"></i>
-              </div>
-              <div className="ms-auto">
-                <nav
-                  aria-label="Page navigation"
-                  className="pagination-style-4"
-                >
-                  <ul className="ti-pagination mb-0">
-                    <li className="page-item disabled">
-                      <Link className="page-link" href="#!">
-                        Prev
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link className="page-link active" href="#!">
-                        1
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link className="page-link" href="#!">
-                        2
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link className="page-link !text-primary" href="#!">
-                        next
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div className="box-footer">
+        <div className="sm:flex items-center">
+          <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
+            Showing 5 Entries{" "}
+            <i className="bi bi-arrow-right ms-2 font-semibold"></i>
+          </div>
+          <div className="ms-auto">
+            <nav aria-label="Page navigation" className="pagination-style-4">
+              <ul className="ti-pagination mb-0">
+                <li className="page-item disabled">
+                  <Link className="page-link" href="#!">
+                    Prev
+                  </Link>
+                </li>
+                <li className="page-item">
+                  <Link className="page-link active" href="#!">
+                    1
+                  </Link>
+                </li>
+                <li className="page-item">
+                  <Link className="page-link" href="#!">
+                    2
+                  </Link>
+                </li>
+                <li className="page-item">
+                  <Link className="page-link !text-primary" href="#!">
+                    next
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

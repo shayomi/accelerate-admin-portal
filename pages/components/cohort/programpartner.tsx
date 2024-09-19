@@ -2,6 +2,7 @@ import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Link from "next/link";
 import React, { Fragment } from "react";
 import { partners } from "./partnerdata";
+import { FaEye, FaPencilAlt } from "react-icons/fa";
 
 const ProgramPartner = () => {
   return (
@@ -21,51 +22,62 @@ const ProgramPartner = () => {
           </div>
 
           <div className="box-body overflow-x-auto">
-            <table className="table min-w-full">
+            <table className="table min-w-full whitespace-nowrap table-hover border table-bordered">
               <thead className="">
                 <tr>
-                  <th className="px-6 py-3 text-left text-sm font-medium  uppercase tracking-wider">
-                    Name
+                  <th scope="row" className="!ps-4 !pe-5">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
                   </th>
-                  <th className="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider">
-                    Type
-                  </th>
-                  <th className="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider">
-                    Status
-                  </th>
-                  <th className="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider">
-                    Actions
-                  </th>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y ">
                 {partners.map((partner) => (
-                  <tr key={partner.id}>
-                    <td className="px-6 py-4 whitespace-nowrap text-black/50 hs-dark-mode-active:text-white">
+                  <tr
+                    key={partner.id}
+                    className="border border-inherit border-solid hover:bg-gray-100 dark:border-defaultborder/10 dark:hover:bg-light"
+                  >
+                    <th scope="row" className="!ps-4 !pe-5">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        value=""
+                        aria-label="..."
+                      />
+                    </th>
+                    <td className="px-6 py-4 whitespace-nowrap">
                       {partner.name}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-black/50 hs-dark-mode-active:text-white">
+                    <td className="px-6 py-4 whitespace-nowrap">
                       {partner.type}
                     </td>
                     <td
                       className={
                         partner.status === "Active"
                           ? "text-green"
-                          : "text-yellow"
+                          : "text-danger"
                       }
                     >
                       {partner.status}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-black/50">
-                      <div className="flex gap-4">
-                        <button className="bg-transparent border-[1px] border-primary hs-dark-mode-active:bg-white hs-dark-mode-active:border-none  text-primary  px-3 py-1.5 rounded-md">
+                    <td className="px-6 py-4 whitespace-nowra">
+                      <div className="flex gap-6 items-center">
+                        <button className="">
                           <Link href={`/cohort/partner/${partner.id}`}>
-                            View
+                            <FaEye size={20} />
                           </Link>
                         </button>
-                        <button className="text-primary hover:underline">
+                        <button className="text-danger">
                           <Link href={`/cohort/partner/edit/${partner.id}`}>
-                            Edit
+                            <FaPencilAlt size={20} />
                           </Link>
                         </button>
                       </div>

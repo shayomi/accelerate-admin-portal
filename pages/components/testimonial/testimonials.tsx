@@ -3,6 +3,7 @@ import Seo from "@/shared/layout-components/seo/seo";
 import Link from "next/link";
 import React, { Fragment } from "react";
 import { TestimonialList } from "./testimonaildata";
+import { FaEye, FaPencilAlt } from "react-icons/fa";
 
 const Testimonials = () => {
   return (
@@ -32,6 +33,14 @@ const Testimonials = () => {
             <table className="table min-w-full whitespace-nowrap table-hover border table-bordered">
               <thead>
                 <tr className="border border-inherit border-solid dark:border-defaultborder/10">
+                  <th scope="row" className="!ps-4 !pe-5">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                  </th>
                   <th
                     scope="col"
                     className="!text-start !text-[0.85rem] min-w-[200px]"
@@ -52,6 +61,14 @@ const Testimonials = () => {
                     className="border border-inherit border-solid hover:bg-gray-100 dark:border-defaultborder/10 dark:hover:bg-light"
                     key={testimonial.id}
                   >
+                    <th scope="row" className="!ps-4 !pe-5">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        value=""
+                        aria-label="..."
+                      />
+                    </th>
                     <td className="text-sm">{testimonial.name}</td>
                     <td className="text-sm">
                       <Link
@@ -63,16 +80,18 @@ const Testimonials = () => {
                       </Link>
                     </td>
                     <td>
-                      <div className="flex flex-row gap-4 items-center">
+                      <div className="flex flex-row gap-6 items-center">
                         <Link
                           href={`components/testimonial-management/testimonial/${testimonial.id}`}
                         >
-                          <button className="border-[1px] border-primary hs-dark-mode-active:bg-[#ffffff] hs-dark-mode-active:border-none text-primary bg-transparent px-3 py-1.5 rounded-md">
-                            View
+                          <button className="">
+                            <FaEye size={20} />
                           </button>
                         </Link>
                         <Link href={`/testimonials/edit/${testimonial.id}`}>
-                          <button className="text-primary">Edit</button>
+                          <button className="text-primary">
+                            <FaPencilAlt size={20} />
+                          </button>
                         </Link>
                       </div>
                     </td>

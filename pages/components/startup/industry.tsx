@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Link from "next/link";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
+import { FaPencilAlt, FaTrash } from "react-icons/fa";
 
 // Industry data with 5 entries
 export const IndustriesList = [
@@ -104,17 +105,17 @@ const Industry = () => {
                           aria-label="..."
                         />
                       </th>
-                      <td>{industry.name}</td>
+                      <td className="px-4 py-2 text-sm">{industry.name}</td>
                       <td>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-row items-center gap-8">
                           <Link href={`/startup/industry/edit/${industry.id}`}>
-                            <button className="bg-yellow text-black rounded-md px-4 py-2 ">
-                              Edit
+                            <button className="">
+                              <FaPencilAlt size={20} />
                             </button>
                           </Link>
 
-                          <button className="text-primary hover:underline">
-                            Delete
+                          <button className="text-red">
+                            <FaTrash size={20} />
                           </button>
                         </div>
                       </td>
@@ -123,6 +124,40 @@ const Industry = () => {
                 </tbody>
               </table>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="box-footer">
+        <div className="sm:flex items-center">
+          <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
+            Showing 5 Entries{" "}
+            <i className="bi bi-arrow-right ms-2 font-semibold"></i>
+          </div>
+          <div className="ms-auto">
+            <nav aria-label="Page navigation" className="pagination-style-4">
+              <ul className="ti-pagination mb-0">
+                <li className="page-item disabled">
+                  <Link className="page-link" href="#!">
+                    Prev
+                  </Link>
+                </li>
+                <li className="page-item">
+                  <Link className="page-link active" href="#!">
+                    1
+                  </Link>
+                </li>
+                <li className="page-item">
+                  <Link className="page-link" href="#!">
+                    2
+                  </Link>
+                </li>
+                <li className="page-item">
+                  <Link className="page-link !text-primary" href="#!">
+                    next
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

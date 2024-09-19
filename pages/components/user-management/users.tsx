@@ -3,6 +3,7 @@ import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import Link from "next/link";
 import React, { Fragment } from "react";
+import { FaEye, FaPencilAlt } from "react-icons/fa";
 
 const Users = () => {
   return (
@@ -146,24 +147,26 @@ const Users = () => {
                       <td>{idx.email}</td>
                       <td
                         className={
-                          idx.status === "Active" ? "text-green" : "text-yellow"
+                          idx.status === "Active" ? "text-green" : "text-danger"
                         }
                       >
                         {idx.status}
                       </td>
 
                       <td>
-                        <div className="flex flex-row gap-4 items-center">
+                        <div className="flex flex-row gap-6 items-center">
                           <Link href={`/users/${idx.id}`}>
-                            <button className="bg-transparent border-[1px] border-primary text-primary  px-3 py-1.5 rounded-md">
-                              View
+                            <button className="">
+                              <FaEye size={20} />
                             </button>
                           </Link>
 
-                          <button className="bg-[#FFB140] text-black px-3 py-1.5 rounded-md">
-                            <Link href={`/users/edit/${idx.id}`}>edit</Link>
+                          <button className="text-primary">
+                            <Link href={`/users/edit/${idx.id}`}>
+                              <FaPencilAlt size={20} />
+                            </Link>
                           </button>
-                          <button className="text-primary">Deactivate</button>
+                          <button className="text-red">Deactivate</button>
                         </div>
                       </td>
                     </tr>

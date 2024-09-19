@@ -2,17 +2,18 @@ import React, { Fragment } from "react";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import Link from "next/link";
-import Investors from "../components/applications/investors";
+import Cohorts from "../components/cohort/cohorts";
 import Partners from "../components/applications/partners";
+import ProgramPartner from "../components/cohort/programpartner";
 
 const index = () => {
   return (
     <Fragment>
-      <Seo title={"Application Management"} />
+      <Seo title={"Cohort Management"} />
       <Pageheader
-        currentpage="Application Management"
+        currentpage="Cohort"
         activepage="Dashboard"
-        mainpage="Applications"
+        mainpage="Cohort"
       />
 
       <div className="px-4 py-4 w-full mb-12">
@@ -27,7 +28,7 @@ const index = () => {
                 aria-controls="activity-tab-pane"
               >
                 <i className="ri-gift-line  align-middle inline-block me-1"></i>
-                Investors
+                Cohorts
               </Link>
               <Link
                 className="w-full sm:w-auto flex hs-tab-active:font-semibold  hs-tab-active:text-white hs-tab-active:bg-primary rounded-md  py-2 px-4 text-primary text-sm"
@@ -37,17 +38,9 @@ const index = () => {
                 aria-controls="posts-tab-pane"
               >
                 <i className="ri-bill-line me-1 align-middle inline-block"></i>
-                Partners
+                Partner
               </Link>
             </nav>
-            <div className="flex justify-end mb-4">
-              <button className="bg-green text-white py-2 px-4 rounded-md mr-3">
-                <Link href="/application/investor/create">Add Investors</Link>
-              </button>
-              <button className="bg-purple text-white py-2 px-4 rounded-md">
-                <Link href="/application/partner/create">Add Partner</Link>
-              </button>
-            </div>
           </div>
 
           <div className="!p-4">
@@ -58,7 +51,7 @@ const index = () => {
                 role="tabpanel"
                 aria-labelledby="activity-tab"
               >
-                <Investors />
+                <Cohorts />
               </div>
               <div
                 className="tab-pane fade !p-0 !border-0 hidden !rounded-md"
@@ -66,7 +59,7 @@ const index = () => {
                 role="tabpanel"
                 aria-labelledby="posts-tab"
               >
-                <Partners />
+                <ProgramPartner />
               </div>
             </div>
           </div>

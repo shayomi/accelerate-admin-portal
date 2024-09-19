@@ -3,6 +3,7 @@ import Seo from "@/shared/layout-components/seo/seo";
 import Link from "next/link";
 import React, { Fragment, useState } from "react";
 import { articlesData } from "./articledata";
+import { FaEye, FaPencilAlt } from "react-icons/fa";
 
 const Articles = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -102,6 +103,14 @@ const Articles = () => {
             <table className="table min-w-full whitespace-nowrap table-hover border table-bordered">
               <thead>
                 <tr className="text-left text-sm font-semibold ">
+                  <th scope="row" className="!ps-4 !pe-5">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                  </th>
                   <th className="px-4 py-2">Title</th>
                   <th className="px-4 py-2">Category</th>
                   <th className="px-4 py-2">Authors</th>
@@ -112,7 +121,18 @@ const Articles = () => {
               </thead>
               <tbody>
                 {filteredArticles.map((article) => (
-                  <tr key={article.id} className="">
+                  <tr
+                    key={article.id}
+                    className="border border-inherit border-solid hover:bg-gray-100 dark:border-defaultborder/10 dark:hover:bg-light"
+                  >
+                    <th scope="row" className="!ps-4 !pe-5">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        value=""
+                        aria-label="..."
+                      />
+                    </th>
                     <td className="px-4 py-2 text-sm">{article.title}</td>
                     <td className="px-4 py-2 text-sm">{article.category}</td>
                     <td className="px-4 py-2 text-sm">
@@ -132,18 +152,15 @@ const Articles = () => {
                     >
                       {article.status}
                     </td>
-                    <td className="px-4 py-2 border-b flex flex-row gap-4 items-center">
-                      <Link
-                        href={`/articles/${article.id}`}
-                        className="bg-transparent border-[1px] border-primary text-primary px-3 py-1.5 rounded-md"
-                      >
-                        View
+                    <td className="px-4 py-2 border-b flex flex-row gap-6 items-center">
+                      <Link href={`/articles/${article.id}`} className="">
+                        <FaEye size={20} />
                       </Link>
                       <Link
                         href={`/articles/edit/${article.id}`}
-                        className="text-primary hover:underline"
+                        className="text-primary"
                       >
-                        Edit
+                        <FaPencilAlt size={20} />
                       </Link>
                     </td>
                   </tr>
@@ -152,38 +169,38 @@ const Articles = () => {
             </table>
           </div>
         </div>
-        <div className="box-footer">
-          <div className="sm:flex items-center">
-            <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
-              Showing {filteredArticles.length} Entries
-              <i className="bi bi-arrow-right ms-2 font-semibold"></i>
-            </div>
-            <div className="ms-auto">
-              <nav aria-label="Page navigation" className="pagination-style-4">
-                <ul className="ti-pagination mb-0">
-                  <li className="page-item disabled">
-                    <Link className="page-link" href="#!">
-                      Prev
-                    </Link>
-                  </li>
-                  <li className="page-item">
-                    <Link className="page-link active" href="#!">
-                      1
-                    </Link>
-                  </li>
-                  <li className="page-item">
-                    <Link className="page-link" href="#!">
-                      2
-                    </Link>
-                  </li>
-                  <li className="page-item">
-                    <Link className="page-link !text-primary" href="#!">
-                      Next
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+      </div>
+      <div className="box-footer">
+        <div className="sm:flex items-center">
+          <div className="text-defaulttextcolor dark:text-defaulttextcolor/70">
+            Showing {filteredArticles.length} Entries
+            <i className="bi bi-arrow-right ms-2 font-semibold"></i>
+          </div>
+          <div className="ms-auto">
+            <nav aria-label="Page navigation" className="pagination-style-4">
+              <ul className="ti-pagination mb-0">
+                <li className="page-item disabled">
+                  <Link className="page-link" href="#!">
+                    Prev
+                  </Link>
+                </li>
+                <li className="page-item">
+                  <Link className="page-link active" href="#!">
+                    1
+                  </Link>
+                </li>
+                <li className="page-item">
+                  <Link className="page-link" href="#!">
+                    2
+                  </Link>
+                </li>
+                <li className="page-item">
+                  <Link className="page-link !text-primary" href="#!">
+                    Next
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

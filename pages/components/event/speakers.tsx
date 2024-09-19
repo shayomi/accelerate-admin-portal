@@ -3,6 +3,7 @@
 import React, { Fragment, useState } from "react";
 import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
+import { FaEye, FaPencilAlt, FaTrash } from "react-icons/fa";
 
 const speakersData = [
   { name: "Alice Johnson", company: "TechCorp", events: 5 },
@@ -42,36 +43,34 @@ const Speaker = () => {
       {/* Main Card Container */}
       <div className="box custom-card">
         {/* Header */}
-        <div className="box-header justify-between gap-8 mb-6">
-          <div className="box-title text-3xl font-bold text-blue-700">
-            Speakers
+        <div className="box-header justify-between gap-8 mb-2 items-center">
+          <h1 className="text-2xl font-bold text-blue-700">Speakers</h1>
+          <div className="flex flex-col md:flex-row px-4  gap-4">
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder="Search by speaker name"
+              className="form-control !text-[0.75rem] !py-2"
+            />
+
+            <select
+              value={filterCompany}
+              onChange={(e) => setFilterCompany(e.target.value)}
+              className="form-control !text-[0.75rem] !py-2"
+            >
+              <option value="">All Companies</option>
+              {uniqueCompanies.map((company, index) => (
+                <option key={index} value={company}>
+                  {company}
+                </option>
+              ))}
+            </select>
           </div>
+
           <button className="bg-green text-white px-3 py-1.5 rounded-md">
             Add New Speaker
           </button>
-        </div>
-
-        <div className="box-body mb-6 flex flex-row justify-end gap-2">
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search by speaker name"
-            className="form-control !text-[0.75rem] !py-2"
-          />
-
-          <select
-            value={filterCompany}
-            onChange={(e) => setFilterCompany(e.target.value)}
-            className="form-control !text-[0.75rem] !py-2"
-          >
-            <option value="">All Companies</option>
-            {uniqueCompanies.map((company, index) => (
-              <option key={index} value={company}>
-                {company}
-              </option>
-            ))}
-          </select>
         </div>
 
         <div className="overflow-x-auto">
@@ -99,10 +98,12 @@ const Speaker = () => {
                   <td className="p-2">{speaker.events}</td>
                   <td className="p-2">
                     <div className="flex flex-row gap-4 items-center">
-                      <button className="bg-transparent border-[1px] border-primary hs-dark-mode-active:bg-[#ffffff] hs-dark-mode-active:border-none text-primary px-3 py-1.5 rounded-md">
-                        Edit
+                      <button className="">
+                        <FaEye size={20} />
                       </button>
-                      <button className="text-red px-3 py-1.5">Remove</button>
+                      <button className="text-danger">
+                        <FaTrash size={20} />
+                      </button>
                     </div>
                   </td>
                 </tr>

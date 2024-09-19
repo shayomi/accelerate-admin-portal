@@ -46,7 +46,7 @@ const PartnerForm = ({ partner }: AddNewPartnerProps) => {
         activepage="Dashboards"
         mainpage="Cohort Management"
       />
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4 mb-8">
         <div className="mb-4">
           <label className="form-label">Name</label>
           <input
@@ -155,7 +155,7 @@ const PartnerForm = ({ partner }: AddNewPartnerProps) => {
           />
         </div>
 
-        <div className="flex gap-4 mt-6 mb-8">
+        <div className="flex gap-4 mt-12 mb-8 justify-end">
           <button type="button" className="ti-btn bg-none text-red rounded-sm">
             Cancel
           </button>

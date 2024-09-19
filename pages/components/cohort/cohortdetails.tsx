@@ -17,61 +17,53 @@ const CohortDetail: React.FC<CohortDetailProps> = ({ cohort }) => {
         mainpage="Cohort Management"
       />
 
-      <div className="container mx-auto p-6 bg-white shadow-lg rounded-lg">
+      <div className="container mx-auto p-6 shadow-lg rounded-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div className="flex flex-col">
-            <span className="text-xl font-semibold text-gray-800">Name:</span>
-            <p className="text-lg text-gray-700">{cohort.name}</p>
+            <span className="text-md font-semibold">Name:</span>
+            <p className="text-sm">{cohort.name}</p>
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-semibold text-gray-800">
-              Short Name:
-            </span>
-            <p className="text-lg text-gray-700 bg-yellow-200 px-2 py-1 rounded-md">
+            <span className="text-md">Short Name:</span>
+            <p className="text-sm text-black bg-yellow px-2 py-1 rounded-md w-[80px]">
               {cohort.shortName}
             </p>
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-semibold text-gray-800">
-              Start Date:
-            </span>
-            <p className="text-lg text-gray-700">{cohort.startDate}</p>
+            <span className="text-md">Start Date:</span>
+            <p className="text-sm">{cohort.startDate}</p>
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-semibold text-gray-800">
-              End Date:
-            </span>
-            <p className="text-lg text-gray-700">{cohort.endDate}</p>
+            <span className="text-md font-semibold">End Date:</span>
+            <p className="text-sm">{cohort.endDate}</p>
           </div>
         </div>
 
         <div className="mb-6">
-          <h2 className="text-2xl font-bold mb-4 text-gray-800">Description</h2>
-          <p className="text-lg text-gray-700">{cohort.description}</p>
+          <h2 className="text-lg font-bold">Description</h2>
+          <p className="text-sm">{cohort.description}</p>
         </div>
 
         <div className="mb-6">
-          <h2 className="text-2xl font-bold mb-4 text-gray-800">
-            Enrolled Startups
-          </h2>
-          <table className="min-w-full border border-gray-300 rounded-md">
-            <thead className="bg-gray-100">
+          <h2 className="text-md font-bold mb-4">Enrolled Startups</h2>
+          <table className="min-w-full">
+            <thead className="">
               <tr>
-                <th className="px-6 py-3 text-left text-sm font-medium text-gray-900">
+                <th className="px-6 py-3 text-left text-sm font-medium">
                   Startup Name
                 </th>
-                <th className="px-6 py-3 text-left text-sm font-medium text-gray-900">
+                <th className="px-6 py-3 text-left text-sm font-medium ">
                   Industry
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="">
               {cohort.startups.map((startup) => (
                 <tr key={startup.id}>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                  <td className="px-6 py-3 whitespace-nowrap text-sm">
                     {startup.companyName}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                  <td className="px-6 py-3 whitespace-nowrap text-sm ">
                     {startup.industry}
                   </td>
                 </tr>
@@ -81,10 +73,8 @@ const CohortDetail: React.FC<CohortDetailProps> = ({ cohort }) => {
         </div>
 
         <div className="mb-6">
-          <h2 className="text-2xl font-bold mb-4 text-gray-800">
-            Program Schedule Overview
-          </h2>
-          <p className="text-lg text-gray-700">{cohort.schedule}</p>
+          <h2 className="text-md font-bold mb-4">Program Schedule Overview</h2>
+          <p className="text-sm">{cohort.schedule}</p>
         </div>
       </div>
     </Fragment>

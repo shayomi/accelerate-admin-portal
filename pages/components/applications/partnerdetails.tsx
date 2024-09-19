@@ -46,10 +46,10 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
         mainpage="Dashboard"
       />
 
-      <div className="bg-white hs-dark-mode-active:bg-[#1a1e25] rounded-md overflow-hidden">
+      <div className="rounded-md overflow-hidden">
         <div className="box-body !p-0">
           {/* Profile Header */}
-          <div className="md:flex items-start md:items-center p-6 bg-[#E3E4E8]">
+          <div className="md:flex items-start md:items-center p-6 ">
             <div>
               <span className="avatar avatar-xxl avatar-rounded online me-4">
                 <img src="../../../assets/images/faces/9.jpg" alt="" />
@@ -58,13 +58,11 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
             <div className="flex-grow main-profile-info">
               <div className="flex flex-col md:flex-row gap-6 items-start md:items-center !justify-between">
                 <div>
-                  <h6 className="font-semibold mb-1 text-black text-[1rem]">
-                    {partner.name}
-                  </h6>
-                  <p className="mb-1 !text-black opacity-[0.7]">
+                  <h6 className="font-semibold mb-1 text-sm">{partner.name}</h6>
+                  <p className="mb-1 text-sm opacity-[0.7]">
                     {partner.partnerType}
                   </p>
-                  <p className="text-[0.75rem] text-black mb-6 opacity-[0.5]">
+                  <p className="text-sm mb-6 opacity-[0.5]">
                     <span className="me-4 inline-flex">
                       <i className="ri-building-line me-1 align-middle"></i>
                       {partner.company}
@@ -77,18 +75,18 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
                 </div>
 
                 <div className="">
-                  <p className="text-[.9375rem] text-black mb-2 me-6 font-semibold">
+                  <p className="text-sm mb-2 me-6 font-semibold">
                     Contact Information:
                   </p>
-                  <div className="text-black">
+                  <div className="text-sm">
                     <p className="mb-2">
-                      <span className="avatar avatar-sm avatar-rounded me-2 bg-light text-black/50 dark:text-white/50">
-                        <i className="ri-mail-line align-middle text-[.875rem] text-black/50 dark:text-white/50"></i>
+                      <span className="avatar avatar-sm avatar-rounded me-2 bg-light text-sm">
+                        <i className="ri-mail-line align-middle text-sm"></i>
                       </span>
                       contact@{partner.company.toLowerCase()}.com
                     </p>
-                    <p className="mb-0 text-black">
-                      <span className="avatar avatar-sm avatar-rounded me-2 bg-light text-black/50 dark:text-white/50">
+                    <p className="mb-0 text-sm">
+                      <span className="avatar avatar-sm avatar-rounded me-2 bg-light text-sm">
                         <i className="ri-map-pin-line align-middle text-[.875rem] text-black/50 dark:text-white/50"></i>
                       </span>
                       Address: 123 Main St, City, Country
@@ -102,10 +100,8 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
           {/* Company Details */}
           <div className="p-6 border-b border-dashed dark:border-defaultborder/10">
             <div className="mb-6">
-              <p className="text-[.9375rem] mb-2 font-semibold text-black hs-dark-mode-active:text-white">
-                Company Details:
-              </p>
-              <p className="text-[0.75rem] text-black/50 dark:text-white/50 opacity-[0.7] mb-0">
+              <p className="text-sm mb-2 font-semibold ">Company Details:</p>
+              <p className="text-sm opacity-[0.7] mb-0">
                 {partner.companyDetails}
               </p>
             </div>
@@ -113,9 +109,7 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
 
           {/* Supporting Documents */}
           <div className="p-6 border-b border-dashed dark:border-defaultborder/10">
-            <p className="text-[.9375rem] mb-2 font-semibold">
-              Supporting Documents:
-            </p>
+            <p className="text-sm mb-2 font-semibold">Supporting Documents:</p>
             <div className="mb-0">
               {partner.supportingDocuments.map((doc, index) => (
                 <p className="mb-1" key={index}>
@@ -129,7 +123,7 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
 
           {/* Timeline of Actions */}
           <div className="p-6">
-            <p className="text-[.9375rem] mb-2 me-6 font-semibold">
+            <p className="text-sm mb-2 me-6 font-semibold">
               Timeline of Actions:
             </p>
             <ul className="list-group">
@@ -138,14 +132,12 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
                   <div className="sm:flex items-start">
                     <div className="sm:ms-2 ms-0 sm:mt-0 mt-1 font-semibold flex-grow flex-row gap-2 items-center">
                       <p className="mb-0 leading-none">{action.actionType}</p>
-                      <span className="text-[.6875rem] text-[#8c9097] dark:text-white/50 opacity-[0.7]">
+                      <span className="text-sm opacity-[0.7]">
                         {action.date}
                       </span>
                     </div>
                     {action.reason && (
-                      <p className="text-black text-[.6875rem]">
-                        Reason: {action.reason}
-                      </p>
+                      <p className="text-sm">Reason: {action.reason}</p>
                     )}
                   </div>
                 </li>
@@ -155,7 +147,7 @@ const PartnerDetails: React.FC<PartnerDetailsProps> = ({ partner }) => {
 
           {/* Actions */}
           <div className="p-6 border-b dark:border-defaultborder/10 border-dashed">
-            <p className="text-[.9375rem] mb-2 me-6 font-semibold">Actions:</p>
+            <p className="text-sm mb-2 me-6 font-semibold">Actions:</p>
             <div className="flex items-center mb-2">
               <button
                 onClick={handleApprove}

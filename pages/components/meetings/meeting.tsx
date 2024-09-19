@@ -3,6 +3,7 @@ import Pageheader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import { meetings } from "./meetingsdata";
 import Link from "next/link";
+import { FaEye } from "react-icons/fa";
 
 const Meeting = () => {
   const [filter, setFilter] = useState({
@@ -127,10 +128,10 @@ const Meeting = () => {
                         {meeting.status}
                       </td>
                       <td>
-                        <button className="text-primary hover:underline">
+                        <button className="">
                           <Link href={`/meeting/${meeting.id}`}>
                             {" "}
-                            View Details
+                            <FaEye size={20} />
                           </Link>
                         </button>
                       </td>
