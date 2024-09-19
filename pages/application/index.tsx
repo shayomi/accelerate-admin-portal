@@ -17,7 +17,7 @@ const index = () => {
 
       <div className="px-4 py-4 w-full mb-12">
         <div className="w-full">
-          <div className="!p-4 border-b dark:border-defaultborder/10 border-dashed md:flex items-center justify-between">
+          <div className="!p-4 border-b dark:border-defaultborder/10 border-dashed flex flex-col sm:flex-row items-center justify-between">
             <nav className="-mb-0.5 sm:flex md:space-x-6 rtl:space-x-reverse pb-2">
               <Link
                 className="w-full sm:w-auto flex active hs-tab-active:font-semibold  hs-tab-active:text-white hs-tab-active:bg-primary rounded-md py-2 px-4 text-primary text-sm"

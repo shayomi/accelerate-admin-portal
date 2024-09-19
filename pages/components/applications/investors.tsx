@@ -10,9 +10,9 @@ const Investors = () => {
     <Fragment>
       <div className="">
         <div className="box custom-card">
-          <div className="box-header justify-between gap-8">
-            <div className="box-title">Investors List</div>
-            <div className="flex flex-wrap gap-2">
+          <div className="box-header justify-between gap-8 gap-y-4">
+            <div className="box-title mb-4 sm:mt-0">Investors List</div>
+            <div className="flex flex-wrap gap-2 ">
               <div>
                 <input
                   className="ti-form-control form-control-sm"
