@@ -159,12 +159,12 @@ const Users = () => {
 											<td>
 												<div className="flex flex-row gap-6 items-center">
 													<Link href={`/users/${idx.id}`}>
-														<button className="">
+														<button className="ti-btn ti-btn-md ti-btn-secondary !me-[0.375rem]">
 															<FaEye size={20} />
 														</button>
 													</Link>
 
-													<button className="text-primary">
+													<button className="ti-btn ti-btn-md ti-btn-warning !me-[0.375rem]">
 														<Link href={`/users/edit/${idx.id}`}>
 															<FaPencilAlt size={20} />
 														</Link>
