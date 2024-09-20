@@ -17,5 +17,5 @@ const CreateTestimonialPage = () => {
 	return <TestimonialForm onSubmit={handleCreateTestimonial} />;
 };
 
-TestimonialForm.layout = "Contentlayout";
+CreateTestimonialPage.layout = "Contentlayout";
 export default CreateTestimonialPage;
